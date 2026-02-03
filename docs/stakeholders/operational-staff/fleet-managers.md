@@ -206,7 +206,7 @@ Fleet managers are responsible for the physical vehicle inventory that forms the
 
 ### Financial Metrics
 1. **Total Cost of Ownership**: All costs per vehicle per year (track trend)
-2. **Maintenance Cost Per Vehicle**: Annual maintenance spending (target: <$1500/vehicle)
+2. **Maintenance Cost Per Vehicle**: Annual maintenance spending (target: &lt;$1500/vehicle)
 3. **Depreciation Rate**: Annual value decline (track vs. industry average)
 4. **ROI Per Vehicle**: Return on investment for each vehicle (target: >15%)
 5. **Disposition Residual Value**: Sale price vs. book value (target: >90%)
