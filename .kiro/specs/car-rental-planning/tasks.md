@@ -2,7 +2,11 @@
 
 ## Overview
 
-This implementation plan outlines the tasks for executing the planning and analysis phase of the car rental graduation project. The work is organized into sequential phases: project setup, open-source analysis, market research, synthesis and documentation, and final validation. Each task builds incrementally toward a comprehensive Docusaurus documentation site with PDF export capability.
+This implementation plan outlines the tasks for executing the planning and analysis phase of the car rental graduation project. The work is organized into sequential phases: project setup, open-source analysis, market research, stakeholder identification, workflow documentation, feature synthesis, requirements synthesis, and final validation.
+
+**Phases 1-11 (Completed)**: Project infrastructure, analysis of three open-source projects (bookcars, car-rental-php, FreeCar), market research, stakeholder documentation, and workflow documentation have been completed. Comprehensive local documentation exists in `docs/analysis/`, `docs/research/`, `docs/stakeholders/`, and `docs/workflows/`.
+
+**Phases 12-20 (Remaining)**: These tasks focus on synthesizing the existing local documentation into a feature catalog and requirements document. Rather than re-analyzing source projects, these tasks extract and consolidate information from the comprehensive markdown files already created in the `docs/` directory. Each task builds incrementally toward a complete Docusaurus documentation site with PDF export capability.
 
 ## Tasks
 
@@ -214,102 +218,143 @@ This implementation plan outlines the tasks for executing the planning and analy
     - Create `damage-claims.md` (damage claim processing workflow with Mermaid sequence diagram)
     - _Requirements: 4.1, 4.2, 4.5, 4.6, 4.7_
 
-- [ ] 11. Checkpoint - Review Workflows
+- [x] 11. Checkpoint - Review Workflows
   - Ensure all workflows are complete with all required elements
   - Verify all Mermaid diagrams render correctly and use appropriate types
   - Validate that workflows cover all stakeholder types
   - Ask the user if questions arise or if workflows need refinement
 
-- [ ] 12. Create Feature Catalog
-  - [ ] 12.1 Document user-facing features
+- [-] 12. Create Feature Catalog from Local Documentation
+  - [ ] 12.1 Extract and document user-facing features from local analysis
     - Create `docs/features/user-facing/` directory with `_category_.json`
-    - Create `search-discovery.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `booking-management.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `payment-billing.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `account-management.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/bookcars/features-user.md`
+    - Read features from `docs/analysis/car-rental-php/features.md` (user sections)
+    - Read features from `docs/analysis/freecar/features-api.md` and `features-miniprogram.md` (user-facing)
+    - Read features from `docs/research/competitive-analysis/feature-matrix.md`
+    - Synthesize into `search-discovery.md`, `booking-management.md`, `payment-billing.md`, `account-management.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source (which local doc)
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
   
-  - [ ] 12.2 Document mobile-specific features
+  - [ ] 12.2 Extract and document mobile-specific features from local analysis
     - Create `docs/features/mobile-specific/` directory with `_category_.json`
-    - Create `push-notifications.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `offline-mode.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `mobile-payments.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/bookcars/features-mobile.md`
+    - Read features from `docs/analysis/freecar/features-miniprogram.md`
+    - Read features from `docs/research/market-trends/mobile-first.md`
+    - Synthesize into `push-notifications.md`, `offline-mode.md`, `mobile-payments.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.1_
   
-  - [ ] 12.3 Document administrative features
+  - [ ] 12.3 Extract and document administrative features from local analysis
     - Create `docs/features/administrative/` directory with `_category_.json`
-    - Create `fleet-management.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `user-management.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `pricing-management.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/bookcars/features-admin.md`
+    - Read features from `docs/analysis/car-rental-php/features.md` (admin sections)
+    - Read features from `docs/analysis/freecar/features-api.md` (admin endpoints)
+    - Read features from `docs/research/best-practices/fleet-management.md`
+    - Synthesize into `fleet-management.md`, `user-management.md`, `pricing-management.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.3, 10.5_
   
-  - [ ] 12.4 Document operational features
+  - [ ] 12.4 Extract and document operational features from local analysis
     - Create `docs/features/operational/` directory with `_category_.json`
-    - Create `vehicle-tracking.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `maintenance-scheduling.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `analytics-reporting.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/freecar/cloud-native-patterns.md` (tracking, monitoring)
+    - Read features from `docs/research/best-practices/fleet-management.md` (maintenance)
+    - Read features from `docs/research/best-practices/operational-excellence.md`
+    - Synthesize into `vehicle-tracking.md`, `maintenance-scheduling.md`, `analytics-reporting.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.5, 10.6_
   
-  - [ ] 12.5 Document integration features
+  - [ ] 12.5 Extract and document integration features from local analysis
     - Create `docs/features/integration/` directory with `_category_.json`
-    - Create `payment-gateways.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `mapping-services.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `notification-services.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/bookcars/payment-integration.md`
+    - Read features from `docs/analysis/freecar/cloud-native-patterns.md` (external services)
+    - Read features from `docs/research/industry-standards/payment-standards.md`
+    - Synthesize into `payment-gateways.md`, `mapping-services.md`, `notification-services.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.7, 10.8_
   
-  - [ ] 12.6 Document security features
+  - [ ] 12.6 Extract and document security features from local analysis
     - Create `docs/features/security/` directory with `_category_.json`
-    - Create `authentication.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `authorization.md` (features with name, description, stakeholder benefit, priority, source)
-    - Create `data-protection.md` (features with name, description, stakeholder benefit, priority, source)
+    - Read features from `docs/analysis/bookcars/authentication.md`
+    - Read features from `docs/research/industry-standards/compliance-regulations.md`
+    - Read features from `docs/research/industry-standards/payment-standards.md` (PCI-DSS)
+    - Synthesize into `authentication.md`, `authorization.md`, `data-protection.md`
+    - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
   
   - [ ] 12.7 Create feature prioritization and deduplication
     - Create `docs/features/feature-prioritization.md` with priority matrix and rationale
-    - Review all features for duplicates (Levenshtein distance < 3)
+    - Review all features across all category files for duplicates (similar names/descriptions)
     - Merge duplicates or add cross-references explaining distinctions
+    - Create feature-to-source traceability matrix
     - _Requirements: 5.5, 5.6, 5.7_
 
-- [ ] 13. Write Requirements Document
+- [ ] 13. Write Requirements Document from Local Documentation
   - [ ] 13.1 Document functional requirements - User Management
     - Create `docs/requirements/functional/` directory with `_category_.json`
-    - Create `user-management.md` with EARS-compliant requirements
+    - Read from `docs/features/user-facing/account-management.md`
+    - Read from `docs/features/security/authentication.md` and `authorization.md`
+    - Read from `docs/stakeholders/primary-users/*.md` (user needs)
+    - Read from `docs/workflows/core-rental/*.md` (user interactions)
+    - Synthesize into `user-management.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for registration, authentication, profile management
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.10_
   
   - [ ] 13.2 Document functional requirements - Vehicle Search
-    - Create `vehicle-search.md` with EARS-compliant requirements
+    - Read from `docs/features/user-facing/search-discovery.md`
+    - Read from `docs/workflows/core-rental/vehicle-search.md`
+    - Read from `docs/stakeholders/primary-users/*.md` (search needs)
+    - Read from `docs/research/best-practices/ux-patterns.md` (search patterns)
+    - Synthesize into `vehicle-search.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for search, filtering, availability checking
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.2, 10.10_
   
   - [ ] 13.3 Document functional requirements - Booking Management
-    - Create `booking-management.md` with EARS-compliant requirements
+    - Read from `docs/features/user-facing/booking-management.md`
+    - Read from `docs/workflows/core-rental/booking-creation.md`
+    - Read from `docs/workflows/exceptional/cancellations.md` and `modifications.md`
+    - Read from `docs/stakeholders/primary-users/*.md` (booking needs)
+    - Synthesize into `booking-management.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for booking creation, modification, cancellation
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.10_
   
   - [ ] 13.4 Document functional requirements - Payment Processing
-    - Create `payment-processing.md` with EARS-compliant requirements
+    - Read from `docs/features/user-facing/payment-billing.md`
+    - Read from `docs/features/integration/payment-gateways.md`
+    - Read from `docs/workflows/core-rental/payment-processing.md`
+    - Read from `docs/research/industry-standards/payment-standards.md`
+    - Synthesize into `payment-processing.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for payment methods, processing, refunds
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.4, 10.10_
   
   - [ ] 13.5 Document functional requirements - Fleet Management
-    - Create `fleet-management.md` with EARS-compliant requirements
+    - Read from `docs/features/administrative/fleet-management.md`
+    - Read from `docs/features/operational/vehicle-tracking.md` and `maintenance-scheduling.md`
+    - Read from `docs/workflows/administrative/fleet-management.md`
+    - Read from `docs/stakeholders/operational-staff/fleet-managers.md`
+    - Read from `docs/research/best-practices/fleet-management.md`
+    - Synthesize into `fleet-management.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for vehicle management, maintenance, tracking
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.5, 10.10_
   
   - [ ] 13.6 Document functional requirements - Reporting and Analytics
-    - Create `reporting-analytics.md` with EARS-compliant requirements
+    - Read from `docs/features/operational/analytics-reporting.md`
+    - Read from `docs/workflows/administrative/reporting.md`
+    - Read from `docs/stakeholders/operational-staff/administrators.md`
+    - Read from `docs/research/best-practices/operational-excellence.md`
+    - Synthesize into `reporting-analytics.md` with EARS-compliant requirements
     - Include user stories and acceptance criteria for reports, dashboards, analytics
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.6, 10.10_
   
-  - [ ] 13.7 Document non-functional requirements
+  - [ ] 13.7 Document non-functional requirements from local research
     - Create `docs/requirements/non-functional/` directory with `_category_.json`
+    - Read from `docs/analysis/comparative-analysis.md` (performance insights)
+    - Read from `docs/research/best-practices/*.md` (industry standards)
     - Create `performance.md` with response time, throughput, and load requirements
     - Create `scalability.md` with concurrent user and data volume requirements
     - Create `security.md` with authentication, authorization, and encryption requirements
@@ -317,81 +362,99 @@ This implementation plan outlines the tasks for executing the planning and analy
     - Create `reliability.md` with uptime and error handling requirements
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.7_
   
-  - [ ] 13.8 Document integration requirements
+  - [ ] 13.8 Document integration requirements from local feature docs
     - Create `docs/requirements/integration/` directory with `_category_.json`
+    - Read from `docs/features/integration/payment-gateways.md`
+    - Read from `docs/features/integration/mapping-services.md`
+    - Read from `docs/features/integration/notification-services.md`
+    - Read from `docs/research/industry-standards/payment-standards.md`
     - Create `payment-gateways.md` with Stripe, PayPal integration requirements
     - Create `mapping-services.md` with Google Maps, geolocation requirements
     - Create `notification-services.md` with email, SMS, push notification requirements
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.7, 10.7, 10.8, 10.10_
   
-  - [ ] 13.9 Document compliance requirements
+  - [ ] 13.9 Document compliance requirements from local research
     - Create `docs/requirements/compliance/` directory with `_category_.json`
+    - Read from `docs/research/industry-standards/compliance-regulations.md`
+    - Read from `docs/research/industry-standards/payment-standards.md`
+    - Read from `docs/features/security/data-protection.md`
     - Create `data-protection.md` with GDPR, CCPA requirements
     - Create `payment-security.md` with PCI-DSS requirements
     - Create `accessibility.md` with WCAG requirements
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.7, 10.10_
 
-- [ ] 14. Create Appendices
+- [ ] 14. Create Appendices from Local Documentation
   - Create `docs/appendices/` directory with `_category_.json`
-  - Create `glossary.md` with all technical terms and definitions
-  - Create `references.md` with all cited sources organized by category
+  - Create `glossary.md` by extracting technical terms from all local documentation
+  - Create `references.md` by collecting all citations from research documents (`docs/research/**/*.md`)
   - Create `traceability-matrix.md` showing requirements-to-stakeholders-to-features-to-workflows mapping
-  - Create `methodology-details.md` with detailed explanation of analysis and research methodology
+  - Create `methodology-details.md` summarizing the analysis and synthesis approach used
   - _Requirements: 6.6, 9.4_
 
 - [ ] 15. Checkpoint - Review Complete Documentation
   - Ensure all documentation sections are complete
-  - Verify all cross-references work correctly
+  - Verify all cross-references work correctly (especially references to local docs)
   - Validate all Mermaid diagrams render in development server
   - Check that no files exceed 400 lines
   - Verify all files have proper frontmatter
+  - Verify feature catalog properly references source documents
+  - Verify requirements properly reference feature catalog, stakeholders, and workflows
   - Ask the user if questions arise or if documentation needs refinement
 
-- [ ] 16. Configure and Test PDF Export
+- [ ] 16. Update Docusaurus Configuration for Complete Site
+  - Update `sidebars.js` to include all new sections (features, requirements, appendices)
+  - Verify navigation structure is logical and complete
+  - Update `docusaurus.config.js` navbar to include links to features and requirements sections
+  - Test that all sections are accessible from navigation
   - Verify PDF export plugin is properly configured
   - Configure academic-standard PDF styling (margins, fonts, page numbers)
+  - _Requirements: 8.2, 8.6, 8.7, 8.8, 8.9_
+
+- [ ] 17. Test PDF Export with Complete Documentation
   - Test PDF generation with `bun run pdf`
   - Verify table of contents is generated with page numbers
   - Verify all Mermaid diagrams render as images in PDF (not raw code)
-  - Verify all sections are included in correct order
+  - Verify all sections are included in correct order (intro → methodology → analysis → research → stakeholders → workflows → features → requirements → appendices)
   - Fix any PDF rendering issues
   - _Requirements: 8.2, 8.6, 8.7, 8.8, 8.9_
 
-- [ ] 17. Create Build Documentation
-  - Create `README.md` in project root with:
-    - Project overview and purpose
-    - Prerequisites (Bun, Node.js versions)
-    - Installation instructions
-    - Development workflow (`bun run start`)
-    - Build commands (`bun run build`, `bun run pdf`)
-    - Project structure explanation
-    - Contribution guidelines
-  - Create `CONTRIBUTING.md` with documentation standards and guidelines
+- [ ] 18. Update Build Documentation
+  - Update `README.md` in project root to reflect complete documentation structure
+  - Document the synthesis approach (how features and requirements are derived from local docs)
+  - Update project structure explanation to show all sections
+  - Ensure all build commands are documented
+  - Update `CONTRIBUTING.md` if needed with documentation standards
   - _Requirements: 8.10_
 
-- [ ] 18. Final Validation and Quality Assurance
+- [ ] 19. Final Validation and Quality Assurance
   - Run `bun run build` to generate production static site
   - Verify build completes without errors
-  - Test all navigation links in built site
+  - Test all navigation links in built site (especially to features and requirements sections)
   - Test search functionality
   - Verify all images and diagrams load correctly
   - Generate final PDF and review for quality
+  - Validate that feature catalog properly synthesizes from local analysis docs
+  - Validate that requirements properly synthesize from feature catalog, stakeholders, and workflows
   - Validate that all 10 requirements from Requirement 10 are satisfied (mobile, web, admin, payments, fleet, analytics, integrations, notifications, i18n coverage)
-  - Create validation report documenting completeness
+  - Create validation report documenting completeness and traceability
   - _Requirements: All requirements_
 
-- [ ] 19. Final Checkpoint - Project Completion
+- [ ] 20. Final Checkpoint - Project Completion
   - Review complete documentation site with user
   - Demonstrate PDF export
   - Confirm all graduation project requirements are met
+  - Verify synthesis approach successfully leveraged local documentation
   - Ask the user for final feedback or adjustments
 
 ## Notes
 
 - This is a documentation and analysis project, not a coding implementation project
 - The "implementation" involves creating comprehensive markdown documentation in a Docusaurus site
+- **Phases 1-11 are complete**: Comprehensive local documentation exists in `docs/analysis/`, `docs/research/`, `docs/stakeholders/`, and `docs/workflows/`
+- **Phases 12-20 focus on synthesis**: Extract features from local analysis docs, synthesize requirements from feature catalog and stakeholder/workflow docs
 - Each task builds incrementally, with checkpoints for user review
 - All documentation must be modular (150-400 lines per file)
-- All research must include proper citations with URLs
-- All workflows must include Mermaid diagrams
+- Feature catalog should reference source documents (e.g., "Source: docs/analysis/bookcars/features-user.md")
+- Requirements should reference feature catalog, stakeholders, and workflows for traceability
+- All workflows already include Mermaid diagrams
 - The final deliverable is both a documentation website and an academic-quality PDF

@@ -267,14 +267,25 @@ Each workflow includes:
 
 ### Component 5: Feature Cataloger
 
-**Purpose**: Create a comprehensive, categorized inventory of all features for the target car rental system.
+**Purpose**: Create a comprehensive, categorized inventory of all features for the target car rental system by synthesizing information from local analysis and research documentation.
 
 **Feature Sources**:
-1. Features extracted from bookcars analysis
-2. Features extracted from car-rental-php analysis
-3. Features extracted from FreeCar analysis
-4. Features identified through market research
-5. Features derived from stakeholder needs
+1. Features extracted from local bookcars analysis documents (`docs/analysis/bookcars/features-*.md`)
+2. Features extracted from local car-rental-php analysis documents (`docs/analysis/car-rental-php/features.md`)
+3. Features extracted from local FreeCar analysis documents (`docs/analysis/freecar/features-*.md`)
+4. Features identified through local market research documents (`docs/research/competitive-analysis/*.md`, `docs/research/best-practices/*.md`)
+5. Features derived from local stakeholder documentation (`docs/stakeholders/**/*.md`)
+
+**Input Documents**:
+- `docs/analysis/bookcars/features-user.md`
+- `docs/analysis/bookcars/features-admin.md`
+- `docs/analysis/bookcars/features-mobile.md`
+- `docs/analysis/car-rental-php/features.md`
+- `docs/analysis/freecar/features-api.md`
+- `docs/analysis/freecar/features-miniprogram.md`
+- `docs/research/competitive-analysis/feature-matrix.md`
+- `docs/research/best-practices/*.md`
+- `docs/stakeholders/**/*.md`
 
 **Categorization Scheme**:
 
@@ -343,7 +354,14 @@ For each feature:
 
 ### Component 6: Requirements Writer
 
-**Purpose**: Transform analysis findings into a formal, EARS-compliant requirements document for the target car rental system.
+**Purpose**: Transform analysis findings into a formal, EARS-compliant requirements document for the target car rental system by synthesizing information from local feature catalog, stakeholder documentation, and workflow documentation.
+
+**Input Documents**:
+- `docs/features/**/*.md` (feature catalog created in previous phase)
+- `docs/stakeholders/**/*.md` (stakeholder analysis documents)
+- `docs/workflows/**/*.md` (workflow documentation)
+- `docs/analysis/comparative-analysis.md` (architectural insights)
+- `docs/research/**/*.md` (industry standards and best practices)
 
 **Requirements Organization**:
 
