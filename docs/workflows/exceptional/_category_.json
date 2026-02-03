@@ -1,0 +1,8 @@
+{
+  "label": "Exceptional Workflows",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Workflows for handling exceptions and special cases including booking cancellations, modifications, and damage claims."
+  }
+}

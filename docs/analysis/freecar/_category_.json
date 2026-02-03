@@ -1,0 +1,8 @@
+{
+  "label": "FreeCar Analysis",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Analysis of FreeCar, a cloud-native microservices-based car rental system built with Go, featuring service mesh architecture, distributed tracing, and comprehensive observability."
+  }
+}

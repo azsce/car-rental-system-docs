@@ -1,0 +1,8 @@
+{
+  "label": "Administrative Workflows",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Workflows for system administrators and operational staff managing fleet, pricing, users, and generating reports."
+  }
+}

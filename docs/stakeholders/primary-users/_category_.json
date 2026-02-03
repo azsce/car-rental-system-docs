@@ -1,0 +1,8 @@
+{
+  "label": "Primary Users",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Primary user stakeholders who directly interact with the car rental system as customers and renters."
+  }
+}

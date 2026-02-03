@@ -1,0 +1,8 @@
+{
+  "label": "BookCars Analysis",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Comprehensive analysis of the BookCars project - a modern, multi-platform car rental system with admin, frontend, backend, and mobile components."
+  }
+}

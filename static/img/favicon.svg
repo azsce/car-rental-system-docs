@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="#2563eb"/>
+  
+  <!-- Simplified car icon -->
+  <g transform="translate(12, 20)">
+    <!-- Body -->
+    <rect x="4" y="12" width="32" height="14" rx="2" fill="white"/>
+    
+    <!-- Roof -->
+    <path d="M 8 12 L 12 4 L 28 4 L 32 12 Z" fill="#93c5fd"/>
+    
+    <!-- Wheels -->
+    <circle cx="12" cy="26" r="4" fill="#1f2937"/>
+    <circle cx="12" cy="26" r="2" fill="#6b7280"/>
+    <circle cx="28" cy="26" r="4" fill="#1f2937"/>
+    <circle cx="28" cy="26" r="2" fill="#6b7280"/>
+    
+    <!-- Headlight -->
+    <circle cx="36" cy="17" r="1.5" fill="#fbbf24"/>
+  </g>
+</svg>

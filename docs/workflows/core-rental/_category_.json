@@ -1,0 +1,8 @@
+{
+  "label": "Core Rental Workflows",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Essential workflows covering the complete rental journey from vehicle search through return, representing the primary user interactions with the system."
+  }
+}
