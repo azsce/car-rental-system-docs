@@ -409,10 +409,10 @@ flowchart TD
 - **Modification Success Rate**: Percentage completed successfully (target: >90%)
 
 ### Processing Metrics
-- **Modification Processing Time**: Time from request to completion (target: <5 minutes)
-- **Payment Processing Time**: Time to process payment adjustments (target: <30 seconds)
-- **Availability Check Time**: Time to verify availability (target: <2 seconds)
-- **Price Recalculation Time**: Time to calculate new pricing (target: <1 second)
+- **Modification Processing Time**: Time from request to completion (target: &lt;5 minutes)
+- **Payment Processing Time**: Time to process payment adjustments (target: &lt;30 seconds)
+- **Availability Check Time**: Time to verify availability (target: &lt;2 seconds)
+- **Price Recalculation Time**: Time to calculate new pricing (target: &lt;1 second)
 
 ### Business Impact Metrics
 - **Modification vs Cancellation**: Modifications preventing cancellations (track ratio)

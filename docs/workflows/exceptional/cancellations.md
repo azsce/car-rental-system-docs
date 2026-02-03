@@ -59,7 +59,7 @@ Process booking cancellations efficiently and fairly, applying appropriate cance
 **Policy Components**:
 - **Free Cancellation Window**: Time period for full refund (e.g., 48 hours before pickup)
 - **Partial Refund Window**: Time period for partial refund (e.g., 24-48 hours before)
-- **No Refund Window**: Time period with no refund (e.g., <24 hours before)
+- **No Refund Window**: Time period with no refund (e.g., &lt;24 hours before)
 - **Cancellation Fees**: Fixed or percentage-based fees
 - **Non-Refundable Items**: Deposits or fees that are never refunded
 
@@ -409,20 +409,20 @@ stateDiagram-v2
 ## Performance Metrics
 
 ### Cancellation Metrics
-- **Cancellation Rate**: Percentage of bookings cancelled (track trend, target: <10%)
+- **Cancellation Rate**: Percentage of bookings cancelled (track trend, target: &lt;10%)
 - **Cancellation Lead Time**: Average days before pickup (track trend)
 - **Refund Rate**: Percentage of cancellations with refunds (track by policy window)
 - **Average Refund Amount**: Mean refund per cancellation (track trend)
 
 ### Processing Metrics
-- **Cancellation Processing Time**: Time from request to completion (target: <5 minutes)
-- **Refund Processing Time**: Time to issue refund (target: <24 hours)
+- **Cancellation Processing Time**: Time from request to completion (target: &lt;5 minutes)
+- **Refund Processing Time**: Time to issue refund (target: &lt;24 hours)
 - **Refund Success Rate**: Percentage of refunds processed successfully (target: >98%)
-- **Manual Intervention Rate**: Percentage requiring manual processing (target: <5%)
+- **Manual Intervention Rate**: Percentage requiring manual processing (target: &lt;5%)
 
 ### Customer Impact Metrics
 - **Cancellation Satisfaction**: Customer rating of cancellation experience (target: >4.0/5)
-- **Dispute Rate**: Percentage of cancellations disputed (target: <5%)
+- **Dispute Rate**: Percentage of cancellations disputed (target: &lt;5%)
 - **Rebook Rate**: Percentage who rebook after cancelling (track for retention)
 - **Cancellation Reason Distribution**: Track reasons to identify patterns
 

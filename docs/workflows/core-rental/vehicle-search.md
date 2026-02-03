@@ -402,9 +402,9 @@ flowchart TD
 ## Performance Metrics
 
 ### Search Performance
-- **Search Execution Time**: Target <2 seconds for results display
-- **Filter Application Time**: Target <500ms for filter updates
-- **Page Load Time**: Target <3 seconds for initial search page
+- **Search Execution Time**: Target &lt;2 seconds for results display
+- **Filter Application Time**: Target &lt;500ms for filter updates
+- **Page Load Time**: Target &lt;3 seconds for initial search page
 
 ### User Engagement
 - **Search to View Rate**: Percentage of searches resulting in vehicle detail views (target >60%)
@@ -413,7 +413,7 @@ flowchart TD
 - **Average Vehicles Viewed**: Number of vehicle details viewed per search (track for engagement)
 
 ### Search Quality
-- **Zero Results Rate**: Percentage of searches returning no results (target <10%)
+- **Zero Results Rate**: Percentage of searches returning no results (target &lt;10%)
 - **Search Refinement Rate**: Percentage of users modifying search criteria (track for usability)
 - **Average Results Per Search**: Number of vehicles returned (track for inventory health)
 

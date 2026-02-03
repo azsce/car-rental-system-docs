@@ -192,22 +192,22 @@ Corporate clients are businesses and organizations that rent vehicles for their 
 3. **Insurance Compliance**: Correct coverage selection (target: >95%)
 4. **Audit Pass Rate**: Clean audits with no findings (target: 100%)
 5. **License Verification Rate**: Validated driver licenses (target: 100%)
-6. **Unauthorized Driver Incidents**: Violations of driver policies (target: <1%)
+6. **Unauthorized Driver Incidents**: Violations of driver policies (target: &lt;1%)
 
 ### Efficiency Metrics
-1. **Booking Time**: Average time for employee to complete booking (target: <5 minutes)
-2. **Approval Cycle Time**: Time from request to approval (target: <2 hours)
-3. **Reconciliation Time**: Hours to process monthly invoice (target: <4 hours)
+1. **Booking Time**: Average time for employee to complete booking (target: &lt;5 minutes)
+2. **Approval Cycle Time**: Time from request to approval (target: &lt;2 hours)
+3. **Reconciliation Time**: Hours to process monthly invoice (target: &lt;4 hours)
 4. **Self-Service Rate**: Employee bookings without travel desk (target: >80%)
 5. **Integration Uptime**: Availability of API connections (target: >99.5%)
-6. **Report Generation Time**: Time to create custom reports (target: <2 minutes)
+6. **Report Generation Time**: Time to create custom reports (target: &lt;2 minutes)
 
 ### Service Quality Metrics
 1. **Corporate NPS**: Net Promoter Score from travel managers (target: >60)
 2. **Employee Satisfaction**: Rental experience rating (target: >4.5/5)
-3. **Account Manager Responsiveness**: Response time to inquiries (target: <4 hours)
-4. **Issue Resolution Time**: Time to resolve corporate issues (target: <24 hours)
-5. **Service Consistency**: Rating variance across locations (target: <0.5 points)
+3. **Account Manager Responsiveness**: Response time to inquiries (target: &lt;4 hours)
+4. **Issue Resolution Time**: Time to resolve corporate issues (target: &lt;24 hours)
+5. **Service Consistency**: Rating variance across locations (target: &lt;0.5 points)
 6. **Contract Compliance**: Negotiated terms honored (target: >98%)
 
 ### Utilization Metrics
@@ -219,10 +219,10 @@ Corporate clients are businesses and organizations that rent vehicles for their 
 6. **Preferred Supplier Compliance**: Rentals with contracted supplier (target: >85%)
 
 ### Risk Management Metrics
-1. **Incident Rate**: Accidents or issues per 1000 rental days (target: <5)
-2. **Damage Dispute Rate**: Contested damage charges (target: <1%)
-3. **Insurance Claim Rate**: Claims filed per 1000 rentals (target: <2)
-4. **Employee Stranded Rate**: Breakdowns requiring assistance (target: <0.5%)
+1. **Incident Rate**: Accidents or issues per 1000 rental days (target: &lt;5)
+2. **Damage Dispute Rate**: Contested damage charges (target: &lt;1%)
+3. **Insurance Claim Rate**: Claims filed per 1000 rentals (target: &lt;2)
+4. **Employee Stranded Rate**: Breakdowns requiring assistance (target: &lt;0.5%)
 5. **Data Breach Incidents**: Security or privacy violations (target: 0)
 6. **Contract Disputes**: Disagreements requiring legal review (target: 0)
 

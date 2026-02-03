@@ -601,12 +601,12 @@ flowchart TD
 - **Authorization Success Rate**: Percentage of authorizations approved (target >90%)
 - **Capture Success Rate**: Percentage of captures successful (target >99%)
 - **Refund Success Rate**: Percentage of refunds processed successfully (target >98%)
-- **Average Transaction Time**: Time from submission to confirmation (target <5 seconds)
+- **Average Transaction Time**: Time from submission to confirmation (target &lt;5 seconds)
 
 ### Security Metrics
 - **Fraud Detection Rate**: Percentage of fraudulent transactions caught (target >95%)
-- **False Positive Rate**: Legitimate transactions flagged as fraud (target <5%)
-- **Chargeback Rate**: Disputed transactions (target <0.5%)
+- **False Positive Rate**: Legitimate transactions flagged as fraud (target &lt;5%)
+- **Chargeback Rate**: Disputed transactions (target &lt;0.5%)
 - **PCI Compliance Score**: Compliance audit results (target: 100%)
 
 ### User Experience Metrics
@@ -617,7 +617,7 @@ flowchart TD
 
 ### Financial Metrics
 - **Average Transaction Value**: Revenue per transaction (track trend)
-- **Refund Rate**: Percentage of transactions refunded (target <5%)
+- **Refund Rate**: Percentage of transactions refunded (target &lt;5%)
 - **Processing Costs**: Payment gateway fees per transaction (optimize)
 - **Settlement Time**: Time to receive funds (track for cash flow)
 

@@ -144,18 +144,18 @@ Vehicle suppliers are manufacturers, dealerships, and leasing companies that pro
 
 ### Financial Metrics
 1. **Gross Margin**: Profit margin on fleet sales (track vs. retail margins)
-2. **Days Sales Outstanding**: Time to receive payment (target: <45 days)
-3. **Residual Value Accuracy**: Buyback price vs. actual resale value (target: <5% variance)
+2. **Days Sales Outstanding**: Time to receive payment (target: &lt;45 days)
+3. **Residual Value Accuracy**: Buyback price vs. actual resale value (target: &lt;5% variance)
 4. **Remarketing Profit**: Profit on resold vehicles (track trend)
 5. **Warranty Costs**: Warranty claims per vehicle (track vs. retail average)
 6. **Customer Lifetime Value**: Total revenue per rental company relationship (track trend)
 
 ### Operational Metrics
-1. **Order-to-Delivery Time**: Days from order to delivery (target: <60 days)
+1. **Order-to-Delivery Time**: Days from order to delivery (target: &lt;60 days)
 2. **Delivery Accuracy**: Vehicles delivered as ordered (target: >98%)
-3. **Quality Defect Rate**: Vehicles rejected at delivery (target: <1%)
+3. **Quality Defect Rate**: Vehicles rejected at delivery (target: &lt;1%)
 4. **Documentation Accuracy**: Correct titles and paperwork (target: >99%)
-5. **Recall Response Time**: Days to notify and schedule recall repairs (target: <7 days)
+5. **Recall Response Time**: Days to notify and schedule recall repairs (target: &lt;7 days)
 6. **Parts Availability**: In-stock rate for common parts (target: >95%)
 
 ### Relationship Metrics
@@ -163,7 +163,7 @@ Vehicle suppliers are manufacturers, dealerships, and leasing companies that pro
 2. **Contract Renewal Rate**: Contracts renewed vs. lost (target: >80%)
 3. **Share of Wallet**: Percentage of rental company's fleet purchases (track trend)
 4. **Referral Rate**: Rental companies recommending supplier (track trend)
-5. **Issue Resolution Time**: Time to resolve problems (target: <48 hours)
+5. **Issue Resolution Time**: Time to resolve problems (target: &lt;48 hours)
 6. **Communication Frequency**: Regular touchpoints with rental company (target: monthly)
 
 ## Relationship to Features

@@ -545,11 +545,11 @@ sequenceDiagram
 - **Booking Completion Rate**: Percentage of initiated bookings completed (target >70%)
 - **Payment Success Rate**: Percentage of payment attempts successful (target >95%)
 - **Abandonment Rate**: Percentage of bookings abandoned at each step (track for optimization)
-- **Time to Complete**: Average time from initiation to confirmation (target <5 minutes)
+- **Time to Complete**: Average time from initiation to confirmation (target &lt;5 minutes)
 
 ### User Experience Metrics
 - **Form Completion Time**: Time spent on each step (track for friction points)
-- **Error Rate**: Percentage of bookings with validation errors (target <10%)
+- **Error Rate**: Percentage of bookings with validation errors (target &lt;10%)
 - **Retry Rate**: Percentage of users retrying after errors (track for UX issues)
 - **Guest vs Account**: Percentage of guest vs logged-in bookings (track for account value)
 

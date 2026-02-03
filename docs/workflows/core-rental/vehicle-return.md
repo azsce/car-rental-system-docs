@@ -239,7 +239,7 @@ Complete the vehicle return process efficiently and fairly, ensuring the vehicle
 **No Charge Damage**:
 - Normal wear and tear
 - Pre-existing damage from pickup inspection
-- Minor scratches under threshold (e.g., <2 inches)
+- Minor scratches under threshold (e.g., &lt;2 inches)
 
 **Minor Damage** (covered by deposit):
 - Small scratches or scuffs
@@ -732,27 +732,27 @@ flowchart TD
 ## Performance Metrics
 
 ### Efficiency Metrics
-- **Average Return Time**: Time from arrival to departure (target <10 minutes)
-- **Inspection Time**: Time to complete vehicle inspection (target <5 minutes)
-- **Queue Wait Time**: Time customer waits before being served (target <3 minutes)
+- **Average Return Time**: Time from arrival to departure (target &lt;10 minutes)
+- **Inspection Time**: Time to complete vehicle inspection (target &lt;5 minutes)
+- **Queue Wait Time**: Time customer waits before being served (target &lt;3 minutes)
 - **After-Hours Return Rate**: Percentage using after-hours drop-off (track for staffing)
 
 ### Quality Metrics
 - **Return Satisfaction**: Customer rating of return experience (target >4.5/5)
-- **Damage Dispute Rate**: Percentage of returns with disputed damage (target <2%)
+- **Damage Dispute Rate**: Percentage of returns with disputed damage (target &lt;2%)
 - **Billing Accuracy**: Percentage of returns with correct final charges (target >98%)
-- **Deposit Release Time**: Days to release deposit (target <7 days)
+- **Deposit Release Time**: Days to release deposit (target &lt;7 days)
 
 ### Financial Metrics
 - **Additional Charges Rate**: Percentage of returns with additional charges (track trend)
 - **Average Additional Charges**: Amount of additional charges per return (track trend)
-- **Fuel Charge Rate**: Percentage charged for fuel (target <20%)
-- **Damage Charge Rate**: Percentage charged for damage (target <5%)
+- **Fuel Charge Rate**: Percentage charged for fuel (target &lt;20%)
+- **Damage Charge Rate**: Percentage charged for damage (target &lt;5%)
 
 ### Operational Metrics
-- **Late Return Rate**: Percentage of returns past scheduled time (target <10%)
-- **Cleaning Fee Rate**: Percentage charged cleaning fees (target <5%)
-- **Missing Equipment Rate**: Percentage with missing items (target <1%)
+- **Late Return Rate**: Percentage of returns past scheduled time (target &lt;10%)
+- **Cleaning Fee Rate**: Percentage charged cleaning fees (target &lt;5%)
+- **Missing Equipment Rate**: Percentage with missing items (target &lt;1%)
 - **Vehicle Turnaround Time**: Time from return to available for next rental (track for optimization)
 
 ## Related Workflows

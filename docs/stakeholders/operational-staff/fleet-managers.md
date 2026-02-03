@@ -199,9 +199,9 @@ Fleet managers are responsible for the physical vehicle inventory that forms the
 ### Utilization Metrics
 1. **Fleet Utilization Rate**: Percentage of days vehicles are rented (target: >75%)
 2. **Revenue Per Vehicle Per Day**: Average daily revenue (track trend, aim to increase)
-3. **Idle Days**: Average days vehicles sit unused (target: <7 days/month)
-4. **Overbooking Rate**: Bookings without available vehicles (target: <2%)
-5. **Upgrade Rate**: Free upgrades due to unavailability (target: <10%)
+3. **Idle Days**: Average days vehicles sit unused (target: &lt;7 days/month)
+4. **Overbooking Rate**: Bookings without available vehicles (target: &lt;2%)
+5. **Upgrade Rate**: Free upgrades due to unavailability (target: &lt;10%)
 6. **Rebalancing Frequency**: Vehicles moved between locations (track cost)
 
 ### Financial Metrics
@@ -214,33 +214,33 @@ Fleet managers are responsible for the physical vehicle inventory that forms the
 
 ### Quality Metrics
 1. **Vehicle Condition Score**: Customer rating of vehicle quality (target: >4.7/5)
-2. **Breakdown Rate**: Mechanical failures per 1000 rental days (target: <0.5)
+2. **Breakdown Rate**: Mechanical failures per 1000 rental days (target: &lt;0.5)
 3. **Cleanliness Rating**: Customer rating of vehicle cleanliness (target: >4.8/5)
-4. **Damage Frequency**: Damage incidents per 1000 rentals (target: <5)
+4. **Damage Frequency**: Damage incidents per 1000 rentals (target: &lt;5)
 5. **Recall Compliance**: Vehicles with open recalls (target: 0)
 6. **Inspection Pass Rate**: Vehicles passing quality checks (target: >98%)
 
 ### Maintenance Metrics
 1. **Preventive Maintenance Compliance**: On-time preventive service (target: >95%)
-2. **Average Downtime**: Days vehicles unavailable for maintenance (target: <2 days)
-3. **Maintenance Cost Variance**: Actual vs. budgeted costs (target: <10% variance)
+2. **Average Downtime**: Days vehicles unavailable for maintenance (target: &lt;2 days)
+3. **Maintenance Cost Variance**: Actual vs. budgeted costs (target: &lt;10% variance)
 4. **Vendor Performance**: Service quality and timeliness (target: >4.5/5)
-5. **Parts Availability**: Delays due to parts shortages (target: <5%)
+5. **Parts Availability**: Delays due to parts shortages (target: &lt;5%)
 6. **Warranty Recovery**: Costs recovered through warranties (track percentage)
 
 ### Operational Metrics
 1. **Fleet Availability**: Percentage of fleet ready to rent (target: >90%)
 2. **Rebalancing Cost**: Cost to move vehicles between locations (track trend)
 3. **Acquisition Lead Time**: Days from order to in-service (track trend)
-4. **Disposition Cycle Time**: Days from decision to sale (target: <30 days)
-5. **Fleet Age**: Average age of vehicles in fleet (target: <24 months)
+4. **Disposition Cycle Time**: Days from decision to sale (target: &lt;30 days)
+5. **Fleet Age**: Average age of vehicles in fleet (target: &lt;24 months)
 6. **Fleet Size Optimization**: Vehicles vs. demand (track right-sizing)
 
 ### Compliance Metrics
 1. **Registration Compliance**: Vehicles with current registration (target: 100%)
 2. **Insurance Coverage**: Vehicles with active insurance (target: 100%)
 3. **Safety Inspection Compliance**: Vehicles passing required inspections (target: 100%)
-4. **Recall Response Time**: Days to address recalls (target: <30 days)
+4. **Recall Response Time**: Days to address recalls (target: &lt;30 days)
 5. **Audit Findings**: Issues identified in compliance audits (target: 0 critical)
 6. **Documentation Completeness**: Required records maintained (target: 100%)
 

@@ -444,14 +444,14 @@ flowchart TD
 ## Performance Metrics
 
 ### Operational Metrics
-- **Account Creation Time**: Average time to create user (target: <3 minutes)
-- **Password Reset Time**: Time to process reset request (target: <1 minute)
+- **Account Creation Time**: Average time to create user (target: &lt;3 minutes)
+- **Password Reset Time**: Time to process reset request (target: &lt;1 minute)
 - **Bulk Operation Speed**: Users processed per minute (target: >100)
-- **Search Performance**: Time to find user (target: <2 seconds)
+- **Search Performance**: Time to find user (target: &lt;2 seconds)
 
 ### Security Metrics
 - **Failed Login Rate**: Percentage of failed login attempts (track for security)
-- **Account Lockout Rate**: Accounts locked due to failed logins (target: <1%)
+- **Account Lockout Rate**: Accounts locked due to failed logins (target: &lt;1%)
 - **Unauthorized Access Attempts**: Blocked access attempts (target: 0 successful)
 - **Password Reset Frequency**: Resets per user per year (track trend)
 

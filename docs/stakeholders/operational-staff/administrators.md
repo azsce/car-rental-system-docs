@@ -200,41 +200,41 @@ System administrators are the technical and operational staff responsible for ma
 ## Success Metrics
 
 ### Operational Efficiency Metrics
-1. **Task Completion Time**: Average time to complete common admin tasks (target: <5 minutes)
+1. **Task Completion Time**: Average time to complete common admin tasks (target: &lt;5 minutes)
 2. **Automation Rate**: Percentage of tasks automated vs. manual (target: >60%)
-3. **Error Rate**: Admin errors requiring correction (target: <2%)
+3. **Error Rate**: Admin errors requiring correction (target: &lt;2%)
 4. **Productivity**: Tasks completed per admin per day (track trend)
-5. **Training Time**: Hours to onboard new administrators (target: <16 hours)
+5. **Training Time**: Hours to onboard new administrators (target: &lt;16 hours)
 6. **Self-Service Rate**: Issues resolved without vendor support (target: >80%)
 
 ### Data Quality Metrics
 1. **Data Accuracy**: Percentage of records with correct information (target: >99%)
-2. **Duplicate Rate**: Duplicate entries in system (target: <0.5%)
+2. **Duplicate Rate**: Duplicate entries in system (target: &lt;0.5%)
 3. **Completeness**: Records with all required fields populated (target: >98%)
 4. **Validation Errors**: Data entry errors caught by system (track trend)
-5. **Data Freshness**: Time lag between real-world changes and system updates (target: <1 hour)
+5. **Data Freshness**: Time lag between real-world changes and system updates (target: &lt;1 hour)
 6. **Cleanup Frequency**: Data quality audits performed (target: monthly)
 
 ### System Performance Metrics
-1. **Admin Interface Response Time**: Page load times (target: <2 seconds)
-2. **Report Generation Time**: Time to create reports (target: <30 seconds)
-3. **Bulk Operation Speed**: Time to process batch updates (target: <5 minutes for 1000 records)
+1. **Admin Interface Response Time**: Page load times (target: &lt;2 seconds)
+2. **Report Generation Time**: Time to create reports (target: &lt;30 seconds)
+3. **Bulk Operation Speed**: Time to process batch updates (target: &lt;5 minutes for 1000 records)
 4. **System Uptime**: Platform availability (target: >99.9%)
-5. **Error Rate**: System errors encountered by admins (target: <0.1% of operations)
+5. **Error Rate**: System errors encountered by admins (target: &lt;0.1% of operations)
 6. **Concurrent Users**: Number of admins working simultaneously (track capacity)
 
 ### Support Metrics
-1. **Issue Resolution Time**: Average time to resolve admin-reported issues (target: <4 hours)
+1. **Issue Resolution Time**: Average time to resolve admin-reported issues (target: &lt;4 hours)
 2. **First-Contact Resolution**: Issues resolved without escalation (target: >70%)
 3. **Support Ticket Volume**: Admin support requests per month (track trend, aim to decrease)
 4. **Knowledge Base Usage**: Percentage using self-service resources (target: >60%)
-5. **Escalation Rate**: Issues requiring vendor support (target: <10%)
+5. **Escalation Rate**: Issues requiring vendor support (target: &lt;10%)
 6. **Admin Satisfaction**: Rating of admin tools and support (target: >4.5/5)
 
 ### Business Impact Metrics
-1. **Booking Processing Time**: Time from customer request to confirmed booking (target: <2 minutes)
-2. **Customer Issue Resolution**: Time to resolve customer problems (target: <24 hours)
-3. **Revenue Impact**: Revenue lost due to admin errors or delays (target: <0.1% of total revenue)
+1. **Booking Processing Time**: Time from customer request to confirmed booking (target: &lt;2 minutes)
+2. **Customer Issue Resolution**: Time to resolve customer problems (target: &lt;24 hours)
+3. **Revenue Impact**: Revenue lost due to admin errors or delays (target: &lt;0.1% of total revenue)
 4. **Compliance Rate**: Adherence to regulatory requirements (target: 100%)
 5. **Audit Findings**: Issues identified in audits (target: 0 critical findings)
 6. **Cost Per Admin**: Total admin tool costs per administrator (track trend)

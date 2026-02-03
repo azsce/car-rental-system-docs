@@ -149,36 +149,36 @@ Insurance providers offer coverage for the car rental company's fleet, liability
 ## Success Metrics
 
 ### Financial Metrics
-1. **Loss Ratio**: Claims paid vs. premiums collected (target: <70%)
-2. **Combined Ratio**: Loss ratio + expense ratio (target: <100%)
+1. **Loss Ratio**: Claims paid vs. premiums collected (target: &lt;70%)
+2. **Combined Ratio**: Loss ratio + expense ratio (target: &lt;100%)
 3. **Premium Growth**: Year-over-year premium revenue increase (track trend)
 4. **Average Premium**: Premium per vehicle or per rental (track trend)
 5. **Claims Severity**: Average cost per claim (track trend)
-6. **Reserve Accuracy**: Actual vs. estimated claim costs (target: <10% variance)
+6. **Reserve Accuracy**: Actual vs. estimated claim costs (target: &lt;10% variance)
 
 ### Operational Metrics
-1. **Claims Processing Time**: Days from report to settlement (target: <30 days)
+1. **Claims Processing Time**: Days from report to settlement (target: &lt;30 days)
 2. **First Notice of Loss (FNOL) Time**: Hours from incident to report (track trend)
 3. **Claim Approval Rate**: Claims approved vs. denied (track trend)
 4. **Fraud Detection Rate**: Fraudulent claims identified (track percentage)
 5. **Subrogation Recovery**: Amount recovered from third parties (track percentage)
-6. **Policy Issuance Time**: Time to activate new policies (target: <24 hours)
+6. **Policy Issuance Time**: Time to activate new policies (target: &lt;24 hours)
 
 ### Customer Satisfaction Metrics
 1. **Claims Satisfaction**: Customer rating of claims experience (target: >4.0/5)
 2. **Rental Company Satisfaction**: Rating from rental company partners (target: >4.5/5)
-3. **Complaint Rate**: Complaints per 1000 claims (target: <5)
-4. **Dispute Rate**: Claims disputed by customers (target: <10%)
+3. **Complaint Rate**: Complaints per 1000 claims (target: &lt;5)
+4. **Dispute Rate**: Claims disputed by customers (target: &lt;10%)
 5. **Renewal Rate**: Policies renewed vs. lost (target: >85%)
 6. **Referral Rate**: Rental companies recommending insurer (track trend)
 
 ### Risk Management Metrics
 1. **Claims Frequency**: Claims per 1000 rental days (track trend)
-2. **Total Loss Rate**: Vehicles declared total loss (target: <0.5%)
+2. **Total Loss Rate**: Vehicles declared total loss (target: &lt;0.5%)
 3. **Bodily Injury Claims**: Injury claims per 1000 rentals (track trend)
-4. **Theft Rate**: Stolen vehicles per 1000 rentals (target: <0.1%)
-5. **Fraud Rate**: Fraudulent claims as percentage of total (target: <5%)
-6. **Litigation Rate**: Claims resulting in lawsuits (target: <2%)
+4. **Theft Rate**: Stolen vehicles per 1000 rentals (target: &lt;0.1%)
+5. **Fraud Rate**: Fraudulent claims as percentage of total (target: &lt;5%)
+6. **Litigation Rate**: Claims resulting in lawsuits (target: &lt;2%)
 
 ## Relationship to Features
 

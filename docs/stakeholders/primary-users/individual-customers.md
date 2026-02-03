@@ -157,31 +157,31 @@ Individual customers represent the core user base of the car rental system. They
 5. **Referral Rate**: Customers who refer friends/family (target: >25%)
 
 ### Efficiency Metrics
-1. **Booking Completion Time**: Average time to complete reservation (target: <5 minutes)
+1. **Booking Completion Time**: Average time to complete reservation (target: &lt;5 minutes)
 2. **Search to Booking Conversion**: Percentage who book after searching (target: >15%)
 3. **Mobile Booking Rate**: Percentage of bookings via mobile (target: >60%)
-4. **Pickup Wait Time**: Average wait at counter (target: <10 minutes)
-5. **Return Processing Time**: Time to complete return (target: <5 minutes)
+4. **Pickup Wait Time**: Average wait at counter (target: &lt;10 minutes)
+5. **Return Processing Time**: Time to complete return (target: &lt;5 minutes)
 
 ### Quality Metrics
 1. **Vehicle Condition Score**: Customer rating of vehicle cleanliness/condition (target: >4.7/5)
 2. **Accuracy Rate**: Vehicle matches description (target: >98%)
-3. **Breakdown Rate**: Mechanical issues during rental (target: <0.5%)
-4. **Damage Dispute Rate**: Contested damage charges (target: <2%)
+3. **Breakdown Rate**: Mechanical issues during rental (target: &lt;0.5%)
+4. **Damage Dispute Rate**: Contested damage charges (target: &lt;2%)
 5. **Billing Accuracy**: Correct charges on first invoice (target: >97%)
 
 ### Support Metrics
-1. **First Response Time**: Time to initial support response (target: <2 hours)
-2. **Resolution Time**: Average time to resolve issues (target: <24 hours)
+1. **First Response Time**: Time to initial support response (target: &lt;2 hours)
+2. **Resolution Time**: Average time to resolve issues (target: &lt;24 hours)
 3. **Support Satisfaction**: Rating of support interactions (target: >4.5/5)
 4. **Self-Service Rate**: Issues resolved without agent contact (target: >70%)
-5. **Escalation Rate**: Issues requiring management intervention (target: <5%)
+5. **Escalation Rate**: Issues requiring management intervention (target: &lt;5%)
 
 ### Financial Metrics
 1. **Average Booking Value**: Revenue per reservation (track trend)
 2. **Upsell Acceptance Rate**: Percentage accepting add-ons (target: >30%)
-3. **Refund Rate**: Percentage of bookings refunded (target: <5%)
-4. **Chargeback Rate**: Payment disputes (target: <0.5%)
+3. **Refund Rate**: Percentage of bookings refunded (target: &lt;5%)
+4. **Chargeback Rate**: Payment disputes (target: &lt;0.5%)
 5. **Lifetime Value (LTV)**: Total revenue per customer over lifetime (track trend)
 
 ### Engagement Metrics

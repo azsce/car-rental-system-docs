@@ -368,7 +368,7 @@ flowchart TD
 
 ### Operational Metrics
 - **Pricing Update Frequency**: Updates per month (track trend)
-- **Update Processing Time**: Time to apply pricing changes (target: <5 minutes)
+- **Update Processing Time**: Time to apply pricing changes (target: &lt;5 minutes)
 - **Pricing Accuracy**: Percentage of updates without errors (target: >98%)
 - **Discount Redemption Rate**: Percentage of codes used (track by campaign)
 

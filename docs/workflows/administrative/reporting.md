@@ -471,10 +471,10 @@ flowchart TD
 ## Performance Metrics
 
 ### Report Generation Metrics
-- **Average Generation Time**: Time to create reports (target: <30 seconds)
+- **Average Generation Time**: Time to create reports (target: &lt;30 seconds)
 - **Report Success Rate**: Percentage generated without errors (target: >98%)
-- **Timeout Rate**: Percentage of reports timing out (target: <2%)
-- **Data Freshness**: Time lag between data and reports (target: <1 hour)
+- **Timeout Rate**: Percentage of reports timing out (target: &lt;2%)
+- **Data Freshness**: Time lag between data and reports (target: &lt;1 hour)
 
 ### Usage Metrics
 - **Reports Generated**: Total reports per period (track trend)

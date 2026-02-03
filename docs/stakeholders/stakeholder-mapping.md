@@ -347,7 +347,7 @@ All features documented in the [Features](../features/) section are mapped to st
 The car rental system is successful when:
 
 1. **Customer Satisfaction**: >4.5/5 rating from all primary user groups
-2. **Operational Efficiency**: <5 minutes average task completion time for staff
+2. **Operational Efficiency**: &lt;5 minutes average task completion time for staff
 3. **Business Viability**: Positive ROI for all stakeholder partnerships
 4. **System Reliability**: >99.9% uptime for all stakeholder interactions
 5. **Compliance**: 100% adherence to regulatory requirements affecting all stakeholders

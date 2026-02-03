@@ -185,7 +185,7 @@ Subscription users are customers who opt for recurring rental arrangements rathe
 
 ### Subscription Health Metrics
 1. **Subscriber Growth Rate**: Monthly new subscriber acquisition (target: >10% MoM)
-2. **Churn Rate**: Monthly subscription cancellations (target: <5%)
+2. **Churn Rate**: Monthly subscription cancellations (target: &lt;5%)
 3. **Retention Rate**: Subscribers active after 12 months (target: >70%)
 4. **Lifetime Value (LTV)**: Total revenue per subscriber (track trend)
 5. **Average Subscription Length**: Months before cancellation (target: >18 months)
@@ -203,9 +203,9 @@ Subscription users are customers who opt for recurring rental arrangements rathe
 1. **Average Revenue Per User (ARPU)**: Monthly revenue per subscriber (track trend)
 2. **Overage Revenue**: Income from usage beyond allowance (target: 15-25% of ARPU)
 3. **Upgrade Rate**: Subscribers moving to higher tiers (target: >20% annually)
-4. **Downgrade Rate**: Subscribers moving to lower tiers (target: <10% annually)
+4. **Downgrade Rate**: Subscribers moving to lower tiers (target: &lt;10% annually)
 5. **Payment Success Rate**: Successful recurring billing (target: >98%)
-6. **Deposit Return Time**: Days to refund deposits after cancellation (target: <7 days)
+6. **Deposit Return Time**: Days to refund deposits after cancellation (target: &lt;7 days)
 
 ### Satisfaction Metrics
 1. **Subscriber NPS**: Net Promoter Score (target: >60)
@@ -217,19 +217,19 @@ Subscription users are customers who opt for recurring rental arrangements rathe
 
 ### Operational Metrics
 1. **Signup Completion Rate**: Applications that become active subscriptions (target: >60%)
-2. **Approval Time**: Hours from application to approval (target: <24 hours)
+2. **Approval Time**: Hours from application to approval (target: &lt;24 hours)
 3. **Vehicle Availability**: Percentage of booking requests fulfilled (target: >90%)
-4. **Pickup Wait Time**: Minutes from arrival to departure (target: <5 minutes)
-5. **Return Processing Time**: Minutes to complete return (target: <3 minutes)
-6. **Support Response Time**: Time to first response (target: <1 hour)
+4. **Pickup Wait Time**: Minutes from arrival to departure (target: &lt;5 minutes)
+5. **Return Processing Time**: Minutes to complete return (target: &lt;3 minutes)
+6. **Support Response Time**: Time to first response (target: &lt;1 hour)
 
 ### Quality Metrics
 1. **Vehicle Condition Score**: Subscriber rating of vehicle quality (target: >4.7/5)
-2. **Breakdown Rate**: Mechanical issues per 1000 trips (target: <0.3%)
+2. **Breakdown Rate**: Mechanical issues per 1000 trips (target: &lt;0.3%)
 3. **Cleanliness Rating**: Vehicle cleanliness score (target: >4.8/5)
 4. **Billing Accuracy**: Correct charges on first invoice (target: >99%)
-5. **Dispute Rate**: Contested charges per 100 trips (target: <1)
-6. **Damage Claim Rate**: Damage charges per 1000 trips (target: <2)
+5. **Dispute Rate**: Contested charges per 100 trips (target: &lt;1)
+6. **Damage Claim Rate**: Damage charges per 1000 trips (target: &lt;2)
 
 ## Relationship to Features
 

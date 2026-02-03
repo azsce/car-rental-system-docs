@@ -620,14 +620,14 @@ flowchart TD
 ## Performance Metrics
 
 ### Operational Metrics
-- **Vehicle Addition Time**: Average time to add new vehicle (target: <10 minutes)
+- **Vehicle Addition Time**: Average time to add new vehicle (target: &lt;10 minutes)
 - **Update Frequency**: Average updates per vehicle per month (track trend)
 - **Data Completeness**: Percentage of vehicles with all optional fields (target: >80%)
 - **Image Quality**: Percentage of vehicles with 5+ images (target: >90%)
 
 ### Data Quality Metrics
 - **Duplicate Rate**: Vehicles with duplicate information (target: 0%)
-- **Validation Error Rate**: Percentage of save attempts with errors (target: <5%)
+- **Validation Error Rate**: Percentage of save attempts with errors (target: &lt;5%)
 - **Pricing Accuracy**: Vehicles with correct pricing structure (target: 100%)
 - **Information Currency**: Days since last vehicle update (track average)
 

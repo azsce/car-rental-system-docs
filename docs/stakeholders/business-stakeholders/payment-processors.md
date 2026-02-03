@@ -179,29 +179,29 @@ Payment processors are financial technology companies that enable the car rental
 1. **Transaction Volume**: Number of transactions processed (track trend)
 2. **Transaction Value**: Total dollar amount processed (track trend)
 3. **Authorization Rate**: Successful authorizations vs. attempts (target: >95%)
-4. **Decline Rate**: Declined transactions (target: <5%)
+4. **Decline Rate**: Declined transactions (target: &lt;5%)
 5. **Average Transaction Size**: Mean transaction amount (track trend)
 6. **Payment Method Mix**: Distribution across card types and methods (track trend)
 
 ### Financial Metrics
 1. **Processing Revenue**: Total fees collected (track trend)
 2. **Revenue Per Transaction**: Average fee per transaction (track trend)
-3. **Chargeback Ratio**: Chargebacks vs. total transactions (target: <0.5%)
+3. **Chargeback Ratio**: Chargebacks vs. total transactions (target: &lt;0.5%)
 4. **Refund Rate**: Refunds as percentage of transactions (track trend)
-5. **Settlement Time**: Days from transaction to merchant payout (target: <3 days)
+5. **Settlement Time**: Days from transaction to merchant payout (target: &lt;3 days)
 6. **Reserve Ratio**: Funds held in reserve (track percentage)
 
 ### Operational Metrics
 1. **System Uptime**: Payment system availability (target: >99.95%)
-2. **Authorization Response Time**: Milliseconds to authorize (target: <500ms)
+2. **Authorization Response Time**: Milliseconds to authorize (target: &lt;500ms)
 3. **Settlement Accuracy**: Correct settlements (target: >99.9%)
-4. **API Error Rate**: Failed API calls (target: <0.1%)
+4. **API Error Rate**: Failed API calls (target: &lt;0.1%)
 5. **Webhook Delivery Rate**: Successful webhook deliveries (target: >99%)
-6. **Support Response Time**: Time to first response (target: <2 hours)
+6. **Support Response Time**: Time to first response (target: &lt;2 hours)
 
 ### Security & Compliance Metrics
-1. **Fraud Rate**: Fraudulent transactions detected (target: <0.1%)
-2. **False Positive Rate**: Legitimate transactions flagged as fraud (target: <2%)
+1. **Fraud Rate**: Fraudulent transactions detected (target: &lt;0.1%)
+2. **False Positive Rate**: Legitimate transactions flagged as fraud (target: &lt;2%)
 3. **PCI Compliance**: Merchant compliance status (target: 100%)
 4. **Security Incidents**: Breaches or compromises (target: 0)
 5. **Chargeback Win Rate**: Disputes won by merchant (track percentage)

@@ -1,104 +1,110 @@
-# Car Rental System Planning & Analysis
+# Car Rental System Documentation
 
-Comprehensive requirements engineering and system design documentation for a modern car rental platform graduation project.
+Comprehensive requirements engineering and system design documentation for a modern car rental management platform. This project includes stakeholder analysis, workflow documentation, competitive analysis, and best practices research.
 
-## Overview
+## 🚗 About
 
-This project contains the planning and analysis phase documentation for a full-stack car rental system. It includes:
+This documentation site is built with [Docusaurus](https://docusaurus.io/) and serves as a complete requirements specification and analysis for a car rental system. It includes:
 
-- Analysis of three open-source car rental projects (bookcars, car-rental-php, FreeCar)
-- Market research on industry standards and best practices
-- Stakeholder identification and analysis
-- User workflows with visual Mermaid diagrams
-- Comprehensive feature catalog
-- Formal EARS-compliant requirements specification
+- **Stakeholder Analysis**: Detailed profiles of primary users, operational staff, and business stakeholders
+- **Workflow Documentation**: Core rental workflows, administrative processes, and exceptional scenarios
+- **Competitive Analysis**: In-depth analysis of BookCars, FreeCar, and Car Rental PHP platforms
+- **Market Research**: Industry standards, best practices, and emerging trends
+- **Requirements Engineering**: Functional and non-functional requirements with use cases
 
-## Project Structure
+## 🌐 Live Site
 
-```
-.
-├── docs/                           # Documentation content
-│   ├── intro.md                    # Landing page
-│   ├── methodology/                # Analysis approach
-│   ├── analysis/                   # Open-source project analysis
-│   ├── research/                   # Market research findings
-│   ├── stakeholders/               # Stakeholder analysis
-│   ├── workflows/                  # User scenarios and workflows
-│   ├── features/                   # Feature catalog
-│   ├── requirements/               # Requirements specification
-│   └── appendices/                 # Glossary, references, traceability
-├── cloned-opensource-projects/     # Reference implementations
-│   ├── bookcars/                   # Multi-platform Node.js solution
-│   ├── car-rental-php/             # PHP monolithic implementation
-│   └── FreeCar/                    # Go microservices architecture
-├── src/                            # Docusaurus theme customization
-├── static/                         # Static assets (images, diagrams)
-├── docusaurus.config.ts            # Docusaurus configuration
-├── sidebars.ts                     # Sidebar navigation structure
-└── package.json                    # Dependencies and scripts
-```
+Visit the documentation at: [https://azsce.github.io/car-rental-system-docs/](https://azsce.github.io/car-rental-system-docs/)
 
-## Prerequisites
+## 🚀 Getting Started
 
-- **Bun** v1.0 or higher (package manager)
-- **Node.js** v20.0 or higher
-- **Prince XML** (optional, for PDF export)
+### Prerequisites
 
-## Installation
+- Node.js 20.0 or higher
+- npm, yarn, or bun
 
-Install dependencies using Bun:
+### Installation
 
 ```bash
+npm install
+# or
 bun install
 ```
 
-## Development
-
-Start the development server with hot reload:
+### Local Development
 
 ```bash
+npm start
+# or
 bun start
 ```
 
-The documentation site will be available at `http://localhost:3000`.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Building
-
-Generate a production-ready static site:
+### Build
 
 ```bash
+npm run build
+# or
 bun run build
 ```
 
-The built site will be in the `build/` directory.
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Serving Built Site
-
-Preview the production build locally:
+### Serve Production Build
 
 ```bash
+npm run serve
+# or
 bun run serve
 ```
 
-## PDF Export
+## 📁 Project Structure
 
-Generate a PDF version of the complete documentation:
+```
+car-rental-system-docs/
+├── docs/                          # Documentation files
+│   ├── analysis/                  # Competitive analysis
+│   │   ├── bookcars/             # BookCars platform analysis
+│   │   ├── car-rental-php/       # Car Rental PHP analysis
+│   │   └── freecar/              # FreeCar platform analysis
+│   ├── research/                  # Market research
+│   │   ├── best-practices/       # Industry best practices
+│   │   ├── competitive-analysis/ # Competitor analysis
+│   │   ├── industry-standards/   # Standards and compliance
+│   │   └── market-trends/        # Emerging trends
+│   ├── stakeholders/             # Stakeholder documentation
+│   │   ├── primary-users/        # End users
+│   │   ├── operational-staff/    # Internal staff
+│   │   └── business-stakeholders/# Business partners
+│   └── workflows/                # Process workflows
+│       ├── core-rental/          # Main rental processes
+│       ├── administrative/       # Admin workflows
+│       └── exceptional/          # Exception handling
+├── src/                          # React components
+│   ├── components/               # Custom components
+│   ├── css/                      # Custom styles
+│   └── pages/                    # Custom pages
+├── static/                       # Static assets
+│   └── img/                      # Images and icons
+├── cloned-opensource-projects/   # Reference implementations
+│   ├── bookcars/                 # Multi-platform Node.js solution
+│   ├── car-rental-php/           # PHP monolithic implementation
+│   └── FreeCar/                  # Go microservices architecture
+├── docusaurus.config.ts          # Docusaurus configuration
+└── sidebars.ts                   # Sidebar configuration
+```
 
-1. Start the development server:
-   ```bash
-   bun start
-   ```
+## 🎨 Features
 
-2. In a separate terminal, run the PDF export:
-   ```bash
-   bun run pdf
-   ```
+- **Mermaid Diagrams**: Interactive diagrams for workflows and architecture
+- **Dark Mode**: Automatic dark mode support
+- **Search**: Built-in documentation search
+- **Mobile Responsive**: Optimized for all devices
+- **SEO Optimized**: Meta tags and social cards
+- **PDF Export**: Generate PDF documentation (requires Prince XML)
 
-The PDF will be generated as `car-rental-planning.pdf` in the project root.
-
-**Note**: PDF export requires Prince XML to be installed. Download from [https://www.princexml.com/](https://www.princexml.com/).
-
-## Documentation Standards
+## 📝 Documentation Standards
 
 ### File Organization
 
@@ -123,73 +129,72 @@ tags: [tag1, tag2, tag3]
 
 Use Mermaid for visual diagrams:
 
-- **Flowcharts**: For decision-based processes
-- **Sequence Diagrams**: For multi-actor interactions
-- **State Diagrams**: For entity lifecycles
-
-Example:
-
-\`\`\`mermaid
+```mermaid
 graph TD
     A[Start] --> B[Process]
     B --> C[End]
-\`\`\`
+```
 
-## Technology Stack
+## 🚢 Deployment
 
-- **Docusaurus**: Documentation framework
-- **React**: UI components
-- **TypeScript**: Type-safe configuration
-- **Mermaid**: Diagram generation
-- **Prince XML**: PDF export
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions.
 
-## Analyzed Projects
+### Setup GitHub Pages
+
+1. Go to repository Settings → Pages
+2. Under "Build and deployment", select "GitHub Actions" as the source
+3. Push to `main` branch to trigger deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+## 📊 Analyzed Projects
 
 ### 1. BookCars
 - **Technology**: Node.js, TypeScript, MongoDB, React
 - **Architecture**: Multi-platform (admin, frontend, backend, mobile)
-- **Location**: `cloned-opensource-projects/bookcars/`
+- **Highlights**: JWT authentication, PayPal integration, mobile apps
 
 ### 2. Car-Rental-PHP
 - **Technology**: PHP, MySQL
 - **Architecture**: Monolithic MVC
-- **Location**: `cloned-opensource-projects/car-rental-php/`
+- **Highlights**: Simple architecture, educational value
 
 ### 3. FreeCar
 - **Technology**: Go, Microservices
 - **Architecture**: Cloud-native with service mesh
-- **Location**: `cloned-opensource-projects/FreeCar/`
+- **Highlights**: Kubernetes deployment, Consul service discovery
 
-## Contributing
+## 🛠️ Built With
 
-When adding documentation:
+- [Docusaurus](https://docusaurus.io/) - Documentation framework
+- [React](https://reactjs.org/) - UI library
+- [Mermaid](https://mermaid.js.org/) - Diagram generation
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [GitHub Pages](https://pages.github.com/) - Hosting
 
-1. Follow the modular structure (one topic per file)
-2. Include proper frontmatter with metadata
-3. Use Mermaid for diagrams where appropriate
-4. Keep files under 400 lines
-5. Use technology-agnostic language when describing patterns
-6. Cite sources for research findings
-
-## Scripts Reference
+## 📜 Scripts Reference
 
 | Script | Description |
 |--------|-------------|
-| `bun start` | Start development server with hot reload |
-| `bun run build` | Build production static site |
-| `bun run serve` | Serve production build locally |
-| `bun run clear` | Clear Docusaurus cache |
-| `bun run pdf` | Generate PDF export (requires Prince XML) |
-| `bun run typecheck` | Run TypeScript type checking |
+| `npm start` | Start development server with hot reload |
+| `npm run build` | Build production static site |
+| `npm run serve` | Serve production build locally |
+| `npm run clear` | Clear Docusaurus cache |
+| `npm run typecheck` | Run TypeScript type checking |
+| `npm run pdf` | Generate PDF export (requires Prince XML) |
 
-## License
+## 🤝 Contributing
 
-This documentation is part of a graduation project and is intended for academic purposes.
+This is a graduation project documentation. For questions or suggestions, please open an issue.
 
-## Contact
+## 📄 License
 
-For questions or feedback about this documentation project, please contact the graduation project team.
+This project is part of a graduation project and is for educational purposes.
+
+## 📧 Contact
+
+For more information, visit the [GitHub repository](https://github.com/azsce/car-rental-system-docs).
 
 ---
 
-**Built with Docusaurus** | **Powered by Bun**
+**Built with Docusaurus** | **Deployed on GitHub Pages**

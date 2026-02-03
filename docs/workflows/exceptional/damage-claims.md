@@ -126,7 +126,7 @@ Document and resolve vehicle damage claims accurately and fairly, determining re
 **Severity Categories**:
 
 **Minor Damage**:
-- Small scratches (<2 inches)
+- Small scratches (&lt;2 inches)
 - Minor scuffs or marks
 - Small chips or dings
 - Typical cost: $50-$200
@@ -558,14 +558,14 @@ sequenceDiagram
 ## Performance Metrics
 
 ### Claim Processing Metrics
-- **Average Claim Resolution Time**: Days from damage discovery to closure (target: <14 days)
-- **Claim Volume**: Number of claims per 1000 rentals (track trend, target: <5)
+- **Average Claim Resolution Time**: Days from damage discovery to closure (target: &lt;14 days)
+- **Claim Volume**: Number of claims per 1000 rentals (track trend, target: &lt;5)
 - **Average Claim Cost**: Mean cost per claim (track trend)
 - **Customer Liability Rate**: Percentage of cost charged to customers (track trend)
 
 ### Dispute Metrics
-- **Dispute Rate**: Percentage of claims disputed (target: <10%)
-- **Dispute Resolution Time**: Days to resolve disputes (target: <7 days)
+- **Dispute Rate**: Percentage of claims disputed (target: &lt;10%)
+- **Dispute Resolution Time**: Days to resolve disputes (target: &lt;7 days)
 - **Dispute Overturn Rate**: Percentage of disputes resulting in charge adjustment (track for fairness)
 - **Customer Satisfaction**: Rating of claim handling (target: >4.0/5)
 

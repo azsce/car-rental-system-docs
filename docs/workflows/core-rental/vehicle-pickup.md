@@ -562,22 +562,22 @@ flowchart TD
 ## Performance Metrics
 
 ### Efficiency Metrics
-- **Average Pickup Time**: Time from check-in to departure (target <15 minutes)
-- **Wait Time**: Time customer waits before being served (target <5 minutes)
-- **Queue Length**: Number of customers waiting (target <3)
+- **Average Pickup Time**: Time from check-in to departure (target &lt;15 minutes)
+- **Wait Time**: Time customer waits before being served (target &lt;5 minutes)
+- **Queue Length**: Number of customers waiting (target &lt;3)
 - **Staff Utilization**: Percentage of time staff actively serving customers (track for staffing)
 
 ### Quality Metrics
 - **Pickup Satisfaction**: Customer rating of pickup experience (target >4.5/5)
 - **Vehicle Condition Score**: Customer rating of vehicle cleanliness (target >4.7/5)
 - **Documentation Accuracy**: Percentage of pickups with complete documentation (target >98%)
-- **Damage Dispute Rate**: Percentage of returns with disputed damage (target <2%)
+- **Damage Dispute Rate**: Percentage of returns with disputed damage (target &lt;2%)
 
 ### Operational Metrics
 - **Vehicle Ready Rate**: Percentage of vehicles ready at scheduled pickup time (target >95%)
 - **Upsell Acceptance**: Percentage of customers accepting upgrades (target >20%)
-- **Payment Decline Rate**: Percentage of deposits declined (target <5%)
-- **Cancellation at Pickup**: Percentage canceling at counter (target <1%)
+- **Payment Decline Rate**: Percentage of deposits declined (target &lt;5%)
+- **Cancellation at Pickup**: Percentage canceling at counter (target &lt;1%)
 
 ## Related Workflows
 

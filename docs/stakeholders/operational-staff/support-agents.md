@@ -189,13 +189,13 @@ Customer support agents are the frontline representatives who assist customers w
 3. **First-Contact Resolution (FCR)**: Issues resolved in first interaction (target: >75%)
 4. **Customer Effort Score (CES)**: Ease of getting help (target: >4.5/5)
 5. **Complaint Resolution Rate**: Complaints resolved satisfactorily (target: >90%)
-6. **Escalation Rate**: Issues requiring supervisor involvement (target: <15%)
+6. **Escalation Rate**: Issues requiring supervisor involvement (target: &lt;15%)
 
 ### Efficiency Metrics
-1. **Average Handle Time (AHT)**: Time per interaction (target: <8 minutes)
-2. **First Response Time**: Time to initial response (target: <2 minutes for chat, <1 hour for email)
-3. **Resolution Time**: Time from issue report to resolution (target: <24 hours)
-4. **Abandonment Rate**: Customers who hang up or leave chat (target: <5%)
+1. **Average Handle Time (AHT)**: Time per interaction (target: &lt;8 minutes)
+2. **First Response Time**: Time to initial response (target: &lt;2 minutes for chat, &lt;1 hour for email)
+3. **Resolution Time**: Time from issue report to resolution (target: &lt;24 hours)
+4. **Abandonment Rate**: Customers who hang up or leave chat (target: &lt;5%)
 5. **Occupancy Rate**: Time agents spend on interactions vs. idle (target: 70-85%)
 6. **Contacts Per Hour**: Interactions handled per agent per hour (track trend)
 
@@ -205,13 +205,13 @@ Customer support agents are the frontline representatives who assist customers w
 3. **Policy Compliance**: Adherence to company policies (target: 100%)
 4. **Documentation Quality**: Completeness of interaction notes (target: >95%)
 5. **Upsell Success Rate**: Accepted offers for upgrades or add-ons (target: >20%)
-6. **Error Rate**: Mistakes requiring correction (target: <2%)
+6. **Error Rate**: Mistakes requiring correction (target: &lt;2%)
 
 ### Availability Metrics
 1. **Service Level**: Calls answered within target time (target: >80% within 30 seconds)
 2. **Uptime**: Agent availability during scheduled shifts (target: >95%)
 3. **Schedule Adherence**: Time agents are available as scheduled (target: >95%)
-4. **After-Call Work Time**: Time spent on post-interaction tasks (target: <2 minutes)
+4. **After-Call Work Time**: Time spent on post-interaction tasks (target: &lt;2 minutes)
 5. **Break Compliance**: Adherence to break schedules (target: 100%)
 6. **Overtime Hours**: Extra hours worked beyond schedule (track trend)
 
