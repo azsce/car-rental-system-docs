@@ -738,7 +738,7 @@ User management requirements support workflows documented in:
 1. **Registration Completion Rate**: Percentage of users who complete registration after starting (Target: >70%)
 2. **Email Verification Rate**: Percentage of registered users who verify email (Target: >85%)
 3. **Social Login Adoption**: Percentage of registrations via social login (Target: >40%)
-4. **Time to First Booking**: Average time from registration to first booking (Target: <24 hours)
+4. **Time to First Booking**: Average time from registration to first booking (Target: &lt;24 hours)
 5. **Profile Completion Rate**: Percentage of users with complete profiles (Target: >60%)
 
 ### Authentication & Security Metrics
@@ -747,14 +747,14 @@ User management requirements support workflows documented in:
 2. **Session Duration**: Average authenticated session length (Track trend)
 3. **2FA Adoption Rate**: Percentage of users with 2FA enabled (Target: >25%)
 4. **Biometric Authentication Adoption**: Percentage of mobile users using biometrics (Target: >60%)
-5. **Account Takeover Rate**: Unauthorized access incidents per 10,000 users (Target: <1)
+5. **Account Takeover Rate**: Unauthorized access incidents per 10,000 users (Target: &lt;1)
 
 ### Verification & Trust Metrics
 
 1. **License Verification Rate**: Percentage of users with verified licenses (Target: >90%)
 2. **KYC Completion Rate**: Percentage of users completing digital KYC (Target: >70%)
-3. **Verification Time**: Average time from document upload to approval (Target: <24 hours)
-4. **Verification Rejection Rate**: Percentage of verifications rejected (Target: <10%)
+3. **Verification Time**: Average time from document upload to approval (Target: &lt;24 hours)
+4. **Verification Rejection Rate**: Percentage of verifications rejected (Target: &lt;10%)
 5. **Trust Score Distribution**: Average user trust score (Target: >75/100)
 
 ### Engagement & Personalization Metrics
@@ -768,7 +768,7 @@ User management requirements support workflows documented in:
 ### Privacy & Compliance Metrics
 
 1. **Data Export Requests**: Number of data export requests per month (Track trend)
-2. **Account Deletion Rate**: Percentage of accounts deleted per month (Target: <2%)
+2. **Account Deletion Rate**: Percentage of accounts deleted per month (Target: &lt;2%)
 3. **Privacy Policy Acceptance**: Percentage of users accepting updated policies (Target: >98%)
 4. **GDPR Compliance Score**: Audit score for data protection compliance (Target: 100%)
 5. **Data Breach Incidents**: Security incidents exposing user data (Target: 0)

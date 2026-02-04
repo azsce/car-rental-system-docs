@@ -669,10 +669,10 @@ Vehicle search represents the critical first touchpoint in the rental journey. T
 ## Success Metrics
 
 ### Search Performance Metrics
-- **Search Execution Time**: Target <2 seconds for results display
-- **Filter Application Time**: Target <500ms for filter updates
-- **Page Load Time**: Target <3 seconds for initial search page
-- **Mobile Performance**: Target <3 seconds on 4G connection
+- **Search Execution Time**: Target &lt;2 seconds for results display
+- **Filter Application Time**: Target &lt;500ms for filter updates
+- **Page Load Time**: Target &lt;3 seconds for initial search page
+- **Mobile Performance**: Target &lt;3 seconds on 4G connection
 
 ### User Engagement Metrics
 - **Search to View Rate**: Percentage of searches resulting in vehicle detail views (target >60%)
@@ -682,7 +682,7 @@ Vehicle search represents the critical first touchpoint in the rental journey. T
 - **Mobile Search Rate**: Percentage of searches from mobile devices (track adoption)
 
 ### Search Quality Metrics
-- **Zero Results Rate**: Percentage of searches returning no results (target <10%)
+- **Zero Results Rate**: Percentage of searches returning no results (target &lt;10%)
 - **Search Refinement Rate**: Percentage of users modifying search criteria (track for usability)
 - **Average Results Per Search**: Number of vehicles returned (track for inventory health)
 - **Availability Accuracy**: Percentage of displayed vehicles actually available (target >98%)
@@ -731,7 +731,7 @@ Vehicle search represents the critical first touchpoint in the rental journey. T
 ### Industry Standards
 - **ACRISS Codes**: Support industry-standard vehicle classification system for consistency
 - **Accessibility**: WCAG 2.1 Level AA compliance for inclusive design
-- **Performance**: Web Vitals standards (LCP <2.5s, FID <100ms, CLS <0.1)
+- **Performance**: Web Vitals standards (LCP &lt;2.5s, FID &lt;100ms, CLS &lt;0.1)
 
 ### Best Practices
 - **UX Principles**: Familiarity, responsiveness, performance, intuitiveness, trustworthiness

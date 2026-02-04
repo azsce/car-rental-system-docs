@@ -163,10 +163,10 @@ Establish core rental operations with production-proven technologies. Deliver a 
 ### Success Metrics
 
 **Technical Metrics**:
-- API response time: <200ms (p95)
-- Database query time: <50ms (p95)
-- Page load time: <2 seconds
-- Mobile app crash rate: <1%
+- API response time: &lt;200ms (p95)
+- Database query time: &lt;50ms (p95)
+- Page load time: &lt;2 seconds
+- Mobile app crash rate: &lt;1%
 - System uptime: >99.5%
 
 **Business Metrics**:
@@ -583,7 +583,7 @@ Position platform as market leader through emerging technologies and experimenta
 
 **Technical KPIs**:
 - System uptime: >99.9%
-- API response time: <200ms (p95)
+- API response time: &lt;200ms (p95)
 - Mobile app performance: >4.0 rating
 - Security incidents: 0 major breaches
 

@@ -593,7 +593,7 @@ The car rental market consists of distinct segments with different competitive d
 ### Market Position Metrics
 
 **Market Share**:
-- **Phase 1**: <1% (establish presence)
+- **Phase 1**: &lt;1% (establish presence)
 - **Phase 2**: 2-3% (gain traction)
 - **Phase 3**: 5-7% (significant player)
 - **Phase 4**: 10%+ (market leader in segments)

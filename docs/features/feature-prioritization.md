@@ -690,21 +690,21 @@ Each phase delivers value to specific user segments:
 - Booking completion rate: >80%
 - Payment success rate: >99%
 - System uptime: >99.5%
-- Page load time: <2 seconds
-- Mobile app crash rate: <1%
+- Page load time: &lt;2 seconds
+- Mobile app crash rate: &lt;1%
 
 **Business Metrics**:
 - Monthly active users: 10,000+
 - Bookings per month: 1,000+
 - Average booking value: $300+
-- Customer acquisition cost: <$50
+- Customer acquisition cost: &lt;$50
 - Customer lifetime value: >$500
 
 **User Satisfaction**:
 - Net Promoter Score (NPS): >40
 - Customer satisfaction (CSAT): >4.0/5.0
 - App store rating: >4.0/5.0
-- Support ticket volume: <5% of bookings
+- Support ticket volume: &lt;5% of bookings
 
 ### Phase 2 Success Criteria
 

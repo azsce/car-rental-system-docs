@@ -1241,7 +1241,7 @@ THE System SHALL provide comprehensive financial reporting for payment operation
 ### Business Metrics
 - **Payment Completion Rate**: >85% of initiated payments complete successfully
 - **Average Transaction Value**: Track trend over time
-- **Refund Rate**: <5% of total transactions
+- **Refund Rate**: &lt;5% of total transactions
 - **BNPL Adoption Rate**: >15% of eligible transactions (Phase 2)
 - **Crypto Payment Volume**: Track adoption in Phase 3
 
@@ -1249,13 +1249,13 @@ THE System SHALL provide comprehensive financial reporting for payment operation
 - **Authorization Success Rate**: >90%
 - **Capture Success Rate**: >99%
 - **Refund Success Rate**: >98%
-- **Average Authorization Time**: <5 seconds (95th percentile)
+- **Average Authorization Time**: &lt;5 seconds (95th percentile)
 - **Gateway Uptime**: >99.9%
 
 ### Security Metrics
 - **Fraud Detection Rate**: >95% of fraudulent transactions caught
-- **False Positive Rate**: <5% of legitimate transactions flagged
-- **Chargeback Rate**: <0.5% of total transactions
+- **False Positive Rate**: &lt;5% of legitimate transactions flagged
+- **Chargeback Rate**: &lt;0.5% of total transactions
 - **PCI Compliance Score**: 100% on all audits
 
 ### User Experience Metrics

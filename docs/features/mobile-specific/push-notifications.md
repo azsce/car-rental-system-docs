@@ -350,7 +350,7 @@ Push notifications provide instant, actionable information delivered to users' l
 - **Delivery Rate**: Percentage of notifications successfully delivered
 - **Open Rate**: Percentage of notifications opened by users
 - **Action Rate**: Percentage of notifications resulting in user action
-- **Opt-Out Rate**: Percentage of users disabling notifications (target: <5%)
+- **Opt-Out Rate**: Percentage of users disabling notifications (target: &lt;5%)
 - **Engagement Impact**: Increase in app opens following notifications
 - **Conversion Impact**: Bookings attributed to promotional notifications
 - **Support Reduction**: Decrease in support inquiries about booking status

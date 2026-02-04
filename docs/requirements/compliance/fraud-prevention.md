@@ -150,7 +150,7 @@ This document specifies fraud prevention requirements for the car rental system,
 7. THE System SHALL implement fraud detection to prevent fraudulent transactions
 8. THE System SHALL monitor chargeback rates and investigate patterns
 9. THE System SHALL provide evidence for chargeback disputes
-10. THE System SHALL maintain chargeback rate below payment processor thresholds (typically <1%)
+10. THE System SHALL maintain chargeback rate below payment processor thresholds (typically &lt;1%)
 
 **Source**: `docs/research/industry-standards/payment-standards.md`
 
