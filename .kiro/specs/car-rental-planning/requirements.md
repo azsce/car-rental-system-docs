@@ -80,26 +80,28 @@ The planning phase involves analyzing three open-source car rental projects (boo
 
 ### Requirement 5: Feature Catalog Creation
 
-**User Story:** As a graduation project team member, I want a comprehensive catalog of features organized by categories, so that we have a complete inventory of what the Target_System should provide.
+**User Story:** As a graduation project team member, I want a comprehensive catalog of features organized by categories, so that we have a complete inventory of what the Target_System should provide, with emphasis on next-generation capabilities.
 
-**Note:** This requirement is fulfilled by synthesizing information from local analysis and research documentation created in earlier phases (Requirements 1-4), rather than re-analyzing source projects.
+**Note:** This requirement is fulfilled by synthesizing information from local analysis and research documentation created in earlier phases (Requirements 1-4), with **primary emphasis on advanced features from `docs/research/advanced-features.md`** to ensure the graduation project demonstrates cutting-edge capabilities.
 
 #### Acceptance Criteria
 
 1. THE Analysis_System SHALL extract features from local analysis documents for all three Open_Source_Projects
-2. THE Analysis_System SHALL supplement extracted features with industry-standard features from local Market_Research documents
-3. WHEN cataloging a Feature, THE Analysis_System SHALL specify its name, description, stakeholder benefit, priority level, and source document
-4. THE Analysis_System SHALL organize features into logical categories including user-facing, administrative, operational, and integration features
-5. THE Analysis_System SHALL identify features for mobile applications, web applications, admin panels, payment processing, fleet management, analytics, and third-party integrations
-6. THE Analysis_System SHALL avoid duplicating features across categories while maintaining clear cross-references
-7. THE Analysis_System SHALL store the feature catalog in a structured, pandoc-compatible markdown format
-8. WHEN documenting a Feature, THE Analysis_System SHALL reference the local documentation file(s) from which it was extracted
+2. THE Analysis_System SHALL **prioritize** features from `docs/research/advanced-features.md` as the primary source for next-generation capabilities
+3. THE Analysis_System SHALL supplement extracted features with industry-standard features from local Market_Research documents
+4. WHEN cataloging a Feature, THE Analysis_System SHALL specify its name, description, stakeholder benefit, priority level, and source document
+5. THE Analysis_System SHALL organize features into logical categories including user-facing, administrative, operational, and integration features
+6. THE Analysis_System SHALL identify features for mobile applications, web applications, admin panels, payment processing, fleet management, analytics, and third-party integrations
+7. THE Analysis_System SHALL **include advanced features** such as AR/VR capabilities, blockchain integration, AI-driven systems, IoT telematics, and emerging technologies
+8. THE Analysis_System SHALL avoid duplicating features across categories while maintaining clear cross-references
+9. THE Analysis_System SHALL store the feature catalog in a structured, pandoc-compatible markdown format
+10. WHEN documenting a Feature, THE Analysis_System SHALL reference the local documentation file(s) from which it was extracted
 
 ### Requirement 6: Requirements Document Generation
 
-**User Story:** As a graduation project team member, I want a comprehensive requirements document for the Target_System, so that we have a formal specification for implementation.
+**User Story:** As a graduation project team member, I want a comprehensive requirements document for the Target_System, so that we have a formal specification for implementation that includes both foundational and advanced capabilities.
 
-**Note:** This requirement is fulfilled by synthesizing information from the local feature catalog, stakeholder documentation, and workflow documentation created in earlier phases, rather than starting from scratch.
+**Note:** This requirement is fulfilled by synthesizing information from the local feature catalog, stakeholder documentation, and workflow documentation created in earlier phases, with **strong emphasis on advanced features from `docs/research/advanced-features.md`** to ensure competitive differentiation.
 
 #### Acceptance Criteria
 
@@ -108,9 +110,11 @@ The planning phase involves analyzing three open-source car rental projects (boo
 3. WHEN writing requirements for the Target_System, THE Analysis_System SHALL include acceptance criteria for each requirement
 4. THE Analysis_System SHALL organize requirements by functional areas including booking, payment, fleet management, user management, and reporting
 5. THE Analysis_System SHALL include non-functional requirements for performance, security, scalability, and usability
-6. THE Analysis_System SHALL ensure the Requirements_Document references stakeholder needs and user scenarios from local documentation
-7. THE Analysis_System SHALL format the Requirements_Document as pandoc-compatible markdown
-8. WHEN documenting a Requirement, THE Analysis_System SHALL reference the local feature, stakeholder, and workflow documents that informed it
+6. THE Analysis_System SHALL **prioritize advanced requirements** from `docs/research/advanced-features.md` including AI/ML capabilities, blockchain integration, IoT telematics, and emerging technologies
+7. THE Analysis_System SHALL ensure the Requirements_Document references stakeholder needs and user scenarios from local documentation
+8. THE Analysis_System SHALL format the Requirements_Document as pandoc-compatible markdown
+9. WHEN documenting a Requirement, THE Analysis_System SHALL reference the local feature, stakeholder, and workflow documents that informed it
+10. THE Analysis_System SHALL **include strategic implementation roadmap** based on phased approach from advanced-features.md
 
 ### Requirement 7: Documentation Structure and Organization
 

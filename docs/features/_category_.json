@@ -1,8 +1,8 @@
 {
-  "label": "Features",
-  "position": 7,
+  "label": "Feature Catalog",
+  "position": 6,
   "link": {
     "type": "generated-index",
-    "description": "Comprehensive feature catalog organized by categories: user-facing, mobile-specific, administrative, operational, integration, and security features."
+    "description": "Comprehensive catalog of features for the next-generation car rental platform, synthesized from open-source analysis, market research, and advanced capabilities research."
   }
 }

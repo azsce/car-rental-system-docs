@@ -1,0 +1,8 @@
+{
+  "label": "User-Facing Features",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Customer-facing features covering search, discovery, booking, payment, and account management with emphasis on next-generation capabilities."
+  }
+}

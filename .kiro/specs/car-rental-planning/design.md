@@ -267,16 +267,18 @@ Each workflow includes:
 
 ### Component 5: Feature Cataloger
 
-**Purpose**: Create a comprehensive, categorized inventory of all features for the target car rental system by synthesizing information from local analysis and research documentation.
+**Purpose**: Create a comprehensive, categorized inventory of all features for the target car rental system by synthesizing information from local analysis and research documentation, with **primary emphasis on advanced features from market research**.
 
-**Feature Sources**:
-1. Features extracted from local bookcars analysis documents (`docs/analysis/bookcars/features-*.md`)
-2. Features extracted from local car-rental-php analysis documents (`docs/analysis/car-rental-php/features.md`)
-3. Features extracted from local FreeCar analysis documents (`docs/analysis/freecar/features-*.md`)
-4. Features identified through local market research documents (`docs/research/competitive-analysis/*.md`, `docs/research/best-practices/*.md`)
-5. Features derived from local stakeholder documentation (`docs/stakeholders/**/*.md`)
+**Feature Sources** (in priority order):
+1. **PRIMARY SOURCE**: Features from `docs/research/advanced-features.md` (next-generation capabilities, strategic innovations)
+2. Features extracted from local bookcars analysis documents (`docs/analysis/bookcars/features-*.md`)
+3. Features extracted from local car-rental-php analysis documents (`docs/analysis/car-rental-php/features.md`)
+4. Features extracted from local FreeCar analysis documents (`docs/analysis/freecar/features-*.md`)
+5. Features identified through local market research documents (`docs/research/competitive-analysis/*.md`, `docs/research/best-practices/*.md`)
+6. Features derived from local stakeholder documentation (`docs/stakeholders/**/*.md`)
 
 **Input Documents**:
+- **`docs/research/advanced-features.md`** (PRIMARY - comprehensive next-gen features)
 - `docs/analysis/bookcars/features-user.md`
 - `docs/analysis/bookcars/features-admin.md`
 - `docs/analysis/bookcars/features-mobile.md`
@@ -289,47 +291,51 @@ Each workflow includes:
 
 **Categorization Scheme**:
 
-1. **User-Facing Features**:
-   - Search and discovery
-   - Booking management
-   - Payment and billing
-   - Account management
+1. **User-Facing Features** (prioritize advanced-features.md Sections 2-3):
+   - Search and discovery (AR showrooms, voice interfaces, map-based search)
+   - Booking management (persona-based UX, contactless operations)
+   - Payment and billing (crypto-fiat gateways, BNPL, digital wallets)
+   - Account management (biometric auth, digital KYC, decentralized identity)
    - Notifications and communication
 
-2. **Mobile-Specific Features**:
+2. **Mobile-Specific Features** (prioritize advanced-features.md Section 3):
    - Push notifications
-   - Offline mode
+   - Offline mode (PWA capabilities)
    - Location services
    - Camera integration (license scanning)
-   - Mobile payments (Apple Pay, Google Pay)
+   - Mobile payments (Apple Pay, Google Pay, crypto wallets)
+   - Phone-as-a-Key (BLE, NFC)
 
-3. **Administrative Features**:
-   - Fleet management
+3. **Administrative Features** (prioritize advanced-features.md Sections 4, 7):
+   - Fleet management (microservices architecture)
    - User management
    - Supplier management (multi-supplier mode)
    - Location management
-   - Pricing management
+   - Pricing management (AI-driven dynamic pricing)
+   - Revenue optimization (gamification, referral programs)
 
-4. **Operational Features**:
-   - Vehicle tracking
-   - Maintenance scheduling
+4. **Operational Features** (prioritize advanced-features.md Section 5):
+   - Vehicle tracking (telematics, geofencing)
+   - Maintenance scheduling (predictive maintenance, AI damage detection)
    - Availability management
    - Reporting and analytics
-   - Audit logging
+   - Audit logging (blockchain event logging)
+   - EV fleet management (smart charging, V2G)
 
-5. **Integration Features**:
-   - Payment gateway integration
+5. **Integration Features** (prioritize advanced-features.md Sections 6, 10):
+   - Payment gateway integration (crypto-fiat, BNPL)
    - Mapping services integration
    - Email/SMS notifications
    - Insurance provider integration
    - Analytics integration
+   - Super-app integration (WeChat Mini-Programs, Grab)
 
-6. **Security Features**:
-   - Authentication (email, social login)
+6. **Security Features** (prioritize advanced-features.md Section 9):
+   - Authentication (biometric, decentralized identity)
    - Authorization (role-based access)
    - Data encryption
-   - Audit trails
-   - Fraud detection
+   - Audit trails (blockchain immutability)
+   - Fraud detection (synthetic identity defense, liveness checks)
 
 **Feature Documentation Format**:
 For each feature:
@@ -354,9 +360,10 @@ For each feature:
 
 ### Component 6: Requirements Writer
 
-**Purpose**: Transform analysis findings into a formal, EARS-compliant requirements document for the target car rental system by synthesizing information from local feature catalog, stakeholder documentation, and workflow documentation.
+**Purpose**: Transform analysis findings into a formal, EARS-compliant requirements document for the target car rental system by synthesizing information from local feature catalog, stakeholder documentation, and workflow documentation, with **strong emphasis on advanced capabilities**.
 
-**Input Documents**:
+**Input Documents** (in priority order):
+- **`docs/research/advanced-features.md`** (PRIMARY - strategic requirements for next-gen platform)
 - `docs/features/**/*.md` (feature catalog created in previous phase)
 - `docs/stakeholders/**/*.md` (stakeholder analysis documents)
 - `docs/workflows/**/*.md` (workflow documentation)

@@ -1,0 +1,8 @@
+{
+  "label": "Mobile-Specific Features",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Mobile-specific features leveraging native device capabilities, offline functionality, and mobile-optimized experiences for on-the-go car rental management."
+  }
+}
