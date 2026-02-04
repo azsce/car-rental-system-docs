@@ -318,8 +318,7 @@ This glossary provides definitions for technical terms, acronyms, business conce
 
 ## Related Documentation
 
-- [Requirements Document](../requirements/overview.md): Formal requirements using these terms
-- [Design Document](../../.kiro/specs/car-rental-planning/design.md): Architectural concepts and patterns
+- [Requirements](../requirements/): Formal requirements using these terms
 - [Advanced Features](../research/advanced-features.md): Next-generation technologies and concepts
 - [Comparative Analysis](../analysis/comparative-analysis.md): Architectural terminology and patterns
 

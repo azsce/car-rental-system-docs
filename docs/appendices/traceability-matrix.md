@@ -407,7 +407,7 @@ Each level is bidirectionally traceable, allowing navigation in both directions.
 
 ## Related Documentation
 
-- [Requirements Document](../requirements/overview.md): Detailed requirements specifications
+- [Requirements](../requirements/): Detailed requirements specifications
 - [Feature Catalog](../features/feature-prioritization.md): Complete feature inventory
 - [Stakeholder Mapping](../stakeholders/stakeholder-mapping.md): Stakeholder relationships
 - [Workflows](../workflows/): Detailed workflow documentation

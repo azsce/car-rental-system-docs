@@ -714,7 +714,7 @@ The balanced approach—emphasizing proven patterns while incorporating strategi
 - [Advanced Features](../research/advanced-features.md): Market research on next-generation capabilities
 - [Stakeholder Mapping](../stakeholders/stakeholder-mapping.md): Stakeholder identification results
 - [Feature Prioritization](../features/feature-prioritization.md): Feature synthesis and prioritization
-- [Requirements Overview](../requirements/overview.md): Requirements synthesis results
+- [Requirements](../requirements/): Requirements synthesis results
 - [Traceability Matrix](./traceability-matrix.md): Comprehensive traceability documentation
 
 ---

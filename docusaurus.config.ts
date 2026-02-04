@@ -151,12 +151,12 @@ const config: Config = {
               to: '/docs/research/advanced-features',
             },
             {
-              label: 'Market Trends',
-              to: '/docs/research/market-trends',
+              label: 'AI Pricing',
+              to: '/docs/research/market-trends/ai-pricing',
             },
             {
-              label: 'Best Practices',
-              to: '/docs/research/best-practices',
+              label: 'UX Patterns',
+              to: '/docs/research/best-practices/ux-patterns',
             },
           ],
         },

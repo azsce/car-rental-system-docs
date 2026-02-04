@@ -618,7 +618,7 @@ By following this roadmap, the car rental platform will deliver immediate value 
 - [Feature Prioritization](../features/feature-prioritization.md): Detailed feature roadmap aligned with this technology plan
 - [Advanced Features](../research/advanced-features.md): Source of next-generation technology insights
 - [Comparative Analysis](../analysis/comparative-analysis.md): Technology decisions based on project analysis
-- [Requirements Document](../requirements/overview.md): Functional and non-functional requirements
+- [Requirements](../requirements/): Functional and non-functional requirements
 - [Competitive Positioning](./competitive-positioning.md): Market positioning strategy
 
 ---
