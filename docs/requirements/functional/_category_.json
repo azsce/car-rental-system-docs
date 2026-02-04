@@ -1,8 +1,8 @@
 {
   "label": "Functional Requirements",
-  "position": 2,
+  "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Functional requirements specify what the car rental system must do to support user needs, business operations, and core rental workflows. These requirements are organized by functional area and follow EARS (Easy Approach to Requirements Syntax) patterns for clarity and testability."
+    "description": "Functional requirements specify what the car rental system must do to meet user needs. These requirements are organized by major functional areas including user management, vehicle search, booking management, payment processing, fleet management, and reporting."
   }
 }

@@ -1,391 +1,403 @@
 ---
 sidebar_position: 2
 title: Offline Mode
-description: Offline functionality for uninterrupted mobile experience
-tags: [mobile, offline, PWA, resilience, user-experience]
+description: Essential functionality without internet connectivity, including cached bookings, offline maps, and local data access
+tags: [mobile, offline, PWA, connectivity, resilience]
 ---
 
 # Offline Mode
 
 ## Overview
 
-Offline mode enables critical rental operations to continue without network connectivity, ensuring users can access their vehicles and essential information even in areas with poor or no cellular coverage. This feature is particularly crucial for parking garages, remote locations, and international travel scenarios.
+Offline mode enables users to access critical rental information and perform essential functions without internet connectivity. This capability is crucial for international travelers, users in areas with poor connectivity, and situations where network access is unavailable (parking garages, remote locations, airplane mode). By caching essential data locally and implementing Progressive Web App (PWA) strategies, the platform ensures users can always access their bookings and vehicle information when needed most.
 
 ## Feature Description
 
-The offline mode capability leverages Progressive Web App (PWA) technology to cache essential data locally on the user's device, enabling core functionality without an active internet connection. This includes digital key access, reservation details, and basic trip information.
+Offline mode provides graceful degradation of functionality when internet connectivity is unavailable. The system intelligently caches essential data, enables core features to work offline, and synchronizes changes when connectivity is restored. Users receive clear indicators of offline status and understand which features are available without internet access.
+
+## Core Offline Capabilities
+
+### Offline Booking Access
+
+**Cached Active Bookings**
+- **Description**: Store current and upcoming bookings locally on device
+- **Data Cached**: Booking reference, vehicle details, pickup/return times and locations, payment status
+- **Access**: Full booking information available without internet
+- **Benefit**: Critical booking details always accessible, even in parking garages or foreign countries
+- **Priority**: Must-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Booking Confirmation Documents**
+- **Description**: Access booking confirmation, rental agreement, and insurance documents offline
+- **Format**: PDF documents cached locally
+- **Benefit**: Show confirmation to rental staff without internet
+- **Priority**: Must-have
+- **Source**: BookCars analysis
+
+**Vehicle Information Offline**
+- **Description**: Access complete vehicle details including specifications, features, and photos
+- **Data Cached**: Vehicle make/model, license plate, features, location, photos
+- **Benefit**: Identify and locate vehicle in parking area without connectivity
+- **Priority**: Must-have
+- **Source**: BookCars analysis
+
+**Location Information Offline**
+- **Description**: View pickup and drop-off location details without internet
+- **Data Cached**: Address, contact information, operating hours, directions
+- **Benefit**: Navigate to locations even without data connection
+- **Priority**: Must-have
+- **Source**: BookCars analysis
+
+**Booking Reference Display**
+- **Description**: View booking reference number and QR code offline
+- **Benefit**: Check in at counter or kiosk without internet
+- **Priority**: Must-have
+- **Source**: BookCars analysis, FreeCar mini-program features
+
+### Offline Maps and Navigation
+
+**Cached Location Maps**
+- **Description**: Store maps of rental locations and surrounding areas locally
+- **Coverage**: Pickup locations, return locations, parking areas, nearby landmarks
+- **Benefit**: Navigate to rental locations without data connection
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Offline Navigation**
+- **Description**: Basic turn-by-turn navigation to pickup locations using cached maps
+- **Functionality**: Route display, distance calculation, estimated time
+- **Limitations**: No real-time traffic, no route recalculation
+- **Benefit**: Find rental locations in foreign countries without roaming data
+- **Priority**: Nice-to-have
+- **Source**: BookCars analysis
+
+**Location Markers Offline**
+- **Description**: View rental location markers and details on cached maps
+- **Information**: Location name, address, distance from current position
+- **Benefit**: Identify nearby rental locations without internet
+- **Priority**: Should-have
+- **Source**: BookCars analysis
+
+**Map Download Management**
+- **Description**: Download maps for specific regions or cities in advance
+- **User Control**: Select regions to cache, manage storage usage, update cached maps
+- **Benefit**: Prepare for travel to areas with poor connectivity
+- **Priority**: Nice-to-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+### Offline Vehicle Access
+
+**Digital Key Functionality**
+- **Description**: Unlock and lock vehicle using cached digital key credentials
+- **Technology**: Bluetooth Low Energy (BLE) communication with vehicle
+- **No Internet Required**: BLE operates without internet connectivity
+- **Benefit**: Access vehicle in parking garages with no cellular signal
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy, phone-as-a-key, BLE keyless entry)
+
+**Vehicle Control Offline**
+- **Description**: Basic vehicle controls (lock/unlock, horn, lights) via BLE
+- **Functionality**: Direct device-to-vehicle communication
+- **Benefit**: Essential vehicle access without network dependency
+- **Priority**: Must-have
+- **Source**: Advanced features (digital wallets, phone-as-a-key)
+
+**Cached Vehicle Status**
+- **Description**: View last-known vehicle status (fuel/charge level, location, mileage)
+- **Limitation**: Data may be stale until reconnection
+- **Benefit**: Reference vehicle information during offline periods
+- **Priority**: Should-have
+- **Source**: Advanced features (telematics integration)
+
+### Offline Profile and Settings
+
+**Profile Information Access**
+- **Description**: View personal profile, driver's license, and verification status offline
+- **Data Cached**: Name, contact details, license information, verification documents
+- **Benefit**: Reference personal information without connectivity
+- **Priority**: Should-have
+- **Source**: FreeCar mini-program features
+
+**Saved Payment Methods**
+- **Description**: View (but not modify) saved payment methods offline
+- **Security**: Masked card numbers only, no sensitive data exposed
+- **Benefit**: Know which payment method will be charged
+- **Priority**: Nice-to-have
+- **Source**: FreeCar mini-program features
+
+**App Settings Access**
+- **Description**: View and modify local app settings offline
+- **Settings**: Language, units, notification preferences, display options
+- **Benefit**: Customize app experience without internet
+- **Priority**: Should-have
+- **Source**: FreeCar mini-program features
+
+### Offline Help and Support
+
+**Cached Help Articles**
+- **Description**: Access frequently asked questions and help content offline
+- **Content**: Common issues, troubleshooting guides, policy information
+- **Benefit**: Self-service support without internet
+- **Priority**: Should-have
+- **Source**: FreeCar mini-program features
+
+**Emergency Contact Information**
+- **Description**: Access emergency support phone numbers offline
+- **Information**: Roadside assistance, customer support, local emergency services
+- **Benefit**: Critical contact information always available
+- **Priority**: Must-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Offline Issue Reporting**
+- **Description**: Queue issue reports and photos to submit when online
+- **Functionality**: Capture damage photos, describe issues, queue for upload
+- **Benefit**: Document issues immediately, even without connectivity
+- **Priority**: Should-have
+- **Source**: Advanced features (AI damage detection), BookCars analysis
+
+## Progressive Web App (PWA) Strategy
+
+### Unified Codebase Benefits
+
+**Cross-Platform Offline Support**
+- **Description**: Single codebase providing offline functionality across iOS, Android, and web
+- **Technology**: Service workers, IndexedDB, Cache API
+- **Benefit**: Consistent offline experience across all platforms
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy)
+
+**Reduced Maintenance**
+- **Description**: Maintain one offline implementation instead of platform-specific code
+- **Benefit**: Faster feature development and bug fixes
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy)
+
+**Native Module Integration**
+- **Description**: Leverage native capabilities (BLE, GPS, camera) while maintaining unified codebase
+- **Benefit**: Best of both worlds - web efficiency with native power
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy, BLE for keyless entry)
+
+### Service Worker Architecture
+
+**Intelligent Caching Strategy**
+- **Description**: Service workers intercept network requests and serve cached content when offline
+- **Cache Priorities**: 
+  - Critical: Active bookings, digital keys, emergency contacts
+  - Important: Vehicle information, location details, help articles
+  - Optional: Vehicle photos, promotional content
+- **Benefit**: Optimal storage usage with guaranteed access to essential data
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy), Mobile-first trends
+
+**Background Sync**
+- **Description**: Queue actions performed offline and sync when connectivity returns
+- **Queued Actions**: Issue reports, photo uploads, booking modifications (if allowed)
+- **Benefit**: Seamless experience with automatic synchronization
+- **Priority**: Should-have
+- **Source**: Advanced features (PWA strategy)
+
+**Cache Versioning**
+- **Description**: Manage cache updates and invalidation for stale data
+- **Strategy**: Version-based cache busting, automatic updates when online
+- **Benefit**: Users always have latest data when possible
+- **Priority**: Must-have
+- **Source**: Advanced features (PWA strategy)
+
+## Offline Status Communication
+
+### Connection Status Indicators
+
+**Visual Offline Indicator**
+- **Description**: Persistent banner or icon showing offline status
+- **Design**: Non-intrusive but clearly visible indicator
+- **Benefit**: Users understand why some features are unavailable
+- **Priority**: Must-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Feature Availability Display**
+- **Description**: Show which features require internet connection
+- **Implementation**: Disabled buttons with "Requires internet" tooltips
+- **Benefit**: Clear communication about offline limitations
+- **Priority**: Must-have
+- **Source**: BookCars analysis
+
+**Last Sync Timestamp**
+- **Description**: Display when data was last synchronized with server
+- **Location**: Settings screen, booking details
+- **Benefit**: Users know if cached data might be stale
+- **Priority**: Should-have
+- **Source**: BookCars analysis, FreeCar mini-program features
+
+### Offline Action Queuing
+
+**Pending Actions Indicator**
+- **Description**: Show actions queued to perform when online
+- **Examples**: Photo uploads, issue reports, booking modifications
+- **Benefit**: Users know their actions will be processed
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Advanced features (PWA strategy)
+
+**Sync Progress Display**
+- **Description**: Show progress when reconnecting and syncing queued actions
+- **Information**: Number of items syncing, completion percentage
+- **Benefit**: Transparency during synchronization process
+- **Priority**: Should-have
+- **Source**: BookCars analysis
+
+**Conflict Resolution Notifications**
+- **Description**: Alert users if offline changes conflict with server state
+- **Example**: Booking modified on another device while offline
+- **Benefit**: Users can resolve conflicts and understand data state
+- **Priority**: Should-have
+- **Source**: BookCars analysis, FreeCar mini-program features
+
+## Data Synchronization
+
+### Automatic Sync on Reconnect
+
+**Immediate Sync Trigger**
+- **Description**: Automatically sync data when internet connection is restored
+- **Priority**: Critical data first (bookings, payments), then optional data
+- **Benefit**: Seamless transition from offline to online
+- **Priority**: Must-have
+- **Source**: BookCars analysis, FreeCar mini-program features
+
+**Incremental Updates**
+- **Description**: Download only changed data, not entire dataset
+- **Benefit**: Faster sync, reduced data usage
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Conflict Resolution Logic**
+- **Description**: Handle cases where local and server data diverge
+- **Strategy**: Server wins for bookings, user wins for preferences, merge for compatible changes
+- **Benefit**: Prevent data loss and maintain consistency
+- **Priority**: Must-have
+- **Source**: BookCars analysis, FreeCar mini-program features
+
+### Manual Sync Control
+
+**Pull-to-Refresh**
+- **Description**: User-initiated data refresh when online
+- **Benefit**: Users can force update when they know data is stale
+- **Priority**: Must-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**Sync Settings**
+- **Description**: User control over sync behavior
+- **Options**: Auto-sync on WiFi only, sync frequency, data to cache
+- **Benefit**: Users manage data usage and storage
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+## Storage Management
+
+### Intelligent Cache Management
+
+**Storage Limits**
+- **Description**: Respect device storage constraints and user preferences
+- **Strategy**: Prioritize critical data, remove old cached content
+- **Benefit**: Prevent app from consuming excessive storage
+- **Priority**: Must-have
+- **Source**: Mobile-first trends, Advanced features (PWA strategy)
+
+**Cache Expiration**
+- **Description**: Automatically remove stale cached data
+- **Rules**: Active bookings never expire, past bookings expire after 30 days, maps expire after 90 days
+- **Benefit**: Keep cache fresh and storage usage reasonable
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Mobile-first trends
+
+**User Storage Control**
+- **Description**: Settings to manage cached data and storage usage
+- **Options**: Clear cache, view storage usage, select data to cache
+- **Benefit**: Users control app storage footprint
+- **Priority**: Should-have
+- **Source**: BookCars analysis, Mobile-first trends
 
 ## Stakeholder Benefits
 
-### Individual Customers
-- **Reliability**: Access vehicle even in parking garages with no signal
-- **Peace of Mind**: No anxiety about connectivity issues preventing vehicle access
-- **International Travel**: Function without data roaming or local SIM cards
-- **Emergency Access**: Retrieve critical information during network outages
-
-### Corporate Clients
-- **Business Continuity**: Employees can access vehicles regardless of connectivity
-- **Reduced Support Calls**: Fewer issues related to network connectivity
-- **Productivity**: No delays waiting for network connection to access vehicle
-
-### Fleet Managers
-- **Reduced Support Burden**: Fewer customer service calls about access issues
-- **Operational Efficiency**: Vehicles remain accessible during network disruptions
-- **Customer Satisfaction**: Higher ratings due to reliable access
-
-## Core Capabilities
-
-### 1. Digital Key Caching
-
-**Functionality**:
-- Pre-download encrypted digital keys to device
-- Store keys in secure local storage
-- Enable Bluetooth Low Energy (BLE) vehicle unlocking without internet
-- Automatic key refresh when connectivity restored
-
-**Technical Implementation**:
-- Encrypted key storage using device keychain/keystore
-- BLE communication protocol for vehicle access
-- Secure element integration for key protection
-- Automatic synchronization when online
-
-**Source**: `docs/research/advanced-features.md` (Section 3: PWA Strategy, Digital Wallets)
-
-### 2. Reservation Details Caching
-
-**Functionality**:
-- Cache complete reservation information locally
-- Store vehicle details, pickup/return locations, and times
-- Display booking confirmation and QR codes offline
-- Access rental agreement terms and conditions
-
-**Cached Information**:
-- Booking reference number
-- Vehicle details (make, model, license plate)
-- Pickup and return location addresses
-- Rental period and pricing breakdown
-- Emergency contact numbers
-- Insurance and coverage details
-
-**Source**: `docs/research/advanced-features.md` (Section 3: PWA Strategy)
-
-### 3. Trip Information Storage
-
-**Functionality**:
-- Store essential trip data for offline access
-- Cache navigation waypoints and destinations
-- Save fuel/charging station locations
-- Store roadside assistance contact information
-
-**Offline Access**:
-- Current trip odometer readings
-- Fuel/charge level at pickup
-- Estimated return requirements
-- Emergency procedures and contacts
-- Basic vehicle operation instructions
-
-**Source**: `docs/research/advanced-features.md` (Section 3: PWA Strategy)
-
-### 4. Offline Map Integration
-
-**Functionality**:
-- Pre-download maps for rental area
-- Cache pickup and return location maps
-- Store nearby fuel/charging station locations
-- Enable basic navigation without connectivity
-
-**Map Features**:
-- Offline routing to return location
-- Saved points of interest
-- Parking facility navigation
-- Emergency service locations
-
-**Source**: `docs/research/advanced-features.md` (Section 3: Map-Based Search, Wayfinding AR)
-
-### 5. Damage Documentation
-
-**Functionality**:
-- Capture photos and videos offline
-- Store damage reports locally
-- Queue uploads for when connectivity restored
-- Timestamp and geotag documentation
-
-**Offline Capabilities**:
-- Photo capture with device camera
-- Video recording for walkaround inspection
-- Local annotation and notes
-- Automatic upload queue management
-
-**Source**: `docs/research/advanced-features.md` (Section 5: AI-Powered Damage Detection)
-
-## Advanced Features
-
-### 1. Bluetooth Low Energy (BLE) Vehicle Access
-
-**Description**: Enable vehicle unlocking and starting using BLE technology without requiring internet connectivity.
-
-**Capabilities**:
-- Phone-as-a-key functionality
-- Proximity-based automatic unlocking
-- Secure BLE pairing with vehicle
-- Battery-efficient communication protocol
-
-**User Experience**:
-- Approach vehicle with phone in pocket
-- Automatic unlock when within range
-- Start vehicle with phone inside
-- Lock vehicle when walking away
-
-**Technical Requirements**:
-- BLE 5.0+ support
-- Secure key exchange protocol
-- Low-power background scanning
-- Fallback to manual unlock via app
-
-**Priority**: High
-
-**Source**: `docs/research/advanced-features.md` (Section 3: PWA Strategy, Digital Wallets)
-
-### 2. Offline Biometric Authentication
-
-**Description**: Enable biometric authentication (Face ID, Touch ID, fingerprint) for app access without network verification.
-
-**Capabilities**:
-- Local biometric verification
-- Cached authentication tokens
-- Secure enclave integration
-- Fallback PIN authentication
-
-**Security Features**:
-- Device-level biometric storage
-- No biometric data transmission
-- Encrypted local authentication
-- Automatic re-verification when online
-
-**Priority**: High
-
-**Source**: `docs/research/advanced-features.md` (Section 3: Biometric Authentication)
-
-### 3. Progressive Sync
-
-**Description**: Intelligent synchronization that prioritizes critical data and handles conflicts when connectivity restored.
-
-**Capabilities**:
-- Priority-based sync queue
-- Conflict resolution algorithms
-- Bandwidth-aware synchronization
-- Background sync when online
-
-**Sync Priorities**:
-1. Digital key updates (highest)
-2. Damage reports and photos
-3. Trip modifications
-4. Usage data and telemetry
-5. User preferences (lowest)
-
-**Conflict Handling**:
-- Server-side timestamp comparison
-- User notification for conflicts
-- Manual conflict resolution UI
-- Automatic merge for non-conflicting changes
-
-**Priority**: Medium
-
-**Source**: `docs/research/advanced-features.md` (Section 3: PWA Strategy)
-
-### 4. Offline Voice Commands
-
-**Description**: Enable basic voice commands for vehicle operations without internet connectivity.
-
-**Capabilities**:
-- On-device speech recognition
-- Local command processing
-- Vehicle control via voice
-- Offline natural language understanding
-
-**Supported Commands**:
-- "Unlock the car"
-- "Start the engine"
-- "Show my reservation"
-- "Call roadside assistance"
-
-**Technical Implementation**:
-- On-device ML models for speech recognition
-- Local command vocabulary
-- Fallback to online processing when available
-- Continuous learning from usage patterns
-
-**Priority**: Medium
-
-**Source**: `docs/research/advanced-features.md` (Section 3: Voice-First Interfaces)
-
-### 5. Offline Damage Detection
-
-**Description**: Enable AI-powered damage detection using on-device machine learning models.
-
-**Capabilities**:
-- Local image processing
-- On-device ML inference
-- Damage classification without connectivity
-- Queue results for server validation
-
-**Detection Features**:
-- Scratch and dent identification
-- Severity assessment
-- Comparison with cached baseline
-- Automatic documentation generation
-
-**Technical Requirements**:
-- TensorFlow Lite or Core ML models
-- On-device image processing
-- Local damage database
-- Efficient model size (<50MB)
-
-**Priority**: Medium
-
-**Source**: `docs/research/advanced-features.md` (Section 5: AI-Powered Damage Detection)
-
-## User Stories
-
-### Story 1: Parking Garage Access
-**As** an individual customer  
-**I want** to unlock my rental car in an underground parking garage with no cell signal  
-**So that** I can access my vehicle without connectivity issues
-
-**Acceptance Criteria**:
-- Digital key works via BLE without internet
-- Reservation details accessible offline
-- Vehicle unlocks within 2 seconds of button press
-- No error messages about connectivity
-
-### Story 2: International Travel
-**As** a corporate client traveling internationally  
-**I want** to access my rental without data roaming  
-**So that** I can avoid expensive roaming charges while still accessing my vehicle
-
-**Acceptance Criteria**:
-- All essential features work without data connection
-- Reservation details cached before travel
-- Digital key functions offline
-- Emergency contacts accessible offline
-
-### Story 3: Remote Location Rental
-**As** an individual customer renting in a remote area  
-**I want** to document vehicle condition without cell coverage  
-**So that** I can protect myself from false damage claims
-
-**Acceptance Criteria**:
-- Photos and videos captured offline
-- Damage reports stored locally
-- Automatic upload when connectivity restored
-- Timestamp and geolocation preserved
-
-### Story 4: Network Outage
-**As** a fleet manager  
-**I want** customers to access vehicles during network outages  
-**So that** operations continue without disruption
-
-**Acceptance Criteria**:
-- Vehicle access unaffected by network issues
-- Critical operations function offline
-- Data syncs automatically when network restored
-- No customer service calls about access issues
-
-## Technical Requirements
-
-### Data Storage
-- Minimum 100MB local storage for cached data
-- Encrypted storage for sensitive information
-- Automatic cache management and cleanup
-- Configurable cache expiration policies
-
-### Synchronization
-- Background sync when connectivity restored
-- Conflict resolution for offline changes
-- Priority-based sync queue
-- Bandwidth-efficient delta synchronization
-
-### Security
-- Encrypted local data storage
-- Secure key management
-- Biometric authentication support
-- Automatic security updates when online
-
-### Performance
-- App launch time <2 seconds offline
-- Digital key response time <2 seconds
-- Photo/video capture without lag
-- Smooth UI transitions offline
-
-## Integration Points
-
-### Vehicle Systems
-- BLE communication protocol
-- Vehicle telematics system
-- Keyless entry system
-- Engine immobilizer integration
-
-### Mobile Platform
-- iOS Keychain / Android Keystore
-- Background sync APIs
-- Local notification system
-- Biometric authentication APIs
-
-### Backend Services
-- Sync service for data reconciliation
-- Conflict resolution service
-- Key management service
-- Analytics service for offline usage
-
-## Success Metrics
-
-### Reliability
-- 99.9% offline access success rate
-- <1% sync conflict rate
-- <0.1% data loss incidents
-- 100% digital key availability offline
-
-### Performance
-- <2 second vehicle unlock time
-- <3 second app launch time offline
-- <5 second sync time when online
-- <10MB average cache size
-
-### User Satisfaction
-- >95% satisfaction with offline features
-- <2% support calls related to offline issues
-- >90% users successfully use offline mode
-- >85% users prefer offline-capable app
+### For Individual Customers
+- **Reliability**: Access critical booking information regardless of connectivity
+- **International Travel**: Use app abroad without expensive roaming data
+- **Peace of Mind**: Never worry about losing booking details due to connectivity issues
+- **Vehicle Access**: Unlock vehicle even in parking garages with no signal
+
+### For Corporate Clients
+- **Business Continuity**: Employees can access bookings during travel disruptions
+- **Cost Savings**: Reduce roaming data costs for international business travel
+- **Compliance**: Access rental agreements and policies offline for review
+
+### For Operational Staff
+- **Reduced Support**: Fewer calls about "can't access booking" issues
+- **Improved Reliability**: Customers can check in even with poor venue connectivity
+- **Better Experience**: Customers arrive prepared with all necessary information
+
+### For Business
+- **Competitive Advantage**: Superior reliability compared to online-only competitors
+- **Customer Satisfaction**: Eliminate frustration from connectivity-dependent features
+- **Global Reach**: Enable usage in regions with poor internet infrastructure
+- **Reduced Churn**: Reliability builds trust and loyalty
 
 ## Implementation Priority
 
-**Priority**: High
+**Must-Have (Phase 1)**:
+- Cached active bookings and vehicle information
+- Digital key offline functionality via BLE
+- Offline status indicators
+- Emergency contact information
+- Automatic sync on reconnect
 
-**Rationale**: Offline mode is critical for user confidence and operational reliability. Network connectivity issues are a common pain point, and offline capabilities significantly improve user experience and reduce support burden.
+**Should-Have (Phase 2)**:
+- Cached location maps
+- Offline help articles
+- Manual sync control (pull-to-refresh)
+- Offline issue reporting queue
+- Storage management settings
 
-**Dependencies**:
-- PWA infrastructure
-- BLE vehicle integration
-- Secure local storage implementation
-- Sync service development
+**Nice-to-Have (Phase 3)**:
+- Offline navigation
+- Regional map downloads
+- Advanced conflict resolution
+- Predictive caching based on travel patterns
 
-## Related Features
+## Technical Considerations
 
-- [Push Notifications](./push-notifications.md) - Offline notification queuing
-- [Digital Key](./digital-key.md) - BLE-based vehicle access
-- [Mobile Payments](./mobile-payments.md) - Offline payment authorization
-- Vehicle Tracking - Offline location caching
+### Storage Technologies
+- **Service Workers**: Intercept network requests, serve cached content
+- **IndexedDB**: Store structured data (bookings, vehicles, locations)
+- **Cache API**: Store static assets (images, maps, documents)
+- **LocalStorage**: Store simple key-value preferences
 
-## References
+### Security
+- **Encrypted Storage**: Sensitive data encrypted at rest on device
+- **Secure Key Storage**: Digital keys stored in secure enclave/keystore
+- **Data Expiration**: Automatic removal of sensitive cached data after period
+- **Biometric Protection**: Require authentication to access cached sensitive data
 
-- Progressive Web App (PWA) best practices
-- BLE security standards
-- Mobile offline-first architecture patterns
-- Conflict-free replicated data types (CRDTs)
+### Performance
+- **Lazy Loading**: Cache data on-demand rather than preloading everything
+- **Compression**: Compress cached data to minimize storage usage
+- **Efficient Queries**: Optimize IndexedDB queries for fast offline access
+- **Background Caching**: Download optional data in background when on WiFi
+
+## Success Metrics
+
+- **Offline Usage Rate**: Percentage of users accessing app while offline
+- **Offline Feature Usage**: Which offline features are most used
+- **Sync Success Rate**: Percentage of successful synchronizations
+- **Storage Usage**: Average cached data size per user
+- **Offline Satisfaction**: User satisfaction scores for offline functionality
+- **Support Reduction**: Decrease in connectivity-related support tickets
+
+## Sources
+
+- **Primary**: BookCars mobile features analysis (comprehensive offline capabilities)
+- **Primary**: Advanced features document (PWA strategy, BLE keyless entry, unified codebase)
+- **Supporting**: FreeCar mini-program features (cached data, sync patterns)
+- **Supporting**: Mobile-first trends research (offline best practices, international travel needs)
 
 ---
 
-**Source Documents**:
-- `docs/research/advanced-features.md` (Sections 3, 5)
-- `docs/analysis/bookcars/features-mobile.md`
-- `docs/research/market-trends/mobile-first.md`
+**Note**: This feature synthesizes proven offline patterns from production systems (BookCars) with advanced PWA capabilities (service workers, BLE integration, unified codebase) to create a robust offline experience that ensures users can always access critical rental information and vehicle access functionality regardless of connectivity.

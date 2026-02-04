@@ -1,451 +1,449 @@
 ---
 sidebar_position: 3
 title: Payment & Billing Features
-description: Advanced payment processing including crypto-fiat gateways, BNPL integration, and digital wallets
-tags: [features, user-facing, payment, billing, crypto, BNPL, digital-wallets]
+description: Comprehensive payment processing and billing capabilities including emerging fintech innovations like crypto-fiat gateways and BNPL
+tags: [features, user-facing, payment, billing, fintech, crypto, BNPL]
 ---
 
 # Payment & Billing Features
 
 ## Overview
 
-Payment and billing features enable secure, flexible payment processing throughout the rental lifecycle. This catalog emphasizes next-generation financial technology including crypto-fiat hybrid gateways, Buy Now Pay Later (BNPL) integration, and digital wallet support while maintaining traditional payment methods.
+Payment and billing features encompass the entire financial transaction lifecycle from payment method management through final invoicing. This document synthesizes proven payment patterns with emerging fintech innovations including crypto-fiat hybrid gateways, Buy Now Pay Later (BNPL), digital wallets, and advanced fraud prevention to create a secure, flexible, and future-ready payment experience.
 
-## Advanced Payment Features
+## Payment Methods
 
-### CRYPTO.1 Crypto-Fiat Hybrid Gateway
+### F-PB-001: Multiple Payment Method Support
 
-**Name**: Cryptocurrency Payment with Fiat Settlement
-
-**Description**: Accept cryptocurrency payments (BTC, ETH) from customers while instantly converting to fiat currency for company settlement, eliminating volatility risk.
-
-**Capabilities**:
-- Accept Bitcoin (BTC) and Ethereum (ETH) payments
-- Real-time market price conversion
-- Instant sell order execution
-- Fiat currency settlement (USD, EUR, etc.)
-- Volatility risk elimination
-- Crypto wallet integration
-- Transaction confirmation tracking
-- Refund processing in original cryptocurrency
-
-**Stakeholder Benefit**: Crypto-wealthy customers can pay with digital assets, while the platform avoids cryptocurrency volatility and regulatory complexity.
-
-**Priority**: Nice-to-have (emerging market segment)
-
-**Source**: docs/research/advanced-features.md (Section 10: Crypto-Fiat Hybrid Gateways)
-
-### BNPL.1 Buy Now, Pay Later Integration
-
-**Name**: Deferred Payment Plans
-
-**Description**: Integrate with BNPL providers (Klarna, Affirm) to offer installment payment options, enabling customers to split rental costs over time.
-
-**Capabilities**:
-- Direct API integration with Klarna/Affirm
-- Soft credit check in milliseconds
-- Split payment options (e.g., 4 payments over 6 weeks)
-- Automatic payment collection
-- Payment status tracking
-- Default handling and notifications
-- Refund distribution across installments
-
-**Payment Split Examples**:
-- $1,000 rental → 4 × $250 payments
-- $500 rental → 3 × $166.67 payments
-- Custom payment schedules
-
-**Stakeholder Benefit**: Customers can book premium vehicles or longer rentals by spreading costs, increasing Average Order Value (AOV) and conversion.
-
-**Priority**: Should-have (conversion optimization)
-
-**Source**: docs/research/advanced-features.md (Section 10: Buy Now, Pay Later)
-
-### WALLET.1 Digital Wallet Integration
-
-**Name**: Mobile Wallet Payment Support
-
-**Description**: Seamless integration with Apple Wallet, Google Wallet, and other digital wallets for one-tap payments and digital key storage.
-
-**Capabilities**:
-- Apple Pay integration
-- Google Pay integration
-- Samsung Pay integration
-- One-tap payment processing
-- Stored payment method management
-- Digital key storage in wallet
-- Boarding pass-style booking cards
-- NFC-based vehicle entry (tap phone to unlock)
-
-**Stakeholder Benefit**: Customers enjoy frictionless payments and convenient access to booking information and vehicle keys in their mobile wallet.
-
-**Priority**: Should-have (mobile-first experience)
-
-**Source**: docs/research/advanced-features.md (Section 3: Digital Wallets), docs/research/competitive-analysis/feature-matrix.md
-
-### EXPENSE.1 Automated Expense Integration
-
-**Name**: Corporate Expense System Integration
-
-**Description**: Automatic export of receipts and booking details to corporate expense management systems (Concur, Expensify, etc.).
-
-**Capabilities**:
-- Direct API integration with Concur, Expensify
-- Automatic receipt export after trip completion
-- Itemized expense breakdown
-- Category tagging (transportation, business travel)
-- Mileage tracking for reimbursement
-- Tax-compliant receipt formatting
-- Multi-currency expense reporting
-
-**Stakeholder Benefit**: Business travelers save time on expense reporting, while companies gain automated expense tracking and policy compliance.
-
-**Priority**: Should-have (business traveler segment)
-
-**Source**: docs/research/advanced-features.md (Section 2: Power Renter Needs)
-
-## Core Payment Features
-
-### PAY.1 Multiple Payment Methods
-
-**Name**: Flexible Payment Options
-
-**Description**: Support for various payment methods to accommodate customer preferences and geographic requirements.
+**Description**: Comprehensive support for various payment methods to accommodate customer preferences and geographic requirements.
 
 **Supported Payment Methods**:
-- **Credit Cards**: Visa, Mastercard, American Express, Discover
-- **Debit Cards**: Major debit card networks
-- **Digital Wallets**: Apple Pay, Google Pay, Samsung Pay
-- **Online Platforms**: PayPal, Venmo
-- **Bank Transfers**: ACH, SEPA (for advance bookings)
-- **Cryptocurrency**: BTC, ETH (via crypto-fiat gateway)
-- **BNPL**: Klarna, Affirm installment plans
-- **Pay at Counter**: Option to pay upon pickup (subject to approval)
+- **Credit/Debit Cards**: Visa, Mastercard, American Express, Discover, JCB
+- **Digital Wallets**: Apple Pay, Google Pay, Samsung Pay, Link
+- **Online Payment Platforms**: PayPal, Venmo
+- **Bank Transfers**: ACH (US), SEPA (Europe), direct debit
+- **Platform Wallet**: Internal balance/credit system
+- **Pay at Counter**: Option to pay upon vehicle pickup (subject to supplier approval)
+- **Corporate Billing**: Direct billing to corporate accounts
 
 **Payment Security**:
-- PCI-DSS compliant payment processing
-- End-to-end encryption (TLS/SSL)
-- Payment tokenization (no raw card storage)
-- 3D Secure authentication
-- Fraud detection and prevention
-- Secure credential storage
+- **PCI-DSS Compliance**: Full compliance with payment card industry standards
+- **Secure Processing**: PCI-compliant payment gateway integration
+- **Encryption**: All payment data encrypted in transit (TLS 1.3) and at rest (AES-256)
+- **Tokenization**: Card details tokenized for future use without storing raw data
+- **3D Secure**: Additional authentication for card payments (3DS 2.0)
+- **Fraud Detection**: Real-time fraud screening and risk scoring
 
-**Stakeholder Benefit**: Customers can pay using their preferred method with confidence in security and data protection.
+**Stakeholder Benefit**: Customers can pay using their preferred method with confidence in security. Global payment method support enables international expansion.
 
 **Priority**: Must-have
 
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md, docs/research/industry-standards/payment-standards.md
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
 
-### PAY.2 Flexible Payment Timing
+---
 
-**Name**: Payment Schedule Options
+### F-PB-002: Crypto-Fiat Hybrid Gateway
 
-**Description**: Multiple payment timing options to suit different customer needs and booking scenarios.
+**Description**: Accept cryptocurrency payments while eliminating volatility risk through instant conversion to fiat currency.
+
+**Crypto Payment Features**:
+- **Supported Cryptocurrencies**: Bitcoin (BTC), Ethereum (ETH), USDC, USDT
+- **Instant Market Conversion**: Automatic sell order execution upon payment
+- **Fiat Settlement**: EUR/USD/GBP settled into company bank account
+- **Volatility Protection**: Zero exposure to crypto price fluctuations
+- **Transparent Exchange Rate**: Real-time exchange rate display
+- **Transaction Confirmation**: Blockchain confirmation tracking
+- **Refund Support**: Crypto refunds at current exchange rate
+- **Compliance**: AML/KYC compliance for crypto transactions
+
+**Stakeholder Benefit**: Access crypto-wealthy demographic without volatility risk. Differentiation in luxury and tech-savvy markets. Lower transaction fees than traditional cards.
+
+**Priority**: Nice-to-have (Phase 3)
+
+**Source**: docs/research/advanced-features.md (Section 10)
+
+---
+
+### F-PB-003: Buy Now, Pay Later (BNPL) Integration
+
+**Description**: Integrated payment plans allowing customers to split payments over time, increasing accessibility to premium vehicles.
+
+**BNPL Features**:
+- **Partner Integration**: Direct API integration with Klarna, Affirm, Afterpay
+- **Soft Credit Check**: Instant approval decision in milliseconds
+- **Flexible Plans**: 4 payments (bi-weekly), 6 payments (monthly), 12 payments (monthly)
+- **Interest-Free Options**: 0% APR for qualified customers on short-term plans
+- **Transparent Terms**: Clear display of payment schedule and any interest
+- **Automatic Payments**: Scheduled automatic deductions
+- **Early Payoff**: Option to pay off early without penalty
+- **Eligibility Check**: Pre-qualification without hard credit inquiry
+
+**Use Cases**:
+- Split $1,000 rental into 4x $250 payments
+- Enable premium vehicle bookings through deferred payment
+- Increase Average Order Value (AOV) by 30-50%
+- Reduce booking abandonment for high-value rentals
+
+**Stakeholder Benefit**: Access to premium vehicles for budget-conscious users. Increased booking conversion for high-value rentals. Younger demographics prefer BNPL over credit cards.
+
+**Priority**: Should-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 10)
+
+---
+
+### F-PB-004: Digital Wallet Integration
+
+**Description**: Seamless integration with mobile digital wallets for fast, secure payments.
+
+**Digital Wallet Features**:
+- **Apple Wallet**: Store digital keys, payment cards, and booking passes
+- **Google Wallet**: Android equivalent with NFC payment support
+- **One-Tap Payment**: Biometric authentication (Face ID, Touch ID, fingerprint)
+- **Stored Value**: Pre-load wallet balance for faster checkout
+- **Loyalty Integration**: Store loyalty cards and rewards in wallet
+- **Booking Passes**: Add booking confirmation to wallet with QR code
+- **NFC Vehicle Access**: Tap phone on car door to unlock (if supported)
+
+**Stakeholder Benefit**: Fastest possible checkout experience. Enhanced security through biometric authentication. Convenience of consolidated digital wallet.
+
+**Priority**: Should-have
+
+**Source**: docs/research/advanced-features.md (Section 3), docs/analysis/bookcars/features-user.md
+
+---
+
+## Payment Timing & Flexibility
+
+### F-PB-005: Flexible Payment Timing Options
+
+**Description**: Multiple payment timing options to suit different customer needs and risk profiles.
 
 **Payment Timing Options**:
-- **Pay in Full**: Complete payment at time of booking
-- **Pay Deposit**: Partial payment upfront, remainder at pickup
-- **Pay at Counter**: Reserve without payment, pay upon arrival
-- **Installment Plans**: BNPL split payments over time
-- **Corporate Billing**: Invoice company after trip completion
+- **Pay in Full**: Complete payment at time of booking (most common)
+- **Pay Deposit**: Pay partial amount upfront (20-50%), remainder at pickup
+- **Pay at Counter**: Reserve without payment, pay upon arrival (if enabled, requires pre-authorization)
+- **Split Payments**: Multiple payments over time (via BNPL)
+- **Corporate Billing**: Post-rental invoicing for corporate accounts
 
 **Deposit Handling**:
-- Configurable deposit amounts (percentage or fixed)
-- Automatic balance calculation
-- Balance due reminders
-- Secure payment method storage for balance
-- Automatic balance collection before pickup
+- Configurable deposit amounts (percentage or fixed amount)
+- Automatic calculation of remaining balance
+- Reminder notifications for balance due (email, SMS, push)
+- Secure storage of payment method for balance collection
+- Automatic charge of balance before pickup
+- Deposit refund on cancellation per policy
 
-**Stakeholder Benefit**: Flexibility in payment timing improves booking conversion and accommodates different financial preferences and corporate policies.
+**Pre-Authorization**:
+- Hold funds on credit card without charging
+- Security deposit for damage/fuel
+- Automatic release after return inspection
+- Transparent hold amount display
+
+**Stakeholder Benefit**: Flexibility in payment timing improves booking conversion. Accommodates different financial preferences and corporate policies.
 
 **Priority**: Should-have
 
 **Source**: docs/analysis/bookcars/features-user.md
 
-### PAY.3 Saved Payment Methods
+---
 
-**Name**: Secure Payment Method Storage
+### F-PB-006: Saved Payment Methods
 
 **Description**: Securely store payment methods for faster checkout and recurring payments.
 
-**Storage Features**:
-- **Card Storage**: Save credit/debit cards with tokenization
-- **Multiple Methods**: Store multiple payment methods
-- **Default Selection**: Set preferred default payment method
+**Payment Storage Features**:
+- **Card Storage**: Save credit/debit cards for future use
+- **Multiple Cards**: Store multiple payment methods
+- **Default Payment**: Set preferred default payment method
 - **Card Management**: Add, remove, or update stored cards
-- **Secure Storage**: PCI-compliant tokenized storage
-- **Expiration Alerts**: Notifications for expiring cards
-- **Verification**: CVV re-entry for security
+- **Secure Storage**: PCI-compliant tokenized storage without exposing full card details
+- **Expiration Alerts**: Notifications for expiring cards (30 days before)
+- **Card Verification**: CVV required for first use, optional for subsequent
+- **Billing Address**: Store billing address with each card
 
-**Stakeholder Benefit**: Faster checkout for repeat customers without re-entering payment details, improving conversion and user experience.
-
-**Priority**: Should-have
-
-**Source**: docs/analysis/bookcars/features-user.md
-
-## Pricing and Transparency
-
-### PRICE.1 Transparent Pricing Breakdown
-
-**Name**: Itemized Cost Display
-
-**Description**: Clear, itemized pricing breakdown with no hidden fees, showing all costs before payment.
-
-**Pricing Components**:
-- **Base Rate**: Vehicle rental cost (hourly/daily/weekly)
-- **Insurance Costs**: Separate line items for each coverage option
-- **Additional Services**: Individual costs for GPS, child seats, drivers
-- **Taxes & Fees**: All applicable taxes and fees itemized
-- **Discounts**: Promotional and long-term rental discounts
-- **Deposits**: Security deposit amount (if applicable)
-- **Total Cost**: Final amount prominently displayed
-- **Savings Display**: Show savings vs. standard rates
-
-**Dynamic Pricing**:
-- Time-based rates (hourly, daily, weekly, monthly)
-- Seasonal pricing (peak and off-peak periods)
-- Real-time price updates as options change
-- Volume discounts for longer rentals
-- Early booking discounts
-
-**Stakeholder Benefit**: Customers understand exactly what they're paying for, building trust and reducing disputes and cart abandonment.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/car-rental-php/features.md
-
-### PRICE.2 Multi-Currency Support
-
-**Name**: International Currency Handling
-
-**Description**: Display prices and process payments in multiple currencies with real-time conversion.
-
-**Currency Features**:
-- **Currency Selection**: Choose preferred currency for display
-- **Real-Time Conversion**: Live exchange rates for accurate pricing
-- **Consistent Currency**: Selected currency maintained throughout booking
-- **Payment Currency**: Process payment in customer's chosen currency
-- **Currency Formatting**: Locale-appropriate number and symbol formatting
-- **Exchange Rate Display**: Show conversion rate used
-- **Multi-Currency Wallet**: Store balance in multiple currencies
-
-**Supported Currencies**:
-- Major currencies (USD, EUR, GBP, JPY, CNY, etc.)
-- Regional currencies based on operating locations
-- Cryptocurrency (BTC, ETH via crypto-fiat gateway)
-
-**Stakeholder Benefit**: International customers see prices in familiar currency, reducing confusion and improving trust and conversion.
-
-**Priority**: Should-have (international operations)
-
-**Source**: docs/analysis/bookcars/features-user.md
-
-### PRICE.3 Discount Code Application
-
-**Name**: Promotional Code System
-
-**Description**: Apply discount codes and promotional offers during booking with validation and automatic price adjustment.
-
-**Discount Features**:
-- **Code Input**: Promo code entry field
-- **Code Validation**: Real-time validation and error messages
-- **Discount Display**: Show discount amount and percentage
-- **Code Restrictions**: Minimum rental period, vehicle types, dates
-- **Expiration Handling**: Check code validity dates
-- **Stacking Rules**: Allow or prevent multiple code usage
-- **Available Promotions**: Display applicable promotions
-
-**Discount Types**:
-- Percentage discounts (e.g., 20% off)
-- Fixed amount discounts (e.g., $50 off)
-- Free upgrades or add-ons
-- First-time user discounts
-- Referral discounts
-- Seasonal promotions
-
-**Stakeholder Benefit**: Customers can take advantage of promotions, improving conversion and customer acquisition.
-
-**Priority**: Should-have
-
-**Source**: docs/analysis/freecar/features-miniprogram.md
-
-## Payment Processing
-
-### PROCESS.1 Secure Payment Processing
-
-**Name**: PCI-Compliant Payment Gateway
-
-**Description**: Secure payment processing through PCI-DSS compliant payment gateways with fraud detection.
-
-**Processing Features**:
-- **Payment Authorization**: Pre-authorize payment amount
-- **Payment Capture**: Capture authorized payment
-- **Instant Processing**: Real-time payment confirmation
-- **Failed Payment Handling**: Clear error messages and retry
-- **Fraud Detection**: AI-powered fraud screening
-- **3D Secure**: Additional authentication for card payments
-- **Chargeback Management**: Handle disputes and chargebacks
-
-**Security Measures**:
-- PCI-DSS Level 1 compliance
-- End-to-end encryption
-- Tokenization of card data
-- Secure credential storage
-- Regular security audits
-- Fraud monitoring and alerts
-
-**Stakeholder Benefit**: Customers trust the platform with sensitive payment information, while the platform minimizes fraud and chargebacks.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/industry-standards/payment-standards.md
-
-### PROCESS.2 Refund Processing
-
-**Name**: Automated Refund Management
-
-**Description**: Automatic refund processing based on cancellation policies and booking modifications.
-
-**Refund Features**:
-- **Automatic Calculation**: Refund amount based on policy
-- **Instant Processing**: Refunds initiated immediately
-- **Original Method**: Refund to original payment method
-- **Partial Refunds**: Prorated refunds for modifications
-- **Refund Tracking**: Status monitoring and notifications
-- **Refund Timeline**: Clear communication of processing time
-- **BNPL Refunds**: Distribute refunds across installments
-
-**Refund Scenarios**:
-- Full cancellation refunds
-- Partial refunds for modifications
-- Damage deposit returns
-- Overcharge corrections
-- Promotional credit refunds
-
-**Stakeholder Benefit**: Customers receive refunds quickly and transparently, improving trust and reducing support burden.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
-
-## Billing and Invoicing
-
-### INVOICE.1 Invoice Generation
-
-**Name**: Detailed Invoice Creation
-
-**Description**: Automatic generation of detailed invoices with itemized charges and tax compliance.
-
-**Invoice Features**:
-- **Automatic Generation**: Invoice created after trip completion
-- **Itemized Breakdown**: Line items for all charges
-- **Tax Calculation**: Accurate tax computation by jurisdiction
-- **Discount Application**: Show all discounts applied
-- **PDF Generation**: Downloadable PDF invoices
-- **Email Delivery**: Automatic email to customer
-- **Invoice History**: Access to all past invoices
-- **Corporate Formatting**: Business-compliant invoice format
-
-**Invoice Components**:
-- Booking reference and dates
-- Vehicle details
-- Base rental charges
-- Insurance and add-ons
-- Taxes and fees
-- Discounts and credits
-- Total amount charged
-- Payment method used
-- Company tax information
-
-**Stakeholder Benefit**: Customers receive professional invoices for expense reporting, while the platform maintains tax compliance.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
-
-### INVOICE.2 Payment History and Receipts
-
-**Name**: Transaction Record Management
-
-**Description**: Complete record of all payment transactions with downloadable receipts and export capabilities.
-
-**Payment Records**:
-- **Transaction History**: List of all payments made
-- **Transaction Details**: Date, amount, method, booking reference
-- **Receipt Generation**: Downloadable PDF receipts
-- **Refund Tracking**: Status and details of refunds
-- **Invoice Access**: Access to all invoices
-- **Export Options**: CSV/Excel export for accounting
-- **Search and Filter**: Find specific transactions
-
-**Stakeholder Benefit**: Easy expense tracking and documentation for personal or business use, reducing support inquiries.
+**Stakeholder Benefit**: Faster checkout process for repeat customers. Reduced friction for frequent renters. Enhanced security through tokenization.
 
 **Priority**: Should-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-## Deposits and Holds
+---
 
-### DEPOSIT.1 Security Deposit Management
+## Pricing & Transparency
 
-**Name**: Automated Deposit Handling
+### F-PB-007: Transparent Pricing Breakdown
 
-**Description**: Manage security deposits with automatic authorization, hold, and release based on vehicle condition.
+**Description**: Clear, itemized pricing breakdown with no hidden fees, building trust and reducing disputes.
 
-**Deposit Features**:
-- **Deposit Authorization**: Pre-authorize deposit amount
-- **Hold Management**: Maintain hold during rental period
-- **Automatic Release**: Release deposit after inspection
-- **Partial Deduction**: Deduct damage costs from deposit
-- **Deposit Refund**: Return unused deposit amount
-- **Timeline Communication**: Clear communication of hold period
-- **Alternative Options**: Deposit waiver with insurance upgrade
+**Pricing Transparency**:
+- **Base Rate**: Vehicle rental cost clearly displayed per hour/day/week
+- **Insurance Costs**: Separate line items for each insurance option selected
+- **Additional Services**: Individual costs for GPS, child seats, additional drivers, fuel
+- **Taxes & Fees**: All applicable taxes and fees itemized by type
+- **Discounts**: Promotional discounts and long-term rental discounts shown as negative line items
+- **Total Cost**: Final amount prominently displayed with currency
+- **Price Comparison**: Show savings compared to standard rates
+- **Estimated vs Final**: Clear distinction between estimated and final charges
 
-**Deposit Amounts**:
-- Vehicle category-based amounts
-- Higher deposits for luxury vehicles
-- Reduced deposits for verified customers
-- Waived deposits for premium members
+**Dynamic Pricing Display**:
+- **Time-Based Rates**: Different rates for hourly, daily, weekly, monthly rentals
+- **Volume Discounts**: Automatic application (e.g., 7+ days = 15% off)
+- **Seasonal Pricing**: Date-based pricing for peak and off-peak periods
+- **Real-Time Updates**: Price updates as rental period or options change
+- **Price Lock**: Option to lock price for limited time
 
-**Stakeholder Benefit**: Customers understand deposit requirements and timeline, while the platform protects against damages.
+**Stakeholder Benefit**: Customers understand exactly what they're paying for. Transparency builds trust and reduces disputes. Clear savings display increases perceived value.
+
+**Priority**: Must-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md (Section 4)
+
+---
+
+### F-PB-008: Multi-Currency Support
+
+**Description**: Display prices and process payments in multiple currencies for international customers.
+
+**Currency Features**:
+- **Currency Selection**: Choose preferred currency for price display
+- **Real-Time Conversion**: Live exchange rates for accurate pricing (updated hourly)
+- **Consistent Currency**: Selected currency maintained throughout booking process
+- **Payment Currency**: Process payment in customer's chosen currency
+- **Currency Formatting**: Locale-appropriate number and currency formatting
+- **Exchange Rate Transparency**: Display exchange rate and conversion date
+- **Multi-Currency Wallet**: Store balance in multiple currencies
+
+**Supported Currencies**:
+- Major currencies: USD, EUR, GBP, JPY, CNY, AUD, CAD, CHF
+- Regional currencies based on operating markets
+- Cryptocurrency display (BTC, ETH) if crypto payments enabled
+
+**Stakeholder Benefit**: International customers see prices in familiar currency, reducing confusion and improving trust. Eliminates surprise foreign transaction fees.
 
 **Priority**: Should-have
 
-**Source**: docs/research/competitive-analysis/feature-matrix.md
+**Source**: docs/analysis/bookcars/features-user.md
 
-## Wallet and Credits
+---
 
-### WALLET.2 Platform Wallet System
+## Invoicing & Documentation
 
-**Name**: Internal Wallet and Credits
+### F-PB-009: Comprehensive Invoice Generation
 
-**Description**: Internal wallet system for storing credits, promotional balances, and facilitating faster payments.
+**Description**: Detailed, professional invoices for all transactions with multiple format options.
+
+**Invoice Features**:
+- **Detailed Line Items**: Complete breakdown of all charges
+- **Tax Breakdown**: Separate display of each tax type and rate
+- **Discount Application**: Show original price and discount amount
+- **Payment Method**: Display payment method used
+- **Transaction ID**: Unique identifier for each transaction
+- **Booking Reference**: Link to original booking
+- **Company Information**: Supplier/platform details for accounting
+- **Customer Information**: Billing name and address
+- **Invoice Number**: Sequential invoice numbering
+- **Issue Date**: Invoice generation date and time
+
+**Invoice Formats**:
+- **PDF Download**: Professional PDF invoice for printing/archiving
+- **Email Delivery**: Automatic email delivery upon payment
+- **Print-Friendly**: Optimized layout for printing
+- **Digital Receipt**: Mobile-optimized receipt view
+- **Expense Integration**: Export to Concur, Expensify, QuickBooks
+
+**Stakeholder Benefit**: Professional documentation for expense reporting and accounting. Particularly valuable for business travelers and corporate clients.
+
+**Priority**: Must-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
+
+---
+
+### F-PB-010: Payment History & Transaction Records
+
+**Description**: Complete record of all payment transactions with search and export capabilities.
+
+**Payment Records**:
+- **Transaction History**: Chronological list of all payments made
+- **Transaction Details**: Date, amount, method, booking reference, status
+- **Receipt Access**: Download PDF receipts for each transaction
+- **Refund Tracking**: Status and details of refund transactions
+- **Failed Payments**: History of failed payment attempts with reasons
+- **Pending Payments**: Outstanding balances and due dates
+- **Search & Filter**: Search by date range, amount, booking, or method
+- **Export**: Download transaction history (CSV, PDF, Excel)
+
+**Stakeholder Benefit**: Easy expense tracking and documentation for personal or business use. Audit trail for accounting and tax purposes.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
+
+---
+
+## Advanced Payment Features
+
+### F-PB-011: Dynamic Pricing Engine
+
+**Description**: AI-powered real-time pricing optimization based on demand, competition, and market conditions.
+
+**Pricing Inputs**:
+- **Demand Signals**: Booking velocity, search volume, competitor inventory
+- **External Events**: Concerts, conferences, sports events, holidays
+- **Flight Data**: Arrival volumes at nearby airports
+- **Weather Forecasts**: Impact on convertible/SUV demand
+- **Historical Patterns**: Seasonal trends and day-of-week patterns
+- **Competitor Rates**: Real-time competitor price monitoring
+- **Utilization Rates**: Current fleet utilization percentage
+
+**Pricing Strategies**:
+- **Flat Rate**: Base price × days (baseline)
+- **Seasonal**: Base × seasonal multiplier
+- **Demand-Based**: Base × (1 + (Utilization% - Target%) × Sensitivity)
+- **Event-Based**: Surge pricing for major events
+- **Last-Minute**: Discounts for same-day bookings to maximize utilization
+
+**Stakeholder Benefit**: Maximize revenue through intelligent pricing. Customers get fair market rates. Discounts available during low-demand periods.
+
+**Priority**: Should-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 4)
+
+---
+
+### F-PB-012: Automated Refund Processing
+
+**Description**: Intelligent, policy-based automatic refund processing for cancellations and modifications.
+
+**Refund Features**:
+- **Policy Engine**: Configurable refund rules by supplier, vehicle, booking type
+- **Automatic Calculation**: Calculate refund amount based on cancellation timing
+- **Instant Processing**: Refunds initiated immediately upon cancellation
+- **Refund Methods**: Return to original payment method or platform wallet
+- **Partial Refunds**: Prorated refunds for early returns or modifications
+- **Refund Timeline**: Clear communication of refund processing time (3-5 business days)
+- **Refund Tracking**: Real-time status updates on refund progress
+- **Refund Confirmation**: Email confirmation with refund details
+
+**Stakeholder Benefit**: Fast, transparent refund process builds trust. Reduces customer service burden. Clear expectations prevent disputes.
+
+**Priority**: Must-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
+
+---
+
+### F-PB-013: Split Payment & Group Billing
+
+**Description**: Enable multiple payment sources for a single booking, supporting group travel and corporate expense splitting.
+
+**Split Payment Features**:
+- **Multiple Cards**: Charge different amounts to different cards
+- **Group Splitting**: Invite co-renters to pay their share
+- **Custom Splits**: Define exact amount or percentage per person
+- **Payment Tracking**: Track payment status per contributor
+- **Automatic Completion**: Booking confirmed when fully paid
+- **Refund Distribution**: Proportional refunds on cancellation
+- **Corporate Split**: Separate personal and business portions
+
+**Stakeholder Benefit**: Groups can share costs easily. Corporate travelers can split personal and business expenses. Reduces barriers to booking.
+
+**Priority**: Nice-to-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 2)
+
+---
+
+## Security & Fraud Prevention
+
+### F-PB-014: Advanced Fraud Detection
+
+**Description**: Multi-layered fraud prevention system protecting both platform and customers.
+
+**Fraud Detection Features**:
+- **Real-Time Risk Scoring**: Machine learning-based fraud probability assessment
+- **Velocity Checks**: Detect unusual booking patterns (multiple bookings in short time)
+- **Device Fingerprinting**: Identify suspicious devices and browsers
+- **IP Geolocation**: Flag mismatches between IP location and billing address
+- **Card BIN Analysis**: Identify high-risk card types and issuers
+- **Behavioral Analysis**: Detect anomalous user behavior patterns
+- **Stolen Card Detection**: Cross-reference with stolen card databases
+- **3D Secure Enforcement**: Require additional authentication for high-risk transactions
+
+**Fraud Response**:
+- **Manual Review Queue**: Flag suspicious transactions for human review
+- **Automatic Decline**: Block high-risk transactions automatically
+- **Step-Up Authentication**: Request additional verification for medium-risk
+- **Customer Communication**: Notify customers of security holds
+
+**Stakeholder Benefit**: Protect customers from fraud. Reduce chargebacks and financial losses. Build trust through security.
+
+**Priority**: Must-have
+
+**Source**: docs/research/advanced-features.md (Section 9), docs/analysis/freecar/features-api.md
+
+---
+
+### F-PB-015: PCI-DSS Compliance & Data Protection
+
+**Description**: Full compliance with payment card industry standards and data protection regulations.
+
+**Compliance Features**:
+- **PCI-DSS Level 1**: Highest level of payment card security compliance
+- **Data Encryption**: End-to-end encryption of payment data
+- **Tokenization**: Replace sensitive data with non-sensitive tokens
+- **Secure Storage**: No storage of full card numbers or CVV codes
+- **Access Controls**: Strict access controls to payment data
+- **Audit Logging**: Complete audit trail of payment data access
+- **Regular Audits**: Quarterly security scans and annual audits
+- **Incident Response**: Documented breach response procedures
+
+**Stakeholder Benefit**: Customer payment data protected to highest standards. Regulatory compliance reduces legal risk. Trust through security certifications.
+
+**Priority**: Must-have
+
+**Source**: docs/research/industry-standards/payment-standards.md
+
+---
+
+## Wallet & Balance Management
+
+### F-PB-016: Platform Wallet System
+
+**Description**: Internal wallet system for storing credits, refunds, and promotional balances.
 
 **Wallet Features**:
 - **Balance Display**: View current wallet balance
-- **Add Funds**: Top up wallet with payment methods
-- **Transaction History**: All wallet transactions
-- **Promotional Credits**: Store promotional and referral credits
-- **Automatic Application**: Use wallet balance for payments
-- **Expiration Tracking**: Monitor credit expiration dates
-- **Refund Destination**: Receive refunds to wallet
+- **Add Funds**: Top up wallet with credit card or bank transfer
+- **Promotional Credits**: Receive and store promotional credits
+- **Referral Rewards**: Earn credits for successful referrals
+- **Refund Storage**: Option to receive refunds as wallet credit (instant) vs original method
+- **Wallet Payments**: Pay for bookings using wallet balance
+- **Transaction History**: Complete history of wallet transactions
+- **Expiration Tracking**: Track expiration dates for promotional credits
+- **Multi-Currency**: Store balance in multiple currencies
 
-**Credit Types**:
-- Promotional credits from campaigns
-- Referral rewards
-- Compensation credits
-- Loyalty program credits
-- Refund credits
+**Stakeholder Benefit**: Faster checkout using wallet balance. Instant refunds to wallet. Promotional credits encourage repeat bookings.
 
-**Stakeholder Benefit**: Customers enjoy faster checkout and can accumulate credits, while the platform reduces payment processing fees.
-
-**Priority**: Nice-to-have (loyalty and retention)
+**Priority**: Nice-to-have (Phase 2)
 
 **Source**: docs/analysis/freecar/features-miniprogram.md
 
+---
+
 ## Summary
 
-Payment and billing features combine traditional payment methods with cutting-edge financial technology including crypto-fiat gateways, BNPL integration, and digital wallets. Priority should be given to transparent pricing, secure payment processing, and BNPL integration as competitive differentiators, with cryptocurrency support as a future enhancement.
+The payment and billing feature set combines proven payment processing with emerging fintech innovations:
 
-**Feature Count**: 16 features documented
-**Primary Sources**: Advanced features research (6 features), BookCars analysis (5 features), FreeCar analysis (3 features), Industry standards (2 features)
+- **Foundational Security**: PCI-DSS compliance, encryption, fraud detection
+- **Payment Flexibility**: Multiple methods, timing options, BNPL
+- **Fintech Innovation**: Crypto-fiat gateways, digital wallets, dynamic pricing
+- **Transparency**: Clear pricing, detailed invoices, refund tracking
+- **Global Support**: Multi-currency, international payment methods
+
+**Implementation Priority**:
+- **Phase 1 (MVP)**: F-PB-001, F-PB-005, F-PB-007, F-PB-009, F-PB-010, F-PB-012, F-PB-014, F-PB-015
+- **Phase 2 (Enhanced)**: F-PB-003, F-PB-004, F-PB-006, F-PB-008, F-PB-011, F-PB-013, F-PB-016
+- **Phase 3 (Advanced)**: F-PB-002
+

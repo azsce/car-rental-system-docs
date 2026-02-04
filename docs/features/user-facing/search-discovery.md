@@ -1,408 +1,388 @@
 ---
 sidebar_position: 1
 title: Search & Discovery Features
-description: Advanced vehicle search and discovery capabilities including AR showrooms, voice interfaces, and persona-based experiences
-tags: [features, user-facing, search, discovery, AR, voice, personalization]
+description: Advanced vehicle search and discovery capabilities combining proven patterns with next-generation innovations
+tags: [features, user-facing, search, discovery, AR, voice, maps]
 ---
 
 # Search & Discovery Features
 
 ## Overview
 
-Search and discovery features enable customers to find and explore vehicles that match their needs. This catalog prioritizes next-generation capabilities including augmented reality, voice interfaces, and AI-driven personalization while maintaining foundational search functionality.
-
-## Advanced Discovery Features
-
-### AR.1 Augmented Reality Showrooms
-
-**Name**: AR Virtual Vehicle Showroom
-
-**Description**: Project 3D vehicle models into the user's physical environment using augmented reality, allowing customers to visualize vehicles in their driveway, inspect interior details, and gauge size before booking.
-
-**Capabilities**:
-- 3D vehicle model projection into real-world environment
-- 360-degree interior and exterior views
-- Interactive feature exploration (open doors, adjust seats)
-- Size comparison with user's current vehicle
-- Legroom and cargo space visualization
-- Dashboard and technology preview
-
-**Stakeholder Benefit**: Customers can make confident booking decisions by experiencing vehicles virtually, reducing uncertainty and increasing satisfaction with vehicle selection.
-
-**Priority**: Should-have (competitive differentiator)
-
-**Source**: docs/research/advanced-features.md (Section 3: Visual Discovery and AR)
-
-### AR.2 AR Wayfinding for Vehicle Pickup
-
-**Name**: AR Navigation to Parked Vehicle
-
-**Description**: Use augmented reality overlays to guide customers to their reserved vehicle in large parking facilities, displaying directional arrows and distance information through the camera view.
-
-**Capabilities**:
-- Camera overlay with directional guidance
-- Real-time distance calculation
-- Indoor positioning system integration
-- Parking bay identification (e.g., "Bay 402 - Level 3")
-- Visual markers for vehicle location
-- Multi-level parking navigation
-
-**Stakeholder Benefit**: Eliminates frustration of finding vehicles in large lots, improving pickup experience and reducing customer service calls.
-
-**Priority**: Nice-to-have (operational efficiency)
-
-**Source**: docs/research/advanced-features.md (Section 3: Wayfinding AR)
-
-### VOICE.1 Voice-First Booking Interface
-
-**Name**: Voice-Activated Booking and Modifications
-
-**Description**: Enable hands-free booking, modifications, and inquiries through natural language voice commands integrated with automotive voice assistants and smart speakers.
-
-**Capabilities**:
-- Natural language processing for intent recognition
-- Voice booking creation ("Book an SUV for next weekend")
-- Booking modifications ("Extend my rental by 2 hours")
-- Availability inquiries ("Are there any electric cars available tomorrow?")
-- Integration with Alexa Automotive, Android Auto, Google Assistant
-- Contextual understanding of user preferences
-- Voice confirmation and authentication
-
-**Stakeholder Benefit**: Drivers can manage bookings safely while driving, and all users gain convenient hands-free access to rental services.
-
-**Priority**: Should-have (accessibility and convenience)
-
-**Source**: docs/research/advanced-features.md (Section 3: Voice-First Interfaces)
-
-### PERSONA.1 Dynamic Persona-Based UX
-
-**Name**: Adaptive Interface Based on User Segment
-
-**Description**: Dynamically adjust the user interface, feature prominence, and recommendations based on detected user persona (business traveler, luxury seeker, budget-conscious, eco-conscious, etc.).
-
-**Capabilities**:
-- Automatic persona detection from booking patterns
-- Customized homepage layouts per persona
-- Persona-specific feature highlighting
-- Tailored search result ordering
-- Personalized upsell recommendations
-- Adaptive pricing display (show savings for budget users, emphasize premium for luxury seekers)
-
-**User Segments**:
-- Power Renter (Business): One-click rebooking, expense integration, skip-the-counter
-- Experience Seeker (Luxury): AR showrooms, VIN-specific booking, concierge delivery
-- Young Driver (Gen Z): Split payments, telematics discounts, social features
-- Eco-Conscious: EV range calculators, carbon offset integration, green routing
-- Accessible Mobility: Guaranteed specific vehicle (VIN-locked), accessibility filters
-
-**Stakeholder Benefit**: Each user type sees the most relevant features and information, improving conversion and satisfaction.
-
-**Priority**: Must-have (competitive differentiator)
-
-**Source**: docs/research/advanced-features.md (Section 2: Persona-Based Feature Sets)
+Vehicle search and discovery represents the critical first touchpoint in the rental journey. This document synthesizes proven search patterns from production systems with cutting-edge innovations including augmented reality showrooms, voice interfaces, and AI-powered recommendations to create a best-in-class discovery experience.
 
 ## Core Search Features
 
-### SEARCH.1 Location-Based Vehicle Search
+### F-SD-001: Location-Based Search
 
-**Name**: Geographic Vehicle Search
-
-**Description**: Search for available vehicles by specifying pickup and drop-off locations with support for different location types (airports, neighborhoods, specific addresses).
+**Description**: Customers can search for available vehicles by specifying pickup and drop-off locations with flexible location selection options.
 
 **Capabilities**:
-- Current location detection
-- Address or landmark search
-- Hierarchical location selection (country → city → specific spot)
-- One-way rental support (different pickup/return locations)
-- Distance-based sorting from user location
-- Map view of available vehicles
+- Hierarchical location selection (country → city → specific parking spot)
+- Support for one-way rentals with different pickup/return locations
+- Current location detection and auto-fill
+- Address autocomplete with mapping service integration
+- Search by landmark or point of interest
+- Multiple location types (airport, neighborhood, delivery to address)
 
-**Stakeholder Benefit**: Customers quickly find vehicles near their desired location, reducing search time and improving convenience.
+**Stakeholder Benefit**: Customers quickly find vehicles at their desired location, reducing search friction and improving booking conversion. Supports both planned trips and spontaneous rentals.
 
 **Priority**: Must-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-### SEARCH.2 Date and Time Selection
+---
 
-**Name**: Rental Period Specification
+### F-SD-002: Map-Based Vehicle Discovery
 
-**Description**: Precise rental period selection with calendar and time picker interfaces, real-time availability checking, and duration calculation.
+**Description**: Interactive map interface displaying available vehicles plotted relative to user's location or destination, essential for peer-to-peer and car-sharing models.
+
+**Capabilities**:
+- Real-time vehicle markers on interactive map
+- Walking distance estimates overlayed
+- Vehicle clustering for dense areas
+- Zoom and pan controls
+- Filter vehicles visible on map
+- Distance from user location display
+- Tap marker for vehicle quick info
+- Direct navigation to vehicle location
+
+**Stakeholder Benefit**: Visual, intuitive discovery especially valuable for urban users and peer-to-peer platforms. Enables location-based decision making.
+
+**Priority**: Should-have
+
+**Source**: docs/research/advanced-features.md (Section 3), docs/analysis/freecar/features-miniprogram.md
+
+---
+
+### F-SD-003: Date & Time Availability Search
+
+**Description**: Precise rental period specification with real-time availability checking across the fleet.
 
 **Capabilities**:
 - Calendar picker for pickup/return dates
-- Time selection with configurable intervals (15-min, 30-min)
+- Time picker with configurable intervals (15/30/60 minutes)
 - Duration calculation and display
-- Real-time availability validation
-- Minimum/maximum rental period enforcement
+- Real-time availability checking as dates change
 - Visual availability calendar per vehicle
+- Blocked dates for maintenance display
+- Buffer time between bookings enforcement
+- Minimum/maximum rental period validation
 
-**Stakeholder Benefit**: Clear, flexible rental period selection with immediate availability feedback prevents booking failures.
+**Stakeholder Benefit**: Customers see only available vehicles for their exact timeframe, preventing booking failures and disappointment.
 
 **Priority**: Must-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-### SEARCH.3 Map-Based Vehicle Discovery
-
-**Name**: Interactive Map Search
-
-**Description**: Visual map interface showing available vehicles plotted relative to user location or destination, with distance estimates and real-time availability.
-
-**Capabilities**:
-- Interactive map with vehicle markers
-- Vehicle information on marker click
-- Walking/driving distance estimates
-- Real-time availability indicators
-- Zoom and pan controls
-- Filter vehicles on map
-- Cluster markers for dense areas
-
-**Stakeholder Benefit**: Spatial visualization helps users find conveniently located vehicles, especially important for peer-to-peer and car-sharing models.
-
-**Priority**: Should-have
-
-**Source**: docs/research/advanced-features.md (Section 3: Map-Based Search), docs/analysis/freecar/features-miniprogram.md
+---
 
 ## Advanced Filtering
 
-### FILTER.1 Granular Feature Filtering
+### F-SD-004: Granular Multi-Criteria Filtering
 
-**Name**: Detailed Vehicle Feature Filters
-
-**Description**: Comprehensive filtering system allowing customers to narrow results based on specific vehicle features and attributes beyond basic categories.
+**Description**: Comprehensive filtering system allowing customers to narrow results based on vehicle characteristics, features, and preferences beyond basic categories.
 
 **Filter Categories**:
 - **Vehicle Type**: Diesel, gasoline, electric, hybrid, plug-in hybrid
-- **Transmission**: Manual, automatic, CVT
-- **Vehicle Category**: Mini, economy, standard, luxury, SUV, van, truck, electric
-- **Capacity**: Seats (2-9+), doors (2-5), luggage capacity
-- **Technology Features**: Apple CarPlay, Android Auto, Bluetooth, touchscreen, navigation
-- **Comfort Features**: Heated seats, sunroof, leather interior, climate control
-- **Safety Features**: Backup camera, blind spot monitoring, lane assist, adaptive cruise
-- **Accessibility**: Hand controls, wheelchair ramps, Isofix points
-- **Pet-Friendly**: Vehicles allowing pets
-- **Fuel Policy**: Like-for-like, full-to-full, full-to-empty, unlimited
-- **Mileage**: Unlimited or limited mileage options
+- **Transmission**: Manual or automatic gearbox
+- **Vehicle Category**: Economy, standard, luxury, SUV, electric, mini, midi, maxi, scooter, bus, truck, caravan
+- **Capacity**: Number of seats (2-9+), number of doors (2-5)
+- **Specific Features**: Apple CarPlay, Android Auto, heated seats, Isofix child seat points, pet-friendly, GPS navigation, Bluetooth, touchscreen, backup camera, sunroof, leather seats
+- **Fuel Policy**: Like-for-like, free tank, full-to-full, full-to-empty
 - **Price Range**: Minimum and maximum daily rate slider
+- **Mileage**: Unlimited or limited mileage options
+- **Supplier/Host**: Filter by specific rental suppliers or hosts
+- **Minimum Rating**: Filter by customer rating threshold
+- **Accessibility**: Hand controls, wheelchair ramps, accessible features
 
-**Stakeholder Benefit**: Customers efficiently find vehicles matching specific needs without browsing irrelevant options, improving satisfaction and reducing search time.
+**Stakeholder Benefit**: Customers efficiently find vehicles matching specific needs without browsing irrelevant options. Critical for users with accessibility requirements or specific feature needs.
 
 **Priority**: Must-have
 
-**Source**: docs/research/advanced-features.md (Section 3: Granular Filtering), docs/analysis/bookcars/features-user.md
+**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md (Section 3)
 
-### FILTER.2 Accessibility-Focused Filtering
+---
 
-**Name**: Accessible Mobility Vehicle Filters
+### F-SD-005: Intelligent Search Results Sorting
 
-**Description**: Specialized filters for customers requiring accessible vehicles, with guaranteed specific vehicle allocation (VIN-locked bookings).
-
-**Capabilities**:
-- Filter for hand controls
-- Filter for wheelchair ramps/lifts
-- Filter for Isofix child seat points
-- Filter for hearing loop systems
-- Guaranteed specific vehicle confirmation (not "or similar")
-- VIN-locked booking to prevent operational swapping
-
-**Stakeholder Benefit**: Customers with accessibility needs can confidently book vehicles knowing their specific requirements will be met.
-
-**Priority**: Must-have (inclusion and compliance)
-
-**Source**: docs/research/advanced-features.md (Section 2: Accessible Mobility Deep Dive)
-
-## Search Results and Sorting
-
-### SORT.1 Multi-Criteria Sorting
-
-**Name**: Flexible Search Result Sorting
-
-**Description**: Multiple sorting options to organize search results according to customer preferences and decision criteria.
+**Description**: Multiple sorting algorithms to organize search results according to customer preferences and platform optimization goals.
 
 **Sort Options**:
-- Price (lowest to highest, highest to lowest)
-- Distance from location (nearest first)
-- Customer rating (highest rated first)
-- Popularity (most frequently booked)
-- Newest vehicles (recently added)
-- Eco-friendliness (lowest emissions first)
-- Availability (soonest available)
+- **Price**: Lowest to highest or highest to lowest
+- **Distance**: Nearest to farthest from pickup location
+- **Rating**: Customer ratings and reviews (highest first)
+- **Popularity**: Most frequently booked vehicles
+- **Newest**: Recently added vehicles
+- **Recommended**: AI-powered personalized recommendations
+- **Availability**: Vehicles with longest availability windows
+- **Eco-Friendly**: Lowest CO2 emissions first
 
-**Stakeholder Benefit**: Customers can prioritize results based on their decision criteria (budget, quality, convenience, sustainability).
+**Stakeholder Benefit**: Customers prioritize results based on their decision criteria (budget, quality, convenience, sustainability).
 
 **Priority**: Should-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-### RESULTS.1 Rich Search Results Display
+---
 
-**Name**: Comprehensive Vehicle Cards
+## Next-Generation Discovery
 
-**Description**: Information-rich vehicle cards in search results providing key decision-making information at a glance.
+### F-SD-006: Augmented Reality Vehicle Showroom
 
-**Information Displayed**:
-- Vehicle image (high-quality photo)
-- Make, model, year
-- Vehicle category and type
-- Price per hour/day with discounts
-- Distance from pickup location
-- Customer rating and review count
-- Key features (transmission, fuel type, seats)
-- Availability indicator
-- Instant booking badge (if applicable)
-- Favorite/save option
+**Description**: AR technology allowing customers to project 3D vehicle models into their physical environment for immersive pre-booking inspection.
 
-**Stakeholder Benefit**: Customers can quickly evaluate options without clicking into each vehicle, accelerating decision-making.
+**Capabilities**:
+- Project 3D vehicle model into user's driveway or parking space
+- 360-degree rotation and viewing
+- Walk around virtual vehicle
+- Inspect interior with AR camera view
+- View legroom and cargo space in context
+- Gauge vehicle size relative to physical space
+- Compare multiple vehicles side-by-side in AR
+- Save AR session for later review
 
-**Priority**: Must-have
+**Stakeholder Benefit**: Experience seekers and luxury customers can inspect vehicles virtually before booking, increasing confidence and reducing post-booking surprises. Particularly valuable for high-value rentals.
 
-**Source**: docs/analysis/freecar/features-miniprogram.md, docs/research/competitive-analysis/feature-matrix.md
+**Priority**: Nice-to-have (Phase 3)
 
-## Vehicle Details
+**Source**: docs/research/advanced-features.md (Section 3)
 
-### DETAIL.1 Comprehensive Vehicle Information
+---
 
-**Name**: Detailed Vehicle Specifications
+### F-SD-007: Voice-First Search Interface
 
-**Description**: Complete vehicle information page enabling informed booking decisions with all relevant specifications, features, pricing, and customer feedback.
+**Description**: Natural language voice interface for hands-free vehicle search and booking, integrated with automotive voice assistants.
+
+**Capabilities**:
+- Voice-activated search: "Find me an SUV near LAX for next weekend"
+- Natural Language Processing (NLP) for intent interpretation
+- Integration with Amazon Alexa Automotive and Android Auto
+- Voice-based filter refinement: "Show only electric vehicles"
+- Spoken search results with key details
+- Voice confirmation of selections
+- Hands-free booking flow
+- Multi-turn conversation support
+
+**Stakeholder Benefit**: Drivers can search and book while driving safely. Accessibility benefit for visually impaired users. Convenience for power renters who value speed.
+
+**Priority**: Nice-to-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 3)
+
+---
+
+### F-SD-008: AI-Powered Personalized Recommendations
+
+**Description**: Machine learning algorithms analyze user behavior and preferences to surface relevant vehicles proactively.
+
+**Recommendation Factors**:
+- Previous booking history and preferences
+- Trip intent inference (business vs leisure)
+- Seasonal patterns and user behavior
+- Location-based suggestions
+- Similar user preferences (collaborative filtering)
+- Real-time context (weather, events, traffic)
+- Price sensitivity analysis
+- Feature preference learning
+
+**Recommendation Types**:
+- "Recommended for You" section on homepage
+- "Similar to your last rental" suggestions
+- "Popular in your area" vehicles
+- "Trending for your dates" options
+- "You might also like" alternatives
+- Context-aware upsells (e.g., minivan + Orlando + week = Disney trip)
+
+**Stakeholder Benefit**: Reduces search time by surfacing relevant options. Increases booking conversion through personalized matching. Enables discovery of vehicles users might not have searched for.
+
+**Priority**: Should-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 7), docs/analysis/freecar/features-miniprogram.md
+
+---
+
+## Vehicle Information Display
+
+### F-SD-009: Comprehensive Vehicle Details
+
+**Description**: Rich, detailed information display for each vehicle enabling informed booking decisions without contacting support.
 
 **Information Provided**:
-- **Basic Specifications**: Make, model, year, license plate, VIN (for VIN-specific bookings)
-- **Capacity**: Seats, doors, luggage space (with visual indicators)
+- **Basic Specifications**: Make, model, year, license plate, VIN (for specific bookings)
+- **Capacity**: Number of seats, doors, luggage space (cubic feet/liters)
 - **Technical Details**: Engine type, transmission, fuel policy, mileage limits
-- **Features**: Complete list of technology, comfort, and safety features
-- **Pricing**: Hourly, daily, weekly, monthly rates with volume discounts
-- **Insurance Options**: Coverage tiers with clear explanations
-- **Additional Services**: GPS, child seats, additional driver fees
-- **Location**: Current vehicle location on map
-- **Availability Calendar**: Visual representation of available dates
-- **Image Gallery**: Multiple high-quality photos (exterior, interior, features)
-- **Customer Reviews**: Ratings and written reviews with photos
-- **Environmental Info**: CO2 emissions, fuel efficiency, EV range
-- **Similar Vehicles**: Alternative options in same category
+- **Features**: Air conditioning, multimedia systems, safety features, connectivity
+- **Pricing**: Hourly, daily, weekly, bi-weekly, monthly rates with volume discounts
+- **Insurance Options**: Theft protection, collision damage waiver, full insurance costs
+- **Additional Services**: Additional driver, GPS, child seats, pet fees, and associated costs
+- **Supplier/Host Information**: Name, rating, location details, response time
+- **Availability Calendar**: Visual representation of vehicle availability
+- **Image Gallery**: Multiple high-quality photos (exterior, interior, features, damage)
+- **Customer Reviews**: Ratings and written reviews from previous renters
+- **Environmental Information**: CO2 emissions, fuel efficiency, eco-friendly badge
+- **Accessibility Features**: Hand controls, ramps, modifications
 
-**Stakeholder Benefit**: Customers have all necessary information to make confident booking decisions without contacting support.
+**Stakeholder Benefit**: Customers have complete information to make confident decisions. Reduces support inquiries and booking modifications.
 
 **Priority**: Must-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-### DETAIL.2 VIN-Specific Booking
+---
 
-**Name**: Guaranteed Specific Vehicle Booking
+### F-SD-010: Vehicle Reviews & Ratings System
 
-**Description**: Allow customers to book a specific vehicle by VIN rather than "or similar" category booking, guaranteeing the exact vehicle shown.
+**Description**: Comprehensive customer feedback system for vehicles, hosts, and overall rental experience.
 
-**Capabilities**:
-- VIN display on vehicle details page
-- "Book This Specific Vehicle" option
-- Hard allocation in inventory system
-- Prevention of operational vehicle swapping
-- Premium pricing for guaranteed specific vehicle
-- Critical for luxury vehicles and accessible vehicles
+**Review Features**:
+- **Star Ratings**: 1-5 star rating system with half-star precision
+- **Written Reviews**: Detailed customer feedback with character limits
+- **Rating Categories**: Cleanliness, performance, value, accuracy, host communication
+- **Review Photos**: Customer-uploaded photos from their rental
+- **Verified Bookings**: Reviews only from confirmed, completed rentals
+- **Review Sorting**: Sort by date, rating, helpfulness, or relevance
+- **Helpful Votes**: Upvote/downvote review helpfulness
+- **Host Responses**: Allow hosts/suppliers to respond to reviews
+- **Review Moderation**: Automated and manual review screening
+- **Aggregate Ratings**: Overall rating with review count display
 
-**Stakeholder Benefit**: Customers booking luxury or accessible vehicles receive exactly what they reserved, eliminating disappointment and accessibility issues.
+**Stakeholder Benefit**: Make informed decisions based on authentic previous customer experiences. Builds trust and transparency in the platform.
 
-**Priority**: Should-have (premium and accessibility)
+**Priority**: Should-have
 
-**Source**: docs/research/advanced-features.md (Section 2: Experience Seeker, Accessible Mobility)
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-## Personalization and Recommendations
+---
 
-### RECOMMEND.1 AI-Driven Vehicle Recommendations
+## Supplier & Fleet Discovery
 
-**Name**: Personalized Vehicle Suggestions
+### F-SD-011: Supplier Directory & Profiles
 
-**Description**: Use machine learning to recommend vehicles based on user history, preferences, and contextual factors.
-
-**Recommendation Factors**:
-- Previous booking history
-- User persona and preferences
-- Trip purpose (inferred from dates, location)
-- Seasonal appropriateness
-- Similar user behavior patterns
-- Inventory optimization (suggest surplus vehicles)
-
-**Recommendation Types**:
-- "Recommended for You" on homepage
-- "Customers Like You Also Booked"
-- "Perfect for Your Trip" (context-aware)
-- "Trending in Your Area"
-- "Eco-Friendly Alternatives"
-
-**Stakeholder Benefit**: Customers discover relevant vehicles faster, improving conversion and satisfaction.
-
-**Priority**: Should-have (conversion optimization)
-
-**Source**: docs/research/advanced-features.md (Section 7: AI Upselling Algorithms)
-
-### SAVE.1 Saved Vehicles and Favorites
-
-**Name**: Vehicle Wishlist
-
-**Description**: Allow customers to save favorite vehicles for quick access and receive notifications about availability and price changes.
+**Description**: Browse and evaluate rental suppliers or hosts operating on the platform.
 
 **Capabilities**:
-- Save/favorite vehicles from search or details
-- Quick access to favorites list
-- Availability notifications for saved vehicles
-- Price drop alerts
+- **Supplier Profiles**: Company information, ratings, fleet overview, years in business
+- **Supplier Filtering**: Filter vehicles by preferred suppliers
+- **Supplier Comparison**: Compare offerings, pricing, and ratings across suppliers
+- **Supplier Locations**: View all locations where a supplier operates
+- **Supplier Ratings**: Aggregate customer ratings and review count
+- **Response Time**: Average response time for inquiries
+- **Cancellation Rate**: Supplier cancellation statistics
+- **Fleet Size**: Number of vehicles available
+- **Specializations**: Luxury, electric, accessible, commercial vehicles
+
+**Stakeholder Benefit**: Customers choose suppliers based on reputation, location coverage, or previous positive experiences. Particularly important for corporate clients with preferred vendor programs.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/bookcars/features-user.md
+
+---
+
+### F-SD-012: Environmental Impact Discovery
+
+**Description**: Display environmental information to support eco-conscious rental decisions.
+
+**Environmental Data**:
+- **CO2 Emissions**: Carbon dioxide emissions per kilometer/mile
+- **Fuel Type**: Electric, hybrid, plug-in hybrid, or traditional fuel
+- **Eco-Friendly Badge**: Highlight low-emission and electric vehicles
+- **Environmental Comparison**: Compare emissions across similar vehicles
+- **Carbon Offset Options**: Offer carbon offset purchase at booking
+- **EV Range Information**: Battery range and charging time estimates
+- **Green Routing**: Suggest routes with charging stations for EVs
+- **Sustainability Score**: Composite environmental impact score
+
+**Stakeholder Benefit**: Eco-conscious users can make environmentally responsible choices. Supports corporate sustainability goals and ESG reporting.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md (Section 5)
+
+---
+
+## Search Experience Optimization
+
+### F-SD-013: Saved Searches & Alerts
+
+**Description**: Save frequent searches and receive notifications when matching vehicles become available or prices drop.
+
+**Capabilities**:
+- Save search criteria with custom names
+- Quick access to saved searches
+- Price drop alerts for saved searches
+- Availability notifications when vehicles match criteria
+- Email/push notification preferences
+- Manage and delete saved searches
+- Share saved searches with others
+- Search history tracking
+
+**Stakeholder Benefit**: Power renters and frequent travelers save time by reusing common searches. Never miss deals on preferred vehicles.
+
+**Priority**: Nice-to-have
+
+**Source**: Synthesized from competitive analysis best practices
+
+---
+
+### F-SD-014: Favorite Vehicles
+
+**Description**: Save favorite vehicles for quick access and monitoring.
+
+**Capabilities**:
+- Add vehicles to favorites list
+- Quick access to favorites from homepage
+- Availability notifications for favorite vehicles
+- Price change alerts for favorites
 - Remove from favorites
-- Share favorites with others
+- Share favorites with travel companions
+- Favorite vehicle history
 
-**Stakeholder Benefit**: Customers can track vehicles of interest and receive proactive notifications, improving booking conversion.
+**Stakeholder Benefit**: Easy access to preferred vehicles. Receive alerts when favorites become available or go on sale.
 
 **Priority**: Should-have
 
 **Source**: docs/analysis/freecar/features-miniprogram.md
 
-## Eco-Conscious Features
+---
 
-### ECO.1 EV Range Anxiety Calculator
+## Search Performance & UX
 
-**Name**: Electric Vehicle Range Planner
+### F-SD-015: Fast, Responsive Search Experience
 
-**Description**: Help customers plan electric vehicle rentals by calculating range requirements, showing charging station locations, and estimating charging time.
+**Description**: Optimized search performance with instant feedback and progressive loading.
 
-**Capabilities**:
-- Trip distance calculation
-- EV range sufficiency check
-- Charging station map along route
-- Charging time estimates
-- Range buffer recommendations
-- Weather impact on range
-- Alternative route suggestions for charging
+**Performance Features**:
+- Real-time search results as filters change
+- Debounced search input (300ms delay)
+- Progressive image loading with placeholders
+- Lazy loading of search results (infinite scroll or pagination)
+- Cached search results for back navigation
+- Optimistic UI updates
+- Loading skeletons for perceived performance
+- Search result count display
+- "No results" state with suggestions
 
-**Stakeholder Benefit**: Eco-conscious customers can confidently rent electric vehicles without range anxiety, promoting EV adoption.
+**Stakeholder Benefit**: Smooth, fast search experience reduces frustration and abandonment. Particularly important for mobile users on slower connections.
 
-**Priority**: Should-have (sustainability)
+**Priority**: Must-have
 
-**Source**: docs/research/advanced-features.md (Section 2: Eco-Conscious User Needs)
+**Source**: docs/analysis/freecar/features-miniprogram.md, docs/research/best-practices/ux-patterns.md
 
-### ECO.2 Carbon Footprint Display
-
-**Name**: Environmental Impact Transparency
-
-**Description**: Display CO2 emissions and environmental impact for each vehicle, with comparison tools and carbon offset options.
-
-**Capabilities**:
-- CO2 emissions per kilometer display
-- Total trip emissions estimate
-- Comparison across vehicles
-- Eco-friendly badge for low-emission vehicles
-- Carbon offset purchase option
-- Environmental impact tracking in user profile
-
-**Stakeholder Benefit**: Environmentally conscious customers can make informed decisions and offset their impact.
-
-**Priority**: Nice-to-have (sustainability)
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md
+---
 
 ## Summary
 
-Search and discovery features combine foundational capabilities (location search, filtering, vehicle details) with next-generation innovations (AR showrooms, voice interfaces, persona-based UX) to create a comprehensive, differentiated discovery experience. Priority should be given to persona-based adaptation and granular filtering as competitive differentiators, with AR and voice features as phase 2 enhancements.
+The search and discovery feature set combines proven patterns from production systems (location-based search, filtering, sorting) with next-generation innovations (AR showrooms, voice interfaces, AI recommendations). This balanced approach ensures:
 
-**Feature Count**: 17 features documented
-**Primary Sources**: Advanced features research (9 features), BookCars analysis (4 features), FreeCar analysis (3 features), Competitive analysis (1 feature)
+- **Foundational Excellence**: Core search features work flawlessly for all user segments
+- **Competitive Differentiation**: Advanced features like AR and voice set the platform apart
+- **Persona-Based Value**: Features serve both budget-conscious users (efficient filtering) and premium users (AR showrooms)
+- **Future-Ready**: Architecture supports emerging technologies while delivering immediate value
+
+**Implementation Priority**:
+- **Phase 1 (MVP)**: F-SD-001 through F-SD-005, F-SD-009, F-SD-015
+- **Phase 2 (Enhanced)**: F-SD-007, F-SD-008, F-SD-010, F-SD-011, F-SD-012, F-SD-014
+- **Phase 3 (Advanced)**: F-SD-006, F-SD-013
+

@@ -80,6 +80,26 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          to: '/docs/analysis/comparative-analysis',
+          label: 'Analysis',
+          position: 'left',
+        },
+        {
+          to: '/docs/research',
+          label: 'Research',
+          position: 'left',
+        },
+        {
+          to: '/docs/features',
+          label: 'Features',
+          position: 'left',
+        },
+        {
+          to: '/docs/requirements',
+          label: 'Requirements',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/azsce/car-rental-system-docs',
           label: 'GitHub',
           position: 'right',
@@ -97,12 +117,12 @@ const config: Config = {
               to: '/docs/intro',
             },
             {
-              label: 'Stakeholders',
-              to: '/docs/stakeholders/stakeholder-mapping',
+              label: 'Features',
+              to: '/docs/features',
             },
             {
-              label: 'Workflows',
-              to: '/docs/workflows',
+              label: 'Requirements',
+              to: '/docs/requirements',
             },
           ],
         },
@@ -127,6 +147,10 @@ const config: Config = {
           title: 'Research',
           items: [
             {
+              label: 'Advanced Features',
+              to: '/docs/research/advanced-features',
+            },
+            {
               label: 'Market Trends',
               to: '/docs/research/market-trends',
             },
@@ -134,15 +158,19 @@ const config: Config = {
               label: 'Best Practices',
               to: '/docs/research/best-practices',
             },
-            {
-              label: 'Industry Standards',
-              to: '/docs/research/industry-standards',
-            },
           ],
         },
         {
           title: 'More',
           items: [
+            {
+              label: 'Stakeholders',
+              to: '/docs/stakeholders/stakeholder-mapping',
+            },
+            {
+              label: 'Workflows',
+              to: '/docs/workflows',
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/azsce/car-rental-system-docs',

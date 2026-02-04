@@ -6,9 +6,9 @@ This implementation plan outlines the tasks for executing the planning and analy
 
 **Phases 1-11 (Completed)**: Project infrastructure, analysis of three open-source projects (bookcars, car-rental-php, FreeCar), market research, stakeholder documentation, and workflow documentation have been completed. Comprehensive local documentation exists in `docs/analysis/`, `docs/research/`, `docs/stakeholders/`, and `docs/workflows/`.
 
-**Key Asset**: `docs/research/advanced-features.md` contains cutting-edge features and strategic insights that will be the **primary source** for next-generation capabilities in the feature catalog and requirements document.
+**Key Asset**: `docs/research/advanced-features.md` contains cutting-edge features and strategic insights that provide next-generation capabilities for the feature catalog and requirements document.
 
-**Phases 12-20 (Remaining)**: These tasks focus on synthesizing the existing local documentation into a feature catalog and requirements document, with **heavy emphasis on advanced features from `docs/research/advanced-features.md`**. Rather than re-analyzing source projects, these tasks extract and consolidate information from the comprehensive markdown files already created in the `docs/` directory. Each task builds incrementally toward a complete Docusaurus documentation site with PDF export capability.
+**Phases 12-20 (Remaining)**: These tasks focus on synthesizing the existing local documentation into a feature catalog and requirements document. Rather than re-analyzing source projects, these tasks extract and consolidate information from ALL comprehensive markdown files already created in the `docs/` directory. The synthesis approach balances foundational features from open-source project analysis (bookcars, car-rental-php, FreeCar) with advanced capabilities from research documentation (especially `docs/research/advanced-features.md`), ensuring both proven patterns and cutting-edge innovations are well-represented. Each task builds incrementally toward a complete Docusaurus documentation site with PDF export capability.
 
 ## Tasks
 
@@ -226,7 +226,7 @@ This implementation plan outlines the tasks for executing the planning and analy
   - Validate that workflows cover all stakeholder types
   - Ask the user if questions arise or if workflows need refinement
 
-- [-] 12. Create Feature Catalog from Local Documentation
+- [ ] 12. Create Feature Catalog from Local Documentation
   - [x] 12.1 Extract and document user-facing features from local analysis
     - Create `docs/features/user-facing/` directory with `_category_.json`
     - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Sections 2-3: Persona-Based Features, Frontend Innovations)
@@ -239,184 +239,205 @@ This implementation plan outlines the tasks for executing the planning and analy
     - Each feature should include: name, description, stakeholder benefit, priority, source (which local doc)
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
   
-  - [-] 12.2 Extract and document mobile-specific features from local analysis
+  - [x] 12.2 Extract and document mobile-specific features from local analysis
     - Create `docs/features/mobile-specific/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Section 3: PWA Strategy, Digital Wallets, Phone-as-a-Key)
-    - Read features from `docs/analysis/bookcars/features-mobile.md`
-    - Read features from `docs/analysis/freecar/features-miniprogram.md`
-    - Read features from `docs/research/market-trends/mobile-first.md`
+    - Read features from ALL sources:
+      - `docs/analysis/bookcars/features-mobile.md` (proven mobile features from production system)
+      - `docs/analysis/freecar/features-miniprogram.md` (WeChat Mini-Program patterns)
+      - `docs/research/market-trends/mobile-first.md` (mobile-first industry trends)
+      - **`docs/research/advanced-features.md`** (Section 3: advanced mobile - PWA strategy, digital wallets, phone-as-a-key, BLE keyless entry, biometric authentication)
     - Synthesize into `push-notifications.md`, `offline-mode.md`, `mobile-payments.md`, `digital-key.md`
-    - **PRIORITIZE** PWA capabilities, BLE keyless entry, biometric authentication, digital wallets from advanced-features.md
+    - Build on proven mobile features from bookcars/freecar, enhanced with advanced PWA and keyless capabilities
     - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.1_
   
-  - [ ] 12.3 Extract and document administrative features from local analysis
+  - [x] 12.3 Extract and document administrative features from local analysis
     - Create `docs/features/administrative/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Section 4: Backend Architecture, Dynamic Pricing, Section 7: Growth & Monetization)
-    - Read features from `docs/analysis/bookcars/features-admin.md`
-    - Read features from `docs/analysis/car-rental-php/features.md` (admin sections)
-    - Read features from `docs/analysis/freecar/features-api.md` (admin endpoints)
-    - Read features from `docs/research/best-practices/fleet-management.md`
+    - Read features from ALL sources:
+      - `docs/analysis/bookcars/features-admin.md` (comprehensive admin features)
+      - `docs/analysis/car-rental-php/features.md` (admin sections - basic patterns)
+      - `docs/analysis/freecar/features-api.md` (admin endpoints - microservices approach)
+      - `docs/research/best-practices/fleet-management.md` (industry best practices)
+      - **`docs/research/advanced-features.md`** (Sections 4, 7: advanced admin - AI pricing, gamification, referral programs, microservices architecture)
     - Synthesize into `fleet-management.md`, `user-management.md`, `pricing-management.md`, `revenue-optimization.md`
-    - **PRIORITIZE** microservices architecture, AI-driven dynamic pricing, gamification, referral programs from advanced-features.md
+    - Build on proven admin features from open-source projects, enhanced with advanced capabilities
     - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.3, 10.5_
   
-  - [ ] 12.4 Extract and document operational features from local analysis
+  - [x] 12.4 Extract and document operational features from local analysis
     - Create `docs/features/operational/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Section 5: Fleet Intelligence & IoT, Section 10: Data Monetization)
-    - Read features from `docs/analysis/freecar/cloud-native-patterns.md` (tracking, monitoring)
-    - Read features from `docs/research/best-practices/fleet-management.md` (maintenance)
-    - Read features from `docs/research/best-practices/operational-excellence.md`
+    - Read features from ALL sources:
+      - `docs/analysis/freecar/cloud-native-patterns.md` (observability, monitoring, tracking)
+      - `docs/research/best-practices/fleet-management.md` (maintenance best practices)
+      - `docs/research/best-practices/operational-excellence.md` (operational patterns)
+      - **`docs/research/advanced-features.md`** (Section 5: IoT revolution - telematics, AI damage detection, predictive maintenance, EV/V2G, data monetization)
     - Synthesize into `vehicle-tracking.md`, `maintenance-scheduling.md`, `analytics-reporting.md`, `iot-telematics.md`
-    - **PRIORITIZE** telematics, AI damage detection, predictive maintenance, EV fleet management, V2G capabilities from advanced-features.md
+    - Integrate cloud-native patterns from FreeCar with advanced IoT capabilities from research
     - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.5, 10.6_
   
-  - [ ] 12.5 Extract and document integration features from local analysis
+  - [x] 12.5 Extract and document integration features from local analysis
     - Create `docs/features/integration/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Section 6: Regional Adaptations, Section 10: Financial Technology)
-    - Read features from `docs/analysis/bookcars/payment-integration.md`
-    - Read features from `docs/analysis/freecar/cloud-native-patterns.md` (external services)
-    - Read features from `docs/research/industry-standards/payment-standards.md`
+    - Read features from ALL sources:
+      - `docs/analysis/bookcars/payment-integration.md` (Stripe, PayPal patterns)
+      - `docs/analysis/freecar/cloud-native-patterns.md` (external service integration)
+      - `docs/research/industry-standards/payment-standards.md` (PCI-DSS compliance)
+      - **`docs/research/advanced-features.md`** (Sections 6, 10: regional & fintech - WeChat, Grab, crypto-fiat, BNPL)
     - Synthesize into `payment-gateways.md`, `mapping-services.md`, `notification-services.md`, `super-app-integration.md`
-    - **PRIORITIZE** WeChat Mini-Programs, Grab integration, crypto-fiat gateways, BNPL (Buy Now Pay Later) from advanced-features.md
+    - Extend proven payment integrations with regional adaptations and emerging fintech
     - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 10.7, 10.8_
   
-  - [ ] 12.6 Extract and document security features from local analysis
+  - [x] 12.6 Extract and document security features from local analysis
     - Create `docs/features/security/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read features from `docs/research/advanced-features.md` (Section 9: Trust and Safety Stack)
-    - Read features from `docs/analysis/bookcars/authentication.md`
-    - Read features from `docs/research/industry-standards/compliance-regulations.md`
-    - Read features from `docs/research/industry-standards/payment-standards.md` (PCI-DSS)
+    - Read features from ALL sources:
+      - `docs/analysis/bookcars/authentication.md` (JWT, social login, email auth)
+      - `docs/research/industry-standards/compliance-regulations.md` (GDPR, CCPA)
+      - `docs/research/industry-standards/payment-standards.md` (PCI-DSS security)
+      - **`docs/research/advanced-features.md`** (Section 9: advanced security - synthetic identity fraud defense, blockchain logging, DID)
     - Synthesize into `authentication.md`, `authorization.md`, `data-protection.md`, `fraud-prevention.md`
-    - **PRIORITIZE** synthetic identity fraud defense, blockchain event logging, decentralized identity (DID) from advanced-features.md
+    - Build on proven auth patterns from bookcars, enhanced with advanced fraud prevention
     - Each feature should include: name, description, stakeholder benefit, priority, source
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
   
-  - [ ] 12.7 Create feature prioritization and deduplication
+  - [x] 12.7 Create feature prioritization and deduplication
     - Create `docs/features/feature-prioritization.md` with priority matrix and rationale
-    - **Include strategic roadmap** from `docs/research/advanced-features.md` (Section 11: Strategic Implementation Roadmap)
-    - Organize features into phases: Foundation (Months 1-6), Intelligence (7-12), Ecosystem (13-18), Future-Ready (19-24)
     - Review all features across all category files for duplicates (similar names/descriptions)
     - Merge duplicates or add cross-references explaining distinctions
-    - Create feature-to-source traceability matrix
-    - **Highlight competitive differentiators** from advanced-features.md competitive matrix
-    - _Requirements: 5.5, 5.6, 5.7_
+    - Create feature-to-source traceability matrix showing features from ALL sources
+    - Organize features into implementation phases using strategic roadmap from `docs/research/advanced-features.md`:
+      - Phase 1 Foundation (Months 1-6): Core features from open-source analysis
+      - Phase 2 Intelligence (7-12): Enhanced features combining proven + advanced
+      - Phase 3 Ecosystem (13-18): Advanced integrations and capabilities
+      - Phase 4 Future-Ready (19-24): Emerging technologies
+    - Balance foundational features (must-have) with advanced capabilities (competitive differentiators)
+    - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7_
 
 - [ ] 13. Write Requirements Document from Local Documentation
   - [x] 13.1 Document functional requirements - User Management
     - Create `docs/requirements/functional/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 2: Persona-Based Features, Section 3: Biometric Auth, Digital KYC)
-    - Read from `docs/features/user-facing/account-management.md`
-    - Read from `docs/features/security/authentication.md` and `authorization.md`
-    - Read from `docs/stakeholders/primary-users/*.md` (user needs)
-    - Read from `docs/workflows/core-rental/*.md` (user interactions)
+    - Read from ALL sources:
+      - `docs/features/user-facing/account-management.md` (synthesized account features)
+      - `docs/features/security/authentication.md` and `authorization.md` (security features)
+      - `docs/stakeholders/primary-users/*.md` (user needs across segments)
+      - `docs/workflows/core-rental/*.md` (user interaction patterns)
+      - **`docs/research/advanced-features.md`** (Section 2: persona-based features, Section 3: biometric auth, digital KYC, decentralized identity)
     - Synthesize into `user-management.md` with EARS-compliant requirements
-    - **Include advanced requirements**: persona-based UX, biometric authentication, digital KYC, decentralized identity
-    - Include user stories and acceptance criteria for registration, authentication, profile management
+    - Include both standard requirements (registration, login, profile) and advanced capabilities (persona-based UX, biometrics, DID)
+    - Include user stories and acceptance criteria for all user management aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.10_
   
-  - [ ] 13.2 Document functional requirements - Vehicle Search
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 3: Visual Discovery & AR, Map-Based Search, Voice Interfaces)
-    - Read from `docs/features/user-facing/search-discovery.md`
-    - Read from `docs/workflows/core-rental/vehicle-search.md`
-    - Read from `docs/stakeholders/primary-users/*.md` (search needs)
-    - Read from `docs/research/best-practices/ux-patterns.md` (search patterns)
+  - [x] 13.2 Document functional requirements - Vehicle Search
+    - Read from ALL sources:
+      - `docs/features/user-facing/search-discovery.md` (synthesized search features)
+      - `docs/workflows/core-rental/vehicle-search.md` (search workflow patterns)
+      - `docs/stakeholders/primary-users/*.md` (search needs across user segments)
+      - `docs/research/best-practices/ux-patterns.md` (proven search UX patterns)
+      - **`docs/research/advanced-features.md`** (Section 3: next-gen search - AR showrooms, map-based, voice interfaces, granular filtering)
     - Synthesize into `vehicle-search.md` with EARS-compliant requirements
-    - **Include advanced requirements**: AR showrooms, map-based search, voice-first interfaces, granular filtering
-    - Include user stories and acceptance criteria for search, filtering, availability checking
+    - Include both standard search requirements (filters, availability) and advanced capabilities (AR, voice, maps)
+    - Include user stories and acceptance criteria for all search aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.2, 10.10_
   
-  - [ ] 13.3 Document functional requirements - Booking Management
-    - Read from `docs/features/user-facing/booking-management.md`
-    - Read from `docs/workflows/core-rental/booking-creation.md`
-    - Read from `docs/workflows/exceptional/cancellations.md` and `modifications.md`
-    - Read from `docs/stakeholders/primary-users/*.md` (booking needs)
+  - [x] 13.3 Document functional requirements - Booking Management
+    - Read from ALL sources:
+      - `docs/features/user-facing/booking-management.md` (synthesized booking features)
+      - `docs/workflows/core-rental/booking-creation.md` (booking workflow patterns)
+      - `docs/workflows/exceptional/cancellations.md` and `modifications.md` (exception handling)
+      - `docs/stakeholders/primary-users/*.md` (booking needs across user segments)
+      - **`docs/research/advanced-features.md`** (Section 2: persona-based booking, Section 3: contactless operations, voice booking)
     - Synthesize into `booking-management.md` with EARS-compliant requirements
-    - Include user stories and acceptance criteria for booking creation, modification, cancellation
+    - Include both standard requirements (create, modify, cancel) and advanced capabilities (voice booking, contactless)
+    - Include user stories and acceptance criteria for all booking aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.10_
   
-  - [ ] 13.4 Document functional requirements - Payment Processing
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 10: Financial Technology Integration, Crypto-Fiat Gateways, BNPL)
-    - Read from `docs/features/user-facing/payment-billing.md`
-    - Read from `docs/features/integration/payment-gateways.md`
-    - Read from `docs/workflows/core-rental/payment-processing.md`
-    - Read from `docs/research/industry-standards/payment-standards.md`
+  - [x] 13.4 Document functional requirements - Payment Processing
+    - Read from ALL sources:
+      - `docs/features/user-facing/payment-billing.md` (synthesized payment features)
+      - `docs/features/integration/payment-gateways.md` (integration patterns)
+      - `docs/workflows/core-rental/payment-processing.md` (payment workflow)
+      - `docs/research/industry-standards/payment-standards.md` (PCI-DSS, compliance)
+      - **`docs/research/advanced-features.md`** (Section 10: fintech innovation - crypto-fiat, BNPL, digital wallets, split payments)
     - Synthesize into `payment-processing.md` with EARS-compliant requirements
-    - **Include advanced requirements**: crypto-fiat hybrid gateways, BNPL integration (Klarna/Affirm), digital wallets, split payments
-    - Include user stories and acceptance criteria for payment methods, processing, refunds
+    - Include both standard payment requirements (credit cards, refunds) and emerging fintech (crypto, BNPL)
+    - Include user stories and acceptance criteria for all payment aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.4, 10.10_
   
-  - [ ] 13.5 Document functional requirements - Fleet Management
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 5: Fleet Intelligence & IoT, Telematics, AI Damage Detection, Predictive Maintenance, EV Management)
-    - Read from `docs/features/administrative/fleet-management.md`
-    - Read from `docs/features/operational/vehicle-tracking.md` and `maintenance-scheduling.md`
-    - Read from `docs/workflows/administrative/fleet-management.md`
-    - Read from `docs/stakeholders/operational-staff/fleet-managers.md`
-    - Read from `docs/research/best-practices/fleet-management.md`
+  - [x] 13.5 Document functional requirements - Fleet Management
+    - Read from ALL sources:
+      - `docs/features/administrative/fleet-management.md` (synthesized fleet features)
+      - `docs/features/operational/vehicle-tracking.md` and `maintenance-scheduling.md` (operational features)
+      - `docs/workflows/administrative/fleet-management.md` (fleet workflows)
+      - `docs/stakeholders/operational-staff/fleet-managers.md` (fleet manager needs)
+      - `docs/research/best-practices/fleet-management.md` (industry best practices)
+      - **`docs/research/advanced-features.md`** (Section 5: IoT & intelligence - telematics, AI damage detection, predictive maintenance, EV/V2G, geofencing)
     - Synthesize into `fleet-management.md` with EARS-compliant requirements
-    - **Include advanced requirements**: telematics integration, AI-powered damage detection, predictive maintenance, EV smart charging, V2G capabilities, geofencing
-    - Include user stories and acceptance criteria for vehicle management, maintenance, tracking
+    - Include both standard fleet requirements (add/remove vehicles, maintenance) and advanced IoT capabilities
+    - Include user stories and acceptance criteria for all fleet management aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.5, 10.10_
   
-  - [ ] 13.6 Document functional requirements - Reporting and Analytics
-    - Read from `docs/features/operational/analytics-reporting.md`
-    - Read from `docs/workflows/administrative/reporting.md`
-    - Read from `docs/stakeholders/operational-staff/administrators.md`
-    - Read from `docs/research/best-practices/operational-excellence.md`
+  - [x] 13.6 Document functional requirements - Reporting and Analytics
+    - Read from ALL sources:
+      - `docs/features/operational/analytics-reporting.md` (synthesized analytics features)
+      - `docs/workflows/administrative/reporting.md` (reporting workflow patterns)
+      - `docs/stakeholders/operational-staff/administrators.md` (admin reporting needs)
+      - `docs/research/best-practices/operational-excellence.md` (industry analytics practices)
+      - **`docs/research/advanced-features.md`** (Section 5: data monetization, Section 7: AI-driven insights, business intelligence)
     - Synthesize into `reporting-analytics.md` with EARS-compliant requirements
-    - Include user stories and acceptance criteria for reports, dashboards, analytics
+    - Include both standard requirements (reports, dashboards) and advanced capabilities (AI insights, data monetization)
+    - Include user stories and acceptance criteria for all reporting aspects
     - Link to stakeholders, features, and workflows
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.6, 10.6, 10.10_
   
-  - [ ] 13.7 Document non-functional requirements from local research
+  - [x] 13.7 Document non-functional requirements from local research
     - Create `docs/requirements/non-functional/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 4: Backend Architecture Excellence, Microservices Landscape)
-    - Read from `docs/analysis/comparative-analysis.md` (performance insights)
-    - Read from `docs/research/best-practices/*.md` (industry standards)
+    - Read from ALL sources:
+      - `docs/analysis/comparative-analysis.md` (architectural insights from all three projects)
+      - `docs/research/best-practices/*.md` (industry standards and patterns)
+      - **`docs/research/advanced-features.md`** (Section 4: advanced architecture - microservices, serverless, saga pattern, PWA)
     - Create `performance.md` with response time, throughput, and load requirements
-    - Create `scalability.md` with concurrent user and data volume requirements (include serverless for search spikes)
+    - Create `scalability.md` with concurrent user and data volume requirements (standard + serverless patterns)
     - Create `security.md` with authentication, authorization, and encryption requirements
-    - Create `usability.md` with accessibility and mobile-first requirements (include PWA capabilities)
-    - Create `reliability.md` with uptime and error handling requirements (include saga pattern for distributed transactions)
-    - **Include microservices architecture requirements**: service mesh, API gateway, event-driven architecture
+    - Create `usability.md` with accessibility and mobile-first requirements (standard + PWA capabilities)
+    - Create `reliability.md` with uptime and error handling requirements (standard + saga pattern)
+    - Balance proven architectural patterns with advanced microservices capabilities
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.7_
   
-  - [ ] 13.8 Document integration requirements from local feature docs
+  - [x] 13.8 Document integration requirements from local feature docs
     - Create `docs/requirements/integration/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 6: Regional Adaptations, Section 8: Emerging Frontiers)
-    - Read from `docs/features/integration/payment-gateways.md`
-    - Read from `docs/features/integration/mapping-services.md`
-    - Read from `docs/features/integration/notification-services.md`
-    - Read from `docs/research/industry-standards/payment-standards.md`
-    - Create `payment-gateways.md` with Stripe, PayPal integration requirements (include crypto-fiat, BNPL)
+    - Read from ALL sources:
+      - `docs/features/integration/payment-gateways.md` (synthesized payment integration features)
+      - `docs/features/integration/mapping-services.md` (mapping integration features)
+      - `docs/features/integration/notification-services.md` (notification integration features)
+      - `docs/research/industry-standards/payment-standards.md` (PCI-DSS, payment compliance)
+      - **`docs/research/advanced-features.md`** (Section 6: regional adaptations - WeChat, Grab; Section 8: emerging frontiers - autonomous logistics, metaverse; Section 10: fintech - crypto-fiat, BNPL)
+    - Create `payment-gateways.md` with standard (Stripe, PayPal) and emerging (crypto-fiat, BNPL) integration requirements
     - Create `mapping-services.md` with Google Maps, geolocation requirements
     - Create `notification-services.md` with email, SMS, push notification requirements
     - Create `super-app-integration.md` with WeChat Mini-Programs, Grab Partner Apps requirements
-    - **Include emerging integrations**: autonomous vehicle logistics, metaverse presence, data monetization APIs
+    - Build on proven integration patterns, enhanced with regional and emerging capabilities
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.7, 10.7, 10.8, 10.10_
   
-  - [ ] 13.9 Document compliance requirements from local research
+  - [x] 13.9 Document compliance requirements from local research
     - Create `docs/requirements/compliance/` directory with `_category_.json`
-    - **PRIMARY SOURCE**: Read from `docs/research/advanced-features.md` (Section 9: Trust and Safety Stack, Blockchain Event Logging)
-    - Read from `docs/research/industry-standards/compliance-regulations.md`
-    - Read from `docs/research/industry-standards/payment-standards.md`
-    - Read from `docs/features/security/data-protection.md`
-    - Create `data-protection.md` with GDPR, CCPA requirements (include blockchain immutability for audit trails)
-    - Create `payment-security.md` with PCI-DSS requirements (include crypto payment compliance)
-    - Create `accessibility.md` with WCAG requirements (include accessible mobility features)
-    - Create `fraud-prevention.md` with synthetic identity fraud defense, liveness checks requirements
-    - **Include blockchain compliance**: immutable event logging, chain of custody, smart contract auditing
+    - Read from ALL sources:
+      - `docs/research/industry-standards/compliance-regulations.md` (GDPR, CCPA, insurance regulations)
+      - `docs/research/industry-standards/payment-standards.md` (PCI-DSS payment security)
+      - `docs/features/security/data-protection.md` (data protection features)
+      - **`docs/research/advanced-features.md`** (Section 9: trust and safety - synthetic identity fraud defense, blockchain event logging, liveness checks, immutable audit trails)
+    - Create `data-protection.md` with GDPR, CCPA requirements enhanced with blockchain immutability for audit trails
+    - Create `payment-security.md` with PCI-DSS requirements including crypto payment compliance
+    - Create `accessibility.md` with WCAG requirements including accessible mobility features
+    - Create `fraud-prevention.md` with synthetic identity fraud defense, liveness checks, blockchain chain of custody
+    - Build on standard compliance requirements, enhanced with advanced trust and safety capabilities
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.7, 10.10_
 
-- [ ] 14. Create Appendices from Local Documentation
+- [x] 14. Create Appendices from Local Documentation
   - Create `docs/appendices/` directory with `_category_.json`
   - Create `glossary.md` by extracting technical terms from all local documentation (include advanced terms from advanced-features.md)
   - Create `references.md` by collecting all citations from research documents (`docs/research/**/*.md`)
@@ -486,7 +507,7 @@ This implementation plan outlines the tasks for executing the planning and analy
 - This is a documentation and analysis project, not a coding implementation project
 - The "implementation" involves creating comprehensive markdown documentation in a Docusaurus site
 - **Phases 1-11 are complete**: Comprehensive local documentation exists in `docs/analysis/`, `docs/research/`, `docs/stakeholders/`, and `docs/workflows/`
-- **PRIMARY SOURCE for advanced features**: `docs/research/advanced-features.md` contains next-generation capabilities including:
+- **Key asset for advanced features**: `docs/research/advanced-features.md` contains next-generation capabilities including:
   - Hybrid business models (P2P, subscription, fractional ownership)
   - Persona-based feature sets (dynamic user segmentation)
   - Advanced frontend innovations (AR/VR, voice interfaces, PWA)
@@ -497,10 +518,10 @@ This implementation plan outlines the tasks for executing the planning and analy
   - Emerging frontiers (autonomous logistics, metaverse, data monetization)
   - Trust & safety stack (synthetic identity fraud defense, blockchain event logging)
   - Financial technology (crypto-fiat gateways, BNPL)
-- **Phases 12-20 focus on synthesis**: Extract features from local analysis docs with **heavy emphasis on advanced-features.md**, synthesize requirements from feature catalog and stakeholder/workflow docs
+- **Phases 12-20 focus on balanced synthesis**: Extract features from ALL local documentation sources, combining proven patterns from open-source analysis (bookcars, car-rental-php, FreeCar) with advanced capabilities from research (especially advanced-features.md)
 - Each task builds incrementally, with checkpoints for user review
 - All documentation must be modular (150-400 lines per file)
-- Feature catalog should reference source documents (e.g., "Source: docs/research/advanced-features.md")
+- Feature catalog should reference source documents (e.g., "Source: docs/research/advanced-features.md, docs/analysis/bookcars/features-user.md")
 - Requirements should reference feature catalog, stakeholders, and workflows for traceability
 - All workflows already include Mermaid diagrams
-- The final deliverable is both a documentation website and an academic-quality PDF showcasing cutting-edge car rental platform capabilities
+- The final deliverable is both a documentation website and an academic-quality PDF showcasing a comprehensive car rental platform that balances foundational features with cutting-edge capabilities

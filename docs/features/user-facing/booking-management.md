@@ -1,434 +1,443 @@
 ---
 sidebar_position: 2
 title: Booking Management Features
-description: Comprehensive booking lifecycle management including contactless operations, split payments, and flexible modifications
-tags: [features, user-facing, booking, reservation, contactless, modifications]
+description: Comprehensive booking lifecycle management from reservation through completion, including persona-based UX and contactless operations
+tags: [features, user-facing, booking, reservation, contactless, voice]
 ---
 
 # Booking Management Features
 
 ## Overview
 
-Booking management features cover the complete rental lifecycle from reservation creation through trip completion. This catalog emphasizes next-generation capabilities including contactless operations, biometric authentication, and flexible payment options while maintaining core booking functionality.
+Booking management encompasses the entire rental lifecycle from initial reservation through trip completion. This document synthesizes proven booking workflows with next-generation capabilities including persona-based UX, contactless operations, voice booking, and flexible modification options to create a seamless, user-centric experience.
 
-## Advanced Booking Features
+## Booking Creation
 
-### CONTACTLESS.1 Digital KYC and Document Scanning
+### F-BM-001: Multi-Step Checkout Process
 
-**Name**: Automated Identity Verification
-
-**Description**: Streamline customer onboarding through OCR-powered document scanning and AI-based identity verification, eliminating manual document review.
-
-**Capabilities**:
-- OCR (Optical Character Recognition) for license and passport scanning
-- Automatic data extraction (name, DOB, license number, expiration)
-- AI-powered "Liveness Check" (blink or head turn detection)
-- Photo spoofing prevention
-- Automated identity verification against government databases
-- Real-time verification status
-- Secure document storage with encryption
-
-**Stakeholder Benefit**: Customers complete verification in minutes without visiting a counter, while the platform reduces fraud and manual review costs.
-
-**Priority**: Must-have (operational efficiency and fraud prevention)
-
-**Source**: docs/research/advanced-features.md (Section 3: Contactless Operations - Digital KYC)
-
-### CONTACTLESS.2 Biometric Authentication at Pickup
-
-**Name**: Facial Recognition Checkout
-
-**Description**: Enable sub-30-second vehicle pickup through facial recognition kiosks or mobile FaceID, eliminating counter interactions and paperwork.
-
-**Capabilities**:
-- Facial recognition kiosks at pickup locations
-- Mobile FaceID/TouchID integration
-- Verification against ID photo on file
-- Automatic booking retrieval
-- Digital signature capture
-- Instant vehicle key/access code generation
-- Checkout completion under 30 seconds
-
-**Stakeholder Benefit**: Customers skip long counter lines and complete pickup in seconds, dramatically improving experience for business travelers and power renters.
-
-**Priority**: Should-have (competitive differentiator)
-
-**Source**: docs/research/advanced-features.md (Section 3: Contactless Operations - Biometric Authentication)
-
-### SPLIT.1 Group Split Payment
-
-**Name**: Multi-Party Payment Splitting
-
-**Description**: Enable groups to split rental costs among multiple participants, with flexible split options and automatic payment collection.
-
-**Capabilities**:
-- Invite participants via email/SMS
-- Equal or custom split amounts
-- Individual payment method collection
-- Automatic payment processing
-- Payment status tracking per participant
-- Reminder notifications for unpaid shares
-- Refund distribution on cancellation
-
-**Stakeholder Benefit**: Young drivers and group travelers can share costs easily, removing financial barriers and increasing booking conversion.
-
-**Priority**: Should-have (Gen Z segment)
-
-**Source**: docs/research/advanced-features.md (Section 2: Young Driver Needs - Split-payment group booking)
-
-### INSTANT.1 One-Click Rebooking
-
-**Name**: Instant Repeat Booking
-
-**Description**: Enable power renters to rebook previous rentals with a single click, using saved preferences and payment methods.
-
-**Capabilities**:
-- "Book Again" button on past bookings
-- Automatic date adjustment to future dates
-- Saved vehicle preferences
-- Saved pickup/return locations
-- Saved payment method
-- Saved insurance and add-on selections
-- Availability check and instant confirmation
-
-**Stakeholder Benefit**: Business travelers and frequent renters save time with streamlined rebooking, improving loyalty and reducing friction.
-
-**Priority**: Should-have (power renter segment)
-
-**Source**: docs/research/advanced-features.md (Section 2: Power Renter Needs)
-
-## Core Booking Features
-
-### BOOKING.1 Multi-Step Checkout Process
-
-**Name**: Guided Booking Workflow
-
-**Description**: Streamlined booking workflow guiding customers from vehicle selection to confirmation with validation at each step.
+**Description**: Streamlined, guided booking workflow from vehicle selection to confirmation with clear progress indication.
 
 **Checkout Steps**:
-1. **Vehicle Selection**: Choose vehicle and rental period
-2. **Customer Information**: Provide/confirm personal details
-3. **Additional Options**: Select insurance, additional driver, extras
-4. **Payment Method**: Choose payment option and provide details
-5. **Review & Confirm**: Review booking summary and terms
-6. **Confirmation**: Receive booking confirmation with reference
+1. **Vehicle Selection**: Confirm vehicle and rental period
+2. **Customer Information**: Provide/verify personal details (name, email, phone, birth date)
+3. **Additional Options**: Select insurance tiers, additional driver, extra services
+4. **Payment Method**: Choose payment option and provide payment details
+5. **Review & Confirm**: Review complete booking summary
+6. **Confirmation**: Receive booking confirmation with reference number
 
 **Validation Features**:
-- Age verification (minimum age requirements)
-- License verification status check
-- Date validation (prevent invalid ranges)
-- Availability recheck before payment
-- Real-time input validation
-- Progress indicator
+- **Age Verification**: Ensure customer meets minimum age requirements (typically 21-25)
+- **License Verification**: Check driver license validity and verification status
+- **Date Validation**: Prevent invalid date ranges, past dates, or conflicts
+- **Availability Recheck**: Confirm vehicle availability before payment
+- **Input Validation**: Real-time validation of email, phone, and other fields
+- **Business Rules**: Enforce minimum/maximum rental duration
+- **Stock Checking**: Prevent overbooking through real-time inventory checks
 
-**Stakeholder Benefit**: Clear, guided process reduces booking abandonment and errors, improving conversion rates.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
-
-### BOOKING.2 Booking Confirmation and Documentation
-
-**Name**: Comprehensive Booking Confirmation
-
-**Description**: Provide complete confirmation materials after booking completion, including all necessary information for pickup.
-
-**Confirmation Materials**:
-- **Confirmation Email**: Detailed booking summary
-- **Booking Reference**: Unique identifier for support
-- **Pickup Instructions**: Location details, hours, contact info
-- **Vehicle Details**: Confirmed specifications and features
-- **Pricing Breakdown**: Itemized cost summary with taxes
-- **Terms & Conditions**: Rental agreement and policies
-- **QR Code**: Scannable code for quick check-in (mobile)
-- **Calendar Integration**: Add booking to personal calendar
-- **Digital Wallet Pass**: Apple Wallet/Google Wallet integration
-
-**Stakeholder Benefit**: Customers have all necessary information readily accessible, reducing support calls and improving pickup experience.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md (Section 3: Digital Wallets)
-
-### BOOKING.3 Booking History and Tracking
-
-**Name**: Complete Booking Records
-
-**Description**: Comprehensive record of all customer bookings (past, current, upcoming) with status tracking and quick actions.
-
-**History Features**:
-- **Booking List**: Chronological list with status indicators
-- **Status Tracking**: Pending, confirmed, active, completed, cancelled
-- **Booking Details**: Access full details of any booking
-- **Filtering**: Filter by status, date range, vehicle type
-- **Search**: Search by vehicle, location, booking reference
-- **Export**: Download booking history for records
-- **Quick Actions**: Modify, cancel, rebook, contact support
-
-**Stakeholder Benefit**: Easy access to booking information for trip planning, expense tracking, and reference.
+**Stakeholder Benefit**: Clear, guided process reduces booking abandonment and errors. Progress indicators set expectations and reduce anxiety.
 
 **Priority**: Must-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/car-rental-php/features.md
 
-## Booking Modifications
+---
 
-### MODIFY.1 Flexible Booking Changes
+### F-BM-002: Persona-Based Booking Experience
 
-**Name**: Self-Service Booking Modifications
+**Description**: Dynamic booking interface that adapts to user segment, surfacing relevant options and streamlining the flow based on user type.
 
-**Description**: Allow customers to modify existing bookings within policy constraints, with automatic repricing and availability checking.
+**Persona Adaptations**:
 
-**Modification Capabilities**:
-- **Date Changes**: Extend or shorten rental period
-- **Time Changes**: Adjust pickup/return times
-- **Location Changes**: Change pickup or drop-off locations
-- **Vehicle Changes**: Upgrade or change vehicle (if available)
-- **Additional Services**: Add/remove insurance, GPS, child seats
-- **Additional Driver**: Add or remove authorized drivers
-- **Automatic Repricing**: Recalculate total cost based on changes
+| User Segment | Booking Optimizations |
+|--------------|----------------------|
+| **Power Renter (Business)** | One-click rebooking from history, pre-filled corporate details, automated receipt export, skip-the-counter options, expense policy enforcement |
+| **Experience Seeker (Luxury)** | VIN-specific booking (not "or similar"), white-glove concierge delivery options, premium insurance pre-selected, vehicle history transparency |
+| **Young Driver (Gen Z)** | Split-payment group booking, telematics-based insurance discounts, social sharing features, flexible payment plans |
+| **Eco-Conscious** | EV range anxiety calculator, carbon offset integration, green routing suggestions, sustainability impact display |
+| **Accessible Mobility** | Hard allocation (VIN-locked bookings), guaranteed specific vehicle, accessibility feature verification, no vehicle swapping |
 
-**Business Rules**:
-- Modifications subject to availability
-- Some changes may incur fees
-- Modifications restricted within time window before pickup
-- Price protection for certain rate types
-- Automatic refund/charge for price differences
+**Stakeholder Benefit**: Tailored experience reduces friction for each user type. Power renters book faster, luxury customers get assurance, budget users see relevant options.
 
-**Stakeholder Benefit**: Flexibility to adapt bookings to changing plans without canceling and rebooking, improving customer satisfaction.
+**Priority**: Should-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 2)
+
+---
+
+### F-BM-003: Voice-Activated Booking
+
+**Description**: Complete booking flow executable through voice commands for hands-free operation.
+
+**Voice Capabilities**:
+- Voice search and vehicle selection
+- Spoken date/time selection: "Book for next Friday at 2 PM"
+- Voice-based option selection: "Add full insurance"
+- Payment method selection by voice
+- Booking confirmation via voice
+- Booking modification: "Extend my rental by 2 hours"
+- Integration with Alexa Automotive, Android Auto, Siri
+
+**Stakeholder Benefit**: Drivers can book while driving safely. Accessibility benefit for visually impaired users. Speed and convenience for power users.
+
+**Priority**: Nice-to-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 3)
+
+---
+
+### F-BM-004: Flexible Pricing Mode Selection
+
+**Description**: Multiple pricing models to accommodate different usage patterns and customer preferences.
+
+**Pricing Modes**:
+- **Hourly**: Rent by the hour with hourly rate (minimum 1-4 hours)
+- **Daily**: Rent by the day with daily rate and volume discounts
+- **Weekly**: Discounted weekly rate
+- **Monthly**: Subscription-style monthly rate
+- **Per-Kilometer**: Distance-based pricing for specific use cases
+- **Unlimited Mileage**: Flat rate with no distance restrictions
+- **Hybrid**: Combination of time and distance pricing
+
+**Dynamic Pricing Display**:
+- Real-time price calculation as duration changes
+- Volume discount application (e.g., 7+ days = 15% off)
+- Seasonal pricing transparency
+- Competitor price comparison (optional)
+- Price breakdown by component
+
+**Stakeholder Benefit**: Customers choose pricing that matches their usage pattern. Transparency builds trust and reduces disputes.
+
+**Priority**: Must-have
+
+**Source**: docs/analysis/car-rental-php/features.md, docs/analysis/bookcars/features-user.md
+
+---
+
+### F-BM-005: Discount Code & Promotion Application
+
+**Description**: Apply promotional codes, corporate discounts, and loyalty rewards during booking.
+
+**Discount Features**:
+- Promo code input field with validation
+- Real-time discount calculation and display
+- Code expiration and usage limit enforcement
+- Corporate discount code support
+- Loyalty points redemption
+- Referral credit application
+- Automatic best-price guarantee
+- Stacking rules for multiple discounts
+- Available promotions display
+
+**Stakeholder Benefit**: Customers access available discounts easily. Transparent pricing with clear savings display.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
+
+---
+
+## Booking Confirmation & Documentation
+
+### F-BM-006: Comprehensive Booking Confirmation
+
+**Description**: Complete confirmation materials provided immediately after booking completion.
+
+**Confirmation Materials**:
+- **Confirmation Email**: Detailed booking summary sent to customer email
+- **Booking Reference**: Unique identifier for customer service interactions
+- **Pickup Instructions**: Location details, operating hours, contact information, parking instructions
+- **Vehicle Details**: Confirmed vehicle specifications, features, and license plate
+- **Pricing Breakdown**: Itemized cost summary including all fees, taxes, and discounts
+- **Terms & Conditions**: Rental agreement and policies with acceptance record
+- **QR Code**: Scannable code for quick check-in at pickup location
+- **Digital Wallet Pass**: Add booking to Apple Wallet or Google Wallet
+- **Calendar Integration**: Add booking to personal calendar with reminders
+- **Directions**: Navigation link to pickup location
+
+**Stakeholder Benefit**: Customers have all necessary information for smooth pickup. Reduces support inquiries and no-shows.
 
 **Priority**: Must-have
 
 **Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
 
-### EXTEND.1 Trip Extension
+---
 
-**Name**: Active Trip Extension
+### F-BM-007: Contactless Digital Check-In
 
-**Description**: Allow customers to extend ongoing rentals in real-time, with availability checking and automatic payment processing.
+**Description**: Complete check-in process through mobile app without counter interaction.
 
-**Extension Capabilities**:
-- Extend trip from mobile app during rental
+**Contactless Features**:
+- **Digital KYC**: OCR scanning of driver's license and passport
+- **Liveness Check**: AI-powered verification (blink or head turn) to prevent photo spoofing
+- **Biometric Authentication**: Facial recognition kiosks or mobile FaceID
+- **Automated Identity Verification**: Cross-reference with government databases
+- **Digital Signature**: Electronic rental agreement signing
+- **Vehicle Unlock**: Digital key delivery to mobile device
+- **Checkout Under 30 Seconds**: Streamlined verification process
+- **Skip-the-Counter**: Direct to vehicle without staff interaction
+
+**Stakeholder Benefit**: Fast, safe, hygienic pickup process. Particularly valuable post-pandemic and for power renters who value speed.
+
+**Priority**: Should-have (Phase 2)
+
+**Source**: docs/research/advanced-features.md (Section 3)
+
+---
+
+## Booking Modifications
+
+### F-BM-008: Flexible Booking Modifications
+
+**Description**: Self-service modification of existing bookings within allowed parameters.
+
+**Modification Capabilities**:
+- **Date/Time Changes**: Extend or shorten rental period (subject to availability)
+- **Location Changes**: Change pickup or drop-off locations (if supported)
+- **Vehicle Changes**: Upgrade or downgrade to different vehicle (if available)
+- **Additional Services**: Add or remove insurance, GPS, child seats, additional driver
+- **Automatic Repricing**: Recalculate total cost based on modifications
+- **Modification History**: Track all changes made to booking
+- **Modification Fees**: Transparent display of any change fees
+- **Availability Validation**: Real-time check of new dates/vehicle availability
+
+**Modification Restrictions**:
+- Time windows (e.g., no changes within 24 hours of pickup)
+- Supplier-specific policies
+- Availability constraints
+- Price protection rules
+
+**Stakeholder Benefit**: Flexibility to adapt bookings to changing travel plans without canceling and rebooking. Reduces customer service load.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
+
+---
+
+### F-BM-009: Trip Extension
+
+**Description**: Extend active rental duration while trip is in progress.
+
+**Extension Features**:
+- Extend from mobile app during trip
 - Select new return time
-- Check vehicle availability for extension
+- Real-time availability checking for extension period
 - Calculate additional cost
-- Automatic payment processing
+- Instant confirmation
 - Updated booking confirmation
-- Notification to pickup location
+- Notification to supplier/host
+- Grace period for late returns
 
-**Stakeholder Benefit**: Customers can adapt to changing plans without returning vehicle early or facing late fees.
+**Stakeholder Benefit**: Flexibility for users whose plans change during trip. Prevents late fees through proactive extension.
 
 **Priority**: Should-have
 
 **Source**: docs/analysis/freecar/features-api.md, docs/analysis/freecar/features-miniprogram.md
 
-## Cancellation Management
+---
 
-### CANCEL.1 Self-Service Cancellation
+### F-BM-010: Booking Cancellation
 
-**Name**: Online Booking Cancellation
-
-**Description**: Self-service cancellation with automated refund processing based on cancellation policies.
+**Description**: Self-service cancellation with automated refund processing and transparent policy enforcement.
 
 **Cancellation Features**:
-- **Online Cancellation**: Cancel through web or mobile interface
-- **Cancellation Policies**: Clear display of terms and refund amounts
-- **Automatic Refunds**: Refunds processed based on timing
-- **Cancellation Confirmation**: Email confirmation with refund details
-- **Partial Refunds**: Prorated refunds based on policy
-- **Cancellation Reason**: Optional feedback collection
+- **Online Cancellation**: Cancel bookings through web or mobile interface
+- **Cancellation Policies**: Clear display of cancellation terms and refund amounts
+- **Automatic Refunds**: Refunds processed automatically based on cancellation timing
+- **Cancellation Confirmation**: Email confirmation of cancellation and refund details
+- **Partial Refunds**: Prorated refunds based on cancellation policy
+- **Cancellation Reason**: Optional feedback on cancellation reason
+- **Rebooking Suggestions**: Offer alternative dates or vehicles
 
 **Policy Enforcement**:
-- Free cancellation within specified window
-- Partial refunds for cancellations closer to pickup
+- Free cancellation within specified time window (e.g., 24-48 hours before pickup)
+- Partial refunds for cancellations closer to pickup date
 - No refund for late cancellations or no-shows
-- Automatic inventory release
+- Supplier-specific policy variations
+- Force majeure exceptions
 
-**Stakeholder Benefit**: Customers can cancel bookings without contacting support, with transparent refund expectations.
+**Stakeholder Benefit**: Customers can cancel bookings without contacting support, with transparent refund expectations. Reduces support burden.
 
 **Priority**: Must-have
 
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-api.md
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
+
+---
+
+## Booking History & Tracking
+
+### F-BM-011: Comprehensive Booking History
+
+**Description**: Complete record of all customer bookings with status tracking and filtering.
+
+**History Features**:
+- **Booking List**: Chronological list of all bookings with status indicators
+- **Status Categories**: Upcoming, active, completed, cancelled, pending payment
+- **Visual Status Indicators**: Color-coded status badges and icons
+- **Booking Details**: Access full details of any booking
+- **Filtering**: Filter by status, date range, supplier, vehicle type
+- **Search**: Search bookings by vehicle name, location, or booking reference
+- **Export**: Download booking history for record-keeping (CSV, PDF)
+- **Sorting**: Sort by date, price, status, or vehicle
+
+**Stakeholder Benefit**: Easy access to booking information for trip planning, expense tracking, and reference. Particularly valuable for business travelers.
+
+**Priority**: Must-have
+
+**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/car-rental-php/features.md
+
+---
+
+### F-BM-012: Active Trip Dashboard
+
+**Description**: Real-time dashboard for monitoring and managing active rentals.
+
+**Dashboard Features**:
+- **Current Trip Status**: Visual display of trip progress
+- **Vehicle Information**: Quick access to vehicle details and location
+- **Time Tracking**: Elapsed time and time remaining display
+- **Cost Tracking**: Estimated cost so far with real-time updates
+- **Extend Trip**: Quick access to extension feature
+- **End Trip**: Initiate return process
+- **Vehicle Controls**: Lock/unlock, horn/lights (if supported)
+- **Navigation**: Get directions to vehicle or return location
+- **Report Issue**: Quick access to support for problems
+- **Trip Progress**: Route visualization on map
+
+**Stakeholder Benefit**: Complete visibility and control over active rental. Peace of mind through real-time information.
+
+**Priority**: Should-have
+
+**Source**: docs/analysis/freecar/features-miniprogram.md
+
+---
 
 ## Trip Lifecycle Management
 
-### TRIP.1 Trip Start and Vehicle Pickup
+### F-BM-013: Vehicle Pickup Process
 
-**Name**: Digital Vehicle Pickup
-
-**Description**: Streamlined pickup process with digital verification, vehicle inspection, and access authorization.
+**Description**: Guided process for vehicle pickup with verification and documentation.
 
 **Pickup Features**:
-- **Pickup Confirmation**: Confirm arrival at location
+- **Pickup Checklist**: Step-by-step pickup guide
+- **Location Verification**: Confirm arrival at pickup location
 - **Vehicle Inspection**: Digital walkthrough with photo/video capture
-- **Odometer Reading**: Capture starting mileage
-- **Fuel/Battery Level**: Document starting level
-- **Location Verification**: GPS confirmation of pickup location
-- **Vehicle Unlock**: Digital key or access code generation
-- **Trip Timer Activation**: Start rental period tracking
-- **Damage Documentation**: AI-powered damage detection from photos
+- **Odometer Reading**: Record starting mileage
+- **Fuel/Battery Level**: Document starting fuel/charge level
+- **Damage Documentation**: AI-powered damage detection from photos/video
+- **Vehicle Unlock**: Digital key activation
+- **Trip Timer**: Automatic trip start
+- **Pickup Confirmation**: Confirm successful pickup
 
-**Stakeholder Benefit**: Customers complete pickup quickly with clear documentation, reducing disputes and improving experience.
+**Stakeholder Benefit**: Clear process reduces confusion and disputes. Digital documentation protects both customer and supplier.
 
 **Priority**: Must-have
 
-**Source**: docs/analysis/freecar/features-api.md, docs/research/advanced-features.md (Section 5: AI-Powered Damage Detection)
+**Source**: docs/analysis/freecar/features-api.md, docs/research/advanced-features.md (Section 5)
 
-### TRIP.2 Active Trip Monitoring
+---
 
-**Name**: Real-Time Trip Tracking
+### F-BM-014: Vehicle Return Process
 
-**Description**: Monitor active trips with real-time location tracking, duration monitoring, and status updates.
+**Description**: Guided return process with final inspection and billing.
 
-**Monitoring Features**:
-- **Trip Dashboard**: Current trip status and information
-- **Location Tracking**: Real-time vehicle location on map
-- **Duration Tracking**: Elapsed time and time remaining
-- **Mileage Tracking**: Distance traveled
-- **Cost Tracking**: Estimated current cost
-- **Route Visualization**: Trip route on map
-- **Fuel/Battery Monitoring**: Current level tracking
+**Return Features**:
+- **Return Location Verification**: Confirm arrival at return location
+- **Final Odometer Reading**: Record ending mileage
+- **Fuel/Battery Level**: Document ending fuel/charge level
+- **Vehicle Condition Checklist**: Digital inspection form
+- **Damage Reporting**: Report any new damage with photos
+- **AI Damage Detection**: Automated comparison against pickup condition
+- **Vehicle Lock**: Confirm vehicle secured
+- **Trip Completion**: Finalize trip and stop billing
+- **Final Invoice**: Generate and display final charges
 
-**Stakeholder Benefit**: Customers stay informed about trip progress and costs, while platform monitors for issues.
+**Stakeholder Benefit**: Clear return process with transparent final billing. Dispute prevention through digital documentation.
 
-**Priority**: Should-have
+**Priority**: Must-have
 
 **Source**: docs/analysis/freecar/features-api.md, docs/analysis/freecar/features-miniprogram.md
 
-### TRIP.3 Trip Completion and Return
+---
 
-**Name**: Digital Vehicle Return
+## Advanced Booking Features
 
-**Description**: Streamlined return process with digital verification, final inspection, and automatic billing.
+### F-BM-015: Split-Payment Group Booking
 
-**Return Features**:
-- **Return Confirmation**: Confirm arrival at return location
-- **Final Inspection**: Digital walkthrough with photo/video
-- **Odometer Reading**: Capture ending mileage
-- **Fuel/Battery Level**: Document ending level
-- **Location Verification**: GPS confirmation of return location
-- **Damage Comparison**: AI comparison against pickup photos
-- **Final Invoice**: Automatic generation with all charges
-- **Trip Summary**: Complete trip statistics and receipt
+**Description**: Enable multiple users to share payment for a single booking, particularly valuable for young drivers and group travel.
 
-**Stakeholder Benefit**: Customers complete return quickly with immediate final invoice, eliminating wait times and uncertainty.
+**Split-Payment Features**:
+- Invite co-renters by email or phone
+- Define payment split (equal or custom amounts)
+- Individual payment collection
+- Payment status tracking per person
+- Automatic booking confirmation when fully paid
+- Refund distribution on cancellation
+- Primary renter designation
+- Co-renter liability agreement
 
-**Priority**: Must-have
+**Stakeholder Benefit**: Young drivers and groups can share costs easily. Reduces barriers to booking for budget-conscious users.
 
-**Source**: docs/analysis/freecar/features-api.md, docs/research/advanced-features.md (Section 5: AI-Powered Damage Detection)
+**Priority**: Nice-to-have (Phase 2)
 
-## Insurance and Protection
+**Source**: docs/research/advanced-features.md (Section 2)
 
-### INSURANCE.1 Flexible Insurance Options
+---
 
-**Name**: Tiered Insurance Coverage
+### F-BM-016: One-Click Rebooking
 
-**Description**: Multiple insurance tiers allowing customers to choose appropriate coverage level for their needs and risk tolerance.
+**Description**: Instant rebooking of previous rentals with saved preferences, optimized for power renters.
 
-**Insurance Tiers**:
-- **Basic Liability**: Included in base price (minimum legal coverage)
-- **Standard Protection**: Collision damage waiver with deductible
-- **Premium Protection**: Full coverage with zero deductible
-- **Personal Accident**: Optional personal injury coverage
-- **Roadside Assistance**: 24/7 emergency support
+**Rebooking Features**:
+- "Book Again" button on completed bookings
+- Pre-filled booking details from previous rental
+- Same vehicle or similar alternative
+- Adjust dates with one click
+- Saved payment method auto-selected
+- Saved preferences applied (insurance, extras)
+- Booking confirmation in under 30 seconds
 
-**Insurance Features**:
-- Clear coverage explanations
-- Deductible amount display
-- Coverage comparison table
-- Recommendation based on trip type
-- Third-party insurance acceptance
+**Stakeholder Benefit**: Power renters and business travelers save significant time. Reduces friction for repeat bookings.
 
-**Stakeholder Benefit**: Customers choose coverage matching their needs and budget, with clear understanding of protection.
+**Priority**: Should-have (Phase 2)
 
-**Priority**: Must-have
+**Source**: docs/research/advanced-features.md (Section 2)
 
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/competitive-analysis/feature-matrix.md
+---
 
-### INSURANCE.2 Telematics-Based Insurance Discounts
+### F-BM-017: Booking Templates & Favorites
 
-**Name**: Pay-How-You-Drive Insurance
+**Description**: Save booking configurations as templates for quick future bookings.
 
-**Description**: Offer insurance discounts based on safe driving behavior monitored through telematics, appealing to young drivers and safe drivers.
+**Template Features**:
+- Save booking as template with custom name
+- Include vehicle preferences, insurance, extras
+- Save pickup/return locations
+- Save typical rental duration
+- Quick booking from template
+- Modify template before booking
+- Share templates with colleagues (corporate)
 
-**Capabilities**:
-- Driving behavior monitoring (speed, braking, acceleration)
-- Safety score calculation
-- Real-time feedback on driving
-- Discount calculation based on score
-- Gamification of safe driving
-- Privacy controls and opt-in
+**Stakeholder Benefit**: Frequent renters with consistent needs book faster. Corporate travelers use company-approved templates.
 
-**Stakeholder Benefit**: Safe drivers, especially young drivers, receive lower insurance costs, while platform reduces risk and claims.
+**Priority**: Nice-to-have
 
-**Priority**: Nice-to-have (Gen Z segment, risk reduction)
+**Source**: Synthesized from competitive analysis best practices
 
-**Source**: docs/research/advanced-features.md (Section 2: Young Driver Needs)
-
-## Additional Services
-
-### EXTRAS.1 Additional Services and Add-Ons
-
-**Name**: Rental Extras and Upgrades
-
-**Description**: Optional additional services and equipment to enhance the rental experience.
-
-**Available Add-Ons**:
-- **Navigation**: GPS device or navigation app
-- **Child Safety**: Child seats (infant, toddler, booster)
-- **Additional Driver**: Authorize additional drivers
-- **Roadside Assistance**: Enhanced 24/7 support
-- **Fuel Service**: Pre-purchase fuel or fuel service
-- **Toll Pass**: Electronic toll payment device
-- **Wi-Fi Hotspot**: Mobile internet connectivity
-- **Winter Equipment**: Snow chains, winter tires
-
-**Add-On Features**:
-- Clear pricing for each add-on
-- Availability checking
-- Add during booking or modify later
-- Quantity selection (multiple child seats)
-- Recommendations based on trip
-
-**Stakeholder Benefit**: Customers can customize rental to their specific needs, improving convenience and satisfaction.
-
-**Priority**: Should-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/research/advanced-features.md (Section 7: AI Upselling)
-
-## Notifications and Reminders
-
-### NOTIFY.1 Booking Notifications
-
-**Name**: Proactive Booking Updates
-
-**Description**: Automated notifications keeping customers informed throughout the booking lifecycle.
-
-**Notification Types**:
-- **Booking Confirmation**: Immediate confirmation after booking
-- **Payment Confirmation**: Payment processing confirmation
-- **Pickup Reminders**: 24 hours and 1 hour before pickup
-- **Trip Start**: Confirmation of trip activation
-- **Trip End Reminder**: Reminder before return time
-- **Modification Confirmations**: Confirmation of changes
-- **Cancellation Confirmations**: Cancellation and refund confirmation
-- **Document Reminders**: Reminder to complete verification
-
-**Notification Channels**:
-- Email notifications
-- Push notifications (mobile app)
-- SMS notifications (optional)
-- In-app notifications
-
-**Stakeholder Benefit**: Customers stay informed and never miss important deadlines, reducing no-shows and improving experience.
-
-**Priority**: Must-have
-
-**Source**: docs/analysis/bookcars/features-user.md, docs/analysis/freecar/features-miniprogram.md
+---
 
 ## Summary
 
-Booking management features combine essential booking lifecycle capabilities with next-generation innovations in contactless operations, biometric authentication, and flexible payment options. Priority should be given to digital KYC, comprehensive booking modifications, and AI-powered damage detection as competitive differentiators.
+The booking management feature set balances proven workflows with innovative capabilities:
 
-**Feature Count**: 18 features documented
-**Primary Sources**: Advanced features research (7 features), FreeCar analysis (6 features), BookCars analysis (4 features), Competitive analysis (1 feature)
+- **Foundational Excellence**: Core booking, modification, and cancellation features work flawlessly
+- **Persona-Based Innovation**: Tailored experiences for different user segments
+- **Contactless Operations**: Modern, safe, efficient pickup/return processes
+- **Flexibility**: Comprehensive modification and extension capabilities
+- **Transparency**: Clear pricing, policies, and documentation throughout
+
+**Implementation Priority**:
+- **Phase 1 (MVP)**: F-BM-001, F-BM-004, F-BM-006, F-BM-008, F-BM-010, F-BM-011, F-BM-013, F-BM-014
+- **Phase 2 (Enhanced)**: F-BM-002, F-BM-003, F-BM-005, F-BM-007, F-BM-009, F-BM-012, F-BM-016
+- **Phase 3 (Advanced)**: F-BM-015, F-BM-017
+

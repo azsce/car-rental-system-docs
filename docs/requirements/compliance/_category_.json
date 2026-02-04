@@ -1,0 +1,8 @@
+{
+  "label": "Compliance Requirements",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Regulatory compliance requirements including data protection (GDPR, CCPA), payment security (PCI-DSS), accessibility (WCAG), and fraud prevention with advanced trust and safety capabilities."
+  }
+}
