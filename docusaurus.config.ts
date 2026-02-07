@@ -66,6 +66,18 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    mermaid: {
+      theme: {
+        light: 'default',
+        dark: 'dark',
+      },
+      options: {
+        themeVariables: {
+          // These will be overridden by CSS variables for better control
+          fontFamily: 'var(--ifm-font-family-base)',
+        },
+      },
+    },
     navbar: {
       title: 'Car Rental Planning',
       logo: {

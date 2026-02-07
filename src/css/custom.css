@@ -56,6 +56,98 @@
   margin: 2rem 0;
 }
 
+/* Mermaid dark mode theme */
+[data-theme='dark'] .docusaurus-mermaid-container {
+  /* Override Mermaid's default colors for dark mode */
+  --mermaid-font-family: var(--ifm-font-family-base);
+  
+  /* Primary colors - use darker backgrounds and lighter text */
+  --mermaid-primary-color: #1e3a8a;
+  --mermaid-primary-text-color: #e0e7ff;
+  --mermaid-primary-border-color: #60a5fa;
+  
+  /* Secondary colors */
+  --mermaid-secondary-color: #1e40af;
+  --mermaid-secondary-text-color: #dbeafe;
+  --mermaid-secondary-border-color: #3b82f6;
+  
+  /* Tertiary colors */
+  --mermaid-tertiary-color: #1d4ed8;
+  --mermaid-tertiary-text-color: #bfdbfe;
+  --mermaid-tertiary-border-color: #2563eb;
+  
+  /* Background and text */
+  --mermaid-background-color: #1e293b;
+  --mermaid-main-bg: #1e293b;
+  --mermaid-text-color: #e2e8f0;
+  --mermaid-label-color: #f1f5f9;
+  
+  /* Node colors */
+  --mermaid-node-bg-color: #334155;
+  --mermaid-node-border-color: #60a5fa;
+  
+  /* Edge/line colors */
+  --mermaid-line-color: #94a3b8;
+  --mermaid-arrow-head-color: #cbd5e1;
+  
+  /* Cluster/subgraph colors */
+  --mermaid-cluster-bg: #0f172a;
+  --mermaid-cluster-border: #475569;
+  
+  /* State diagram colors */
+  --mermaid-state-bg: #334155;
+  --mermaid-state-border: #60a5fa;
+  
+  /* Sequence diagram colors */
+  --mermaid-actor-bg: #334155;
+  --mermaid-actor-border: #60a5fa;
+  --mermaid-actor-text-color: #f1f5f9;
+  --mermaid-signal-color: #94a3b8;
+  --mermaid-signal-text-color: #e2e8f0;
+  --mermaid-label-box-bg-color: #1e293b;
+  --mermaid-label-box-border-color: #475569;
+  
+  /* ER diagram colors */
+  --mermaid-entity-bg-color: #334155;
+  --mermaid-entity-border-color: #60a5fa;
+  
+  /* Flowchart specific */
+  --mermaid-flowchart-default-fill: #334155;
+  --mermaid-flowchart-default-stroke: #60a5fa;
+}
+
+/* Light mode Mermaid theme adjustments */
+[data-theme='light'] .docusaurus-mermaid-container {
+  --mermaid-font-family: var(--ifm-font-family-base);
+  
+  /* Ensure good contrast in light mode */
+  --mermaid-primary-color: #dbeafe;
+  --mermaid-primary-text-color: #1e3a8a;
+  --mermaid-primary-border-color: #2563eb;
+  
+  --mermaid-secondary-color: #fef3c7;
+  --mermaid-secondary-text-color: #78350f;
+  --mermaid-secondary-border-color: #f59e0b;
+  
+  --mermaid-tertiary-color: #fce7f3;
+  --mermaid-tertiary-text-color: #831843;
+  --mermaid-tertiary-border-color: #ec4899;
+  
+  --mermaid-background-color: #ffffff;
+  --mermaid-main-bg: #ffffff;
+  --mermaid-text-color: #1e293b;
+  --mermaid-label-color: #0f172a;
+  
+  --mermaid-node-bg-color: #f8fafc;
+  --mermaid-node-border-color: #2563eb;
+  
+  --mermaid-line-color: #475569;
+  --mermaid-arrow-head-color: #334155;
+  
+  --mermaid-cluster-bg: #f8fafc;
+  --mermaid-cluster-border: #cbd5e1;
+}
+
 /* Ensure logo displays properly */
 .navbar__logo img {
   height: 2rem;
