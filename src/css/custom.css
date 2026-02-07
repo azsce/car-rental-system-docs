@@ -56,96 +56,68 @@
   margin: 2rem 0;
 }
 
-/* Mermaid dark mode theme */
-[data-theme='dark'] .docusaurus-mermaid-container {
-  /* Override Mermaid's default colors for dark mode */
-  --mermaid-font-family: var(--ifm-font-family-base);
-  
-  /* Primary colors - use darker backgrounds and lighter text */
-  --mermaid-primary-color: #1e3a8a;
-  --mermaid-primary-text-color: #e0e7ff;
-  --mermaid-primary-border-color: #60a5fa;
-  
-  /* Secondary colors */
-  --mermaid-secondary-color: #1e40af;
-  --mermaid-secondary-text-color: #dbeafe;
-  --mermaid-secondary-border-color: #3b82f6;
-  
-  /* Tertiary colors */
-  --mermaid-tertiary-color: #1d4ed8;
-  --mermaid-tertiary-text-color: #bfdbfe;
-  --mermaid-tertiary-border-color: #2563eb;
-  
-  /* Background and text */
-  --mermaid-background-color: #1e293b;
-  --mermaid-main-bg: #1e293b;
-  --mermaid-text-color: #e2e8f0;
-  --mermaid-label-color: #f1f5f9;
-  
-  /* Node colors */
-  --mermaid-node-bg-color: #334155;
-  --mermaid-node-border-color: #60a5fa;
-  
-  /* Edge/line colors */
-  --mermaid-line-color: #94a3b8;
-  --mermaid-arrow-head-color: #cbd5e1;
-  
-  /* Cluster/subgraph colors */
-  --mermaid-cluster-bg: #0f172a;
-  --mermaid-cluster-border: #475569;
-  
-  /* State diagram colors */
-  --mermaid-state-bg: #334155;
-  --mermaid-state-border: #60a5fa;
-  
-  /* Sequence diagram colors */
-  --mermaid-actor-bg: #334155;
-  --mermaid-actor-border: #60a5fa;
-  --mermaid-actor-text-color: #f1f5f9;
-  --mermaid-signal-color: #94a3b8;
-  --mermaid-signal-text-color: #e2e8f0;
-  --mermaid-label-box-bg-color: #1e293b;
-  --mermaid-label-box-border-color: #475569;
-  
-  /* ER diagram colors */
-  --mermaid-entity-bg-color: #334155;
-  --mermaid-entity-border-color: #60a5fa;
-  
-  /* Flowchart specific */
-  --mermaid-flowchart-default-fill: #334155;
-  --mermaid-flowchart-default-stroke: #60a5fa;
+/* Dark mode Mermaid - Override inline styles with attribute selectors */
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#f3e5f5"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#e1bee7"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ce93d8"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ba68c8"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ab47bc"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#9c27b0"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#8e24aa"],
+[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:rgb"] {
+  fill: #334155 !important;
+  stroke: #60a5fa !important;
 }
 
-/* Light mode Mermaid theme adjustments */
-[data-theme='light'] .docusaurus-mermaid-container {
-  --mermaid-font-family: var(--ifm-font-family-base);
-  
-  /* Ensure good contrast in light mode */
-  --mermaid-primary-color: #dbeafe;
-  --mermaid-primary-text-color: #1e3a8a;
-  --mermaid-primary-border-color: #2563eb;
-  
-  --mermaid-secondary-color: #fef3c7;
-  --mermaid-secondary-text-color: #78350f;
-  --mermaid-secondary-border-color: #f59e0b;
-  
-  --mermaid-tertiary-color: #fce7f3;
-  --mermaid-tertiary-text-color: #831843;
-  --mermaid-tertiary-border-color: #ec4899;
-  
-  --mermaid-background-color: #ffffff;
-  --mermaid-main-bg: #ffffff;
-  --mermaid-text-color: #1e293b;
-  --mermaid-label-color: #0f172a;
-  
-  --mermaid-node-bg-color: #f8fafc;
-  --mermaid-node-border-color: #2563eb;
-  
-  --mermaid-line-color: #475569;
-  --mermaid-arrow-head-color: #334155;
-  
-  --mermaid-cluster-bg: #f8fafc;
-  --mermaid-cluster-border: #cbd5e1;
+/* Override all node rectangles in dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container svg .node rect,
+[data-theme='dark'] .docusaurus-mermaid-container svg g[id^="flowchart-"] rect {
+  fill: #334155 !important;
+  stroke: #60a5fa !important;
+  stroke-width: 2px !important;
+}
+
+/* Override cluster/subgraph backgrounds */
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster > rect {
+  fill: #1e293b !important;
+  stroke: #475569 !important;
+  stroke-width: 2px !important;
+}
+
+/* Text colors in dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container svg text,
+[data-theme='dark'] .docusaurus-mermaid-container svg .nodeLabel,
+[data-theme='dark'] .docusaurus-mermaid-container svg .nodeLabel p,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject div,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject span,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject p {
+  fill: #f1f5f9 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Edge labels background */
+[data-theme='dark'] .docusaurus-mermaid-container svg .edgeLabel .labelBkg,
+[data-theme='dark'] .docusaurus-mermaid-container svg .labelBkg {
+  background-color: #1e293b !important;
+}
+
+/* Lines and arrows */
+[data-theme='dark'] .docusaurus-mermaid-container svg path.flowchart-link,
+[data-theme='dark'] .docusaurus-mermaid-container svg .edgePath path {
+  stroke: #94a3b8 !important;
+}
+
+[data-theme='dark'] .docusaurus-mermaid-container svg .arrowMarkerPath {
+  fill: #94a3b8 !important;
+  stroke: #94a3b8 !important;
+}
+
+/* Cluster labels */
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label text,
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label span,
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label p {
+  fill: #e2e8f0 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Ensure logo displays properly */
