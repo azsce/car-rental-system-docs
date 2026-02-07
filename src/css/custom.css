@@ -56,6 +56,12 @@
   margin: 2rem 0;
 }
 
+/* Ensure logo displays properly */
+.navbar__logo img {
+  height: 2rem;
+  width: auto;
+}
+
 /* PDF Export Styling - Academic Standard */
 @media print {
   /* Page setup with academic margins */
