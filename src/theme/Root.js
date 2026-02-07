@@ -12,22 +12,20 @@ export default function Root({ children }) {
         const mermaidContainers = document.querySelectorAll('.docusaurus-mermaid-container svg');
         
         mermaidContainers.forEach((svg) => {
-          // Remove inline fill styles from rect elements
-          const rects = svg.querySelectorAll('rect[style*="fill"]');
-          rects.forEach((rect) => {
-            // Check if it's a node (not a cluster)
-            const isNode = rect.closest('.node');
-            const isCluster = rect.closest('.cluster') && !isNode;
-            
-            if (isNode) {
-              rect.style.fill = '#334155';
-              rect.style.stroke = '#60a5fa';
-              rect.style.strokeWidth = '2px';
-            } else if (isCluster) {
-              rect.style.fill = '#1e293b';
-              rect.style.stroke = '#475569';
-              rect.style.strokeWidth = '2px';
-            }
+          // Get all rect elements in nodes
+          const nodeRects = svg.querySelectorAll('.node rect.label-container');
+          nodeRects.forEach((rect) => {
+            // Remove the inline style attribute completely
+            rect.removeAttribute('style');
+            // Add a class for dark mode styling
+            rect.classList.add('dark-mode-node');
+          });
+
+          // Get all rect elements in clusters
+          const clusterRects = svg.querySelectorAll('.cluster > rect');
+          clusterRects.forEach((rect) => {
+            rect.removeAttribute('style');
+            rect.classList.add('dark-mode-cluster');
           });
         });
       }
@@ -36,18 +34,24 @@ export default function Root({ children }) {
     // Run immediately
     fixMermaidColors();
 
-    // Run after a short delay to catch dynamically loaded diagrams
-    const timeoutId = setTimeout(fixMermaidColors, 100);
+    // Run after multiple delays to catch dynamically loaded diagrams
+    const timeoutId1 = setTimeout(fixMermaidColors, 100);
+    const timeoutId2 = setTimeout(fixMermaidColors, 500);
+    const timeoutId3 = setTimeout(fixMermaidColors, 1000);
 
     // Observe DOM changes for dynamically loaded content
-    const observer = new MutationObserver(fixMermaidColors);
+    const observer = new MutationObserver(() => {
+      setTimeout(fixMermaidColors, 50);
+    });
     observer.observe(document.body, {
       childList: true,
       subtree: true,
     });
 
     return () => {
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId1);
+      clearTimeout(timeoutId2);
+      clearTimeout(timeoutId3);
       observer.disconnect();
     };
   }, [colorMode]);

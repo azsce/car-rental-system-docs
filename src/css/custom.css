@@ -56,20 +56,20 @@
   margin: 2rem 0;
 }
 
-/* Dark mode Mermaid - Override inline styles with attribute selectors */
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#f3e5f5"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#e1bee7"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ce93d8"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ba68c8"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#ab47bc"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#9c27b0"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:#8e24aa"],
-[data-theme='dark'] .docusaurus-mermaid-container svg rect[style*="fill:rgb"] {
+/* Dark mode Mermaid - Target classes added by JavaScript */
+[data-theme='dark'] .docusaurus-mermaid-container svg rect.dark-mode-node {
   fill: #334155 !important;
   stroke: #60a5fa !important;
+  stroke-width: 2px !important;
 }
 
-/* Override all node rectangles in dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container svg rect.dark-mode-cluster {
+  fill: #1e293b !important;
+  stroke: #475569 !important;
+  stroke-width: 2px !important;
+}
+
+/* Fallback: Override all node rectangles in dark mode */
 [data-theme='dark'] .docusaurus-mermaid-container svg .node rect,
 [data-theme='dark'] .docusaurus-mermaid-container svg g[id^="flowchart-"] rect {
   fill: #334155 !important;
