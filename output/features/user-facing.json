@@ -1,0 +1,3360 @@
+{
+  "category": "user-facing",
+  "total_features": 159,
+  "features": [
+    {
+      "id": "F-IND-001",
+      "name": "Advanced Vehicle Search",
+      "description": "Search vehicles by location, dates, price, type, features with multiple filters and sorting options",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Helps customers quickly find vehicles that meet their specific needs"
+    },
+    {
+      "id": "F-IND-002",
+      "name": "Transparent Pricing Display",
+      "description": "Clear breakdown of all costs including base rate, taxes, fees, and add-ons before booking",
+      "category": "user-facing",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-006: Transparent Pricing Display"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Builds trust by eliminating surprise charges and enabling informed decisions"
+    },
+    {
+      "id": "F-IND-003",
+      "name": "Mobile-Optimized Booking",
+      "description": "Responsive mobile web and native app experience for seamless booking on smartphones",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables convenient booking from anywhere and improves mobile conversion"
+    },
+    {
+      "id": "F-IND-004",
+      "name": "Flexible Booking Modification",
+      "description": "Easy date changes, vehicle swaps, and cancellations with clear policy display",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Accommodates changing plans and reduces booking anxiety"
+    },
+    {
+      "id": "F-IND-005",
+      "name": "Digital Check-In",
+      "description": "Pre-arrival paperwork completion to skip counter lines and expedite pickup",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Saves time at pickup and improves customer experience"
+    },
+    {
+      "id": "F-IND-007",
+      "name": "Multiple Payment Options",
+      "description": "Support for credit cards, debit cards, digital wallets (Apple Pay, Google Pay), and buy-now-pay-later",
+      "category": "user-facing",
+      "functionalArea": "payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Accommodates customer payment preferences and reduces payment friction"
+    },
+    {
+      "id": "F-IND-008",
+      "name": "Instant Booking Confirmation",
+      "description": "Immediate confirmation via email and SMS with booking details and pickup instructions",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides peace of mind and essential booking information"
+    },
+    {
+      "id": "F-IND-009",
+      "name": "Booking Management Dashboard",
+      "description": "View and manage all current and past reservations in one place",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Simplifies booking management and provides easy access to rental history"
+    },
+    {
+      "id": "F-IND-010",
+      "name": "Customer Reviews and Ratings",
+      "description": "Read and submit reviews for vehicles and rental locations with verified renter badges",
+      "category": "user-facing",
+      "functionalArea": "reviews",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Helps customers make informed decisions and builds trust through social proof"
+    },
+    {
+      "id": "F-IND-011",
+      "name": "Loyalty Rewards Program",
+      "description": "Earn points for rentals, redeem for discounts, and access tiered benefits for frequent renters",
+      "category": "user-facing",
+      "functionalArea": "loyalty",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Important Features for Premium Segment"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Encourages repeat business and rewards customer loyalty"
+    },
+    {
+      "id": "F-IND-012",
+      "name": "Price Comparison Tools",
+      "description": "Compare total costs across different dates, locations, and vehicle types",
+      "category": "user-facing",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/individual-customers.md",
+          "section": "Relationship to Features - Important Features for Budget Segment"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Helps budget-conscious customers find the best deals"
+    },
+    {
+      "id": "F-SUB-001",
+      "name": "Subscription Management Portal",
+      "description": "View plan details, usage, billing, and modify subscription settings with self-service controls",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides transparency and control over subscription membership"
+    },
+    {
+      "id": "F-SUB-002",
+      "name": "Mobile-First Subscription Experience",
+      "description": "App-based booking, pickup, and return optimized for subscription users",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables convenient on-demand vehicle access from smartphone"
+    },
+    {
+      "id": "F-SUB-003",
+      "name": "Keyless Vehicle Entry",
+      "description": "Unlock and start vehicles via smartphone app without physical keys",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-FLT-013"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Eliminates key exchange and enables instant vehicle access"
+    },
+    {
+      "id": "F-SUB-004",
+      "name": "Real-Time Subscription Availability",
+      "description": "See available vehicles in subscription tier instantly with location and distance",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables spontaneous vehicle access and reduces booking friction"
+    },
+    {
+      "id": "F-SUB-005",
+      "name": "Usage Tracking Dashboard",
+      "description": "Monitor mileage, time, and allowance usage in real-time with overage alerts",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Prevents surprise overage charges and enables usage management"
+    },
+    {
+      "id": "F-SUB-006",
+      "name": "Flexible Subscription Booking",
+      "description": "Reserve vehicles hours or days in advance within subscription plan",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Balances spontaneity with planning for important trips"
+    },
+    {
+      "id": "F-SUB-007",
+      "name": "Vehicle Swapping",
+      "description": "Change vehicles based on current needs (sedan for commute, SUV for weekend)",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides flexibility to match vehicle to trip purpose"
+    },
+    {
+      "id": "F-SUB-008",
+      "name": "Subscription Pause and Resume",
+      "description": "Temporarily suspend subscription without cancellation for travel or non-use periods",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Avoids paying for unused months and maintains membership status"
+    },
+    {
+      "id": "F-SUB-009",
+      "name": "Transparent Subscription Billing",
+      "description": "Clear breakdown of monthly charges, usage fees, and overages with billing history",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Builds trust through billing transparency and predictability"
+    },
+    {
+      "id": "F-SUB-010",
+      "name": "Self-Service Subscription Management",
+      "description": "Modify plan, update payment, and cancel subscription without calling support",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides control and convenience for subscription changes"
+    },
+    {
+      "id": "F-SUB-011",
+      "name": "Subscription Loyalty Rewards",
+      "description": "Points, discounts, and perks for long-term subscription members with referral bonuses",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Important Features for Engagement"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Encourages long-term commitment and member retention"
+    },
+    {
+      "id": "F-SUB-012",
+      "name": "Personalized Vehicle Recommendations",
+      "description": "AI-driven suggestions based on usage patterns, preferences, and trip history",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Important Features for Engagement"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Improves vehicle selection and enhances user experience"
+    },
+    {
+      "id": "F-SUB-013",
+      "name": "Instant Subscription Booking",
+      "description": "Reserve and pick up vehicle within minutes for spontaneous trips",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Important Features for Convenience"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-002",
+        "F-SUB-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Maximizes convenience and enables on-demand vehicle access"
+    },
+    {
+      "id": "F-SUB-014",
+      "name": "Multi-Location Subscription Access",
+      "description": "Use subscription benefits across different cities and rental locations",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/subscription-users.md",
+          "section": "Relationship to Features - Important Features for Convenience"
+        }
+      ],
+      "dependencies": [
+        "F-SUB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides flexibility for travel and relocation"
+    },
+    {
+      "id": "F-WF-CAN-001",
+      "name": "Booking Cancellation System",
+      "description": "Self-service and admin-initiated booking cancellation with policy enforcement, refund calculation, and vehicle availability updates",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/cancellations.md",
+          "section": "Workflow Steps - Initiate Cancellation"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Cancellation",
+        "step": 1,
+        "nextSteps": [
+          "Review Cancellation Policy"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-CAN-003",
+      "name": "Cancellation Confirmation Interface",
+      "description": "Display booking details, cancellation fees, refund amount, timeline, and method with modify/cancel options before final confirmation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/cancellations.md",
+          "section": "Workflow Steps - Confirm Cancellation Intent"
+        }
+      ],
+      "dependencies": [
+        "F-WF-CAN-002"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Cancellation",
+        "step": 3,
+        "nextSteps": [
+          "Process Cancellation"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-MOD-001",
+      "name": "Booking Modification System",
+      "description": "Enable customers and admins to modify existing bookings including dates, vehicles, locations, and services without cancellation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/modifications.md",
+          "section": "Workflow Steps - Initiate Modification"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Modification",
+        "step": 1,
+        "nextSteps": [
+          "Select Modification Type"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-MOD-003",
+      "name": "Vehicle Change System",
+      "description": "Switch to different vehicles (upgrade, downgrade, same category) with availability checking, price difference calculation, and comparison display",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/modifications.md",
+          "section": "Workflow Steps - Change Vehicle"
+        }
+      ],
+      "dependencies": [
+        "F-WF-MOD-001"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Modification",
+        "step": 3,
+        "nextSteps": [
+          "Review Modification Summary"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-MOD-005",
+      "name": "Service Modification System",
+      "description": "Add or remove insurance, equipment, additional drivers with cost calculation, prorated refunds, and itemized breakdown",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/modifications.md",
+          "section": "Workflow Steps - Add or Remove Services"
+        }
+      ],
+      "dependencies": [
+        "F-WF-MOD-001"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Modification",
+        "step": 3,
+        "nextSteps": [
+          "Review Modification Summary"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-MOD-006",
+      "name": "Modification Summary and Review",
+      "description": "Display before/after comparison with original booking, requested changes, new details, price impact, and availability confirmation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/exceptional/modifications.md",
+          "section": "Workflow Steps - Review Modification Summary"
+        }
+      ],
+      "dependencies": [
+        "F-WF-MOD-002",
+        "F-WF-MOD-003",
+        "F-WF-MOD-004",
+        "F-WF-MOD-005"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Modification",
+        "step": 4,
+        "nextSteps": [
+          "Process Payment Adjustment"
+        ]
+      }
+    },
+    {
+      "id": "F-REV-004",
+      "name": "Engagement-Driven Retention Platform",
+      "description": "Comprehensive gamification system with progress tracking, achievements, challenges, status tiers, and rewards to increase engagement and loyalty",
+      "category": "user-facing",
+      "functionalArea": "loyalty",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "2.1 Gamified Loyalty System"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Gamification dramatically increases engagement, drives repeat bookings, and improves retention"
+    },
+    {
+      "id": "F-REV-005",
+      "name": "Competitive Engagement Platform",
+      "description": "Public and private leaderboards that create competition and recognition across multiple categories and time periods",
+      "category": "user-facing",
+      "functionalArea": "loyalty",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "2.2 Leaderboard Systems"
+        }
+      ],
+      "dependencies": [
+        "F-REV-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Leaderboards drive competition, increase engagement, and encourage desired behaviors"
+    },
+    {
+      "id": "F-REV-006",
+      "name": "Recurring Revenue Model",
+      "description": "Subscription-based rental programs offering flexibility with monthly or annual memberships, vehicle swapping, and rollover days",
+      "category": "user-facing",
+      "functionalArea": "subscription",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "2.3 Subscription and Membership Programs"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Subscriptions create predictable recurring revenue and improve customer retention"
+    },
+    {
+      "id": "F-REV-009",
+      "name": "High-Margin Service Products",
+      "description": "Develop and market premium services including concierge delivery, airport meet & greet, chauffeur services, and VIP experiences",
+      "category": "user-facing",
+      "functionalArea": "services",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "3.3 Premium Service Offerings"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Premium services generate high-margin revenue and appeal to affluent customers"
+    },
+    {
+      "id": "F-USER-013",
+      "name": "Customer Communication Control",
+      "description": "Allow customers to control notification preferences with channel selection, frequency control, and compliance support",
+      "category": "user-facing",
+      "functionalArea": "communications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "5.2 Notification Preferences Management"
+        }
+      ],
+      "dependencies": [
+        "F-USER-012"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Preference management improves customer satisfaction and ensures regulatory compliance"
+    },
+    {
+      "id": "F-USER-018",
+      "name": "Dynamic User Segmentation",
+      "description": "Adapt user interface and features dynamically based on user persona with automatic segmentation and personalized recommendations",
+      "category": "user-facing",
+      "functionalArea": "personalization",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "8.1 Persona-Based User Experience"
+        },
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-17: Dynamic User Segmentation",
+          "requirementId": "R-USE-017"
+        }
+      ],
+      "dependencies": [
+        "F-USER-003"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Persona-based UX dramatically improves conversion and satisfaction by matching platform to user needs"
+    },
+    {
+      "id": "F-USER-019",
+      "name": "Engagement and Retention System",
+      "description": "Gamified user experience with progress tracking, achievements, challenges, status tiers, and rewards",
+      "category": "user-facing",
+      "functionalArea": "loyalty",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "8.2 Gamification and Loyalty"
+        }
+      ],
+      "dependencies": [
+        "F-USER-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Gamification increases engagement and drives repeat bookings"
+    },
+    {
+      "id": "F-PAY-018",
+      "name": "Guest Checkout Flow",
+      "description": "Payment without account creation with automatic account generation on success, reducing checkout friction",
+      "category": "user-facing",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Payment Flow Patterns - Guest Checkout"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-010"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Increases conversion by eliminating forced registration while maintaining customer data"
+    },
+    {
+      "id": "F-NOT-005",
+      "name": "Web Push Notifications",
+      "description": "Browser-based push notifications for web users without requiring app installation",
+      "category": "user-facing",
+      "functionalArea": "notifications",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "Push Notification Services - Web Push Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Engages web users with app-like notifications and drives return visits"
+    },
+    {
+      "id": "F-NOT-006",
+      "name": "In-App Notification Center",
+      "description": "Notification inbox within mobile and web applications with persistent history, read/unread status, and rich content",
+      "category": "user-facing",
+      "functionalArea": "notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "In-App Messaging - In-App Notification Center"
+        },
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 6: In-App Notification Center",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides guaranteed delivery and access to notification history for customers"
+    },
+    {
+      "id": "F-NOT-009",
+      "name": "Notification Preferences Management",
+      "description": "Allow users to control notification frequency, channels, and types with granular preferences and opt-out management",
+      "category": "user-facing",
+      "functionalArea": "preferences",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "Notification Orchestration - Notification Preferences"
+        },
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 9: Notification Preferences Management",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-011"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces notification fatigue and improves engagement through user-controlled communications"
+    },
+    {
+      "id": "F-SUPER-005",
+      "name": "WeChat Social Sharing",
+      "description": "Share bookings with WeChat contacts for group coordination, referral programs, and viral marketing through social network",
+      "category": "user-facing",
+      "functionalArea": "social",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "WeChat Mini-Program Integration - Social Sharing"
+        },
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 5: WeChat Social Sharing",
+          "requirementId": "R-SA-005"
+        }
+      ],
+      "dependencies": [
+        "F-SUPER-001",
+        "R-SA-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Drives viral growth and reduces customer acquisition cost through social distribution"
+    },
+    {
+      "id": "F-MAP-002",
+      "name": "Map-Based Vehicle Search",
+      "description": "Display available vehicles on interactive map with custom markers, filtering by vehicle type/price/features, and real-time availability updates",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Location-Based Features - Map-Based Vehicle Search"
+        },
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 5: Map-Based Vehicle Search",
+          "type": "integration-requirement"
+        },
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-21: Map-Based Search",
+          "requirementId": "R-USE-021"
+        }
+      ],
+      "dependencies": [
+        "F-MAP-001",
+        "R-MS-001",
+        "R-MS-002",
+        "R-VS-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables visual vehicle discovery with proximity-based selection and intuitive interface for customers"
+    },
+    {
+      "id": "F-MAP-003",
+      "name": "Geolocation Services",
+      "description": "Determine customer's current location using GPS or IP-based detection for proximity-based features with permission handling",
+      "category": "user-facing",
+      "functionalArea": "location",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Location-Based Features - Geolocation Services"
+        },
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 2: Geolocation Services",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables automatic location detection and personalized search results based on customer proximity"
+    },
+    {
+      "id": "F-MAP-007",
+      "name": "Indoor Positioning",
+      "description": "Navigate customers to specific parking locations within large facilities with indoor maps and turn-by-turn navigation",
+      "category": "user-facing",
+      "functionalArea": "navigation",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Advanced Location Features - Indoor Positioning"
+        },
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 7: Indoor Positioning",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-MAP-001",
+        "R-MS-001",
+        "R-MS-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces customer frustration and support inquiries by guiding to exact parking locations in complex facilities"
+    },
+    {
+      "id": "F-MAP-008",
+      "name": "AR Wayfinding",
+      "description": "Augmented reality navigation overlays for finding vehicles in parking facilities with camera-based directional guidance",
+      "category": "user-facing",
+      "functionalArea": "navigation",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Advanced Location Features - AR Wayfinding"
+        },
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 8: AR Wayfinding",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-MAP-003",
+        "F-MAP-007",
+        "R-MS-002",
+        "R-MS-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides innovative visual guidance for faster vehicle location and differentiated user experience"
+    },
+    {
+      "id": "F-MAP-009",
+      "name": "Location-Based Recommendations",
+      "description": "Suggest vehicles, locations, and services based on customer location and context with event-aware suggestions",
+      "category": "user-facing",
+      "functionalArea": "recommendations",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Location Intelligence - Location-Based Recommendations"
+        },
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 9: Location-Based Recommendations",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-MAP-003",
+        "R-MS-002",
+        "R-VS-008"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Increases conversion through relevant suggestions and location-based promotions"
+    },
+    {
+      "id": "F-MOB-001",
+      "name": "BLE Vehicle Unlock and Lock",
+      "description": "Bluetooth Low Energy communication enabling automatic unlock when approaching vehicle (1-2m range) and manual lock/unlock controls with haptic feedback",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Core Digital Key Capabilities - Vehicle Unlocking and Locking"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides seamless, hands-free vehicle access without physical keys, eliminating counter visits and key exchange"
+    },
+    {
+      "id": "F-MOB-002",
+      "name": "NFC Tap-to-Unlock",
+      "description": "Near Field Communication enabling vehicle unlock by tapping phone on door handle or windshield, works with locked phone as fallback to BLE",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Core Digital Key Capabilities - Vehicle Unlocking and Locking"
+        }
+      ],
+      "dependencies": [
+        "F-MOB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides reliable backup unlock method and works even when BLE fails or phone is locked"
+    },
+    {
+      "id": "F-MOB-003",
+      "name": "Find My Car",
+      "description": "Locate vehicle in parking areas using GPS and BLE with map view, walking directions, distance display, and ability to flash lights or honk horn",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Core Digital Key Capabilities - Vehicle Location and Identification"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Helps users quickly locate vehicles in large parking facilities, reducing frustration and time spent searching"
+    },
+    {
+      "id": "F-MOB-004",
+      "name": "Digital Wallet Integration",
+      "description": "Store digital keys in Apple Wallet and Google Wallet for native iOS/Android experience with express mode unlock and boarding pass-style booking cards",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Core Digital Key Capabilities - Digital Wallet Integration"
+        },
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Methods - F-PB-004"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-014: Digital Wallet Integration"
+        }
+      ],
+      "dependencies": [
+        "F-MOB-001",
+        "F-MOB-002",
+        "F-PB-001",
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides native platform integration and fastest possible vehicle access without opening rental app"
+    },
+    {
+      "id": "F-MOB-007",
+      "name": "Digital Key Sharing",
+      "description": "Share digital keys with additional drivers via invitation system with full or limited permissions (unlock only, no engine start)",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Advanced Digital Key Features - Secure Key Provisioning"
+        }
+      ],
+      "dependencies": [
+        "F-MOB-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables multiple drivers without physical key exchange, improving convenience for shared rentals"
+    },
+    {
+      "id": "F-MOB-008",
+      "name": "Offline Digital Key Functionality",
+      "description": "Digital key works without internet connectivity using cached credentials and BLE direct communication with vehicle",
+      "category": "user-facing",
+      "functionalArea": "digital-key",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Advanced Digital Key Features - Offline Functionality"
+        },
+        {
+          "file": "docs/05-features/mobile-specific/offline-mode.md",
+          "section": "Core Offline Capabilities - Offline Vehicle Access"
+        }
+      ],
+      "dependencies": [
+        "F-MOB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures reliable vehicle access in parking garages and areas with no cellular signal"
+    },
+    {
+      "id": "F-MOB-011",
+      "name": "Real-Time Vehicle Status Display",
+      "description": "Display vehicle status in app including fuel/charge level, mileage, and location with real-time updates when connected",
+      "category": "user-facing",
+      "functionalArea": "telematics",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Advanced Digital Key Features - Vehicle Telematics Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides users with vehicle information before approaching, enabling better trip planning"
+    },
+    {
+      "id": "F-MOB-014",
+      "name": "QR Code Check-In",
+      "description": "Display booking QR code for scanning at pickup location enabling contactless check-in without physical documents",
+      "category": "user-facing",
+      "functionalArea": "contactless-operations",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/digital-key.md",
+          "section": "Contactless Operations Integration - Digital Check-In"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables contactless check-in and reduces physical document handling"
+    },
+    {
+      "id": "F-MOB-017",
+      "name": "Apple Pay Integration",
+      "description": "One-tap payment on iOS devices with Face ID or Touch ID authentication using tokenized payments without exposing card numbers",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Core Mobile Payment Methods - Digital Wallet Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides fastest, most secure payment method for iPhone users with single-tap checkout"
+    },
+    {
+      "id": "F-MOB-018",
+      "name": "Google Pay Integration",
+      "description": "One-tap payment on Android devices with biometric authentication using tokenized payments with device-level security",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Core Mobile Payment Methods - Digital Wallet Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides fastest, most secure payment method for Android users with single-tap checkout"
+    },
+    {
+      "id": "F-MOB-020",
+      "name": "Saved Payment Methods",
+      "description": "Securely store payment methods with tokenization, encryption, and PCI DSS compliance with default payment method selection",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Core Mobile Payment Methods - Saved Payment Methods"
+        },
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Timing & Flexibility - F-PB-006"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-007: Saved Payment Methods"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001",
+        "R-PP-001",
+        "R-PP-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables quick checkout without re-entering card details while maintaining security"
+    },
+    {
+      "id": "F-MOB-021",
+      "name": "Buy Now Pay Later (BNPL) Integration",
+      "description": "Split rental payments into installments through Klarna, Affirm with instant approval and transparent fee disclosure",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Emerging Payment Technologies - Buy Now, Pay Later (BNPL)"
+        },
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Methods - F-PB-003"
+        },
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 4: Buy Now, Pay Later (BNPL) Integration",
+          "requirementId": "R-PG-006"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001",
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables premium vehicle bookings through deferred payment, increasing average order value"
+    },
+    {
+      "id": "F-MOB-022",
+      "name": "Cryptocurrency Payment Support",
+      "description": "Accept cryptocurrency payments (Bitcoin, Ethereum) with instant conversion to fiat currency eliminating volatility risk",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Emerging Payment Technologies - Cryptocurrency Payments"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Accesses crypto-wealthy demographic while eliminating volatility risk through instant conversion"
+    },
+    {
+      "id": "F-MOB-023",
+      "name": "Split Payment for Group Bookings",
+      "description": "Split rental cost among multiple users with each paying their share and booking confirmed when fully paid",
+      "category": "user-facing",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Emerging Payment Technologies - Split Payment Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Simplifies group travel payment coordination and reduces friction for shared rentals"
+    },
+    {
+      "id": "F-MOB-026",
+      "name": "Cached Active Bookings",
+      "description": "Store current and upcoming bookings locally with booking reference, vehicle details, pickup/return information accessible offline",
+      "category": "user-facing",
+      "functionalArea": "offline-mode",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/offline-mode.md",
+          "section": "Core Offline Capabilities - Offline Booking Access"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures critical booking details always accessible even in parking garages or foreign countries"
+    },
+    {
+      "id": "F-MOB-027",
+      "name": "Offline Maps and Navigation",
+      "description": "Store maps of rental locations and surrounding areas locally with basic turn-by-turn navigation to pickup locations",
+      "category": "user-facing",
+      "functionalArea": "offline-mode",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/offline-mode.md",
+          "section": "Core Offline Capabilities - Offline Maps and Navigation"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables navigation to rental locations in foreign countries without roaming data"
+    },
+    {
+      "id": "F-MOB-030",
+      "name": "Offline Status Indicators",
+      "description": "Visual indicators showing offline status, feature availability, and last sync timestamp with pending actions display",
+      "category": "user-facing",
+      "functionalArea": "offline-mode",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/offline-mode.md",
+          "section": "Offline Status Communication - Connection Status Indicators"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides clear communication about offline limitations and data freshness"
+    },
+    {
+      "id": "F-MOB-031",
+      "name": "Booking Lifecycle Notifications",
+      "description": "Push notifications for booking confirmation, payment confirmation, modifications, and cancellations with action buttons",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Core Notification Types - Booking Lifecycle Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Keeps users informed about booking status changes with instant, actionable updates"
+    },
+    {
+      "id": "F-MOB-032",
+      "name": "Trip Reminder Notifications",
+      "description": "Timely reminders before pickup (24h, 1h) and return (24h, 2h) with vehicle details, location, and required documents",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Core Notification Types - Trip Reminder Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces missed pickups and late returns through proactive reminders"
+    },
+    {
+      "id": "F-MOB-033",
+      "name": "Payment and Billing Notifications",
+      "description": "Alerts for payment due, refund processed, and invoice availability with action buttons for quick access",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Core Notification Types - Payment and Billing Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Keeps users informed about payment status and provides instant receipt access"
+    },
+    {
+      "id": "F-MOB-034",
+      "name": "Verification Status Notifications",
+      "description": "Notifications for document receipt, verification approval/rejection, and expiration warnings with re-submission guidance",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Core Notification Types - Verification and Account Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides transparency in verification process and prevents booking issues from expired documents"
+    },
+    {
+      "id": "F-MOB-035",
+      "name": "Promotional and Loyalty Notifications",
+      "description": "Personalized deals, loyalty rewards, referral updates, and new vehicle announcements with user opt-in required",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Core Notification Types - Promotional and Engagement Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Drives engagement and incremental bookings through targeted promotional communications"
+    },
+    {
+      "id": "F-MOB-036",
+      "name": "Rich Notifications with Actions",
+      "description": "Notifications with images, maps, action buttons, and expandable content enabling quick actions without opening app",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Advanced Notification Features - Rich Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces friction by enabling actions directly from notifications"
+    },
+    {
+      "id": "F-MOB-037",
+      "name": "Granular Notification Preferences",
+      "description": "User control over notification types, frequency, timing with quiet hours and notification history access",
+      "category": "user-facing",
+      "functionalArea": "push-notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/push-notifications.md",
+          "section": "Advanced Notification Features - Notification Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Respects user preferences and reduces notification fatigue through customization"
+    },
+    {
+      "id": "F-OPS-018",
+      "name": "Customer-Facing EV Information",
+      "description": "Provide customers with real-time visibility into EV charge levels, estimated range, nearby charging stations, and charging cost estimates to build confidence in EV rentals",
+      "category": "user-facing",
+      "functionalArea": "iot-telematics",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/operational/iot-telematics.md",
+          "section": "Electric Vehicle Fleet Management - EV Range and Charging Visibility"
+        }
+      ],
+      "dependencies": [
+        "F-OPS-013"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces range anxiety and increases EV rental confidence"
+    },
+    {
+      "id": "F-AM-001",
+      "name": "Multi-Method User Registration",
+      "description": "Flexible account creation supporting email, social login (Google, Facebook, Apple, WeChat), phone number with SMS OTP, SSO for corporate accounts, with progressive profiling, social data import, duplicate detection, age verification, and welcome flow",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Registration & Authentication - F-AM-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Low-friction registration increases conversion. Multiple methods accommodate different user preferences and regional norms"
+    },
+    {
+      "id": "F-AM-002",
+      "name": "Secure Authentication System",
+      "description": "Multi-layered authentication with password-based, social login, magic link, SMS OTP, biometric, and 2FA options. Includes session management, device recognition, login history, suspicious activity alerts, and password security features",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Registration & Authentication - F-AM-002"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Secure access with multiple convenient options. Balance between security and user experience. Protection against unauthorized access"
+    },
+    {
+      "id": "F-AM-005",
+      "name": "Comprehensive User Profile",
+      "description": "Rich user profile with personal details, profile photo, address, emergency contact, language/currency preferences, communication settings, with edit capabilities, verification, and GDPR-compliant data export",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Profile Management - F-AM-005"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Personalized experience with saved preferences. Faster bookings with pre-filled information. Control over personal data"
+    },
+    {
+      "id": "F-AM-006",
+      "name": "Persona-Based Profile Customization",
+      "description": "Dynamic profile adaptation based on user segment (Power Renter, Experience Seeker, Young Driver, Eco-Conscious, Accessible Mobility) with tailored features and preferences",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Profile Management - F-AM-006"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-006: Persona-Based Profile Customization",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-AM-005",
+        "R-UM-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Tailored experience for each user type. Relevant features surfaced based on segment. Reduced friction through smart defaults"
+    },
+    {
+      "id": "F-AM-007",
+      "name": "Notification Preferences",
+      "description": "Granular control over email, push, and SMS notifications with separate controls for booking confirmations, payments, reminders, promotions, language preferences, frequency control, and quiet hours",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Profile Management - F-AM-007"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-011: Notification Preferences",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Receive relevant communications without being overwhelmed. Control over notification timing and channels. Respect for user preferences builds trust"
+    },
+    {
+      "id": "F-AM-008",
+      "name": "Driver License Verification",
+      "description": "Comprehensive driver license verification with document upload, OCR processing, data validation, manual review, verification status tracking, and support for international licenses",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Verification & Trust - F-AM-008"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-007: Driver License Verification",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures only qualified drivers book vehicles. Builds trust and safety. Reduces fraud and liability"
+    },
+    {
+      "id": "F-AM-009",
+      "name": "Digital KYC (Know Your Customer)",
+      "description": "Advanced digital identity verification using OCR for documents, liveness checks, facial matching, database verification, address verification, credit checks, and fraud detection with tiered verification levels",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Verification & Trust - F-AM-009"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-008: Digital KYC (Know Your Customer)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-AM-008",
+        "R-UM-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Fast, automated verification process. Enhanced security and fraud prevention. Tiered verification for different risk levels"
+    },
+    {
+      "id": "F-AM-010",
+      "name": "Trust & Safety Score",
+      "description": "Composite trust score based on verification status, booking history, payment reliability, vehicle care, communication, cancellation rate, and account age with score display and improvement tips",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Verification & Trust - F-AM-010"
+        }
+      ],
+      "dependencies": [
+        "F-AM-008",
+        "F-AM-009"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Transparent trust system builds confidence. Hosts/suppliers can assess renter reliability. Incentivizes good behavior"
+    },
+    {
+      "id": "F-AM-011",
+      "name": "Two-Factor Authentication (2FA)",
+      "description": "Optional additional security layer with SMS OTP, authenticator app, email OTP, backup codes, and biometric options, with trusted devices and recovery options",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Account Security - F-AM-011"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-009: Two-Factor Authentication (2FA)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-AM-002",
+        "R-UM-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enhanced account security against unauthorized access. Protection for high-value accounts. Peace of mind for security-conscious users"
+    },
+    {
+      "id": "F-AM-012",
+      "name": "Account Security Settings",
+      "description": "Centralized security management with password/email/phone change, active sessions view, session management, login history, suspicious activity alerts, account deactivation, and GDPR-compliant data download",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Account Security - F-AM-012"
+        }
+      ],
+      "dependencies": [
+        "F-AM-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Complete control over account security. Visibility into account activity. Quick response to suspicious activity"
+    },
+    {
+      "id": "F-AM-013",
+      "name": "Saved Preferences",
+      "description": "Store user preferences for favorite locations, preferred vehicle types, default insurance, default extras, payment preferences, communication preferences, and accessibility needs",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Preferences & Customization - F-AM-013"
+        }
+      ],
+      "dependencies": [
+        "F-AM-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Faster booking with pre-filled preferences. Personalized experience based on past behavior. Reduced cognitive load"
+    },
+    {
+      "id": "F-AM-014",
+      "name": "Saved Locations",
+      "description": "Quick access to frequently used pickup and return locations with home/work addresses, location nicknames, quick selection, and location history",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Preferences & Customization - F-AM-014"
+        }
+      ],
+      "dependencies": [
+        "F-AM-013"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Faster booking with saved locations. Reduced typing and errors. Convenience for frequent renters"
+    },
+    {
+      "id": "F-AM-015",
+      "name": "Loyalty Program Integration",
+      "description": "Integrated loyalty program with points earning, tier system (Bronze/Silver/Gold/Platinum), tier benefits, points redemption, points balance/history, expiration tracking, and anniversary rewards",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Loyalty & Rewards - F-AM-015"
+        },
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-014: Loyalty Program Integration",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005",
+        "R-BM-001",
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Rewards for loyalty encourage repeat bookings. Tier benefits provide aspirational goals. Gamification increases engagement"
+    },
+    {
+      "id": "F-AM-016",
+      "name": "Referral Program",
+      "description": "Incentivize customer acquisition with unique referral codes, shareable links, referral tracking, rewards for referrer and referred user, tiered rewards, and social sharing",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Loyalty & Rewards - F-AM-016"
+        }
+      ],
+      "dependencies": [
+        "F-AM-015"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Lower customer acquisition costs. Viral growth through customer networks. Rewards for brand advocacy"
+    },
+    {
+      "id": "F-AM-017",
+      "name": "Privacy Controls",
+      "description": "Granular control over personal data with data visibility settings, location/camera/photo permissions, data sharing preferences, marketing preferences, cookie settings, and GDPR rights (data portability, right to erasure)",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Privacy & Data Management - F-AM-017"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Control over personal data builds trust. GDPR compliance protects user rights. Transparency in data usage"
+    },
+    {
+      "id": "F-AM-018",
+      "name": "Account Deletion & Data Export",
+      "description": "User rights to export all personal data in machine-readable format and request account deletion with validation, grace period, and clear data retention policies per GDPR requirements",
+      "category": "user-facing",
+      "functionalArea": "account-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/account-management.md",
+          "section": "Privacy & Data Management - F-AM-018"
+        }
+      ],
+      "dependencies": [
+        "F-AM-017"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "User control over personal data. GDPR compliance. Trust through transparency"
+    },
+    {
+      "id": "F-BM-001",
+      "name": "Multi-Step Checkout Process",
+      "description": "Streamlined, guided booking workflow with vehicle selection, customer information, additional options, payment method, review & confirm, and confirmation steps. Includes age/license verification, date validation, availability recheck, and business rules enforcement",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Creation - F-BM-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Clear, guided process reduces booking abandonment and errors. Progress indicators set expectations and reduce anxiety"
+    },
+    {
+      "id": "F-BM-002",
+      "name": "Persona-Based Booking Experience",
+      "description": "Dynamic booking interface adapting to user segment (Power Renter, Experience Seeker, Young Driver, Eco-Conscious, Accessible Mobility) with tailored options and streamlined flows",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Creation - F-BM-002"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 2: Persona-Based Booking Experience"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Tailored experience reduces friction for each user type. Power renters book faster, luxury customers get assurance, budget users see relevant options"
+    },
+    {
+      "id": "F-BM-003",
+      "name": "Voice-Activated Booking",
+      "description": "Complete booking flow executable through voice commands with voice search, date/time selection, option selection, payment method, and booking modification. Integration with Alexa Automotive, Android Auto, Siri",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Creation - F-BM-003"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 3: Voice-Activated Booking"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Drivers can book while driving safely. Accessibility benefit for visually impaired users. Speed and convenience for power users"
+    },
+    {
+      "id": "F-BM-004",
+      "name": "Flexible Pricing Mode Selection",
+      "description": "Multiple pricing models (hourly, daily, weekly, monthly, per-kilometer, unlimited mileage, hybrid) with real-time price calculation, volume discounts, seasonal pricing, and price breakdown",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Creation - F-BM-004"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers choose pricing that matches their usage pattern. Transparency builds trust and reduces disputes"
+    },
+    {
+      "id": "F-BM-005",
+      "name": "Discount Code & Promotion Application",
+      "description": "Apply promotional codes, corporate discounts, loyalty rewards with real-time validation, discount calculation, code expiration enforcement, stacking rules, and available promotions display",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Creation - F-BM-005"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers access available discounts easily. Transparent pricing with clear savings display"
+    },
+    {
+      "id": "F-BM-006",
+      "name": "Comprehensive Booking Confirmation",
+      "description": "Complete confirmation materials including email, booking reference, pickup instructions, vehicle details, pricing breakdown, terms & conditions, QR code, digital wallet pass, calendar integration, and directions",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Confirmation & Documentation - F-BM-006"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 5: Comprehensive Booking Confirmation"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers have all necessary information for smooth pickup. Reduces support inquiries and no-shows"
+    },
+    {
+      "id": "F-BM-007",
+      "name": "Contactless Digital Check-In",
+      "description": "Complete check-in through mobile app with digital KYC, liveness check, biometric authentication, automated identity verification, digital signature, vehicle unlock, and skip-the-counter capability",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Confirmation & Documentation - F-BM-007"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 6: Contactless Digital Check-In"
+        }
+      ],
+      "dependencies": [
+        "F-BM-006",
+        "F-AM-009",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Fast, safe, hygienic pickup process. Particularly valuable post-pandemic and for power renters who value speed"
+    },
+    {
+      "id": "F-BM-008",
+      "name": "Flexible Booking Modifications",
+      "description": "Self-service modification of bookings including date/time changes, location changes, vehicle changes, additional services, with automatic repricing, modification history, and availability validation",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Modifications - F-BM-008"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 7: Flexible Booking Modifications"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexibility to adapt bookings to changing travel plans without canceling and rebooking. Reduces customer service load"
+    },
+    {
+      "id": "F-BM-009",
+      "name": "Trip Extension",
+      "description": "Extend active rental duration during trip with real-time availability checking, cost calculation, instant confirmation, and supplier notification",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Modifications - F-BM-009"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 8: Trip Extension"
+        }
+      ],
+      "dependencies": [
+        "F-BM-008",
+        "R-BM-001",
+        "R-BM-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexibility for users whose plans change during trip. Prevents late fees through proactive extension"
+    },
+    {
+      "id": "F-BM-010",
+      "name": "Booking Cancellation",
+      "description": "Self-service cancellation with automated refund processing, transparent policy enforcement, cancellation confirmation, partial refunds, and rebooking suggestions",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking Modifications - F-BM-010"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 9: Booking Cancellation"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers can cancel bookings without contacting support, with transparent refund expectations. Reduces support burden"
+    },
+    {
+      "id": "F-BM-011",
+      "name": "Comprehensive Booking History",
+      "description": "Complete record of all bookings with status tracking, filtering by status/date/supplier/vehicle, search, export capabilities, and sorting options",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking History & Tracking - F-BM-011"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Easy access to booking information for trip planning, expense tracking, and reference. Particularly valuable for business travelers"
+    },
+    {
+      "id": "F-BM-012",
+      "name": "Active Trip Dashboard",
+      "description": "Real-time dashboard for monitoring active rentals with trip status, vehicle information, time/cost tracking, trip extension, vehicle controls, navigation, and issue reporting",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Booking History & Tracking - F-BM-012"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 11: Active Trip Dashboard"
+        }
+      ],
+      "dependencies": [
+        "F-BM-011",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Complete visibility and control over active rental. Peace of mind through real-time information"
+    },
+    {
+      "id": "F-BM-013",
+      "name": "Vehicle Pickup Process",
+      "description": "Guided pickup process with location verification, vehicle inspection, odometer/fuel reading, AI-powered damage detection, digital key activation, and pickup confirmation",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Trip Lifecycle Management - F-BM-013"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 12: Vehicle Pickup Process"
+        }
+      ],
+      "dependencies": [
+        "F-BM-006",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Clear process reduces confusion and disputes. Digital documentation protects both customer and supplier"
+    },
+    {
+      "id": "F-BM-014",
+      "name": "Vehicle Return Process",
+      "description": "Guided return process with location verification, final odometer/fuel reading, condition checklist, AI damage detection, vehicle lock confirmation, trip completion, and final invoice",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Trip Lifecycle Management - F-BM-014"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 13: Vehicle Return Process"
+        }
+      ],
+      "dependencies": [
+        "F-BM-013",
+        "R-BM-001",
+        "R-BM-012"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Clear return process with transparent final billing. Dispute prevention through digital documentation"
+    },
+    {
+      "id": "F-BM-015",
+      "name": "Split-Payment Group Booking",
+      "description": "Enable multiple users to share payment for a single booking with invite co-renters, payment split definition, individual payment collection, status tracking, and refund distribution",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Advanced Booking Features - F-BM-015"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 14: Split-Payment Group Booking"
+        }
+      ],
+      "dependencies": [
+        "F-BM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Young drivers and groups can share costs easily. Reduces barriers to booking for budget-conscious users"
+    },
+    {
+      "id": "F-BM-016",
+      "name": "One-Click Rebooking",
+      "description": "Instant rebooking of previous rentals with pre-filled details, same vehicle or similar, date adjustment, saved payment method, and booking confirmation in under 30 seconds",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Advanced Booking Features - F-BM-016"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 15: One-Click Rebooking"
+        }
+      ],
+      "dependencies": [
+        "F-BM-011",
+        "R-BM-001",
+        "R-BM-010"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Power renters and business travelers save significant time. Reduces friction for repeat bookings"
+    },
+    {
+      "id": "F-BM-017",
+      "name": "Booking Templates & Favorites",
+      "description": "Save booking configurations as templates with vehicle preferences, insurance, extras, locations, duration, and quick booking from template with modification capability",
+      "category": "user-facing",
+      "functionalArea": "booking-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/booking-management.md",
+          "section": "Advanced Booking Features - F-BM-017"
+        }
+      ],
+      "dependencies": [
+        "F-BM-011"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Frequent renters with consistent needs book faster. Corporate travelers use company-approved templates"
+    },
+    {
+      "id": "F-PB-001",
+      "name": "Multiple Payment Method Support",
+      "description": "Comprehensive support for credit/debit cards, digital wallets (Apple Pay, Google Pay), PayPal, bank transfers, platform wallet, pay at counter, and corporate billing with PCI-DSS compliance, encryption, tokenization, 3D Secure, and fraud detection",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Methods - F-PB-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers can pay using their preferred method with confidence in security. Global payment method support enables international expansion"
+    },
+    {
+      "id": "F-PB-002",
+      "name": "Crypto-Fiat Hybrid Gateway",
+      "description": "Accept cryptocurrency payments (BTC, ETH, USDC, USDT) with instant market conversion to fiat currency, eliminating volatility risk with transparent exchange rates and AML/KYC compliance",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Methods - F-PB-002"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-013: Crypto-Fiat Hybrid Gateway"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001",
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Access crypto-wealthy demographic without volatility risk. Differentiation in luxury and tech-savvy markets. Lower transaction fees than traditional cards"
+    },
+    {
+      "id": "F-PB-005",
+      "name": "Flexible Payment Timing Options",
+      "description": "Multiple payment timing options including pay in full, pay deposit, pay at counter, split payments, and corporate billing with deposit handling, pre-authorization, and automatic balance collection",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Payment Timing & Flexibility - F-PB-005"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexibility in payment timing improves booking conversion. Accommodates different financial preferences and corporate policies"
+    },
+    {
+      "id": "F-PB-007",
+      "name": "Transparent Pricing Breakdown",
+      "description": "Clear, itemized pricing with base rate, insurance costs, additional services, taxes & fees, discounts, total cost, price comparison, and dynamic pricing display with time-based rates and volume discounts",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Pricing & Transparency - F-PB-007"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers understand exactly what they're paying for. Transparency builds trust and reduces disputes. Clear savings display increases perceived value"
+    },
+    {
+      "id": "F-PB-009",
+      "name": "Comprehensive Invoice Generation",
+      "description": "Detailed, professional invoices with line items, tax breakdown, discount application, payment method, transaction ID, booking reference, in multiple formats (PDF, email, print-friendly, expense integration)",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Invoicing & Documentation - F-PB-009"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Professional documentation for expense reporting and accounting. Particularly valuable for business travelers and corporate clients"
+    },
+    {
+      "id": "F-PB-010",
+      "name": "Payment History & Transaction Records",
+      "description": "Complete record of all payment transactions with transaction details, receipt access, refund tracking, failed payments, pending payments, search & filter, and export capabilities",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Invoicing & Documentation - F-PB-010"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Easy expense tracking and documentation for personal or business use. Audit trail for accounting and tax purposes"
+    },
+    {
+      "id": "F-PB-011",
+      "name": "Dynamic Pricing Engine",
+      "description": "AI-powered real-time pricing optimization based on demand signals, external events, flight data, weather, historical patterns, competitor rates, and utilization with multiple pricing strategies",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Advanced Payment Features - F-PB-011"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-017: Dynamic Pricing Engine"
+        }
+      ],
+      "dependencies": [
+        "F-PB-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Maximize revenue through intelligent pricing. Customers get fair market rates. Discounts available during low-demand periods"
+    },
+    {
+      "id": "F-PB-013",
+      "name": "Split Payment & Group Billing",
+      "description": "Enable multiple payment sources for a single booking with multiple cards, group splitting, custom splits, payment tracking, automatic completion, and refund distribution",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Advanced Payment Features - F-PB-013"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Groups can share costs easily. Corporate travelers can split personal and business expenses. Reduces barriers to booking"
+    },
+    {
+      "id": "F-PB-016",
+      "name": "Platform Wallet System",
+      "description": "Internal wallet system for storing credits, refunds, and promotional balances with balance display, add funds, promotional credits, referral rewards, wallet payments, transaction history, and multi-currency support",
+      "category": "user-facing",
+      "functionalArea": "payment-billing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Wallet & Balance Management - F-PB-016"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-018: Platform Wallet System"
+        }
+      ],
+      "dependencies": [
+        "F-PB-001",
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Faster checkout using wallet balance. Instant refunds to wallet. Promotional credits encourage repeat bookings"
+    },
+    {
+      "id": "F-SD-001",
+      "name": "Location-Based Search",
+      "description": "Search for available vehicles by pickup and drop-off locations with hierarchical selection, one-way rental support, current location detection, address autocomplete, landmark search, and multiple location types",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Core Search Features - F-SD-001"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-1: Location-Based Search",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers quickly find vehicles at their desired location, reducing search friction and improving booking conversion. Supports both planned trips and spontaneous rentals"
+    },
+    {
+      "id": "F-SD-002",
+      "name": "Map-Based Vehicle Discovery",
+      "description": "Interactive map interface displaying available vehicles with real-time markers, walking distance estimates, vehicle clustering, zoom/pan controls, filter vehicles on map, and direct navigation",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Core Search Features - F-SD-002"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-2: Map-Based Vehicle Discovery",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001",
+        "R-VS-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Visual, intuitive discovery especially valuable for urban users and peer-to-peer platforms. Enables location-based decision making"
+    },
+    {
+      "id": "F-SD-003",
+      "name": "Date & Time Availability Search",
+      "description": "Precise rental period specification with calendar/time pickers, duration calculation, real-time availability checking, visual availability calendar, blocked dates display, and buffer time enforcement",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Core Search Features - F-SD-003"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers see only available vehicles for their exact timeframe, preventing booking failures and disappointment"
+    },
+    {
+      "id": "F-SD-004",
+      "name": "Granular Multi-Criteria Filtering",
+      "description": "Comprehensive filtering by vehicle type, transmission, category, capacity, specific features, fuel policy, price range, mileage, supplier, rating, and accessibility with multiple filter categories",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Advanced Filtering - F-SD-004"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-4: Granular Multi-Criteria Filtering",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001",
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers efficiently find vehicles matching specific needs without browsing irrelevant options. Critical for users with accessibility requirements or specific feature needs"
+    },
+    {
+      "id": "F-SD-005",
+      "name": "Intelligent Search Results Sorting",
+      "description": "Multiple sorting algorithms including price, distance, rating, popularity, newest, recommended (AI-powered), availability, and eco-friendly options",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Advanced Filtering - F-SD-005"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-5: Intelligent Search Results Sorting",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001",
+        "R-VS-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers prioritize results based on their decision criteria (budget, quality, convenience, sustainability)"
+    },
+    {
+      "id": "F-SD-006",
+      "name": "Augmented Reality Vehicle Showroom",
+      "description": "AR technology to project 3D vehicle models into physical environment with 360-degree rotation, walk around, interior inspection, legroom/cargo space viewing, size gauging, and side-by-side comparison",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Next-Generation Discovery - F-SD-006"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-6: Augmented Reality Vehicle Showroom",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-009",
+        "R-VS-009"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Experience seekers and luxury customers can inspect vehicles virtually before booking, increasing confidence and reducing post-booking surprises. Particularly valuable for high-value rentals"
+    },
+    {
+      "id": "F-SD-007",
+      "name": "Voice-First Search Interface",
+      "description": "Natural language voice interface for hands-free search with NLP, integration with Alexa Automotive and Android Auto, voice-based filtering, spoken results, and multi-turn conversation support",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Next-Generation Discovery - F-SD-007"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-7: Voice-First Search Interface",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001",
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Drivers can search and book while driving safely. Accessibility benefit for visually impaired users. Convenience for power renters who value speed"
+    },
+    {
+      "id": "F-SD-008",
+      "name": "AI-Powered Personalized Recommendations",
+      "description": "Machine learning algorithms analyzing user behavior, trip intent, seasonal patterns, location, similar users, real-time context, and price sensitivity to surface relevant vehicles with multiple recommendation types",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Next-Generation Discovery - F-SD-008"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-8: AI-Powered Personalized Recommendations",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001",
+        "R-UM-005",
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces search time by surfacing relevant options. Increases booking conversion through personalized matching. Enables discovery of vehicles users might not have searched for"
+    },
+    {
+      "id": "F-SD-009",
+      "name": "Comprehensive Vehicle Details",
+      "description": "Rich, detailed information display including specifications, capacity, technical details, features, pricing, insurance options, additional services, supplier info, availability calendar, image gallery, reviews, environmental info, and accessibility features",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Vehicle Information Display - F-SD-009"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers have complete information to make confident decisions. Reduces support inquiries and booking modifications"
+    },
+    {
+      "id": "F-SD-010",
+      "name": "Vehicle Reviews & Ratings System",
+      "description": "Comprehensive customer feedback with star ratings, written reviews, rating categories, review photos, verified bookings, review sorting, helpful votes, host responses, and review moderation",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Vehicle Information Display - F-SD-010"
+        }
+      ],
+      "dependencies": [
+        "F-SD-009"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Make informed decisions based on authentic previous customer experiences. Builds trust and transparency in the platform"
+    },
+    {
+      "id": "F-SD-011",
+      "name": "Supplier Directory & Profiles",
+      "description": "Browse and evaluate rental suppliers with profiles, filtering, comparison, locations, ratings, response time, cancellation rate, fleet size, and specializations",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Supplier & Fleet Discovery - F-SD-011"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Customers choose suppliers based on reputation, location coverage, or previous positive experiences. Particularly important for corporate clients with preferred vendor programs"
+    },
+    {
+      "id": "F-SD-012",
+      "name": "Environmental Impact Discovery",
+      "description": "Display environmental information including CO2 emissions, fuel type, eco-friendly badge, environmental comparison, carbon offset options, EV range, green routing, and sustainability score",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Supplier & Fleet Discovery - F-SD-012"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-11: Environmental Impact Discovery",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-009",
+        "R-VS-009"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Eco-conscious users can make environmentally responsible choices. Supports corporate sustainability goals and ESG reporting"
+    },
+    {
+      "id": "F-SD-013",
+      "name": "Saved Searches & Alerts",
+      "description": "Save frequent searches with custom names, quick access, price drop alerts, availability notifications, email/push preferences, search management, sharing, and search history tracking",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Search Experience Optimization - F-SD-013"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Power renters and frequent travelers save time by reusing common searches. Never miss deals on preferred vehicles"
+    },
+    {
+      "id": "F-SD-014",
+      "name": "Favorite Vehicles",
+      "description": "Save favorite vehicles for quick access with favorites list, availability notifications, price change alerts, removal, sharing, and favorite history",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Search Experience Optimization - F-SD-014"
+        },
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-14: Favorite Vehicles",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "F-SD-009",
+        "R-UM-005",
+        "R-VS-009"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Easy access to preferred vehicles. Receive alerts when favorites become available or go on sale"
+    },
+    {
+      "id": "F-SD-015",
+      "name": "Fast, Responsive Search Experience",
+      "description": "Optimized search performance with real-time results, debounced input, progressive image loading, lazy loading, cached results, optimistic UI, loading skeletons, result count display, and no results state",
+      "category": "user-facing",
+      "functionalArea": "search-discovery",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/user-facing/search-discovery.md",
+          "section": "Search Performance & UX - F-SD-015"
+        }
+      ],
+      "dependencies": [
+        "F-SD-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Smooth, fast search experience reduces frustration and abandonment. Particularly important for mobile users on slower connections"
+    },
+    {
+      "id": "R-ACC-010",
+      "name": "Voice Interface Support",
+      "description": "Integrate with voice assistants (Siri, Google Assistant, Alexa) for basic operations, support voice commands for search/booking management, provide voice feedback, and test with users with disabilities",
+      "category": "user-facing",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Advanced Accessibility Features - Requirement 10"
+        },
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-19: Voice Interface Support",
+          "requirementId": "R-USE-019"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with visual or motor impairments can use voice commands to search and book vehicles hands-free"
+    },
+    {
+      "id": "R-ACC-011",
+      "name": "Simplified Interfaces for Cognitive Accessibility",
+      "description": "Provide simplified booking flow with fewer steps, use plain language, provide visual aids, break complex tasks into smaller steps, provide progress indicators, allow saving progress, minimize distractions, and offer prominent help options",
+      "category": "user-facing",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Advanced Accessibility Features - Requirement 11"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with cognitive disabilities can complete bookings without being overwhelmed by complex interfaces"
+    },
+    {
+      "id": "R-ACC-012",
+      "name": "Personalized Accessibility Settings",
+      "description": "Provide accessibility settings panel for customizing text size/font/spacing, color schemes (high contrast, dark mode), disabling animations, adjusting timing, save preferences to user accounts, and provide preset configurations",
+      "category": "user-facing",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Advanced Accessibility Features - Requirement 12"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with disabilities can customize accessibility settings to their specific needs for optimal experience"
+    },
+    {
+      "id": "R-BM-001",
+      "name": "Multi-Step Booking Creation",
+      "description": "Complete vehicle reservation through a clear, guided multi-step checkout process with progress indication, validation, and state preservation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 1: Multi-Step Booking Creation"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 1,
+        "nextSteps": [
+          "Payment Processing",
+          "Booking Confirmation"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As an individual customer, I want to complete a vehicle reservation through a clear, guided process",
+        "acceptanceCriteriaCount": 15,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    },
+    {
+      "id": "R-BM-004",
+      "name": "Flexible Pricing and Discount Application",
+      "description": "Support multiple pricing modes (hourly, daily, weekly, monthly, per-km, unlimited) with real-time calculation, discount code validation, loyalty points redemption, and transparent pricing breakdown",
+      "category": "user-facing",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 4: Flexible Pricing and Discount Application"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 3,
+        "nextSteps": [
+          "Payment Processing"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to see transparent pricing with multiple rental duration options and apply available discounts",
+        "acceptanceCriteriaCount": 14,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    },
+    {
+      "id": "R-BM-010",
+      "name": "Booking History and Tracking",
+      "description": "Chronological list of all bookings with status indicators, filtering, search, export capabilities, and complete history maintenance",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 10: Booking History and Tracking"
+        }
+      ],
+      "dependencies": [
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want to view all my bookings with status tracking and filtering",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    },
+    {
+      "id": "R-BM-016",
+      "name": "Booking Templates and Favorites",
+      "description": "Save booking configurations as reusable templates with vehicle preferences, insurance selections, extras, locations, and duration for quick booking",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 16: Booking Templates and Favorites"
+        }
+      ],
+      "dependencies": [
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a frequent renter, I want to save booking configurations as templates",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Nice-to-Have",
+        "phase": "Phase 3: Advanced Capabilities"
+      }
+    },
+    {
+      "id": "R-BM-028",
+      "name": "Accessible Booking Interface",
+      "description": "WCAG 2.1 Level AA compliant booking interface with screen reader support, keyboard navigation, voice control, sufficient color contrast, and assistive technology compatibility",
+      "category": "user-facing",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 28: Accessible Booking Interface"
+        }
+      ],
+      "dependencies": [
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer with disabilities, I want an accessible booking interface",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Enhanced Experience"
+      }
+    },
+    {
+      "id": "R-PP-010",
+      "name": "Payment History and Transaction Records",
+      "description": "Complete transaction history with search, filtering, PDF receipts, refund tracking, failed attempts, export to CSV/Excel, and expense management tool integration (Concur, Expensify, QuickBooks)",
+      "category": "user-facing",
+      "functionalArea": "reporting",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-010: Payment History and Transaction Records"
+        }
+      ],
+      "dependencies": [
+        "R-PP-009"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want detailed receipts and transaction history",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Enhanced Features"
+      }
+    },
+    {
+      "id": "F-WF-BOOK-001",
+      "name": "Multi-Step Booking Checkout",
+      "description": "Guided booking workflow with customer information collection, insurance selection, additional services, payment processing, and confirmation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Complete Booking Flow"
+        }
+      ],
+      "dependencies": [
+        "F-IND-001"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 1,
+        "nextSteps": [
+          "Customer Information Collection",
+          "Insurance Selection",
+          "Payment Processing"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-003",
+      "name": "Customer Information Pre-Fill",
+      "description": "Auto-populate customer details for logged-in users including name, email, phone, license information with edit capability",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Customer Information Collection"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 2,
+        "nextSteps": [
+          "Additional Driver Information"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-004",
+      "name": "Real-Time Form Validation",
+      "description": "Inline validation of email format, phone numbers, driver's license expiration, and age requirements during booking",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Customer Information Collection"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 2,
+        "nextSteps": [
+          "Additional Driver Information"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-005",
+      "name": "Additional Driver Management",
+      "description": "Add multiple authorized drivers with license validation, age verification, and automatic fee calculation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Additional Driver Information"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 3,
+        "nextSteps": [
+          "Insurance Selection"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-006",
+      "name": "Insurance Coverage Selection",
+      "description": "Present insurance options (CDW, TP, PAI, SLI) with clear descriptions, coverage limits, costs, and comparison features",
+      "category": "user-facing",
+      "functionalArea": "insurance",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Insurance and Protection Selection"
+        }
+      ],
+      "dependencies": [
+        "F-INS-004"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 4,
+        "nextSteps": [
+          "Additional Services Selection"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-007",
+      "name": "Additional Services and Equipment Rental",
+      "description": "Select optional equipment (GPS, child seats, ski racks) and services (prepaid fuel, toll passes, WiFi) with availability confirmation",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Additional Services and Equipment"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 5,
+        "nextSteps": [
+          "Review Booking Summary"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-008",
+      "name": "Booking Summary Review",
+      "description": "Complete itemized breakdown of all charges including base rate, insurance, fees, taxes with edit capability for each section",
+      "category": "user-facing",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Review Booking Summary"
+        }
+      ],
+      "dependencies": [
+        "F-IND-002"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 6,
+        "nextSteps": [
+          "Apply Discount Code",
+          "Payment Method Selection"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-009",
+      "name": "Promotional Code Application",
+      "description": "Validate and apply discount codes with eligibility checking, automatic price recalculation, and error handling for invalid codes",
+      "category": "user-facing",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Apply Discount Code"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 7,
+        "nextSteps": [
+          "Payment Method Selection"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-010",
+      "name": "Terms and Conditions Acceptance",
+      "description": "Display and require acceptance of rental agreement, cancellation policy, privacy policy with timestamp and IP recording",
+      "category": "user-facing",
+      "functionalArea": "compliance",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Terms and Conditions Acceptance"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 9,
+        "nextSteps": [
+          "Process Payment"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-BOOK-011",
+      "name": "Booking Confirmation Delivery",
+      "description": "Immediate confirmation via email and SMS with booking reference, pickup instructions, and downloadable PDF",
+      "category": "user-facing",
+      "functionalArea": "communications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/booking-creation.md",
+          "section": "Workflow Steps - Booking Confirmation"
+        }
+      ],
+      "dependencies": [
+        "F-IND-008"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation",
+        "step": 11,
+        "nextSteps": [
+          "Post-Booking Actions"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PAY-001",
+      "name": "Payment Method Display",
+      "description": "Show available payment options (credit/debit cards, digital wallets, pay-at-counter) with security badges and saved methods for logged-in users",
+      "category": "user-facing",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/payment-processing.md",
+          "section": "Workflow Steps - Payment Method Selection"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001"
+      ],
+      "workflowContext": {
+        "workflow": "Payment Processing",
+        "step": 1,
+        "nextSteps": [
+          "Payment Information Entry"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PAY-005",
+      "name": "Payment Decline Handling",
+      "description": "User-friendly decline messages with corrective action suggestions and option to try alternative payment methods",
+      "category": "user-facing",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/payment-processing.md",
+          "section": "Workflow Steps - Authorization Response Handling"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001"
+      ],
+      "workflowContext": {
+        "workflow": "Payment Processing",
+        "step": 5,
+        "nextSteps": [
+          "Payment Method Selection"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PAY-007",
+      "name": "Digital Receipt Generation",
+      "description": "Automated receipt creation with transaction details, itemized charges, and PDF download/email delivery",
+      "category": "user-facing",
+      "functionalArea": "payments",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/payment-processing.md",
+          "section": "Workflow Steps - Receipt Generation"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Payment Processing",
+        "step": 7,
+        "nextSteps": [
+          "Payment Method Storage"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PICK-001",
+      "name": "Digital Check-In System",
+      "description": "Pre-arrival check-in with document upload, contract review, and express pickup option to skip counter lines",
+      "category": "user-facing",
+      "functionalArea": "pickup",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-pickup.md",
+          "section": "Workflow Steps - Customer Arrival"
+        }
+      ],
+      "dependencies": [
+        "F-IND-005"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Pickup",
+        "step": 1,
+        "nextSteps": [
+          "Check-In at Counter"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-001",
+      "name": "Location-Based Vehicle Search",
+      "description": "Search available vehicles by pickup/return location with auto-complete suggestions and geolocation support",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - Specify Search Criteria"
+        }
+      ],
+      "dependencies": [
+        "F-IND-001"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 2,
+        "nextSteps": [
+          "Execute Search"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-002",
+      "name": "Date and Time Selection",
+      "description": "Calendar picker for pickup/return dates with time selection in 30-minute increments and rental duration calculation",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - Specify Search Criteria"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 2,
+        "nextSteps": [
+          "Execute Search"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-003",
+      "name": "Multi-Criteria Filtering",
+      "description": "Filter search results by price range, vehicle type, transmission, capacity, features, fuel policy, and supplier",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - Apply Filters"
+        }
+      ],
+      "dependencies": [
+        "F-IND-001"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 5,
+        "nextSteps": [
+          "Review Search Results"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-004",
+      "name": "Vehicle Comparison Tool",
+      "description": "Side-by-side comparison of up to 4 vehicles showing specifications, features, pricing, and supplier ratings",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - Compare Vehicles"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 8,
+        "nextSteps": [
+          "Proceed to Booking"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-005",
+      "name": "Search Result Sorting",
+      "description": "Sort vehicles by price, rating, popularity, newest additions, or supplier name with preserved filters",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - Sort Results"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 6,
+        "nextSteps": [
+          "View Vehicle Details"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-SRCH-006",
+      "name": "Detailed Vehicle Information Page",
+      "description": "Comprehensive vehicle details with image gallery, specifications, pricing breakdown, reviews, availability calendar, and environmental info",
+      "category": "user-facing",
+      "functionalArea": "search",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/core-rental/vehicle-search.md",
+          "section": "Workflow Steps - View Vehicle Details"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search",
+        "step": 7,
+        "nextSteps": [
+          "Proceed to Booking",
+          "Compare Vehicles"
+        ]
+      }
+    }
+  ]
+}

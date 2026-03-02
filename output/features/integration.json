@@ -1,0 +1,658 @@
+{
+  "category": "integration",
+  "total_features": 33,
+  "features": [
+    {
+      "id": "F-INS-001",
+      "name": "Insurance Integration API",
+      "description": "Real-time API integration with insurance providers for coverage verification, policy binding, and premium calculation at booking time",
+      "category": "integration",
+      "functionalArea": "insurance",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/insurance-providers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Insurance providers can verify coverage instantly and bind policies in real-time, reducing manual processes and improving accuracy"
+    },
+    {
+      "id": "F-PAY-001",
+      "name": "Payment Gateway Integration",
+      "description": "Secure API integration with payment processors (Stripe, PayPal, etc.) for credit card, debit card, and digital wallet processing",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
+          "section": "Relationship to Features - Critical Features"
+        },
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 24: Payment Gateway Integration"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-019: Payment Gateway Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables secure, reliable payment processing with support for multiple payment methods and processors"
+    },
+    {
+      "id": "F-PAY-005",
+      "name": "Multi-Currency Support",
+      "description": "Process payments in multiple currencies with real-time exchange rates and currency conversion",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
+          "section": "Relationship to Features - Critical Features"
+        },
+        {
+          "file": "docs/05-features/user-facing/payment-billing.md",
+          "section": "Pricing & Transparency - F-PB-008"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-011: Multi-Currency Support"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001",
+        "F-PB-001",
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables international operations and improves customer experience for cross-border transactions"
+    },
+    {
+      "id": "F-PAY-008",
+      "name": "Payment Webhook Handling",
+      "description": "Receive and process payment event notifications (successful payments, failures, refunds, chargebacks) from payment processors",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables real-time payment status updates and automated reconciliation"
+    },
+    {
+      "id": "F-FLT-013",
+      "name": "Telematics Integration",
+      "description": "Real-time vehicle location tracking, diagnostics, and usage monitoring through IoT device integration",
+      "category": "integration",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/fleet-managers.md",
+          "section": "Relationship to Features - Important Features for Optimization"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides real-time fleet visibility and enables proactive issue detection"
+    },
+    {
+      "id": "F-CORP-006",
+      "name": "SSO Integration",
+      "description": "Single sign-on with corporate identity providers (Azure AD, Okta, Google Workspace)",
+      "category": "integration",
+      "functionalArea": "authentication",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Simplifies employee access and improves security through centralized authentication"
+    },
+    {
+      "id": "F-CORP-007",
+      "name": "Travel Management Integration",
+      "description": "API connections to corporate travel management systems (Concur, SAP, TripActions)",
+      "category": "integration",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Streamlines booking process and integrates with existing travel workflows"
+    },
+    {
+      "id": "F-REV-003",
+      "name": "Strategic Channel Development",
+      "description": "Develop partnerships with complementary businesses and affiliate marketers with partner portal, commission management, and API integration",
+      "category": "integration",
+      "functionalArea": "marketing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "1.3 Partnership and Affiliate Programs"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Partnership programs expand market reach and create new revenue channels with minimal marketing spend"
+    },
+    {
+      "id": "F-USER-011",
+      "name": "Portable Reputation System",
+      "description": "Integration with decentralized identity systems enabling portable reputation scores and verified credentials across platforms",
+      "category": "integration",
+      "functionalArea": "identity",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "4.3 Decentralized Identity (DID) Integration"
+        }
+      ],
+      "dependencies": [
+        "F-USER-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "DID enables trust without sacrificing privacy and reduces onboarding friction"
+    },
+    {
+      "id": "F-PAY-010",
+      "name": "Stripe Payment Integration",
+      "description": "Comprehensive payment API with hosted checkout, customer tokenization, Payment Intent pattern, and multi-currency support with PCI compliance",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Traditional Payment Gateways - Stripe Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides secure payment processing with reduced PCI compliance scope and built-in fraud detection"
+    },
+    {
+      "id": "F-PAY-011",
+      "name": "PayPal Payment Integration",
+      "description": "Alternative payment method supporting PayPal accounts and card payments with buyer protection and instant refunds",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Traditional Payment Gateways - PayPal Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces cart abandonment with trusted payment brand and global reach"
+    },
+    {
+      "id": "F-PAY-012",
+      "name": "Square Payment Integration",
+      "description": "Unified online and in-person payment processing with point-of-sale hardware integration for physical locations",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Traditional Payment Gateways - Square Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides single system for online and counter payments with consolidated reporting"
+    },
+    {
+      "id": "F-PAY-013",
+      "name": "Mobile Wallet Integration",
+      "description": "Apple Pay and Google Pay integration for one-tap mobile payments with biometric authentication and tokenized credentials",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Mobile Wallet Integration - Apple Pay and Google Pay"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-010"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Increases mobile conversion rates with fastest checkout experience and reduced cart abandonment"
+    },
+    {
+      "id": "F-PAY-014",
+      "name": "Cryptocurrency Payment Gateway",
+      "description": "Accept cryptocurrency payments with instant conversion to fiat currency, eliminating volatility risk through hybrid gateways",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Emerging Fintech Solutions - Crypto-Fiat Hybrid Gateways"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Accesses new customer demographic with zero volatility risk and lower transaction fees"
+    },
+    {
+      "id": "F-PAY-015",
+      "name": "Buy Now Pay Later Integration",
+      "description": "Deferred payment options through BNPL services like Klarna or Affirm, enabling customers to split payments with instant approval",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/payment-gateways.md",
+          "section": "Emerging Fintech Solutions - Buy Now, Pay Later (BNPL)"
+        },
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-012: Buy Now Pay Later Integration"
+        }
+      ],
+      "dependencies": [
+        "R-PP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Increases booking value and conversion rates by enabling payment flexibility for customers"
+    },
+    {
+      "id": "F-NOT-001",
+      "name": "Transactional Email Integration",
+      "description": "Reliable email delivery for transactional messages like booking confirmations, receipts, and password resets with template management and delivery tracking",
+      "category": "integration",
+      "functionalArea": "notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "Email Notification Services - Transactional Email Providers"
+        },
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 1: Transactional Email Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures reliable booking confirmations and timely updates with high deliverability rates"
+    },
+    {
+      "id": "F-NOT-002",
+      "name": "Marketing Email Services",
+      "description": "Bulk email campaigns for promotions, newsletters, and customer engagement with list management, segmentation, and automation",
+      "category": "integration",
+      "functionalArea": "marketing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "Email Notification Services - Marketing Email Services"
+        }
+      ],
+      "dependencies": [
+        "F-NOT-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables targeted marketing campaigns and customer engagement with performance tracking"
+    },
+    {
+      "id": "F-NOT-003",
+      "name": "SMS Gateway Integration",
+      "description": "Send text messages for time-sensitive notifications and two-factor authentication with delivery receipts and international support",
+      "category": "integration",
+      "functionalArea": "notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "SMS Notification Services - SMS Gateway Integration"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides instant notifications with high open rates for critical alerts and authentication"
+    },
+    {
+      "id": "F-NOT-004",
+      "name": "Mobile Push Notifications",
+      "description": "Send notifications directly to mobile app users' devices with rich content, deep linking, and user segmentation",
+      "category": "integration",
+      "functionalArea": "notifications",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "Push Notification Services - Mobile Push Notifications"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables real-time updates and high engagement rates for mobile app users"
+    },
+    {
+      "id": "F-NOT-007",
+      "name": "Real-Time Chat Integration",
+      "description": "Live chat support within application with agent routing, canned responses, and chat history",
+      "category": "integration",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/notification-services.md",
+          "section": "In-App Messaging - Real-Time Chat Integration"
+        },
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 7: Real-Time Chat Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables instant customer support and improves satisfaction with efficient assistance"
+    },
+    {
+      "id": "F-SUPER-001",
+      "name": "WeChat Mini-Program Platform",
+      "description": "Lightweight application running within WeChat with built-in authentication, WeChat Pay integration, and social sharing for China market",
+      "category": "integration",
+      "functionalArea": "super-app",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "WeChat Mini-Program Integration - Overview"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides instant access to 1B+ WeChat users without app download and reduces registration friction"
+    },
+    {
+      "id": "F-SUPER-002",
+      "name": "WeChat Authentication Integration",
+      "description": "WeChat ID-based login with automatic profile sync, OpenID identification, and no separate registration required",
+      "category": "integration",
+      "functionalArea": "authentication",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "WeChat Mini-Program Integration - User Authentication"
+        },
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 2: WeChat Authentication Integration",
+          "requirementId": "R-SA-002"
+        }
+      ],
+      "dependencies": [
+        "F-SUPER-001",
+        "R-SA-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Eliminates registration friction and provides verified user identity through WeChat"
+    },
+    {
+      "id": "F-SUPER-003",
+      "name": "WeChat Pay Integration",
+      "description": "Native payment within Mini-Program supporting WeChat balance and linked cards with instant confirmation and refund processing",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "WeChat Mini-Program Integration - WeChat Pay Integration"
+        },
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 3: WeChat Pay Integration",
+          "requirementId": "R-SA-003"
+        }
+      ],
+      "dependencies": [
+        "F-SUPER-001",
+        "R-SA-001",
+        "R-SA-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Achieves high conversion rates with familiar payment method and reduced friction"
+    },
+    {
+      "id": "F-SUPER-006",
+      "name": "Grab Partner App Integration",
+      "description": "Deep API integration with Grab platform for Southeast Asia market with Grab ID authentication and GrabPay payment system",
+      "category": "integration",
+      "functionalArea": "super-app",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "Grab Partner App Integration - Overview"
+        },
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 10: Grab Partner App Integration",
+          "requirementId": "R-SA-010"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides access to Grab's massive user base in Southeast Asia with reduced acquisition cost"
+    },
+    {
+      "id": "F-SUPER-007",
+      "name": "Grab ID Authentication",
+      "description": "Single sign-on using Grab account with automatic profile sync and cross-platform reputation",
+      "category": "integration",
+      "functionalArea": "authentication",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "Grab Partner App Integration - Grab ID Authentication"
+        }
+      ],
+      "dependencies": [
+        "F-SUPER-006"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides seamless authentication with verified identity and cross-platform reputation"
+    },
+    {
+      "id": "F-SUPER-008",
+      "name": "GrabPay Integration",
+      "description": "Native payment within Grab ecosystem with GrabPay balance, linked cards, and loyalty points integration",
+      "category": "integration",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/super-app-integration.md",
+          "section": "Grab Partner App Integration - GrabPay Integration"
+        }
+      ],
+      "dependencies": [
+        "F-SUPER-006"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables instant payment processing with familiar payment method and promotional opportunities"
+    },
+    {
+      "id": "F-MAP-001",
+      "name": "Google Maps Platform Integration",
+      "description": "Comprehensive mapping solution with geocoding, directions, places, and visualization APIs for interactive maps, location search, and navigation",
+      "category": "integration",
+      "functionalArea": "mapping",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/integration/mapping-services.md",
+          "section": "Core Mapping Integration - Google Maps Platform"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides reliable location data, comprehensive coverage, and rich mapping features for vehicle discovery and navigation"
+    },
+    {
+      "id": "F-MOB-024",
+      "name": "Regional Payment Methods",
+      "description": "Support region-specific payment methods including WeChat Pay, Alipay (China), GrabPay (SEA), iDEAL, Bancontact",
+      "category": "integration",
+      "functionalArea": "mobile-payments",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/mobile-payments.md",
+          "section": "Emerging Payment Technologies - Regional Payment Methods"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Maximizes conversion in each market through local payment method support"
+    },
+    {
+      "id": "F-MOB-028",
+      "name": "Progressive Web App (PWA) Architecture",
+      "description": "Unified codebase with service workers providing offline functionality across iOS, Android, and web with intelligent caching",
+      "category": "integration",
+      "functionalArea": "offline-mode",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/mobile-specific/offline-mode.md",
+          "section": "Progressive Web App (PWA) Strategy - Unified Codebase Benefits"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides consistent offline experience across platforms with reduced maintenance overhead"
+    },
+    {
+      "id": "R-PS-009",
+      "name": "Payment Gateway Selection",
+      "description": "Integrate with PCI DSS Level 1 certified payment gateways, support multiple gateways for redundancy, integrate with gateways supporting tokenization and hosted pages, select gateways with strong fraud detection, verify comprehensive API documentation, ensure gateways support required payment methods, validate real-time processing",
+      "category": "integration",
+      "functionalArea": "payment-security",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/payment-security.md",
+          "section": "Payment Gateway Integration Requirements - Requirement 9"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Payment gateways handle PCI compliance, minimizing compliance burden while providing secure processing"
+    },
+    {
+      "id": "R-PS-012",
+      "name": "Crypto-Fiat Gateway Integration",
+      "description": "Integrate with crypto-fiat payment gateways accepting cryptocurrency and settling in fiat, support major cryptocurrencies (Bitcoin, Ethereum), execute instant market sell orders to convert to fiat, settle fiat into bank accounts, comply with AML/KYC regulations, implement transaction monitoring, provide transparent exchange rates/fees",
+      "category": "integration",
+      "functionalArea": "payment-security",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/payment-security.md",
+          "section": "Cryptocurrency Payment Requirements - Requirement 12"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can pay with cryptocurrency while platform eliminates volatility risk through instant conversion"
+    },
+    {
+      "id": "R-BM-025",
+      "name": "Calendar and Wallet Integration",
+      "description": "Generate calendar events (.ics) and digital wallet passes (Apple Wallet, Google Wallet) with booking details, QR codes, reminders, and automatic updates for modifications",
+      "category": "integration",
+      "functionalArea": "booking",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/booking-management.md",
+          "section": "Requirement 25: Calendar and Wallet Integration"
+        }
+      ],
+      "dependencies": [
+        "R-BM-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want to add my booking to my calendar and digital wallet",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Enhanced Experience"
+      }
+    },
+    {
+      "id": "R-PP-001",
+      "name": "Payment Method Support",
+      "description": "Support multiple payment methods including credit/debit cards (Visa, Mastercard, Amex, Discover, JCB), digital wallets (Apple Pay, Google Pay, Samsung Pay, PayPal, Venmo), and corporate billing with instant confirmation indication",
+      "category": "integration",
+      "functionalArea": "payment",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/payment-processing.md",
+          "section": "REQ-PP-001: Payment Method Support"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Payment Processing",
+        "step": 1,
+        "nextSteps": [
+          "Payment Authorization",
+          "Payment Capture"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to choose from multiple payment methods",
+        "acceptanceCriteriaCount": 8,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "category": "Compliance",
+  "total_features": 2,
+  "features": [
+    {
+      "id": "R-PG-007",
+      "name": "PCI DSS Compliance Implementation",
+      "description": "Maintain PCI DSS compliance with minimal scope through hosted payment pages, tokenization, encryption, and audit logging",
+      "category": "Compliance",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 5: PCI DSS Compliance",
+          "requirementId": "R-PG-007"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want to maintain PCI DSS compliance with minimal scope, so that customer payment data is protected and regulatory requirements are met.",
+        "acceptanceCriteria": [
+          "System never stores full credit card numbers or CVV codes",
+          "Uses hosted payment pages or tokenization for all card transactions",
+          "Encrypts all payment-related data in transit using TLS 1.2 or higher",
+          "Implements strong access controls for payment system administration",
+          "Maintains audit logs of payment activities for at least 12 months",
+          "Completes appropriate Self-Assessment Questionnaire (SAQ A or SAQ A-EP) annually",
+          "Conducts quarterly vulnerability scans by approved scanning vendors",
+          "Implements role-based access controls for cardholder data",
+          "Documents all payment processing workflows and security controls",
+          "Maintains Attestation of Compliance (AOC) for acquiring bank submission"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-014",
+      "name": "Super-App Compliance and Governance",
+      "description": "Maintain compliance with WeChat and Grab platform policies including approval processes, certifications, and policy monitoring",
+      "category": "Compliance",
+      "functionalArea": "Platform Governance",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 14: Super-App Compliance and Governance",
+          "requirementId": "R-SA-014"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001",
+        "R-SA-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want to maintain compliance with super-app platform policies, so that the integration remains active and avoids suspension.",
+        "acceptanceCriteria": [
+          "Complies with WeChat Mini-Program guidelines",
+          "Complies with Grab Partner program policies",
+          "Submits updates for platform approval before deployment",
+          "Maintains required certifications and licenses",
+          "Responds to platform policy changes within required timeframes",
+          "Implements required security measures per platform standards",
+          "Maintains data privacy per platform requirements",
+          "Handles platform API deprecations proactively",
+          "Monitors platform status and announcements",
+          "Documents compliance procedures and audit trails"
+        ]
+      }
+    }
+  ]
+}

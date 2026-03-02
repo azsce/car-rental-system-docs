@@ -1,0 +1,174 @@
+{
+  "directories": [
+    {
+      "path": "docs/03-stakeholders/business-stakeholders",
+      "isLeaf": true,
+      "files": [
+        "docs/03-stakeholders/business-stakeholders/insurance-providers.md",
+        "docs/03-stakeholders/business-stakeholders/payment-processors.md",
+        "docs/03-stakeholders/business-stakeholders/suppliers.md"
+      ]
+    },
+    {
+      "path": "docs/03-stakeholders/operational-staff",
+      "isLeaf": true,
+      "files": [
+        "docs/03-stakeholders/operational-staff/administrators.md",
+        "docs/03-stakeholders/operational-staff/fleet-managers.md",
+        "docs/03-stakeholders/operational-staff/support-agents.md"
+      ]
+    },
+    {
+      "path": "docs/03-stakeholders/primary-users",
+      "isLeaf": true,
+      "files": [
+        "docs/03-stakeholders/primary-users/corporate-clients.md",
+        "docs/03-stakeholders/primary-users/individual-customers.md",
+        "docs/03-stakeholders/primary-users/subscription-users.md"
+      ]
+    },
+    {
+      "path": "docs/04-workflows/administrative",
+      "isLeaf": true,
+      "files": [
+        "docs/04-workflows/administrative/fleet-management.md",
+        "docs/04-workflows/administrative/pricing-updates.md",
+        "docs/04-workflows/administrative/reporting.md",
+        "docs/04-workflows/administrative/user-management.md"
+      ]
+    },
+    {
+      "path": "docs/04-workflows/core-rental",
+      "isLeaf": true,
+      "files": [
+        "docs/04-workflows/core-rental/booking-creation.md",
+        "docs/04-workflows/core-rental/payment-processing.md",
+        "docs/04-workflows/core-rental/vehicle-pickup.md",
+        "docs/04-workflows/core-rental/vehicle-return.md",
+        "docs/04-workflows/core-rental/vehicle-search.md"
+      ]
+    },
+    {
+      "path": "docs/04-workflows/exceptional",
+      "isLeaf": true,
+      "files": [
+        "docs/04-workflows/exceptional/cancellations.md",
+        "docs/04-workflows/exceptional/damage-claims.md",
+        "docs/04-workflows/exceptional/modifications.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/administrative",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/administrative/fleet-management.md",
+        "docs/05-features/administrative/pricing-management.md",
+        "docs/05-features/administrative/revenue-optimization.md",
+        "docs/05-features/administrative/user-management.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/integration",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/integration/mapping-services.md",
+        "docs/05-features/integration/notification-services.md",
+        "docs/05-features/integration/payment-gateways.md",
+        "docs/05-features/integration/super-app-integration.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/mobile-specific",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/mobile-specific/digital-key.md",
+        "docs/05-features/mobile-specific/mobile-payments.md",
+        "docs/05-features/mobile-specific/offline-mode.md",
+        "docs/05-features/mobile-specific/push-notifications.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/operational",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/operational/analytics-reporting.md",
+        "docs/05-features/operational/iot-telematics.md",
+        "docs/05-features/operational/maintenance-scheduling.md",
+        "docs/05-features/operational/vehicle-tracking.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/security",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/security/authentication.md",
+        "docs/05-features/security/authorization.md",
+        "docs/05-features/security/data-protection.md",
+        "docs/05-features/security/fraud-prevention.md"
+      ]
+    },
+    {
+      "path": "docs/05-features/user-facing",
+      "isLeaf": true,
+      "files": [
+        "docs/05-features/user-facing/account-management.md",
+        "docs/05-features/user-facing/booking-management.md",
+        "docs/05-features/user-facing/payment-billing.md",
+        "docs/05-features/user-facing/search-discovery.md"
+      ]
+    },
+    {
+      "path": "docs/06-requirements/compliance",
+      "isLeaf": true,
+      "files": [
+        "docs/06-requirements/compliance/accessibility.md",
+        "docs/06-requirements/compliance/data-protection.md",
+        "docs/06-requirements/compliance/fraud-prevention.md",
+        "docs/06-requirements/compliance/payment-security.md"
+      ]
+    },
+    {
+      "path": "docs/06-requirements/functional",
+      "isLeaf": true,
+      "files": [
+        "docs/06-requirements/functional/booking-management.md",
+        "docs/06-requirements/functional/fleet-management.md",
+        "docs/06-requirements/functional/payment-processing.md",
+        "docs/06-requirements/functional/reporting-analytics.md",
+        "docs/06-requirements/functional/user-management.md",
+        "docs/06-requirements/functional/vehicle-search.md"
+      ]
+    },
+    {
+      "path": "docs/06-requirements/integration",
+      "isLeaf": true,
+      "files": [
+        "docs/06-requirements/integration/mapping-services.md",
+        "docs/06-requirements/integration/notification-services.md",
+        "docs/06-requirements/integration/payment-gateways.md",
+        "docs/06-requirements/integration/super-app-integration.md"
+      ]
+    },
+    {
+      "path": "docs/06-requirements/non-functional",
+      "isLeaf": true,
+      "files": [
+        "docs/06-requirements/non-functional/performance.md",
+        "docs/06-requirements/non-functional/reliability.md",
+        "docs/06-requirements/non-functional/scalability.md",
+        "docs/06-requirements/non-functional/security.md",
+        "docs/06-requirements/non-functional/usability.md"
+      ]
+    }
+  ],
+  "summary": {
+    "totalLeafDirectories": 16,
+    "totalFiles": 64,
+    "targetDirectories": [
+      "docs/03-stakeholders",
+      "docs/04-workflows",
+      "docs/05-features",
+      "docs/06-requirements"
+    ]
+  }
+}

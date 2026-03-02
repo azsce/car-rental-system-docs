@@ -1,0 +1,8 @@
+{
+  "label": "Integration Features",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Third-party integrations including payment gateways, mapping services, notification systems, and super-app ecosystems. These features enable the car rental platform to leverage external services for payments, location services, communications, and regional market access."
+  }
+}

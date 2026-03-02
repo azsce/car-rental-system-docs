@@ -1,0 +1,480 @@
+{
+  "category": "compliance",
+  "total_features": 27,
+  "features": [
+    {
+      "id": "R-ACC-001",
+      "name": "WCAG 2.1 Level AA - Perceivable Content",
+      "description": "Provide text alternatives for non-text content, captions for audio/video, semantic HTML structure, sufficient color contrast (4.5:1 minimum), and text resizable to 200%",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "WCAG 2.1 Level AA Compliance - Requirement 1"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with visual impairments can access all content through multiple senses, ensuring equal access to information"
+    },
+    {
+      "id": "R-ACC-002",
+      "name": "WCAG 2.1 Level AA - Operable Interface",
+      "description": "Make all functionality keyboard accessible, provide skip links, descriptive page titles, visible focus indicators, and mechanisms to pause/stop moving content",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "WCAG 2.1 Level AA Compliance - Requirement 2"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with motor impairments can operate the interface using keyboard only without requiring a mouse"
+    },
+    {
+      "id": "R-ACC-003",
+      "name": "WCAG 2.1 Level AA - Understandable Content",
+      "description": "Specify page language, make pages predictable, provide consistent navigation, clear labels/instructions, error identification with correction suggestions, and error prevention for critical actions",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "WCAG 2.1 Level AA Compliance - Requirement 3"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with cognitive disabilities can understand content and predict how the platform operates"
+    },
+    {
+      "id": "R-ACC-004",
+      "name": "WCAG 2.1 Level AA - Robust Content",
+      "description": "Use valid HTML, provide name/role for UI components, ensure states/properties are programmatically determinable, use ARIA correctly, and test with major screen readers",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "WCAG 2.1 Level AA Compliance - Requirement 4"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users of assistive technology can access all functionality through screen readers and other assistive devices"
+    },
+    {
+      "id": "R-ACC-005",
+      "name": "Accessible Forms",
+      "description": "Associate labels with inputs, provide clear instructions, group related controls, indicate required fields, provide inline error messages, allow review before submission, and ensure form validation is announced to screen readers",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Form Accessibility Requirements - Requirement 5"
+        }
+      ],
+      "dependencies": [
+        "R-ACC-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with disabilities can complete booking forms independently without assistance"
+    },
+    {
+      "id": "R-ACC-006",
+      "name": "Mobile Accessibility",
+      "description": "Support platform accessibility features (VoiceOver, TalkBack), provide sufficient touch target sizes (44x44px iOS, 48x48px Android), support text resizing, provide alt text, and test with accessibility tools",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Mobile Accessibility Requirements - Requirement 6"
+        }
+      ],
+      "dependencies": [
+        "R-ACC-001",
+        "R-ACC-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Mobile users with disabilities can use their preferred device with full accessibility support"
+    },
+    {
+      "id": "R-ACC-007",
+      "name": "Accessible Vehicle Availability",
+      "description": "Maintain inventory of accessible vehicles with hand controls/wheelchair lifts, allow search/filtering for accessible vehicles, provide at same rates without additional fees, ensure availability at all locations, and provide staff training",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "ADA Compliance Requirements - Requirement 7"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with mobility impairments can rent vehicles with accessibility features to drive or be transported safely"
+    },
+    {
+      "id": "R-ACC-008",
+      "name": "Accessible Rental Locations",
+      "description": "Ensure rental locations have accessible parking, entrances with ramps, accessible counters (max 36 inches height), accessible restrooms, wide pathways (min 36 inches), accessible signage with Braille, and conduct regular accessibility audits",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "ADA Compliance Requirements - Requirement 8"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with mobility impairments can pick up and return vehicles independently at physically accessible locations"
+    },
+    {
+      "id": "R-ACC-009",
+      "name": "Accessible Communication",
+      "description": "Provide multiple communication channels (phone, email, chat, video relay), offer TTY/TDD services, provide video relay for sign language users, ensure chat is screen reader accessible, train staff on communicating with customers with disabilities",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "ADA Compliance Requirements - Requirement 9"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users with hearing or speech impairments can communicate with customer service through accessible channels"
+    },
+    {
+      "id": "R-ACC-013",
+      "name": "Accessibility Testing",
+      "description": "Conduct automated testing (axe, WAVE, Lighthouse), manual keyboard navigation testing, screen reader testing (JAWS, NVDA, VoiceOver), user testing with people with disabilities, test color contrast, and conduct regression testing",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Testing and Validation Requirements - Requirement 13"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Comprehensive testing identifies and fixes accessibility issues before launch, ensuring compliance"
+    },
+    {
+      "id": "R-ACC-014",
+      "name": "Accessibility Audits",
+      "description": "Conduct comprehensive accessibility audits at least annually, engage third-party experts, audit all public pages and critical flows, document findings with severity ratings, create remediation plans, and publish accessibility conformance reports (VPAT/ACR)",
+      "category": "compliance",
+      "functionalArea": "accessibility",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/accessibility.md",
+          "section": "Testing and Validation Requirements - Requirement 14"
+        }
+      ],
+      "dependencies": [
+        "R-ACC-013"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Regular audits ensure ongoing compliance with accessibility standards and identify areas for improvement"
+    },
+    {
+      "id": "R-DP-001",
+      "name": "GDPR - Lawful Basis for Data Processing",
+      "description": "Establish and document lawful basis for processing under GDPR Article 6, process only data required for rental agreement, conduct legitimate interests assessments, obtain explicit consent when required, and document lawful basis for each data category",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 1"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Platform has valid legal reason for processing personal data, ensuring compliance with GDPR"
+    },
+    {
+      "id": "R-DP-002",
+      "name": "GDPR - Data Minimization",
+      "description": "Collect only personal data that is adequate, relevant, and necessary for stated purpose, justify each field's necessity, clearly distinguish required vs optional fields, conduct periodic reviews, and document business justification for new fields",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 2"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Platform collects only necessary personal data, minimizing privacy exposure for users"
+    },
+    {
+      "id": "R-DP-003",
+      "name": "GDPR - Purpose Limitation",
+      "description": "Process personal data only for specified, explicit, legitimate purposes, clearly communicate processing purposes in privacy policy, maintain documentation mapping data to purposes, obtain consent for new purposes, and provide separate consent mechanisms",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 3"
+        }
+      ],
+      "dependencies": [
+        "R-DP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Personal data is used only for purposes users were informed about, maintaining user control"
+    },
+    {
+      "id": "R-DP-004",
+      "name": "GDPR - Data Retention and Deletion",
+      "description": "Establish and document retention periods for each data category, automatically delete data when retention expires, retain data for minimum period required by law, implement automated monthly purge processes, delete data within 30 days of account deletion request, and maintain audit logs",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 4"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Personal data is deleted when no longer needed, minimizing privacy risk over time"
+    },
+    {
+      "id": "R-DP-005",
+      "name": "GDPR - Right to Access",
+      "description": "Provide mechanism for users to request access to personal data, provide copy within one month (extendable to three months for complex requests), provide data in structured, machine-readable format (JSON/CSV), include processing information, verify requester identity",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 5"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can request and receive copies of their personal data to verify what information the platform holds"
+    },
+    {
+      "id": "R-DP-006",
+      "name": "GDPR - Right to Rectification",
+      "description": "Provide user-accessible interfaces for updating personal information, process correction requests within one month, verify accuracy of corrections, notify third parties of corrections, maintain audit trail of corrections, and allow supplementary statements for disputed data",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 6"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can correct inaccurate personal data to ensure platform maintains accurate information"
+    },
+    {
+      "id": "R-DP-007",
+      "name": "GDPR - Right to Erasure",
+      "description": "Provide mechanism for users to request deletion of personal data, delete all data within 30 days unless exception applies, retain data when required by legal obligations, inform user of retention reasons, notify third parties to delete data, and provide deletion confirmation",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 7"
+        }
+      ],
+      "dependencies": [
+        "R-DP-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can request deletion of personal data to exercise right to be forgotten when no longer using service"
+    },
+    {
+      "id": "R-DP-008",
+      "name": "GDPR - Right to Data Portability",
+      "description": "Provide personal data in structured, machine-readable format (JSON/CSV), include all user-provided and system-generated data, provide option to transmit directly to another service provider where feasible, process requests within one month, and verify requester identity",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 8"
+        }
+      ],
+      "dependencies": [
+        "R-DP-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can receive personal data in portable format to transfer to another service provider"
+    },
+    {
+      "id": "R-DP-009",
+      "name": "GDPR - Right to Object",
+      "description": "Provide mechanisms for users to object to processing based on legitimate interests, cease processing unless compelling grounds override user interests, provide clear opt-out for direct marketing, cease marketing immediately upon opt-out, allow objection to automated decision-making",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 9"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users can object to certain types of data processing to control how their data is used"
+    },
+    {
+      "id": "R-DP-010",
+      "name": "GDPR - Data Breach Notification",
+      "description": "Notify supervisory authority within 72 hours of breach, notify affected users if high risk, include breach description/data affected/consequences/mitigation in notifications, maintain documentation of all breaches, implement breach detection systems, and maintain incident response plan",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "GDPR Compliance Requirements - Requirement 10"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Users are notified promptly if personal data is compromised so they can take protective actions"
+    },
+    {
+      "id": "R-DP-011",
+      "name": "CCPA - Right to Know",
+      "description": "Disclose in privacy policy categories of personal information collected, sources, purposes, and third parties with access, provide specific pieces of information within 45 days for California residents, provide disclosure covering 12 months, verify requester identity",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "CCPA Compliance Requirements - Requirement 11"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "California residents can know what personal information the platform collects and how it's used"
+    },
+    {
+      "id": "R-DP-012",
+      "name": "CCPA - Right to Delete",
+      "description": "Provide mechanism for California residents to request deletion, delete personal information within 45 days unless exception applies, retain data when necessary for transaction completion/legal obligations/security, notify service providers to delete data, provide deletion confirmation",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "CCPA Compliance Requirements - Requirement 12"
+        }
+      ],
+      "dependencies": [
+        "R-DP-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "California residents can request deletion of personal information to control their data footprint"
+    },
+    {
+      "id": "R-DP-013",
+      "name": "CCPA - Right to Opt-Out of Sale",
+      "description": "Provide 'Do Not Sell My Personal Information' link on homepage and privacy policy, cease selling personal information within 15 days of opt-out, do not require account creation to opt out, notify third parties to stop selling data, do not discriminate against users who opt out",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "CCPA Compliance Requirements - Requirement 13"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "California residents can opt out of sale of personal information to prevent monetization of their data"
+    },
+    {
+      "id": "R-DP-014",
+      "name": "CCPA - Non-Discrimination",
+      "description": "Do not deny goods/services to consumers who exercise CCPA rights, do not charge different prices, do not provide different quality of service, may offer financial incentives if reasonably related to data value, clearly explain incentive terms and obtain opt-in consent",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "CCPA Compliance Requirements - Requirement 14"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "California residents can exercise CCPA rights without facing discrimination or penalties"
+    },
+    {
+      "id": "R-DP-016",
+      "name": "Privacy by Design",
+      "description": "Implement privacy by design principles in all components, conduct privacy impact assessments for new features, enable maximum privacy settings by default, require opt-in for data sharing, embed privacy in technical specifications, protect data throughout lifecycle",
+      "category": "compliance",
+      "functionalArea": "data-protection",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/data-protection.md",
+          "section": "Advanced Data Protection Requirements - Requirement 16"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Privacy protections are built into the system from the beginning, ensuring GDPR compliance"
+    },
+    {
+      "id": "R-PS-014",
+      "name": "Self-Assessment Questionnaire (SAQ)",
+      "description": "Determine appropriate SAQ type based on payment processing methods, complete SAQ A or SAQ A-EP for hosted pages/tokenization, complete SAQ annually and after significant changes, document all responses with supporting evidence, submit Attestation of Compliance to acquiring banks, address non-compliant items",
+      "category": "compliance",
+      "functionalArea": "payment-security",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/compliance/payment-security.md",
+          "section": "Compliance Validation Requirements - Requirement 14"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Completing PCI DSS self-assessment validates and documents compliance"
+    }
+  ]
+}

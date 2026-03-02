@@ -1,0 +1,8 @@
+{
+  "label": "Operational Features",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Features that support fleet operations, vehicle tracking, maintenance scheduling, analytics, and IoT-enabled telematics for operational excellence."
+  }
+}

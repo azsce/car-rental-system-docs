@@ -1,0 +1,1091 @@
+{
+  "category": "Security",
+  "total_features": 33,
+  "features": [
+    {
+      "id": "R-RA-008",
+      "name": "Audit Trail and Compliance Reporting",
+      "description": "Comprehensive audit trails logging all user actions, system events, data modifications with complete access tracking, change history, pre-built compliance reports (GDPR, SOX, PCI-DSS), tamper-proof logs, and automated suspicious activity alerts",
+      "category": "Security",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 8: Audit Trail and Compliance Reporting",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Monitor Report Performance",
+        "userRole": "Compliance Officer, Security Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a Compliance Officer, I want comprehensive audit trails and compliance reports, so that I can demonstrate regulatory compliance and investigate security incidents",
+        "acceptanceCriteria": [
+          "Log all user actions, system events, data modifications with timestamp, user ID, action details",
+          "Track who accessed what data and when with complete access audit trail",
+          "Maintain complete change history for all data with before/after values",
+          "Provide pre-built compliance reports for GDPR, SOX, PCI-DSS",
+          "Provide powerful search and filter capabilities across audit logs",
+          "Implement configurable log retention policies based on compliance requirements",
+          "Ensure audit logs are tamper-proof and immutable using cryptographic hashing or blockchain",
+          "Alert security teams automatically when suspicious activity is detected",
+          "Provide audit log export capabilities for external analysis and archival",
+          "Support compliance reporting for data protection regulations including data access requests and deletion confirmations"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-002",
+      "name": "User Authentication",
+      "description": "Secure multi-method authentication supporting email/password, social login, magic link, SMS OTP, and biometric with encrypted session tokens, account lockout protection, and login activity tracking",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-002: User Authentication",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-001"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "User Authentication",
+        "userRole": "Registered User"
+      },
+      "requirementDetails": {
+        "userStory": "As a registered user, I want to securely log in to my account using my preferred authentication method, so that I can access my bookings and personal information",
+        "acceptanceCriteria": [
+          "Support multiple authentication methods: email/password, social login, magic link, SMS OTP, biometric",
+          "Validate credentials against securely hashed passwords",
+          "Generate encrypted session token with user ID, role, expiration",
+          "Store session token in HTTP-only, secure, SameSite cookie for web",
+          "Return session token in API response for mobile secure storage",
+          "Extend session to 30 days with 'Remember Me' (configurable to 400 days for corporate)",
+          "Lock account for 30 minutes after 5 failed login attempts in 15 minutes",
+          "Send notification email for login from new device or location",
+          "Auto-logout and redirect to login page when session expires",
+          "Record login activity with timestamp, device, IP, location for audit"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-004",
+      "name": "Corporate Single Sign-On (SSO)",
+      "description": "Enterprise SSO integration supporting SAML 2.0 and OAuth 2.0/OpenID Connect for corporate identity providers with automatic account provisioning and session management",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-004: Corporate Single Sign-On (SSO)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-002",
+        "R-UM-016"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "Corporate User Authentication",
+        "userRole": "Corporate Employee"
+      },
+      "requirementDetails": {
+        "userStory": "As a corporate employee, I want to log in using my company credentials, so that I don't need to manage separate passwords and can comply with corporate security policies",
+        "acceptanceCriteria": [
+          "Support SAML 2.0 and OAuth 2.0/OpenID Connect protocols for corporate identity providers",
+          "Redirect corporate user to identity provider's login page",
+          "Receive and validate authentication assertion with user identity and attributes",
+          "Validate signature and expiration of SSO assertion",
+          "Auto-create account and assign to corporate organization on first SSO login",
+          "Auto-logout and redirect to SSO login when corporate session expires",
+          "Deny access when corporate administrator disables user in identity provider",
+          "Display error message and corporate IT helpdesk contact when SSO fails"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-010",
+      "name": "Account Security Management",
+      "description": "Comprehensive account security settings including password management, active session management, login history, suspicious activity alerts, and account deactivation with session invalidation",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-010: Account Security Management",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-002"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Session Management",
+        "userRole": "Registered User"
+      },
+      "requirementDetails": {
+        "userStory": "As a user, I want to manage my account security settings and monitor account activity, so that I can protect my account from unauthorized access",
+        "acceptanceCriteria": [
+          "Display security settings: change password, update email/phone, manage sessions, view login history",
+          "Require current password verification before allowing password change",
+          "Enforce password strength requirements (min 8 chars, mix of uppercase, lowercase, numbers, special chars)",
+          "Invalidate all existing sessions except current when password changed, send confirmation email",
+          "Display active sessions with device type, browser, OS, IP, location, last activity timestamp",
+          "Invalidate specific session token and logout user on that device when session terminated",
+          "Invalidate all session tokens except current when 'Log out all devices' selected",
+          "Display last 50 login attempts with timestamp, device, location, success/failure status",
+          "Send email alert with details and account security link when suspicious login activity detected",
+          "Verify no active bookings, mark account inactive, send confirmation email when account deactivation requested"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-013",
+      "name": "Privacy Controls and Data Management",
+      "description": "GDPR/CCPA-compliant privacy controls including data visibility settings, partner data sharing opt-out, marketing opt-out, data export, account deletion with grace period, cookie preferences, and clear privacy policy",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-013: Privacy Controls and Data Management",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Privacy Compliance",
+        "userRole": "All Users"
+      },
+      "requirementDetails": {
+        "userStory": "As a user concerned about privacy, I want to control how my personal data is used and shared, so that I can protect my privacy while using the platform",
+        "acceptanceCriteria": [
+          "Display controls for data visibility, location tracking, data sharing, marketing communications",
+          "Not share personal information with third parties (except service delivery: payment, insurance) when opted out of data sharing",
+          "Suppress promotional emails, SMS, push notifications while continuing transactional communications when opted out of marketing",
+          "Generate machine-readable export (JSON/CSV) with all personal info, bookings, payments, communications within 30 days",
+          "Verify no active bookings or outstanding payments before proceeding with account deletion",
+          "Provide 30-day grace period for account restoration when account deletion confirmed",
+          "Permanently delete account and personal data after grace period, retain only legally required info",
+          "Send confirmation email explaining retained data and reasons when account deleted",
+          "Respect user choices for analytics, advertising, functional cookies when managing cookie preferences",
+          "Display privacy policy in clear, accessible language with sections on data collection, usage, sharing, user rights"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-015",
+      "name": "Decentralized Identity (DID) Integration",
+      "description": "Blockchain-based portable identity supporting W3C DID standards, verifiable credentials, cryptographic signature verification, portable reputation scores, selective disclosure, and redundant verification skip",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-015: Decentralized Identity (DID) Integration",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-007",
+        "R-UM-008"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "DID-Based Instant Verification",
+        "userRole": "Tech-Savvy Early Adopter"
+      },
+      "requirementDetails": {
+        "userStory": "As a user who rents from multiple platforms, I want to use a portable digital identity, so that I can build a reputation that follows me across services and skip redundant verifications",
+        "acceptanceCriteria": [
+          "Support W3C DID standards and common wallet providers (uPort, Civic, Microsoft ION)",
+          "Verify cryptographic signatures on verifiable credentials without accessing raw personal data",
+          "Validate credential authenticity by checking issuer signature and blockchain anchor",
+          "Display portable reputation score from other platforms and use for trust decisions",
+          "Issue verifiable credentials representing rental history and reliability when user builds reputation",
+          "Support selective disclosure allowing users to prove attributes (e.g., 'over 25') without revealing exact data",
+          "Skip redundant verification steps (license upload, KYC) when equivalent DID credentials validated",
+          "Stop accessing DID-based credentials and fall back to traditional verification when user revokes DID access"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-018",
+      "name": "Accessibility Compliance",
+      "description": "Screen reader compatibility with semantic HTML and ARIA labels, full keyboard navigation, sufficient color contrast (WCAG AA 4.5:1), font size preference support, descriptive alt text for images, captions/transcripts for video, proper form label association, clear focus indicators, voice control support, text alternatives for non-text content, screen reader error announcements, and WCAG 2.1 Level AA compliance",
+      "category": "Security",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-18: Accessibility Compliance",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Accessible Search",
+        "userRole": "User with Disabilities"
+      },
+      "requirementDetails": {
+        "userStory": "As a user with disabilities, I want an accessible search interface, so that I can search for vehicles independently using assistive technologies",
+        "acceptanceCriteria": [
+          "Provide screen reader compatibility with proper semantic HTML and ARIA labels",
+          "Support full keyboard navigation for all search functions",
+          "Maintain sufficient color contrast ratios (WCAG AA minimum 4.5:1)",
+          "Respect user font size preferences and support text scaling",
+          "Provide descriptive alt text for all vehicle images",
+          "Provide captions and transcripts for video content",
+          "Ensure form labels are properly associated with input fields",
+          "Provide clear focus indicators for keyboard navigation",
+          "Support voice control for search on compatible devices",
+          "Provide text alternatives for all non-text content",
+          "Ensure error messages are announced to screen readers",
+          "Meet WCAG 2.1 Level AA compliance standards"
+        ]
+      }
+    },
+    {
+      "id": "R-MS-011",
+      "name": "API Key Management and Security",
+      "description": "Store mapping API keys in environment variables, use separate keys for dev/prod, implement key rotation policies (annually), monitor API usage and costs, set usage quotas and alerts, restrict keys to specific domains/IPs, implement rate limiting, log all API requests, alert on budget threshold exceeded, and document key compromise response procedures",
+      "category": "Security",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 11: API Key Management and Security",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "API Security",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure management of mapping service API keys, so that unauthorized usage is prevented and costs are controlled",
+        "acceptanceCriteria": [
+          "Store mapping API keys in environment variables, not in code",
+          "Use separate API keys for development and production environments",
+          "Implement API key rotation policies (minimum annually)",
+          "Monitor API usage and costs through provider dashboards",
+          "Set usage quotas and alerts for cost control",
+          "Restrict API keys to specific domains and IP addresses",
+          "Implement rate limiting to prevent API abuse",
+          "Log all mapping API requests for audit and debugging",
+          "Alert operations team when API usage exceeds budget threshold",
+          "Have documented procedures for API key compromise response"
+        ]
+      }
+    },
+    {
+      "id": "R-MS-013",
+      "name": "Privacy and Permissions",
+      "description": "Request location permission with clear explanation, provide value before requesting permission, respect permission denial without degrading core functionality, allow permission revocation, minimize location data retention (delete after session unless consent), anonymize location data for analytics, comply with GDPR/CCPA, provide transparency in privacy policy, no third-party sharing without consent, and allow location history deletion",
+      "category": "Security",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 13: Privacy and Permissions",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-MS-002"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Privacy Compliance",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want control over my location data, so that my privacy is respected and I understand how my location is used",
+        "acceptanceCriteria": [
+          "Request location permission with clear explanation of usage",
+          "Provide value before requesting location permission",
+          "Respect location permission denial without degrading core functionality",
+          "Allow users to revoke location permission at any time",
+          "Minimize location data retention (delete after session unless consent given)",
+          "Anonymize location data for analytics purposes",
+          "Comply with GDPR and CCPA location data requirements",
+          "Provide transparency about location data usage in privacy policy",
+          "Not share location data with third parties without explicit consent",
+          "Allow users to delete their location history"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-014",
+      "name": "Regulatory Compliance",
+      "description": "Obtain explicit opt-in consent for marketing, provide clear opt-out mechanisms, honor opt-out within 10 business days (CAN-SPAM), include sender identification, maintain consent records for audit, comply with GDPR (EU), TCPA (US SMS), CASL (Canada), respect quiet hours (9 PM - 8 AM local), provide data portability for preferences, allow notification history deletion, and document compliance in privacy policy",
+      "category": "Security",
+      "functionalArea": "Notification Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 14: Regulatory Compliance",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-009"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Compliance Enforcement",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want notification practices to comply with regulations, so that the platform avoids penalties and maintains customer trust",
+        "acceptanceCriteria": [
+          "Obtain explicit opt-in consent before sending marketing communications",
+          "Provide clear opt-out mechanisms in all marketing messages",
+          "Honor opt-out requests within 10 business days (CAN-SPAM requirement)",
+          "Include sender identification in all messages",
+          "Maintain consent records for audit purposes",
+          "Comply with GDPR requirements for EU customers",
+          "Comply with TCPA requirements for US SMS",
+          "Comply with CASL requirements for Canadian customers",
+          "Respect quiet hours (no SMS/push between 9 PM - 8 AM local time)",
+          "Provide data portability for notification preferences",
+          "Allow users to delete their notification history",
+          "Document compliance procedures in privacy policy"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-008",
+      "name": "Payment Fraud Prevention System",
+      "description": "Implement fraud detection with gateway-provided features, 3D Secure, AVS checks, velocity limits, and device fingerprinting",
+      "category": "Security",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 6: Fraud Prevention",
+          "requirementId": "R-PG-008"
+        }
+      ],
+      "dependencies": [
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want to detect and prevent fraudulent transactions, so that chargebacks are minimized and legitimate customers are protected.",
+        "acceptanceCriteria": [
+          "Enables gateway-provided fraud detection features (Stripe Radar, PayPal Fraud Protection)",
+          "Implements 3D Secure authentication for high-value transactions (>$500)",
+          "Performs Address Verification System (AVS) checks for card payments",
+          "Implements velocity checks to limit transaction frequency per user",
+          "Maintains blacklist of fraudulent users and payment methods",
+          "Flags transactions for manual review when fraud is detected",
+          "Implements device fingerprinting to identify suspicious patterns",
+          "Monitors for unusual booking patterns (multiple bookings from same IP)",
+          "Requires additional verification for high-risk transactions",
+          "Tracks chargeback rates and fraud losses for continuous improvement"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-001",
+      "name": "Multi-Channel Authentication",
+      "description": "Support multiple authentication methods including email/password, social login, and two-factor authentication",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-1: Multi-Channel Authentication",
+          "requirementId": "R-SEC-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user of the car rental platform, I want my personal information, payment data, and account to be protected by robust security measures, so that I can use the service with confidence and without fear of fraud or data breaches.",
+        "acceptanceCriteria": [
+          "Email and password authentication with strong password requirements",
+          "Social login (Google, Facebook, Apple) integration",
+          "Two-factor authentication (2FA) option for enhanced security",
+          "Password reset via secure email verification",
+          "Account lockout after 5 failed login attempts"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-002",
+      "name": "Strong Password Security",
+      "description": "Enforce strong password requirements and secure storage with bcrypt or Argon2 hashing",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-2: Password Security",
+          "requirementId": "R-SEC-002"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my password to be stored securely to protect my account.",
+        "acceptanceCriteria": [
+          "Minimum password length of 8 characters",
+          "Passwords must include uppercase, lowercase, number, and special character",
+          "Passwords are hashed using bcrypt or Argon2 with appropriate cost factor",
+          "Passwords are salted with unique salt per user",
+          "Password history prevents reuse of last 5 passwords"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-003",
+      "name": "JWT Token Security",
+      "description": "Use JSON Web Tokens for stateless authentication with appropriate security controls and expiration",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-3: JWT Token Security",
+          "requirementId": "R-SEC-003"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure token-based authentication for scalable, stateless sessions.",
+        "acceptanceCriteria": [
+          "JWTs are signed with strong secret keys (minimum 256 bits)",
+          "Access tokens expire within 15 minutes",
+          "Refresh tokens expire within 7 days",
+          "Tokens include user ID, roles, and expiration claims",
+          "Token revocation mechanism exists for compromised accounts"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-005",
+      "name": "Digital KYC and Liveness Checks",
+      "description": "Implement digital Know Your Customer processes with liveness detection to prevent fraud",
+      "category": "Security",
+      "functionalArea": "Identity Verification",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-5: Digital KYC and Liveness Checks",
+          "requirementId": "R-SEC-005"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want digital KYC with liveness detection to prevent identity fraud.",
+        "acceptanceCriteria": [
+          "OCR scans driver's licenses and passports automatically",
+          "Liveness checks detect live humans vs photos or videos",
+          "Facial recognition matches selfie to ID photo",
+          "Passive liveness checks analyze micro-reflections",
+          "Failed verification attempts are logged and reviewed"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-007",
+      "name": "Resource-Level Authorization",
+      "description": "Verify user permissions to access specific resources (bookings, vehicles, reports) on every request",
+      "category": "Security",
+      "functionalArea": "Authorization",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-7: Resource-Level Authorization",
+          "requirementId": "R-SEC-007"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-006"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my data protected so only I can access my bookings and information.",
+        "acceptanceCriteria": [
+          "Users can only view their own bookings (unless admin)",
+          "Suppliers can only manage their own vehicles",
+          "Fleet managers can only access their assigned locations",
+          "API endpoints verify resource ownership before returning data",
+          "Authorization checks occur on every request"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-008",
+      "name": "API Authentication and Authorization",
+      "description": "Authenticate and authorize all API requests with API keys or OAuth tokens",
+      "category": "Security",
+      "functionalArea": "API Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-8: API Authentication and Authorization",
+          "requirementId": "R-SEC-008"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure API access to prevent unauthorized usage.",
+        "acceptanceCriteria": [
+          "API keys or OAuth tokens required for all API access",
+          "API rate limiting prevents abuse",
+          "API permissions are scoped to specific operations",
+          "API access is logged for audit purposes",
+          "Compromised API keys can be revoked immediately"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-009",
+      "name": "Encryption in Transit (TLS/HTTPS)",
+      "description": "Encrypt all data transmitted between clients and servers using TLS 1.2 or higher",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-9: Encryption in Transit",
+          "requirementId": "R-SEC-009"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my data encrypted during transmission to prevent interception.",
+        "acceptanceCriteria": [
+          "TLS 1.2 or higher is enforced for all connections",
+          "HTTP requests are automatically redirected to HTTPS",
+          "Strong cipher suites are configured (no weak ciphers)",
+          "Valid SSL/TLS certificates from trusted authorities",
+          "Certificate expiration monitoring and automatic renewal"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-010",
+      "name": "Encryption at Rest",
+      "description": "Encrypt sensitive data at rest in databases and file storage using AES-256",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-10: Encryption at Rest",
+          "requirementId": "R-SEC-010"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want data encrypted at rest to protect against storage compromise.",
+        "acceptanceCriteria": [
+          "Database encryption is enabled for all sensitive tables",
+          "Payment information is encrypted with strong algorithms (AES-256)",
+          "Personal identification documents are encrypted in storage",
+          "Encryption keys are managed securely (key management service)",
+          "Encryption key rotation occurs annually"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-011",
+      "name": "PII Protection",
+      "description": "Implement appropriate protection measures for Personally Identifiable Information with encryption and access logging",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-11: PII Protection",
+          "requirementId": "R-SEC-011"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-009",
+        "R-SEC-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my personal information protected according to privacy regulations.",
+        "acceptanceCriteria": [
+          "PII is encrypted at rest and in transit",
+          "PII access is logged and audited",
+          "PII is masked in logs and error messages",
+          "PII is segregated from non-sensitive data where possible",
+          "PII retention policies are enforced automatically"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-012",
+      "name": "Payment Data Security (PCI-DSS)",
+      "description": "Comply with PCI-DSS requirements for payment card data handling",
+      "category": "Security",
+      "functionalArea": "Payment Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-12: Payment Data Security",
+          "requirementId": "R-SEC-012"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want PCI-DSS compliance to handle payment data securely.",
+        "acceptanceCriteria": [
+          "Credit card numbers are never stored in plain text",
+          "Hosted checkout pages reduce PCI scope",
+          "Payment tokenization is used for recurring charges",
+          "PCI-DSS compliance is validated annually",
+          "Payment data is segregated from other application data"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-013",
+      "name": "Input Validation and Sanitization",
+      "description": "Validate and sanitize all user input to prevent injection attacks (SQL, XSS, command injection)",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-13: Input Validation and Sanitization",
+          "requirementId": "R-SEC-013"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want input validation to prevent common attacks.",
+        "acceptanceCriteria": [
+          "All user input is validated against expected formats",
+          "SQL injection is prevented through parameterized queries",
+          "XSS attacks are prevented through output encoding",
+          "File uploads are validated for type and size",
+          "Input validation occurs on both client and server"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-014",
+      "name": "CSRF Protection",
+      "description": "Implement Cross-Site Request Forgery protection for all state-changing operations",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-14: CSRF Protection",
+          "requirementId": "R-SEC-014"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want protection from CSRF attacks that could trick me into unwanted actions.",
+        "acceptanceCriteria": [
+          "CSRF tokens are generated for each user session",
+          "CSRF tokens are validated on all POST, PUT, DELETE requests",
+          "CSRF tokens are included in forms and AJAX requests",
+          "Failed CSRF validation results in request rejection",
+          "CSRF protection is tested regularly"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-015",
+      "name": "Rate Limiting and Throttling",
+      "description": "Implement rate limiting to prevent abuse and denial-of-service attacks",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-15: Rate Limiting and Throttling",
+          "requirementId": "R-SEC-015"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want rate limiting to prevent brute force and DoS attacks.",
+        "acceptanceCriteria": [
+          "API endpoints have appropriate rate limits (e.g., 100 requests/minute)",
+          "Login attempts are rate limited (5 attempts per 15 minutes)",
+          "Password reset requests are rate limited",
+          "Rate limit violations return 429 Too Many Requests",
+          "Rate limits are configurable per endpoint and user type"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-016",
+      "name": "Security Headers",
+      "description": "Implement security headers to protect against common web vulnerabilities",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-16: Security Headers",
+          "requirementId": "R-SEC-016"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want security headers for defense-in-depth.",
+        "acceptanceCriteria": [
+          "Content-Security-Policy header prevents XSS",
+          "X-Frame-Options header prevents clickjacking",
+          "X-Content-Type-Options header prevents MIME sniffing",
+          "Strict-Transport-Security header enforces HTTPS",
+          "Referrer-Policy header controls referrer information"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-017",
+      "name": "Security Event Logging",
+      "description": "Log all security-relevant events for audit and forensic purposes",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-17: Security Event Logging",
+          "requirementId": "R-SEC-017"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want comprehensive security logging for incident response.",
+        "acceptanceCriteria": [
+          "Login attempts (successful and failed) are logged",
+          "Authorization failures are logged",
+          "Data access to sensitive resources is logged",
+          "Configuration changes are logged",
+          "Logs include timestamp, user ID, IP address, and action"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-018",
+      "name": "Blockchain Audit Trail",
+      "description": "Use blockchain for immutable audit trails of critical events (bookings, payments, damage reports)",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-18: Blockchain Audit Trail",
+          "requirementId": "R-SEC-018"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-017"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want blockchain audit trails for tamper-proof records.",
+        "acceptanceCriteria": [
+          "Critical events (bookings, payments, damage reports) are hashed and stored on-chain",
+          "Blockchain records are immutable and tamper-evident",
+          "Audit trail provides chain of custody for disputes",
+          "Blockchain records are accessible for verification",
+          "Blockchain implementation does not impact performance"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-019",
+      "name": "Log Protection",
+      "description": "Protect log files from unauthorized access and tampering with access controls and integrity verification",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-19: Log Protection",
+          "requirementId": "R-SEC-019"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-017"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want protected logs to ensure audit trails remain reliable.",
+        "acceptanceCriteria": [
+          "Logs are stored in secure, access-controlled locations",
+          "Log access is restricted to authorized personnel",
+          "Log integrity is verified through checksums or signatures",
+          "Logs are backed up regularly",
+          "Log retention policies comply with regulatory requirements"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-022",
+      "name": "Account Takeover Prevention",
+      "description": "Detect and prevent account takeover attempts with device verification and unusual activity alerts",
+      "category": "Security",
+      "functionalArea": "Fraud Prevention",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-22: Account Takeover Prevention",
+          "requirementId": "R-SEC-022"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want protection from unauthorized access to my account.",
+        "acceptanceCriteria": [
+          "Login from new devices triggers verification",
+          "Unusual login patterns (location, time) trigger alerts",
+          "Password changes require current password or email verification",
+          "Email/phone changes require verification",
+          "Users are notified of security-relevant account changes"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-023",
+      "name": "Security Testing",
+      "description": "Conduct regular security testing including automated scanning and annual penetration testing",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-23: Security Testing",
+          "requirementId": "R-SEC-023"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want regular security testing to identify vulnerabilities.",
+        "acceptanceCriteria": [
+          "Automated security scanning runs with each deployment",
+          "Penetration testing occurs at least annually",
+          "Dependency vulnerability scanning runs daily",
+          "Security findings are prioritized and remediated",
+          "Security test results are documented and tracked"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-024",
+      "name": "Dependency Management",
+      "description": "Manage third-party dependencies to prevent known vulnerabilities with scanning and patching",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-24: Dependency Management",
+          "requirementId": "R-SEC-024"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want proactive dependency management to reduce vulnerability risk.",
+        "acceptanceCriteria": [
+          "Dependency versions are tracked and documented",
+          "Known vulnerabilities are identified through scanning",
+          "Critical vulnerabilities are patched within 7 days",
+          "High-severity vulnerabilities are patched within 30 days",
+          "Dependency updates are tested before deployment"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-025",
+      "name": "Incident Response Plan",
+      "description": "Maintain documented incident response procedures for security breaches with breach notification compliance",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-25: Incident Response",
+          "requirementId": "R-SEC-025"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want incident response procedures to minimize breach damage.",
+        "acceptanceCriteria": [
+          "Incident response plan is documented and tested",
+          "Security incidents are detected and escalated promptly",
+          "Incident response team is identified and trained",
+          "Breach notification procedures comply with regulations",
+          "Post-incident reviews identify improvements"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-027",
+      "name": "Smart Contract Security",
+      "description": "Ensure smart contracts are secure and audited before deployment with proper access controls",
+      "category": "Security",
+      "functionalArea": "Advanced Security",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-27: Smart Contract Security",
+          "requirementId": "R-SEC-027"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator using blockchain, I want secure smart contracts to prevent financial losses.",
+        "acceptanceCriteria": [
+          "Smart contracts undergo security audits before deployment",
+          "Smart contracts are tested extensively",
+          "Smart contract upgradability is considered in design",
+          "Smart contract access controls are properly implemented",
+          "Smart contract events are monitored for anomalies"
+        ]
+      }
+    }
+  ]
+}

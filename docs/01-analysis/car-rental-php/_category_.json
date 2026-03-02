@@ -1,0 +1,8 @@
+{
+  "label": "Car Rental PHP",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Analysis of the car-rental-php project - a simple PHP-based car rental system demonstrating monolithic architecture and MVC patterns."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Business Stakeholders",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Business stakeholders who have indirect relationships with the car rental system through partnerships, integrations, and service provision."
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "category": "Integration",
+  "total_features": 12,
+  "features": [
+    {
+      "id": "R-MS-001",
+      "name": "Core Mapping Integration",
+      "description": "Integrate with Google Maps Platform for interactive maps with custom vehicle markers, zoom/pan controls, marker clustering, real-time updates, alternative provider support (Mapbox, OpenStreetMap), responsive rendering, map tile caching, and graceful failure handling",
+      "category": "Integration",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 1: Core Mapping Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Map View",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to view available vehicles on an interactive map, so that I can visually discover vehicles near my location or destination",
+        "acceptanceCriteria": [
+          "Integrate with Google Maps Platform for mapping services",
+          "Display interactive maps with custom markers for vehicle locations",
+          "Support map zoom, pan, and marker clustering for dense areas",
+          "Use custom marker icons to differentiate vehicle types (sedan, SUV, van)",
+          "Display vehicle details in popup when user clicks marker",
+          "Update vehicle markers in real-time as availability changes",
+          "Support alternative mapping providers (Mapbox, OpenStreetMap) for cost optimization",
+          "Render maps responsively on mobile and desktop devices",
+          "Cache map tiles for improved performance",
+          "Handle mapping service failures gracefully with fallback to cached data"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-002",
+      "name": "Marketing Email Integration",
+      "description": "Integrate with marketing email platform (Mailchimp, SendGrid Marketing, Brevo) for promotional campaigns with customer list segmentation, campaign builder, A/B testing, tracking metrics (open/click/conversion rates), honoring unsubscribe requests, maintaining do-not-email list, automated workflows, GDPR compliance, and analytics dashboard",
+      "category": "Integration",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 2: Marketing Email Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-001"
+      ],
+      "workflowContext": {
+        "workflow": "Marketing Campaigns",
+        "step": "Campaign Execution",
+        "userRole": "Marketing Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a marketing team member, I want to send promotional campaigns to customers, so that I can drive engagement and bookings through targeted offers",
+        "acceptanceCriteria": [
+          "Integrate with marketing email platform (Mailchimp, SendGrid Marketing, Brevo)",
+          "Support customer list segmentation by booking history, location, preferences",
+          "Provide campaign builder with template management",
+          "Support A/B testing for email campaigns",
+          "Track email open rates, click rates, and conversion rates",
+          "Honor unsubscribe requests immediately (within 10 business days per CAN-SPAM)",
+          "Maintain do-not-email list and check before sending",
+          "Support automated email workflows (welcome series, abandoned booking)",
+          "Comply with GDPR consent requirements for EU customers",
+          "Provide analytics dashboard for campaign performance"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-003",
+      "name": "SMS Notification Integration",
+      "description": "Integrate with SMS gateway (Twilio, Vonage, AWS SNS) for booking confirmations, pickup reminders (24h and 1h before), vehicle ready notifications, 2FA codes, international delivery, delivery receipt tracking, 160-character optimization, sender identification, clear opt-out instructions, immediate opt-out honoring, explicit opt-in for marketing, and TCPA compliance",
+      "category": "Integration",
+      "functionalArea": "Notification Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 3: SMS Notification Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow, Vehicle Pickup Workflow",
+        "step": "SMS Notification",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to receive text messages for time-sensitive notifications, so that I don't miss important updates about my booking",
+        "acceptanceCriteria": [
+          "Integrate with SMS gateway provider (Twilio, Vonage, AWS SNS)",
+          "Send SMS for booking confirmations with booking reference",
+          "Send SMS reminder 24 hours before pickup",
+          "Send SMS reminder 1 hour before pickup",
+          "Send SMS when vehicle is ready for pickup",
+          "Send SMS for two-factor authentication codes",
+          "Support international SMS delivery",
+          "Track SMS delivery receipts",
+          "Keep SMS messages under 160 characters when possible",
+          "Include sender identification in all SMS messages",
+          "Provide clear opt-out instructions in SMS (e.g., 'Reply STOP to unsubscribe')",
+          "Honor opt-out requests immediately",
+          "Obtain explicit opt-in consent before sending marketing SMS",
+          "Comply with TCPA regulations for US customers"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-004",
+      "name": "Mobile Push Notification Integration",
+      "description": "Integrate Firebase Cloud Messaging (FCM) for Android and Apple Push Notification Service (APNs) for iOS to send push notifications for booking status changes, payment confirmations, pickup reminders, with rich notifications, deep linking, delivery tracking, notification grouping, customizable preferences, quiet hours respect, permission handling, silent notifications, and A/B testing",
+      "category": "Integration",
+      "functionalArea": "Notification Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 4: Mobile Push Notification Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Push Notification",
+        "userRole": "Mobile App User"
+      },
+      "requirementDetails": {
+        "userStory": "As a mobile app user, I want to receive push notifications for booking updates, so that I stay informed about my rental in real-time",
+        "acceptanceCriteria": [
+          "Integrate Firebase Cloud Messaging (FCM) for Android push notifications",
+          "Integrate Apple Push Notification Service (APNs) for iOS push notifications",
+          "Send push notification for booking status changes",
+          "Send push notification for payment confirmations",
+          "Send push notification for pickup reminders",
+          "Support rich notifications with images and action buttons",
+          "Implement deep linking to relevant app screens from notifications",
+          "Track notification delivery and engagement metrics",
+          "Support notification grouping and threading",
+          "Allow users to customize notification preferences in app settings",
+          "Respect device notification settings and quiet hours",
+          "Handle notification permission denial gracefully",
+          "Support silent notifications for background data updates",
+          "Implement A/B testing for notification content"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-005",
+      "name": "Web Push Notification Integration",
+      "description": "Implement web push notifications using service workers with permission request, booking confirmations and updates, rich notifications with images/actions, deep links to relevant pages, desktop and mobile browser support, browser settings respect, engagement tracking, opt-out mechanism, and graceful permission denial handling",
+      "category": "Integration",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 5: Web Push Notification Integration",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Web Push Notification",
+        "userRole": "Web User"
+      },
+      "requirementDetails": {
+        "userStory": "As a web user, I want to receive browser notifications for booking updates, so that I stay informed without needing the mobile app",
+        "acceptanceCriteria": [
+          "Implement web push notifications using service workers",
+          "Request notification permission with clear value proposition",
+          "Send web push for booking confirmations and updates",
+          "Support rich notifications with images and actions",
+          "Handle notification clicks with deep links to relevant pages",
+          "Work on desktop and mobile browsers",
+          "Respect browser notification settings",
+          "Track web push engagement metrics",
+          "Provide opt-out mechanism in notification settings",
+          "Handle permission denial without degrading user experience"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-012",
+      "name": "Webhook Integration for Delivery Status",
+      "description": "Configure webhook endpoints for each notification provider, verify webhook signatures, process delivery confirmation webhooks, process bounce/complaint/unsubscribe event webhooks, update notification status in database, trigger follow-up actions based on events, log all webhook events for audit, and handle duplicate webhook events gracefully",
+      "category": "Integration",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 12: Webhook Integration for Delivery Status",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-001",
+        "R-NS-003"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Delivery Status Tracking",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want to receive delivery status updates from notification providers, so that I can track delivery success and troubleshoot failures",
+        "acceptanceCriteria": [
+          "Configure webhook endpoints for each notification provider",
+          "Verify webhook signatures to prevent spoofing",
+          "Process delivery confirmation webhooks",
+          "Process bounce notification webhooks",
+          "Process complaint notification webhooks",
+          "Process unsubscribe event webhooks",
+          "Update notification status in database based on webhooks",
+          "Trigger follow-up actions based on webhook events",
+          "Log all webhook events for audit",
+          "Handle duplicate webhook events gracefully"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-001",
+      "name": "Stripe Payment Gateway Integration",
+      "description": "Integrate Stripe payment gateway for secure card processing with tokenization, 3D Secure authentication for high-value transactions, and multi-currency support",
+      "category": "Integration",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 1: Traditional Payment Gateway Integration",
+          "requirementId": "R-PG-001"
+        }
+      ],
+      "dependencies": [
+        "R-PS-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want to pay for my rental using credit/debit cards through secure payment gateways, so that my payment information is protected and transactions are processed reliably.",
+        "acceptanceCriteria": [
+          "System integrates with Stripe payment gateway for card processing",
+          "Uses tokenization to avoid storing card numbers",
+          "Receives payment confirmation within 5 seconds",
+          "Supports multi-currency payment processing",
+          "Implements 3D Secure authentication for transactions above $500",
+          "Displays user-friendly error messages for payment failures",
+          "Stores payment tokens securely for repeat transactions",
+          "Uses hosted checkout pages to minimize PCI compliance scope"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-002",
+      "name": "PayPal Payment Gateway Integration",
+      "description": "Integrate PayPal for alternative payment processing with support for one-time payments and recurring billing for subscriptions",
+      "category": "Integration",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 1: Traditional Payment Gateway Integration",
+          "requirementId": "R-PG-002"
+        }
+      ],
+      "dependencies": [
+        "R-PS-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want to pay for my rental using PayPal, so that I can use my preferred payment method without entering card details.",
+        "acceptanceCriteria": [
+          "System integrates with PayPal for alternative payment processing",
+          "Supports both one-time payments and recurring billing",
+          "Processes payments securely through PayPal API",
+          "Handles PayPal payment confirmations",
+          "Displays PayPal as payment option at checkout"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-003",
+      "name": "Apple Pay Mobile Wallet Integration",
+      "description": "Integrate Apple Pay for iOS mobile app payments with biometric authentication and tokenized payment credentials for quick checkout",
+      "category": "Integration",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 2: Mobile Wallet Integration",
+          "requirementId": "R-PG-003"
+        }
+      ],
+      "dependencies": [
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a mobile app user, I want to pay using Apple Pay, so that I can complete checkout quickly with biometric authentication.",
+        "acceptanceCriteria": [
+          "System integrates Apple Pay for iOS mobile app payments",
+          "Displays wallet button prominently on checkout when available",
+          "Processes tokenized payment credentials from Apple Pay",
+          "Completes payment within 3 seconds of biometric authentication",
+          "Supports Apple Pay for initial booking and additional charges",
+          "Handles payment failures gracefully with fallback to card entry",
+          "Enables one-tap checkout for saved Apple Pay payment methods"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-005",
+      "name": "Crypto-Fiat Hybrid Gateway Integration",
+      "description": "Integrate crypto-fiat gateway (BitPay, Coinbase Commerce) for cryptocurrency payments with automatic fiat conversion to eliminate volatility risk",
+      "category": "Integration",
+      "functionalArea": "Payment Processing",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 3: Crypto-Fiat Hybrid Gateway Integration",
+          "requirementId": "R-PG-005"
+        }
+      ],
+      "dependencies": [
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a crypto-wealthy customer, I want to pay for rentals using cryptocurrency with automatic fiat conversion, so that I can use my digital assets without volatility risk to the platform.",
+        "acceptanceCriteria": [
+          "System integrates crypto-fiat gateway (BitPay, Coinbase Commerce)",
+          "Accepts Bitcoin (BTC) and Ethereum (ETH) as payment methods",
+          "Generates unique payment address for crypto payments",
+          "Monitors blockchain for payment confirmation",
+          "Executes instant market sell order to convert to fiat upon receipt",
+          "Settles converted fiat to company bank account within 24 hours",
+          "Displays real-time exchange rates and final fiat amount",
+          "Handles blockchain transaction delays with appropriate timeouts",
+          "Provides alternative payment options if crypto payment fails",
+          "Maintains zero volatility exposure through immediate conversion"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-001",
+      "name": "WeChat Mini-Program Development",
+      "description": "Develop WeChat Mini-Program for car rental platform using WXML, WXSS, and JavaScript with optimized performance and lazy loading",
+      "category": "Integration",
+      "functionalArea": "Super-App Integration",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 1: WeChat Mini-Program Development",
+          "requirementId": "R-SA-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a Chinese customer, I want to access car rental services within WeChat, so that I can book vehicles without downloading a separate app.",
+        "acceptanceCriteria": [
+          "Develops WeChat Mini-Program for car rental platform",
+          "Uses WXML for Mini-Program structure and WXSS for styling",
+          "Implements JavaScript logic for Mini-Program functionality",
+          "Exposes backend APIs for Mini-Program consumption",
+          "Submits Mini-Program for WeChat platform approval",
+          "Maintains Mini-Program compliance with WeChat guidelines",
+          "Supports Mini-Program updates without user action",
+          "Optimizes Mini-Program size (under 2MB initial package)",
+          "Implements lazy loading for Mini-Program pages",
+          "Tests Mini-Program on WeChat Developer Tools before deployment"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-011",
+      "name": "GrabPay Payment Integration",
+      "description": "Integrate GrabPay payment gateway with support for wallet, linked payment methods, and GrabRewards points earning",
+      "category": "Integration",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 11: GrabPay Payment Integration",
+          "requirementId": "R-SA-011"
+        }
+      ],
+      "dependencies": [
+        "R-SA-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a Grab user, I want to pay for rentals using GrabPay, so that I can use my existing payment method and earn Grab rewards.",
+        "acceptanceCriteria": [
+          "Integrates GrabPay payment gateway",
+          "Processes payments through GrabPay API",
+          "Supports GrabPay wallet and linked payment methods",
+          "Displays GrabPay as payment option for Grab users",
+          "Handles GrabPay payment confirmations",
+          "Processes refunds through GrabPay",
+          "Syncs payment status with Grab ecosystem",
+          "Supports GrabRewards points earning",
+          "Handles GrabPay payment failures gracefully",
+          "Maintains payment security per GrabPay requirements"
+        ]
+      }
+    }
+  ]
+}

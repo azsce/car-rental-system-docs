@@ -1,0 +1,714 @@
+{
+  "category": "Usability",
+  "total_features": 24,
+  "features": [
+    {
+      "id": "R-USE-001",
+      "name": "WCAG 2.1 Level AA Compliance",
+      "description": "Comply with Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility",
+      "category": "Usability",
+      "functionalArea": "Accessibility",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-1: WCAG Compliance",
+          "requirementId": "R-USE-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user of the car rental platform, I want an intuitive, accessible interface that works seamlessly on any device, so that I can complete my tasks efficiently regardless of my abilities or device choice.",
+        "acceptanceCriteria": [
+          "All images have descriptive alt text",
+          "Color contrast ratios meet WCAG AA standards (4.5:1 for normal text)",
+          "All functionality is keyboard accessible",
+          "Focus indicators are visible and clear",
+          "ARIA labels are used appropriately for screen readers"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-002",
+      "name": "Screen Reader Compatibility",
+      "description": "Ensure full compatibility with screen readers including JAWS, NVDA, and VoiceOver",
+      "category": "Usability",
+      "functionalArea": "Accessibility",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-2: Screen Reader Compatibility",
+          "requirementId": "R-USE-002"
+        }
+      ],
+      "dependencies": [
+        "R-USE-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a blind or visually impaired user, I want screen reader compatibility to use the platform effectively.",
+        "acceptanceCriteria": [
+          "Semantic HTML is used throughout",
+          "ARIA landmarks identify page regions",
+          "Form labels are properly associated with inputs",
+          "Dynamic content updates are announced",
+          "Screen reader testing is performed regularly"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-003",
+      "name": "Complete Keyboard Navigation",
+      "description": "Support complete keyboard navigation without requiring a mouse",
+      "category": "Usability",
+      "functionalArea": "Accessibility",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-3: Keyboard Navigation",
+          "requirementId": "R-USE-003"
+        }
+      ],
+      "dependencies": [
+        "R-USE-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user with motor disabilities or keyboard preference, I want full keyboard navigation.",
+        "acceptanceCriteria": [
+          "Tab order follows logical reading order",
+          "All interactive elements are keyboard accessible",
+          "Keyboard shortcuts are documented and consistent",
+          "Focus traps are avoided or properly managed",
+          "Skip navigation links are provided"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-004",
+      "name": "Accessible Mobility Features with Hard Allocation",
+      "description": "Provide guaranteed specific vehicle allocation for accessible vehicles with VIN-locked bookings",
+      "category": "Usability",
+      "functionalArea": "Accessibility",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-4: Accessible Mobility Features",
+          "requirementId": "R-USE-004"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user requiring accessible vehicles, I need guaranteed access to specific vehicles with required modifications.",
+        "acceptanceCriteria": [
+          "Filters for hand controls, wheelchair ramps, and other accessibility equipment",
+          "VIN-locked bookings guarantee specific accessible vehicles",
+          "Hard allocation logic prevents vehicle swapping",
+          "Accessible vehicle availability is clearly indicated",
+          "Booking confirmations specify exact vehicle with accessibility features"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-005",
+      "name": "Text Sizing and Zoom Support",
+      "description": "Support text resizing and browser zoom up to 200% without breaking layout or functionality",
+      "category": "Usability",
+      "functionalArea": "Accessibility",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-5: Text Sizing and Zoom",
+          "requirementId": "R-USE-005"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user with visual impairments, I want to resize text for better readability.",
+        "acceptanceCriteria": [
+          "Text can be resized up to 200% without loss of functionality",
+          "Browser zoom up to 200% maintains usability",
+          "Responsive design adapts to different viewport sizes",
+          "No horizontal scrolling at standard zoom levels",
+          "Text remains readable at all supported sizes"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-006",
+      "name": "Mobile-Responsive Design",
+      "description": "Provide fully responsive design that adapts to all device sizes from smartphones to large desktop monitors",
+      "category": "Usability",
+      "functionalArea": "Mobile-First Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-6: Mobile-Responsive Design",
+          "requirementId": "R-USE-006"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user on any device, I want the interface to adapt seamlessly to my screen size.",
+        "acceptanceCriteria": [
+          "Layout adapts seamlessly to viewport sizes from 320px to 2560px width",
+          "Touch targets are at least 44x44 pixels on mobile",
+          "Text is readable without zooming on mobile devices",
+          "Navigation is optimized for mobile (hamburger menu, bottom navigation)",
+          "Forms are mobile-optimized with appropriate input types"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-007",
+      "name": "Touch-Friendly Interactions",
+      "description": "Provide touch-optimized interactions with adequate touch targets and spacing",
+      "category": "Usability",
+      "functionalArea": "Mobile-First Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-7: Touch-Friendly Interactions",
+          "requirementId": "R-USE-007"
+        }
+      ],
+      "dependencies": [
+        "R-USE-006"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a mobile user, I want touch-friendly interactions to prevent mis-taps.",
+        "acceptanceCriteria": [
+          "Buttons and links have minimum 44x44 pixel touch targets",
+          "Adequate spacing between interactive elements (minimum 8px)",
+          "Swipe gestures are supported where appropriate",
+          "Long-press actions are avoided or have alternatives",
+          "Touch feedback is immediate and clear"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-008",
+      "name": "Mobile-Optimized Forms",
+      "description": "Optimize form inputs for mobile interaction with appropriate input types and autocomplete",
+      "category": "Usability",
+      "functionalArea": "Mobile-First Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-8: Mobile-Optimized Forms",
+          "requirementId": "R-USE-008"
+        }
+      ],
+      "dependencies": [
+        "R-USE-006"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a mobile user, I want optimized forms to reduce typing burden.",
+        "acceptanceCriteria": [
+          "Input types match expected data (tel, email, date, number)",
+          "Autocomplete attributes enable browser auto-fill",
+          "Form fields are large enough for easy tapping",
+          "Validation messages appear near relevant fields",
+          "Multi-step forms show progress and allow navigation"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-009",
+      "name": "PWA Offline Capability",
+      "description": "Provide offline functionality for critical features through Progressive Web App capabilities",
+      "category": "Usability",
+      "functionalArea": "Mobile-First Design",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-9: Offline Capability",
+          "requirementId": "R-USE-009"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user without network connectivity, I want access to critical information offline.",
+        "acceptanceCriteria": [
+          "Service worker caches critical resources",
+          "Users can view booking details offline",
+          "Digital keys work offline via Bluetooth",
+          "Offline actions queue for sync when online",
+          "Clear indicators show online/offline status"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-010",
+      "name": "PWA Installation Support",
+      "description": "Support Progressive Web App installation on mobile and desktop devices",
+      "category": "Usability",
+      "functionalArea": "Progressive Web App",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-10: PWA Installation",
+          "requirementId": "R-USE-010"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want to install the app for app-like experience without app store downloads.",
+        "acceptanceCriteria": [
+          "Web app manifest is properly configured",
+          "Service worker is registered and functional",
+          "Install prompts appear at appropriate times",
+          "Installed app launches in standalone mode",
+          "App icon and splash screen are configured"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-011",
+      "name": "Native Hardware Access via PWA",
+      "description": "Access native device hardware (camera, GPS, BLE, biometrics) through PWA capabilities",
+      "category": "Usability",
+      "functionalArea": "Progressive Web App",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-11: Native Hardware Access",
+          "requirementId": "R-USE-011"
+        }
+      ],
+      "dependencies": [
+        "R-USE-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a PWA user, I want access to device hardware for advanced features.",
+        "acceptanceCriteria": [
+          "Camera access for document scanning and AR features",
+          "GPS access for location-based services",
+          "Bluetooth Low Energy (BLE) for keyless vehicle entry",
+          "Push notifications for booking updates",
+          "Biometric authentication (Face ID, Touch ID, fingerprint)"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-012",
+      "name": "App-Like PWA Experience",
+      "description": "Provide app-like user experience through PWA capabilities with smooth animations and native patterns",
+      "category": "Usability",
+      "functionalArea": "Progressive Web App",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-12: App-Like Experience",
+          "requirementId": "R-USE-012"
+        }
+      ],
+      "dependencies": [
+        "R-USE-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a PWA user, I want app-like experience with familiar interactions.",
+        "acceptanceCriteria": [
+          "Fast loading with cached resources",
+          "Smooth animations and transitions",
+          "No browser chrome in standalone mode",
+          "Native-like navigation patterns",
+          "Consistent experience across platforms"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-013",
+      "name": "Intuitive Navigation",
+      "description": "Provide intuitive navigation that enables users to find features and information easily",
+      "category": "Usability",
+      "functionalArea": "Interface Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-13: Intuitive Navigation",
+          "requirementId": "R-USE-013"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want intuitive navigation to find features easily.",
+        "acceptanceCriteria": [
+          "Navigation structure is logical and consistent",
+          "Current location is clearly indicated",
+          "Breadcrumbs show navigation path on complex pages",
+          "Search functionality helps users find content",
+          "Important actions are prominently placed"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-014",
+      "name": "Consistent Design Language",
+      "description": "Maintain consistent visual design and interaction patterns throughout the platform",
+      "category": "Usability",
+      "functionalArea": "Interface Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-14: Consistent Design Language",
+          "requirementId": "R-USE-014"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want consistent design to build confidence through predictable interactions.",
+        "acceptanceCriteria": [
+          "Design system defines colors, typography, spacing",
+          "UI components are reusable and consistent",
+          "Interaction patterns are predictable",
+          "Terminology is consistent across the platform",
+          "Visual hierarchy guides user attention"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-015",
+      "name": "Clear Visual Feedback",
+      "description": "Provide immediate, clear visual feedback for all user interactions",
+      "category": "Usability",
+      "functionalArea": "Interface Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-15: Clear Visual Feedback",
+          "requirementId": "R-USE-015"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want immediate feedback to know my actions are registered.",
+        "acceptanceCriteria": [
+          "Button states (hover, active, disabled) are visually distinct",
+          "Loading indicators appear for operations taking > 1 second",
+          "Success and error messages are clear and actionable",
+          "Form validation provides immediate feedback",
+          "Progress indicators show completion status"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-016",
+      "name": "Error Prevention and Recovery",
+      "description": "Prevent errors where possible and provide clear recovery paths when errors occur",
+      "category": "Usability",
+      "functionalArea": "Interface Design",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-16: Error Prevention and Recovery",
+          "requirementId": "R-USE-016"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want error prevention and clear recovery to complete tasks successfully.",
+        "acceptanceCriteria": [
+          "Confirmation dialogs prevent accidental destructive actions",
+          "Input validation prevents invalid data entry",
+          "Error messages explain what went wrong and how to fix it",
+          "Users can undo or cancel actions where appropriate",
+          "Form data is preserved when errors occur"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-018",
+      "name": "Preference Management",
+      "description": "Remember and apply user preferences across sessions",
+      "category": "Usability",
+      "functionalArea": "Personalization",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-18: Preference Management",
+          "requirementId": "R-USE-018"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a returning user, I want my preferences saved to speed up booking.",
+        "acceptanceCriteria": [
+          "Preferred pickup locations are saved",
+          "Favorite vehicle types are remembered",
+          "Insurance preferences are pre-selected",
+          "Payment methods are saved securely",
+          "Communication preferences are respected"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-020",
+      "name": "Augmented Reality Features",
+      "description": "Provide immersive vehicle discovery experiences through AR capabilities",
+      "category": "Usability",
+      "functionalArea": "Advanced Interfaces",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-20: Augmented Reality Features",
+          "requirementId": "R-USE-020"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want AR features to explore vehicles immersively.",
+        "acceptanceCriteria": [
+          "AR showrooms project 3D vehicle models",
+          "360-degree interior views available",
+          "AR wayfinding guides users to vehicles in parking facilities",
+          "AR features work on standard mobile devices",
+          "Fallback to traditional images when AR unavailable"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-022",
+      "name": "Multi-Language Support",
+      "description": "Support multiple languages to serve diverse user populations",
+      "category": "Usability",
+      "functionalArea": "Localization",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-22: Multi-Language Support",
+          "requirementId": "R-USE-022"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a non-English speaker, I want the interface in my language.",
+        "acceptanceCriteria": [
+          "Interface text is externalized for translation",
+          "Users can select preferred language",
+          "Language preference persists across sessions",
+          "Date, time, and number formats adapt to locale",
+          "Right-to-left (RTL) languages are supported"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-023",
+      "name": "Currency and Regional Adaptation",
+      "description": "Adapt to regional conventions for currency, measurements, and business practices",
+      "category": "Usability",
+      "functionalArea": "Localization",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-23: Currency and Regional Adaptation",
+          "requirementId": "R-USE-023"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As an international user, I want regional conventions for familiar experience.",
+        "acceptanceCriteria": [
+          "Prices display in user's local currency",
+          "Measurements use local units (miles vs kilometers)",
+          "Regional payment methods are supported",
+          "Regional regulations are reflected in policies",
+          "Regional holidays and events affect availability"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-024",
+      "name": "Perceived Performance Optimization",
+      "description": "Optimize perceived performance through progressive loading and optimistic UI updates",
+      "category": "Usability",
+      "functionalArea": "Performance",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-24: Perceived Performance",
+          "requirementId": "R-USE-024"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want the system to feel fast through progressive loading.",
+        "acceptanceCriteria": [
+          "Critical content loads first (above-the-fold)",
+          "Skeleton screens show during loading",
+          "Optimistic UI updates provide immediate feedback",
+          "Progressive image loading (blur-up technique)",
+          "Lazy loading for below-the-fold content"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-025",
+      "name": "Minimal Cognitive Load",
+      "description": "Minimize cognitive load through progressive disclosure and clear information hierarchy",
+      "category": "Usability",
+      "functionalArea": "User Experience",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-25: Minimal Cognitive Load",
+          "requirementId": "R-USE-025"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want simple interfaces that don't overwhelm me.",
+        "acceptanceCriteria": [
+          "Complex features are broken into simple steps",
+          "Advanced options are hidden until needed",
+          "Information is presented in logical chunks",
+          "Visual hierarchy guides attention to important elements",
+          "Help and documentation are contextual"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-026",
+      "name": "Usability Testing",
+      "description": "Conduct regular usability testing with representative users",
+      "category": "Usability",
+      "functionalArea": "Testing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-26: User Testing",
+          "requirementId": "R-USE-026"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want usability testing to identify issues.",
+        "acceptanceCriteria": [
+          "Usability testing occurs before major releases",
+          "Test participants represent target user segments",
+          "Task completion rates are measured",
+          "User satisfaction is assessed",
+          "Findings drive interface improvements"
+        ]
+      }
+    },
+    {
+      "id": "R-USE-027",
+      "name": "Usability Analytics and Metrics",
+      "description": "Track usability metrics to identify improvement opportunities",
+      "category": "Usability",
+      "functionalArea": "Testing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/usability.md",
+          "section": "REQ-USE-27: Analytics and Metrics",
+          "requirementId": "R-USE-027"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want usability metrics for data-driven optimization.",
+        "acceptanceCriteria": [
+          "Task completion rates are tracked",
+          "Time to complete key tasks is measured",
+          "Error rates and abandonment points are identified",
+          "User satisfaction scores (NPS, CSAT) are collected",
+          "Metrics inform continuous improvement"
+        ]
+      }
+    }
+  ]
+}

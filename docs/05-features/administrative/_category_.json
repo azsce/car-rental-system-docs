@@ -1,0 +1,8 @@
+{
+  "label": "Administrative Features",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Comprehensive catalog of administrative features for car rental platform management, including fleet operations, user administration, pricing strategies, and revenue optimization. Features synthesized from proven open-source implementations enhanced with advanced AI-driven capabilities and microservices architecture patterns."
+  }
+}

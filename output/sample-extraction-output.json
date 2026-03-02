@@ -1,0 +1,159 @@
+{
+  "extraction_metadata": {
+    "source_file": "docs/05-features/user-facing/booking-management.md",
+    "directory": "docs/05-features/user-facing",
+    "category": "User-Facing Features",
+    "subcategory": "Booking Management",
+    "extracted_at": "2026-02-18T17:30:00Z",
+    "total_features_extracted": 17
+  },
+  "features": [
+    {
+      "id": "F-BM-001",
+      "name": "Multi-Step Checkout Process",
+      "description": "Streamlined, guided booking workflow from vehicle selection to confirmation with clear progress indication. Includes 6 checkout steps: Vehicle Selection, Customer Information, Additional Options, Payment Method, Review & Confirm, and Confirmation.",
+      "category": "Booking Creation",
+      "priority": "Must-have",
+      "source_file": "docs/05-features/user-facing/booking-management.md",
+      "source_section": "Booking Creation",
+      "key_capabilities": [
+        "Age Verification",
+        "License Verification",
+        "Date Validation",
+        "Availability Recheck",
+        "Input Validation",
+        "Business Rules Enforcement",
+        "Stock Checking"
+      ],
+      "stakeholder_benefit": "Clear, guided process reduces booking abandonment and errors. Progress indicators set expectations and reduce anxiety.",
+      "dependencies": [],
+      "google_form_question": {
+        "title": "F-BM-001: Multi-Step Checkout Process",
+        "description": "",
+        "options_schema_ref": "output/google-form-options-schema.json"
+      }
+    },
+    {
+      "id": "F-BM-002",
+      "name": "Persona-Based Booking Experience",
+      "description": "Dynamic booking interface that adapts to user segment (Power Renter, Experience Seeker, Young Driver, Eco-Conscious, Accessible Mobility), surfacing relevant options and streamlining the flow based on user type.",
+      "category": "Booking Creation",
+      "priority": "Should-have (Phase 2)",
+      "source_file": "docs/05-features/user-facing/booking-management.md",
+      "source_section": "Booking Creation",
+      "key_capabilities": [
+        "One-click rebooking for business users",
+        "VIN-specific booking for luxury users",
+        "Split-payment for young drivers",
+        "EV range calculator for eco-conscious",
+        "Hard allocation for accessible mobility"
+      ],
+      "stakeholder_benefit": "Tailored experience reduces friction for each user type. Power renters book faster, luxury customers get assurance, budget users see relevant options.",
+      "dependencies": ["F-BM-001"],
+      "google_form_question": {
+        "title": "F-BM-002: Persona-Based Booking Experience",
+        "description": "Dynamic interface adapting to user segments (Power Renter, Experience Seeker, Young Driver, Eco-Conscious, Accessible Mobility)",
+        "options_schema_ref": "output/google-form-options-schema.json"
+      }
+    },
+    {
+      "id": "F-BM-003",
+      "name": "Voice-Activated Booking",
+      "description": "Complete booking flow executable through voice commands for hands-free operation. Integration with Alexa Automotive, Android Auto, and Siri.",
+      "category": "Booking Creation",
+      "priority": "Nice-to-have (Phase 2)",
+      "source_file": "docs/05-features/user-facing/booking-management.md",
+      "source_section": "Booking Creation",
+      "key_capabilities": [
+        "Voice search and vehicle selection",
+        "Spoken date/time selection",
+        "Voice-based option selection",
+        "Payment method selection by voice",
+        "Booking modification via voice"
+      ],
+      "stakeholder_benefit": "Drivers can book while driving safely. Accessibility benefit for visually impaired users. Speed and convenience for power users.",
+      "dependencies": ["F-BM-001"],
+      "google_form_question": {
+        "title": "F-BM-003: Voice-Activated Booking",
+        "description": "",
+        "options_schema_ref": "output/google-form-options-schema.json"
+      }
+    },
+    {
+      "id": "F-BM-004",
+      "name": "Flexible Pricing Mode Selection",
+      "description": "Multiple pricing models (Hourly, Daily, Weekly, Monthly, Per-Kilometer, Unlimited Mileage, Hybrid) with real-time price calculation and dynamic pricing display.",
+      "category": "Booking Creation",
+      "priority": "Must-have",
+      "source_file": "docs/05-features/user-facing/booking-management.md",
+      "source_section": "Booking Creation",
+      "key_capabilities": [
+        "Multiple pricing modes",
+        "Real-time price calculation",
+        "Volume discount application",
+        "Seasonal pricing transparency",
+        "Price breakdown by component"
+      ],
+      "stakeholder_benefit": "Customers choose pricing that matches their usage pattern. Transparency builds trust and reduces disputes.",
+      "dependencies": [],
+      "google_form_question": {
+        "title": "F-BM-004: Flexible Pricing Mode Selection",
+        "description": "",
+        "options_schema_ref": "output/google-form-options-schema.json"
+      }
+    },
+    {
+      "id": "F-BM-005",
+      "name": "Discount Code & Promotion Application",
+      "description": "Apply promotional codes, corporate discounts, and loyalty rewards during booking with real-time validation and calculation.",
+      "category": "Booking Creation",
+      "priority": "Should-have",
+      "source_file": "docs/05-features/user-facing/booking-management.md",
+      "source_section": "Booking Creation",
+      "key_capabilities": [
+        "Promo code validation",
+        "Real-time discount calculation",
+        "Corporate discount support",
+        "Loyalty points redemption",
+        "Stacking rules enforcement"
+      ],
+      "stakeholder_benefit": "Customers access available discounts easily. Transparent pricing with clear savings display.",
+      "dependencies": ["F-BM-004"],
+      "google_form_question": {
+        "title": "F-BM-005: Discount Code & Promotion Application",
+        "description": "",
+        "options_schema_ref": "output/google-form-options-schema.json"
+      }
+    }
+  ],
+  "extraction_summary": {
+    "total_features": 17,
+    "must_have_features": 8,
+    "should_have_features": 6,
+    "nice_to_have_features": 3,
+    "categories_found": [
+      "Booking Creation",
+      "Booking Confirmation & Documentation",
+      "Booking Modifications",
+      "Booking History & Tracking",
+      "Trip Lifecycle Management",
+      "Advanced Booking Features"
+    ],
+    "dependencies_identified": 12,
+    "google_form_sections": 6,
+    "total_questions": 17,
+    "questions_per_feature": 1,
+    "options_per_question": 4
+  },
+  "ai_analysis_notes": {
+    "extraction_approach": "The AI reads the markdown file and identifies structured feature definitions (F-BM-XXX codes). Each feature is extracted with its ID, name, description, priority, capabilities, and stakeholder benefits.",
+    "dependency_detection": "Dependencies are inferred from feature relationships - for example, F-BM-002 (Persona-Based) depends on F-BM-001 (Multi-Step Checkout) as the base booking flow.",
+    "google_form_mapping": "Each feature becomes ONE question. All questions use the same 4 options defined in output/google-form-options-schema.json",
+    "options_schema_reference": "output/google-form-options-schema.json contains the standard 4 options used by all questions",
+    "description_usage": "Question descriptions are only added for complex or ambiguous features. Simple features have empty descriptions to keep the form clean.",
+    "analysis_decoding": "During analysis, the AI uses team votes to determine: (a) Which features go in MVP, (b) Which features go in Phase 2/3, (c) Which features are excluded entirely",
+    "question_reduction": "17 features = 17 questions (not 51). All questions share the same 4 options.",
+    "categorization": "Features are grouped by their section headings in the markdown (Booking Creation, Modifications, etc.) which become form sections.",
+    "output_format": "JSON only - contains feature metadata, source file references, and dependency tree for analysis phase lookup."
+  }
+}

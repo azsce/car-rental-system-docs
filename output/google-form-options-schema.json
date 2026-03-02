@@ -1,0 +1,24 @@
+{
+  "standardOptions": [
+    {
+      "value": "MVP",
+      "label": "MVP - Must have for first release (3 weeks)",
+      "priority": 1
+    },
+    {
+      "value": "Project",
+      "label": "Project - Important but can wait until after MVP",
+      "priority": 2
+    },
+    {
+      "value": "Nice-to-have",
+      "label": "Nice-to-have - Would be great but not essential",
+      "priority": 3
+    },
+    {
+      "value": "Exclude",
+      "label": "Exclude - Not needed for this project",
+      "priority": 4
+    }
+  ]
+}

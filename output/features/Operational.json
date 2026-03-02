@@ -1,0 +1,620 @@
+{
+  "category": "Operational",
+  "total_features": 15,
+  "features": [
+    {
+      "id": "R-RA-001",
+      "name": "Real-Time Operational Dashboard",
+      "description": "Display real-time operational dashboard with key metrics updated every 60 seconds, including fleet status, active rentals, revenue tracking, utilization metrics, and system health",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 1: Real-Time Operational Dashboards",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001",
+        "R-BM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Access Reporting Dashboard",
+        "userRole": "Fleet Manager, Operations Manager, Administrator"
+      },
+      "requirementDetails": {
+        "userStory": "As a Fleet Manager, I want real-time visibility into fleet status, active rentals, and utilization metrics, so that I can make immediate operational decisions and respond quickly to issues",
+        "acceptanceCriteria": [
+          "Dashboard displays with metrics updated at least every 60 seconds",
+          "Fleet status overview with vehicle counts by status",
+          "Active rentals monitoring with current count and activity",
+          "Revenue tracking with today's, WTD, MTD comparisons",
+          "Utilization metrics by vehicle category and location",
+          "System health metrics including API response times and error rates",
+          "Geographic heat maps for demand/supply distribution",
+          "Customizable dashboard widgets via drag-and-drop",
+          "Save dashboard customizations per user role and individual",
+          "Drill-down capability from metrics to detailed views"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-003",
+      "name": "Customer Analytics and Insights",
+      "description": "Detailed analytics on customer behavior, preferences, lifetime value (LTV), acquisition cost (CAC), retention metrics, booking patterns, geographic analysis, and conversion funnel with churn risk identification",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 3: Customer Analytics and Insights",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-BM-001",
+        "R-UM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow, User Management Workflow",
+        "step": "Customer Analysis",
+        "userRole": "Marketing Manager, Product Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a Marketing Manager, I want detailed analytics on customer behavior, preferences, and lifetime value, so that I can optimize marketing spend and target high-value segments",
+        "acceptanceCriteria": [
+          "Segment customers by behavior, value, demographics, rental patterns",
+          "Calculate customer LTV based on historical data and predict future value",
+          "Track CAC by marketing channel",
+          "Calculate retention metrics including churn rate and repeat rental rate",
+          "Analyze booking patterns including preferred categories and lead times",
+          "Provide geographic analysis of customer distribution and preferences",
+          "Analyze conversion funnel metrics at each step",
+          "Flag at-risk customers when churn risk exceeds threshold",
+          "Identify high-value customer segments based on LTV",
+          "Provide marketing optimization recommendations"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-005",
+      "name": "Predictive Analytics and Forecasting",
+      "description": "AI-powered demand forecasting, pricing recommendations, maintenance cost predictions, churn risk identification, revenue forecasting with confidence intervals, seasonal pattern detection, and external factor integration with model explainability",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 5: Predictive Analytics and Forecasting",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-RA-001",
+        "R-RA-002",
+        "R-PM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Pricing Updates Workflow, Fleet Management Workflow",
+        "step": "Predictive Analysis",
+        "userRole": "Executive, Revenue Management Team"
+      },
+      "requirementDetails": {
+        "userStory": "As an Executive, I want AI-powered demand forecasting and predictive insights, so that I can make proactive strategic decisions and optimize pricing and fleet planning",
+        "acceptanceCriteria": [
+          "Use ML algorithms to predict rental demand by location, category, time",
+          "Provide AI-driven pricing recommendations based on demand forecasts",
+          "Forecast maintenance costs and timing based on telematics data",
+          "Identify customers at risk of churning with intervention recommendations",
+          "Predict future revenue with confidence intervals",
+          "Identify and quantify seasonal demand patterns automatically",
+          "Integrate external factors (weather, events, holidays) into predictions",
+          "Alert administrators when forecast accuracy falls below threshold",
+          "Continuously improve prediction accuracy through model retraining",
+          "Provide explainability for AI recommendations showing key factors"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-006",
+      "name": "Automated Report Generation",
+      "description": "Automatically generate and distribute reports on scheduled intervals with pre-built templates, custom report builder, multi-format export (PDF, Excel, CSV, PowerPoint, JSON), email distribution, API access, and retention policies",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 6: Automated Report Generation",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-RA-001",
+        "R-RA-002",
+        "R-RA-004"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Schedule Recurring Reports",
+        "userRole": "System Administrator"
+      },
+      "requirementDetails": {
+        "userStory": "As a System Administrator, I want to automatically generate and distribute reports on scheduled intervals, so that stakeholders receive timely information without manual effort",
+        "acceptanceCriteria": [
+          "Provide pre-built report templates for common reports",
+          "Provide drag-and-drop custom report builder",
+          "Allow scheduling with configurable frequency (daily, weekly, monthly, etc.)",
+          "Support multi-format export (PDF, Excel, CSV, PowerPoint, JSON)",
+          "Automatically email reports to configured distribution lists",
+          "Store generated reports for on-demand access via dashboard",
+          "Provide API access to report data for programmatic integration",
+          "Send failure notification and retry when scheduled report fails",
+          "Apply configurable retention policies to archive/delete old reports",
+          "Log all report generation and distribution activities for audit"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-009",
+      "name": "System Performance Metrics",
+      "description": "Monitor technical performance metrics including API/page load response times (p50, p95, p99), error rates, uptime/downtime, database performance, infrastructure metrics (CPU, memory, disk, network), automated alerting, and integration with external monitoring tools",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 9: System Performance Metrics",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Monitor Report Performance",
+        "userRole": "Engineering Manager, Operations Team"
+      },
+      "requirementDetails": {
+        "userStory": "As an Engineering Manager, I want to monitor technical performance metrics, so that I can proactively detect and resolve performance issues",
+        "acceptanceCriteria": [
+          "Track API and page load response times with p50, p95, p99 percentiles",
+          "Monitor error rates by endpoint and error type",
+          "Track system uptime and downtime with root cause analysis",
+          "Monitor database performance including query performance and connection pool usage",
+          "Track infrastructure metrics including CPU, memory, disk, network utilization",
+          "Provide automated alerting for performance degradation based on configurable thresholds",
+          "Maintain historical performance trends for long-term analysis",
+          "Trigger alerts to engineering teams when response times exceed thresholds",
+          "Provide performance dashboards showing real-time and historical metrics",
+          "Integrate with external monitoring tools via standard protocols (Prometheus, StatsD)"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-010",
+      "name": "Business KPI Tracking",
+      "description": "Track critical business KPIs including booking metrics, revenue metrics, customer metrics, operational metrics with goal tracking, trend analysis, comparative analysis (DoD, WoW, MoM, YoY), alerts for deviations, executive summary dashboards, and custom KPI definitions",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 10: Business KPI Tracking",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-RA-001"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Access Reporting Dashboard",
+        "userRole": "Executive, Department Head"
+      },
+      "requirementDetails": {
+        "userStory": "As an Executive, I want to track critical business KPIs with goal tracking and trend analysis, so that I can monitor business health and progress toward objectives",
+        "acceptanceCriteria": [
+          "Track booking metrics including bookings per hour/day/week and conversion rate",
+          "Track revenue metrics including revenue per hour/day/week and average booking value",
+          "Track customer metrics including new registrations, active users, retention rate",
+          "Track operational metrics including vehicle utilization, turnaround time, on-time pickup rate",
+          "Allow users to set and track progress toward business goals with visual progress indicators",
+          "Provide trend analysis identifying patterns and anomalies in KPIs",
+          "Enable comparative analysis between current and previous periods (DoD, WoW, MoM, YoY)",
+          "Alert relevant stakeholders when KPIs deviate significantly from targets",
+          "Provide executive summary dashboards with high-level KPI visualization",
+          "Support custom KPI definitions based on business-specific metrics"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-011",
+      "name": "Competitive Benchmarking",
+      "description": "Monitor competitor pricing, inventory availability, market share estimation, customer sentiment analysis, feature launches, promotional activity, emerging market trends, competitive positioning reports, and integration with third-party market intelligence platforms",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 11: Competitive Benchmarking (Advanced)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-RA-001"
+      ],
+      "workflowContext": {
+        "workflow": "Pricing Updates Workflow",
+        "step": "Competitive Analysis",
+        "userRole": "Strategy Manager, Executive"
+      },
+      "requirementDetails": {
+        "userStory": "As a Strategy Manager, I want to track competitor pricing and market share, so that I can maintain competitive positioning and identify market opportunities",
+        "acceptanceCriteria": [
+          "Monitor competitor pricing across vehicle categories and locations",
+          "Track competitor inventory availability and utilization patterns",
+          "Estimate market share by location and customer segment",
+          "Analyze competitor customer sentiment from reviews and ratings",
+          "Track competitor feature launches and new capabilities",
+          "Monitor competitor promotional activity and discount patterns",
+          "Identify emerging market trends and opportunities based on competitive intelligence",
+          "Provide competitive positioning reports comparing platform performance to competitors",
+          "Alert stakeholders to significant competitive moves or market changes",
+          "Integrate with third-party market intelligence platforms via API"
+        ]
+      }
+    },
+    {
+      "id": "R-RA-012",
+      "name": "Data Monetization Analytics",
+      "description": "Analyze and package anonymized fleet data for monetization including traffic patterns, vehicle performance data for manufacturers, market insights, driving behavior for insurance, urban mobility insights, data asset inventory, privacy-compliant anonymization, API access, and ROI tracking",
+      "category": "Operational",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 12: Data Monetization Analytics (Advanced)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-RA-001",
+        "R-RA-002",
+        "R-RA-008"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting Workflow",
+        "step": "Data Asset Management",
+        "userRole": "Chief Data Officer, Executive"
+      },
+      "requirementDetails": {
+        "userStory": "As a Chief Data Officer, I want to analyze and package anonymized fleet data for monetization, so that I can create new revenue streams from data assets",
+        "acceptanceCriteria": [
+          "Aggregate and anonymize fleet data, usage patterns, market insights for external use",
+          "Analyze traffic patterns, popular routes, parking demand from telematics data",
+          "Package vehicle performance data for automotive manufacturers",
+          "Provide market insights including demand patterns, customer preferences, pricing elasticity",
+          "Analyze driving behavior patterns for insurance actuarial analysis",
+          "Generate urban mobility insights for city planning and transportation authorities",
+          "Identify valuable data assets and revenue opportunities through data asset inventory",
+          "Ensure all data monetization complies with privacy regulations (GDPR, CCPA) through anonymization and aggregation",
+          "Provide API access to data products for third-party consumers",
+          "Track data monetization revenue and ROI on data collection investments"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-012",
+      "name": "Search Performance and User Experience",
+      "description": "Fast search results (<2s), quick filter updates (<500ms), debounced search input (300ms), progressive image loading, lazy loading with infinite scroll/pagination, result caching, optimistic UI updates, loading skeletons, result count display, helpful no-results message, mobile performance optimization, sub-second database queries, and scroll position preservation",
+      "category": "Operational",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-12: Search Performance and User Experience",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Performance Optimization",
+        "userRole": "All Users"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want fast and responsive search experience, so that I can find vehicles quickly without frustration",
+        "acceptanceCriteria": [
+          "Display search results within 2 seconds of search execution",
+          "Update filtered results within 500 milliseconds of filter application",
+          "Implement debounced search input with 300ms delay to reduce unnecessary queries",
+          "Use progressive image loading with placeholders for vehicle photos",
+          "Implement lazy loading of search results using infinite scroll or pagination",
+          "Cache search results for back navigation to avoid re-querying",
+          "Provide optimistic UI updates for perceived performance",
+          "Display loading skeletons during data fetching",
+          "Show search result count prominently",
+          "Display helpful 'No results' message with suggestions when no results found",
+          "Maintain search performance on mobile devices with slower connections",
+          "Optimize database queries for sub-second response times",
+          "Implement search result pagination with configurable page size",
+          "Preserve scroll position when returning to search results from vehicle details"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-019",
+      "name": "Error Handling and Recovery",
+      "description": "Helpful no-results message with alternative suggestions (dates, locations), error messages for failed/timeout searches, preserve search criteria for retry, retry option and alternative search method, invalid criteria highlighting with specific errors, prevent search execution until corrected, provide valid input examples, price change notifications, suggest similar vehicles when unavailable, customer support contact info, and error logging",
+      "category": "Operational",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-19: Error Handling and Recovery",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Error Handling",
+        "userRole": "All Users"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want clear error messages and recovery options, so that I can resolve issues and complete my search successfully",
+        "acceptanceCriteria": [
+          "Display helpful message with alternative suggestions when no vehicles available for search criteria",
+          "Suggest alternative dates showing availability calendar when no vehicles available",
+          "Suggest nearby locations with availability when no vehicles available",
+          "Display error message explaining the issue when search query fails or times out",
+          "Preserve user's search criteria for retry when search fails",
+          "Provide retry option and alternative search method when search fails",
+          "Highlight invalid fields with specific error messages when user enters invalid search criteria",
+          "Prevent search execution until corrected when user enters invalid criteria",
+          "Provide examples of valid input when user enters invalid criteria",
+          "Display notification with old and new prices when price changes between search and booking",
+          "Suggest similar available vehicles when selected vehicle becomes unavailable",
+          "Provide customer support contact information when errors occur",
+          "Log errors for debugging and improvement purposes"
+        ]
+      }
+    },
+    {
+      "id": "R-MS-012",
+      "name": "Performance Optimization",
+      "description": "Cache geocoding results for frequent addresses, cache static map images, cache route calculations for common pairs, implement client-side map tile caching, use CDN for map assets, batch geocoding requests, use static maps where appropriate, implement lazy loading for map components, debounce autocomplete requests, and monitor/optimize cache hit rates",
+      "category": "Operational",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 12: Performance Optimization",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-MS-001",
+        "R-MS-003"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Performance Optimization",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want optimized mapping service usage, so that costs are minimized and performance is maximized",
+        "acceptanceCriteria": [
+          "Cache geocoding results for frequently searched addresses",
+          "Cache static map images for reuse",
+          "Cache route calculations for common origin-destination pairs",
+          "Implement client-side caching for map tiles",
+          "Use CDN for serving map assets",
+          "Batch geocoding requests when possible",
+          "Use static maps instead of interactive maps where appropriate",
+          "Implement lazy loading for map components",
+          "Debounce autocomplete requests to reduce API calls",
+          "Monitor cache hit rates and optimize caching strategy"
+        ]
+      }
+    },
+    {
+      "id": "R-MS-014",
+      "name": "Error Handling and Fallbacks",
+      "description": "Provide fallback for GPS failure, display cached maps when API unavailable, show user-friendly error messages, implement retry logic for transient failures, allow manual address entry when geocoding fails, provide text-based directions when map rendering fails, monitor service availability and alert operations, degrade gracefully to list view, cache critical location data for offline access, and log errors for debugging",
+      "category": "Operational",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 14: Error Handling and Fallbacks",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-MS-001",
+        "R-MS-002"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Error Handling",
+        "userRole": "All Users"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want the system to work even when mapping services are unavailable, so that I can complete my booking without disruption",
+        "acceptanceCriteria": [
+          "Provide fallback for location detection when GPS fails",
+          "Display cached maps when mapping API is unavailable",
+          "Show user-friendly error messages for mapping failures",
+          "Implement retry logic for transient mapping API failures",
+          "Allow manual address entry when geocoding fails",
+          "Provide text-based directions when map rendering fails",
+          "Monitor mapping service availability and alert operations team",
+          "Degrade gracefully to list view when map view fails",
+          "Cache critical location data for offline access",
+          "Log mapping errors for debugging and service improvement"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-010",
+      "name": "Notification Templates",
+      "description": "Create reusable templates for each notification type with dynamic content placeholders, template versioning for A/B testing and rollback, multi-language support, preview and testing tools, validation before deployment, performance metrics tracking, channel-specific customization, template library with categorization, and approval workflow for changes",
+      "category": "Operational",
+      "functionalArea": "Notification Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 10: Notification Templates",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-001"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Template Management",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want reusable notification templates, so that messaging is consistent and easy to maintain across channels",
+        "acceptanceCriteria": [
+          "Create templates for each notification type",
+          "Support dynamic content placeholders (customer name, booking reference, amount)",
+          "Version templates for A/B testing and rollback",
+          "Support multi-language templates",
+          "Provide template preview and testing tools",
+          "Validate templates before deployment",
+          "Track template performance metrics",
+          "Allow template customization per channel (email, SMS, push)",
+          "Maintain template library with categorization",
+          "Require approval workflow for template changes"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-011",
+      "name": "Event-Driven Notification Architecture",
+      "description": "Publish notification events to message queue (RabbitMQ, AWS SQS, Kafka), consume events asynchronously, process in background workers, implement retry logic for failures, use dead letter queue for permanent failures, handle notification spikes without blocking business logic, guarantee at-least-once delivery for critical notifications, prevent duplicates through idempotency, monitor queue depth and lag, and scale workers based on queue depth",
+      "category": "Operational",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 11: Event-Driven Notification Architecture",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Notification Processing",
+        "userRole": "Platform Developer"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform developer, I want notifications decoupled from business logic, so that the system is scalable and reliable",
+        "acceptanceCriteria": [
+          "Publish notification events to message queue (RabbitMQ, AWS SQS, Kafka)",
+          "Consume notification events asynchronously",
+          "Process notifications in background workers",
+          "Implement retry logic for failed deliveries",
+          "Use dead letter queue for permanently failed notifications",
+          "Handle notification spikes without blocking business logic",
+          "Guarantee at-least-once delivery for critical notifications",
+          "Prevent duplicate notification sending through idempotency",
+          "Monitor queue depth and processing lag",
+          "Scale notification workers based on queue depth"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-013",
+      "name": "Notification Analytics",
+      "description": "Track delivery rate, open rate (email/push), click rate, bounce rate (email/SMS), unsubscribe rate by type, conversion rate (notification to booking), provide analytics dashboard with visualizations, support filtering by date/channel/type, set up anomaly alerts (sudden drop in delivery rate), and export analytics data for external analysis",
+      "category": "Operational",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 13: Notification Analytics",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-001",
+        "R-NS-003",
+        "R-NS-004"
+      ],
+      "workflowContext": {
+        "workflow": "Marketing Campaigns",
+        "step": "Performance Analysis",
+        "userRole": "Marketing Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a marketing team member, I want to track notification performance metrics, so that I can optimize messaging and improve engagement",
+        "acceptanceCriteria": [
+          "Track delivery rate for each notification channel",
+          "Track open rate for email and push notifications",
+          "Track click rate for notifications with links",
+          "Track bounce rate for email and SMS",
+          "Track unsubscribe rate by notification type",
+          "Track conversion rate (notification → booking)",
+          "Provide analytics dashboard with visualizations",
+          "Support filtering metrics by date range, channel, and type",
+          "Set up alerts for anomalies (sudden drop in delivery rate)",
+          "Export analytics data for external analysis"
+        ]
+      }
+    }
+  ]
+}

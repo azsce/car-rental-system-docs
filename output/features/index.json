@@ -1,0 +1,96 @@
+{
+  "total_categories": 18,
+  "total_features": 756,
+  "categories": [
+    {
+      "category": "integration",
+      "count": 33,
+      "file": "integration.json"
+    },
+    {
+      "category": "operational",
+      "count": 185,
+      "file": "operational.json"
+    },
+    {
+      "category": "administrative",
+      "count": 81,
+      "file": "administrative.json"
+    },
+    {
+      "category": "security",
+      "count": 91,
+      "file": "security.json"
+    },
+    {
+      "category": "user-facing",
+      "count": 159,
+      "file": "user-facing.json"
+    },
+    {
+      "category": "compliance",
+      "count": 27,
+      "file": "compliance.json"
+    },
+    {
+      "category": "Operational",
+      "count": 15,
+      "file": "Operational.json"
+    },
+    {
+      "category": "Administrative",
+      "count": 1,
+      "file": "Administrative.json"
+    },
+    {
+      "category": "Security",
+      "count": 33,
+      "file": "Security.json"
+    },
+    {
+      "category": "User-Facing",
+      "count": 12,
+      "file": "User-Facing.json"
+    },
+    {
+      "category": "Integration",
+      "count": 12,
+      "file": "Integration.json"
+    },
+    {
+      "category": "Compliance",
+      "count": 2,
+      "file": "Compliance.json"
+    },
+    {
+      "category": "Features",
+      "count": 8,
+      "file": "Features.json"
+    },
+    {
+      "category": "Technical",
+      "count": 2,
+      "file": "Technical.json"
+    },
+    {
+      "category": "Performance",
+      "count": 20,
+      "file": "Performance.json"
+    },
+    {
+      "category": "Reliability",
+      "count": 27,
+      "file": "Reliability.json"
+    },
+    {
+      "category": "Scalability",
+      "count": 24,
+      "file": "Scalability.json"
+    },
+    {
+      "category": "Usability",
+      "count": 24,
+      "file": "Usability.json"
+    }
+  ]
+}

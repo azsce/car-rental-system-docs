@@ -1,0 +1,8 @@
+{
+  "label": "Integration Requirements",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Requirements for integrating with external services including payment gateways, mapping services, notification systems, and super-app ecosystems"
+  }
+}

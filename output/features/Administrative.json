@@ -1,0 +1,47 @@
+{
+  "category": "Administrative",
+  "total_features": 1,
+  "features": [
+    {
+      "id": "R-RA-004",
+      "name": "Financial Reporting and Analytics",
+      "description": "Comprehensive financial reports with revenue analysis, cost tracking, profitability metrics, budget vs actual tracking, cash flow projections, tax tracking, forecasting, and multi-currency support with audit-ready reports",
+      "category": "Administrative",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 4: Financial Reporting and Analytics",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-PP-001",
+        "R-PP-002"
+      ],
+      "workflowContext": {
+        "workflow": "Payment Processing Workflow, Reporting Workflow",
+        "step": "Financial Analysis",
+        "userRole": "Finance Manager, Accounting Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a Finance Manager, I want comprehensive financial reports with revenue, cost, and profitability analysis, so that I can track financial health and forecast future performance",
+        "acceptanceCriteria": [
+          "Provide revenue analysis by category, location, time period, segment",
+          "Track operating costs, maintenance costs, marketing costs, overhead",
+          "Calculate profitability metrics including gross margin, net margin, EBITDA",
+          "Provide budget vs actual tracking with variance analysis",
+          "Generate cash flow projections and AR aging reports",
+          "Track sales tax collection and liability by jurisdiction",
+          "Provide financial forecasting based on historical trends",
+          "Generate automated month-end and year-end financial reports",
+          "Support multi-currency reporting with automatic conversion",
+          "Provide audit-ready reports with complete transaction traceability"
+        ]
+      }
+    }
+  ]
+}

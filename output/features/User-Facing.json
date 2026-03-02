@@ -1,0 +1,510 @@
+{
+  "category": "User-Facing",
+  "total_features": 12,
+  "features": [
+    {
+      "id": "R-UM-001",
+      "name": "User Registration",
+      "description": "Multi-method user registration supporting email/password, social login (Google, Facebook, Apple), and phone number with SMS verification, with progressive profiling and age verification",
+      "category": "User-Facing",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-001: User Registration",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "User Registration",
+        "userRole": "New User"
+      },
+      "requirementDetails": {
+        "userStory": "As a new user, I want to create an account using my preferred method, so that I can access the car rental platform quickly and conveniently",
+        "acceptanceCriteria": [
+          "Provide multiple registration methods: email/password, social login, phone with SMS",
+          "Require valid email and password meeting security requirements (8+ characters)",
+          "Send verification email with activation link expiring after 24 hours",
+          "Authenticate via OAuth 2.0 for social login with auto-verified email",
+          "Send SMS OTP for phone number verification",
+          "Create account with 'unverified' status for email or 'verified' for social login",
+          "Reject duplicate email/phone with appropriate error message",
+          "Reject registration for users under minimum age (18-25 by region)",
+          "Display terms of service and privacy policy for acceptance",
+          "Implement progressive profiling to collect minimum info upfront"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-005",
+      "name": "User Profile Management",
+      "description": "Comprehensive user profile management with personal information, preferences, verification status, profile photo, address autocomplete, language/currency settings, data export, and profile completeness indicator",
+      "category": "User-Facing",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-005: User Profile Management",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "Profile Data Pre-Fill",
+        "userRole": "Registered User"
+      },
+      "requirementDetails": {
+        "userStory": "As a registered user, I want to manage my personal information and preferences, so that I can personalize my experience and ensure my details are accurate",
+        "acceptanceCriteria": [
+          "Display personal information: name, email, phone, DOB, photo, address",
+          "Validate data format (email, phone, DOB) before saving",
+          "Send verification email to new address and require confirmation before updating",
+          "Send SMS verification code to new phone and require confirmation before updating",
+          "Validate profile photo file type (JPEG, PNG), size (max 5MB), dimensions, resize and optimize",
+          "Provide address autocomplete suggestions using mapping service API",
+          "Apply language and currency preferences across all platform interactions",
+          "Display profile completeness indicator showing percentage of completed fields",
+          "Generate machine-readable data export (JSON/CSV) within 30 days for GDPR compliance",
+          "Display verification status badges for verified email, phone, driver's license"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-012",
+      "name": "Saved Preferences and Personalization",
+      "description": "Save and manage user preferences including pickup/return locations, preferred vehicle types, default insurance, extras, payment method, accessibility requirements, and addresses with proactive booking suggestions",
+      "category": "User-Facing",
+      "functionalArea": "User Management",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-012: Saved Preferences and Personalization",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow, Booking Creation Workflow",
+        "step": "Preference Pre-Fill",
+        "userRole": "Frequent Renter, Subscription User"
+      },
+      "requirementDetails": {
+        "userStory": "As a frequent renter, I want to save my preferences and frequently used information, so that I can book vehicles faster without re-entering the same details",
+        "acceptanceCriteria": [
+          "Store pickup/return location with custom nickname for quick selection during booking",
+          "Prioritize preferred vehicle types in search results",
+          "Pre-select preferred insurance tier during booking when default insurance set",
+          "Pre-select default extras (GPS, child seat) during booking",
+          "Pre-select default payment method during checkout",
+          "Automatically filter search results to show only compatible vehicles when accessibility requirements saved",
+          "Display all saved items with edit/delete options when viewing saved preferences",
+          "Use saved home address for location-based search and delivery options",
+          "Offer saved work address as quick pickup/return location option",
+          "Proactively suggest similar vehicles for future bookings based on booking history patterns"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-003",
+      "name": "Date and Time Availability Search",
+      "description": "Specify exact pickup and return dates/times with calendar and time pickers, rental duration calculation, real-time availability checking, date validation, minimum/maximum rental period enforcement, availability calendar per vehicle, and quick date selection options",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-3: Date and Time Availability Search",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Date Selection",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to specify exact pickup and return dates and times, so that I see only vehicles available for my specific rental period",
+        "acceptanceCriteria": [
+          "Provide calendar picker for selecting pickup and return dates",
+          "Provide time picker with configurable intervals (15, 30, or 60 minutes)",
+          "Calculate and display rental duration when dates and times selected",
+          "Perform real-time availability checking as dates change",
+          "Validate that return date/time is after pickup date/time",
+          "Enforce minimum rental period requirements (e.g., 1 hour or 1 day)",
+          "Enforce maximum rental period requirements (e.g., 30 or 90 days)",
+          "Show availability calendar per vehicle when displaying details",
+          "Display blocked dates for maintenance or existing bookings",
+          "Enforce buffer time between bookings for vehicle preparation",
+          "Display validation error and prevent search when past dates selected",
+          "Support quick date selection options (e.g., 'This Weekend', 'Next Week')"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-009",
+      "name": "Comprehensive Vehicle Information Display",
+      "description": "Display detailed vehicle information including specifications, capacity, technical details, features, pricing breakdown with volume discounts, insurance options, additional services, supplier info, availability calendar, image gallery, customer reviews, environmental info, accessibility features, total cost estimate, special offers, and share option",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-9: Comprehensive Vehicle Information Display",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Vehicle Details View",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to view detailed vehicle information, so that I can make informed booking decisions without contacting support",
+        "acceptanceCriteria": [
+          "Display basic specs: make, model, year, license plate",
+          "Display capacity: seats, doors, luggage space",
+          "Display technical details: engine type, transmission, fuel policy, mileage limits",
+          "List all vehicle features (air conditioning, multimedia, safety, connectivity)",
+          "Display pricing breakdown: hourly, daily, weekly, bi-weekly, monthly rates",
+          "Show volume discounts for longer rental periods",
+          "Display insurance options with costs (theft protection, collision damage waiver, full insurance)",
+          "List additional services and costs (additional driver, GPS, child seats, pet fees)",
+          "Display supplier/host info: name, rating, location, response time",
+          "Show availability calendar with visual representation",
+          "Provide image gallery with multiple high-quality photos (exterior, interior, features)",
+          "Display customer reviews and ratings from previous renters",
+          "Show environmental info: CO2 emissions, fuel efficiency",
+          "Display eco-friendly badge for low-emission and electric vehicles",
+          "List accessibility features (hand controls, ramps, modifications)",
+          "Show total estimated cost for selected rental period when displaying pricing",
+          "Highlight any special offers or discounts applicable to the vehicle",
+          "Provide 'Share' option to send vehicle details to others"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-010",
+      "name": "Vehicle Reviews and Ratings System",
+      "description": "1-5 star rating system with detailed reviews, rating categories (cleanliness, performance, value, accuracy, host communication), photo uploads, verified reviews from completed rentals, review sorting, helpfulness voting, host responses, moderation, aggregate rating display, and rating distribution",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-10: Vehicle Reviews and Ratings System",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-VS-009",
+        "R-BM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Review Reading",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to read reviews from previous renters, so that I can make informed decisions based on authentic experiences",
+        "acceptanceCriteria": [
+          "Display 1-5 star rating system with half-star precision for each vehicle",
+          "Allow customers to write detailed reviews with character limits",
+          "Provide rating categories (cleanliness, performance, value, accuracy, host communication)",
+          "Allow customers to upload photos from their rental experience",
+          "Verify that reviews come only from confirmed, completed rentals",
+          "Provide sorting options for reviews (by date, rating, helpfulness, relevance)",
+          "Allow users to upvote or downvote review helpfulness",
+          "Allow hosts or suppliers to respond to reviews",
+          "Implement automated and manual review moderation for inappropriate content",
+          "Display aggregate rating with total review count",
+          "Show rating distribution (number of 5-star, 4-star, etc. reviews)",
+          "Highlight verified bookings when displaying reviews",
+          "Filter reviews by rental duration or vehicle configuration if relevant",
+          "Display most helpful reviews prominently"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-013",
+      "name": "Saved Searches and Alerts",
+      "description": "Save search criteria with custom names, quick access from dashboard, price drop alerts, availability notifications, configurable notification preferences (email, push, SMS), search management and deletion, search sharing via link, search history, saved search limit, and automatic date updates",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-13: Saved Searches and Alerts",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005",
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Saved Search Management",
+        "userRole": "Frequent Renter"
+      },
+      "requirementDetails": {
+        "userStory": "As a frequent renter, I want to save my search criteria and receive alerts, so that I can quickly repeat searches and never miss deals on preferred vehicles",
+        "acceptanceCriteria": [
+          "Allow logged-in users to save search criteria with custom names",
+          "Provide quick access to saved searches from user dashboard",
+          "Send price drop alerts for saved searches via email or push notification",
+          "Send availability notifications when vehicles matching saved criteria become available",
+          "Allow users to configure notification preferences (email, push, SMS)",
+          "Allow users to manage and delete saved searches",
+          "Allow users to share saved searches with others via link",
+          "Maintain search history for logged-in users",
+          "Limit number of saved searches per user (e.g., maximum 10)",
+          "Update dates to current or future dates automatically when executing saved search"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-015",
+      "name": "Corporate Policy Compliance Search",
+      "description": "Automatic corporate policy filter application, vehicle class restrictions by employee level, spending limit enforcement, approved supplier/location filtering, policy compliance indicator, exception request with approval workflow, policy filter reason display, travel manager override capability, policy exception logging, and budget/cost center display",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-15: Corporate Policy Compliance Search",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-004",
+        "R-UM-016",
+        "R-VS-004"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Corporate Policy Enforcement",
+        "userRole": "Corporate Employee"
+      },
+      "requirementDetails": {
+        "userStory": "As a corporate client employee, I want to see only policy-compliant vehicles, so that I can book within company guidelines without manual verification",
+        "acceptanceCriteria": [
+          "Apply corporate policy filters automatically when corporate user logs in",
+          "Restrict vehicle class selections based on employee level or role",
+          "Enforce spending limits by filtering vehicles exceeding maximum daily rate",
+          "Display only approved suppliers or locations per corporate policy",
+          "Show policy compliance indicator on each vehicle",
+          "Allow corporate users to request exception for non-compliant vehicles with approval workflow",
+          "Display reason when vehicles are filtered out due to policy",
+          "Allow corporate travel managers to override policy filters when booking for employees",
+          "Log all policy exceptions for audit purposes",
+          "Display estimated cost against corporate budget or cost center"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-016",
+      "name": "Subscription Member Vehicle Reservation",
+      "description": "Display only subscription tier vehicles, show subscription allowance status (remaining miles/hours/days), indicate vehicles requiring additional payment, allow tier upgrades with surcharge, show vehicle swap availability, enforce subscription booking restrictions, display subscription-specific pricing/benefits, allow immediate pickup booking, and show member priority/exclusive access",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-16: Subscription Member Vehicle Reservation",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005",
+        "R-VS-001",
+        "R-VS-003"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Subscription Vehicle Selection",
+        "userRole": "Subscription User"
+      },
+      "requirementDetails": {
+        "userStory": "As a subscription user, I want to search and reserve vehicles within my subscription tier, so that I can access vehicles included in my plan",
+        "acceptanceCriteria": [
+          "Display only vehicles available in subscription tier when subscription user logs in",
+          "Show subscription allowance status (remaining miles, hours, or days)",
+          "Indicate which vehicles require additional payment beyond subscription",
+          "Allow subscription users to upgrade to higher-tier vehicles with surcharge",
+          "Show vehicle swap availability based on subscription plan rules",
+          "Enforce subscription booking restrictions (e.g., advance booking window, maximum rental duration)",
+          "Display subscription-specific pricing and benefits",
+          "Allow subscription users to book vehicles for immediate pickup if available",
+          "Show subscription member priority or exclusive access to certain vehicles"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-017",
+      "name": "Mobile-Optimized Search Experience",
+      "description": "Responsive design for mobile screens, mobile-optimized input types, touch-friendly interface with 44x44px tap targets, minimized typing with autocomplete, mobile gestures support, optimized images for mobile bandwidth, mobile-specific features (location detection, click-to-call), mobile network performance optimization, offline result caching, app deep linking, mobile-friendly filters, and mobile comparison view",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-17: Mobile-Optimized Search Experience",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-VS-001",
+        "R-VS-003",
+        "R-VS-004"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Mobile Search",
+        "userRole": "Mobile User"
+      },
+      "requirementDetails": {
+        "userStory": "As a mobile user, I want a search experience optimized for my smartphone, so that I can search and book vehicles easily on the go",
+        "acceptanceCriteria": [
+          "Provide responsive design adapting to mobile screen sizes",
+          "Use mobile-optimized input types (date picker, location picker)",
+          "Provide touch-friendly interface with appropriately sized tap targets (minimum 44x44 pixels)",
+          "Minimize typing requirements using autocomplete and suggestions",
+          "Support mobile gestures (swipe, pinch-to-zoom on images)",
+          "Optimize images for mobile bandwidth and screen resolution",
+          "Provide mobile-specific features (current location detection, click-to-call)",
+          "Maintain search performance on mobile networks (3G, 4G, 5G)",
+          "Support offline search result caching for previously viewed vehicles",
+          "Provide mobile app deep linking to specific search results",
+          "Optimize filter interface for mobile with collapsible sections",
+          "Provide mobile-friendly comparison view for multiple vehicles"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-020",
+      "name": "Multi-Language and Multi-Currency Support",
+      "description": "Multiple interface languages with user selection, browser language detection, language preference persistence, translate all interface elements, multiple currency support, currency detection from location/browser, manual currency selection, display prices in selected currency with exchange rates, currency conversion disclaimer with update timestamp, translate vehicle descriptions, localized date/time formats, and RTL language support",
+      "category": "User-Facing",
+      "functionalArea": "Vehicle Search",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-20: Multi-Language and Multi-Currency Support",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Localization",
+        "userRole": "International Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As an international customer, I want to search in my preferred language and currency, so that I can understand pricing and information clearly",
+        "acceptanceCriteria": [
+          "Support multiple interface languages with user selection option",
+          "Detect user's preferred language from browser settings",
+          "Maintain language preference across sessions for logged-in users",
+          "Translate all search interface elements, labels, and messages",
+          "Support multiple currencies for price display",
+          "Detect user's currency preference from location or browser settings",
+          "Allow users to manually select preferred currency",
+          "Display prices in selected currency with current exchange rates",
+          "Show currency conversion disclaimer with last update timestamp",
+          "Translate vehicle descriptions and features when available",
+          "Provide localized date and time formats based on user's region",
+          "Support right-to-left (RTL) languages where applicable"
+        ]
+      }
+    },
+    {
+      "id": "R-NS-015",
+      "name": "Notification Fatigue Prevention",
+      "description": "Limit notification frequency per user (max 5 per day excluding critical), consolidate related notifications, respect user-defined quiet hours, provide daily/weekly digest options, use appropriate urgency levels, test notification timing for optimal engagement, monitor unsubscribe rates, adjust frequency based on engagement, prioritize critical over promotional, and provide 'Pause notifications' option",
+      "category": "User-Facing",
+      "functionalArea": "Notification Services",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 15: Notification Fatigue Prevention",
+          "type": "integration-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-NS-008",
+        "R-NS-009"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Fatigue Prevention",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want to receive only relevant notifications at appropriate frequency, so that I'm not overwhelmed with messages",
+        "acceptanceCriteria": [
+          "Limit notification frequency per user (max 5 per day excluding critical)",
+          "Consolidate related notifications into single message when possible",
+          "Respect user-defined quiet hours",
+          "Provide daily or weekly digest options for non-urgent notifications",
+          "Use appropriate urgency levels for each notification type",
+          "Test notification timing for optimal engagement",
+          "Monitor unsubscribe rates as indicator of notification fatigue",
+          "Adjust notification frequency based on user engagement",
+          "Prioritize critical notifications over promotional",
+          "Provide 'Pause notifications' option for temporary opt-out"
+        ]
+      }
+    }
+  ]
+}

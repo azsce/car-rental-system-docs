@@ -1,0 +1,1695 @@
+{
+  "category": "administrative",
+  "total_features": 81,
+  "features": [
+    {
+      "id": "F-INS-003",
+      "name": "Policy Administration Portal",
+      "description": "Self-service portal for insurance providers to manage policies, update coverage limits, and view policy performance metrics",
+      "category": "administrative",
+      "functionalArea": "insurance",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/insurance-providers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-INS-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces administrative burden and enables insurers to manage policies independently without manual intervention"
+    },
+    {
+      "id": "F-INS-007",
+      "name": "Insurance Document Management",
+      "description": "Centralized storage and access for insurance certificates, policy documents, and claim documentation",
+      "category": "administrative",
+      "functionalArea": "insurance",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/insurance-providers.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides easy access to insurance documents and reduces time spent searching for paperwork"
+    },
+    {
+      "id": "F-PAY-009",
+      "name": "Payment Reporting and Analytics",
+      "description": "Comprehensive transaction reporting with settlement data, fee breakdowns, and payment analytics",
+      "category": "administrative",
+      "functionalArea": "payments",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-PAY-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides visibility into payment performance and enables data-driven optimization"
+    },
+    {
+      "id": "F-ADM-001",
+      "name": "Admin Dashboard",
+      "description": "Centralized dashboard providing real-time view of key operational metrics, alerts, and system health indicators for administrators",
+      "category": "administrative",
+      "functionalArea": "system-administration",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides administrators with at-a-glance visibility into system operations and enables quick identification of issues"
+    },
+    {
+      "id": "F-ADM-002",
+      "name": "User Management System",
+      "description": "Comprehensive user account management including creation, updates, deactivation, role assignment, and bulk operations for customer and employee accounts",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Streamlines user account administration and reduces time spent on routine account management tasks"
+    },
+    {
+      "id": "F-ADM-003",
+      "name": "Fleet Management Interface",
+      "description": "Administrative interface for adding, updating, and managing vehicle inventory including bulk updates and vehicle transfers between locations",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables efficient fleet data management and reduces manual data entry burden"
+    },
+    {
+      "id": "F-ADM-004",
+      "name": "Pricing Management System",
+      "description": "Configure and manage rental rates, seasonal pricing, discounts, promotions, corporate rates, and add-on pricing with tax configuration",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides flexible pricing control and enables quick response to market conditions"
+    },
+    {
+      "id": "F-ADM-005",
+      "name": "Booking Management Interface",
+      "description": "Administrative tools to view, modify, cancel reservations, handle overbooking, process special requests, and manage group bookings",
+      "category": "administrative",
+      "functionalArea": "bookings",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables administrators to handle complex booking scenarios and customer requests efficiently"
+    },
+    {
+      "id": "F-ADM-006",
+      "name": "Reporting and Analytics Tools",
+      "description": "Generate and export operational reports on bookings, revenue, utilization, with custom query capabilities and scheduled report generation",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides data-driven insights for decision-making and reduces time spent on manual report creation"
+    },
+    {
+      "id": "F-ADM-009",
+      "name": "Bulk Operations Interface",
+      "description": "Mass update capabilities for users, vehicles, and pricing with import/export functionality and batch processing",
+      "category": "administrative",
+      "functionalArea": "data-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Dramatically reduces time spent on repetitive administrative tasks"
+    },
+    {
+      "id": "F-ADM-010",
+      "name": "System Configuration Interface",
+      "description": "Customize system settings, policies, workflows, email templates, and integration configurations with validation and rollback capabilities",
+      "category": "administrative",
+      "functionalArea": "system-administration",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables system customization to match business requirements without technical expertise"
+    },
+    {
+      "id": "F-ADM-011",
+      "name": "Quick Actions and Shortcuts",
+      "description": "Keyboard shortcuts and quick action buttons for common administrative tasks to improve efficiency",
+      "category": "administrative",
+      "functionalArea": "user-experience",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Important Features for Efficiency"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Speeds up navigation and task completion for experienced administrators"
+    },
+    {
+      "id": "F-ADM-012",
+      "name": "Advanced Search and Filtering",
+      "description": "Powerful search capabilities to quickly find users, bookings, vehicles with multiple filter criteria and saved searches",
+      "category": "administrative",
+      "functionalArea": "search",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Important Features for Efficiency"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces time spent searching for information and improves productivity"
+    },
+    {
+      "id": "F-ADM-013",
+      "name": "Customer Impersonation Mode",
+      "description": "View system as specific customer to diagnose issues and understand customer experience without accessing sensitive data",
+      "category": "administrative",
+      "functionalArea": "support",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/administrators.md",
+          "section": "Relationship to Features - Important Features for Support"
+        }
+      ],
+      "dependencies": [
+        "F-ADM-007"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables effective troubleshooting by seeing exactly what customers see"
+    },
+    {
+      "id": "F-SUP-008",
+      "name": "Quick Actions for Support",
+      "description": "One-click shortcuts for common support tasks like resending confirmations, applying discounts, or processing refunds",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Speeds up resolution of common issues and improves agent efficiency"
+    },
+    {
+      "id": "F-SUP-009",
+      "name": "Escalation Workflow System",
+      "description": "Route complex issues to appropriate specialists or supervisors with context preservation and escalation tracking",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-SUP-006"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures complex issues reach right expertise without losing context"
+    },
+    {
+      "id": "F-SUP-010",
+      "name": "Support Performance Dashboard",
+      "description": "Real-time view of personal performance metrics including handle time, resolution rate, customer satisfaction, and queue status",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables agents to monitor their performance and identify improvement opportunities"
+    },
+    {
+      "id": "F-SUP-011",
+      "name": "Smart Search for Support",
+      "description": "Powerful search to quickly find customers, bookings, or information with fuzzy matching and multiple search criteria",
+      "category": "administrative",
+      "functionalArea": "search",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Important Features for Efficiency"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Reduces time spent searching for information during customer interactions"
+    },
+    {
+      "id": "F-SUP-012",
+      "name": "Response Templates",
+      "description": "Pre-written, customizable responses for common questions with variable substitution and personalization",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Important Features for Efficiency"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Speeds up responses while maintaining consistency and quality"
+    },
+    {
+      "id": "F-SUP-013",
+      "name": "AI-Powered Suggested Actions",
+      "description": "Machine learning recommendations for issue resolution based on similar past cases and successful outcomes",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Important Features for Efficiency"
+        }
+      ],
+      "dependencies": [
+        "F-SUP-006"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Improves first-contact resolution and reduces time to resolve issues"
+    },
+    {
+      "id": "F-SUP-014",
+      "name": "Policy Guidance System",
+      "description": "Contextual help and decision trees for policy questions with step-by-step guides for complex scenarios",
+      "category": "administrative",
+      "functionalArea": "knowledge-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Important Features for Quality"
+        }
+      ],
+      "dependencies": [
+        "F-SUP-005"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures consistent policy application and reduces errors"
+    },
+    {
+      "id": "F-SUP-015",
+      "name": "Customer Sentiment Analysis",
+      "description": "Real-time indicators of customer emotion during interactions with alerts for escalating frustration",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/operational-staff/support-agents.md",
+          "section": "Relationship to Features - Important Features for Quality"
+        }
+      ],
+      "dependencies": [
+        "F-SUP-004"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables proactive intervention to prevent customer churn and improve satisfaction"
+    },
+    {
+      "id": "F-CORP-001",
+      "name": "Corporate Account Management",
+      "description": "Hierarchical organization structure with multi-entity support for divisions, subsidiaries, and regions with user role management",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables corporate clients to manage complex organizational structures and control user access"
+    },
+    {
+      "id": "F-CORP-002",
+      "name": "Policy Engine",
+      "description": "Configurable rules for vehicle classes, spending limits, approval workflows, and insurance policies with template support",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures employees book within company guidelines and reduces policy violations"
+    },
+    {
+      "id": "F-CORP-003",
+      "name": "Centralized Billing",
+      "description": "Consolidated monthly invoicing with detailed breakdowns by employee, department, and cost center",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Simplifies billing reconciliation and reduces administrative burden"
+    },
+    {
+      "id": "F-CORP-004",
+      "name": "Approval Workflows",
+      "description": "Multi-level authorization system with email notifications and configurable approval rules",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-002"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ensures proper authorization and maintains spending control"
+    },
+    {
+      "id": "F-CORP-005",
+      "name": "Corporate Reporting Dashboard",
+      "description": "Real-time analytics on spending, utilization, compliance, and policy adherence with custom report builder",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides visibility into corporate rental activity and enables data-driven optimization"
+    },
+    {
+      "id": "F-CORP-008",
+      "name": "Cost Center Allocation",
+      "description": "Assign bookings to departments, projects, or clients with flexible cost allocation rules",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Enables accurate cost tracking and chargeback to appropriate business units"
+    },
+    {
+      "id": "F-CORP-010",
+      "name": "Dedicated Corporate Support",
+      "description": "Priority customer service with dedicated account manager and escalation paths",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/03-stakeholders/primary-users/corporate-clients.md",
+          "section": "Relationship to Features - Critical Features"
+        }
+      ],
+      "dependencies": [
+        "F-CORP-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Provides responsive support and single point of contact for corporate issues"
+    },
+    {
+      "id": "F-WF-FLT-001",
+      "name": "Vehicle Creation and Configuration",
+      "description": "Add new vehicles to inventory with complete specifications, pricing, images, features, and location assignments through structured form interface",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Add New Vehicle"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 2,
+        "nextSteps": [
+          "Upload Vehicle Images",
+          "Configure Pricing",
+          "Set Vehicle Availability"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-FLT-002",
+      "name": "Vehicle Image Management",
+      "description": "Upload, organize, and manage multiple vehicle photos with drag-and-drop, automatic optimization, thumbnail generation, and primary image selection",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Upload Vehicle Images"
+        }
+      ],
+      "dependencies": [
+        "F-WF-FLT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 3,
+        "nextSteps": [
+          "Configure Pricing"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-FLT-003",
+      "name": "Multi-Duration Pricing Configuration",
+      "description": "Set rental rates for multiple durations (hourly, daily, weekly, monthly) with automatic discount calculation and pricing validation",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Configure Pricing"
+        }
+      ],
+      "dependencies": [
+        "F-WF-FLT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 4,
+        "nextSteps": [
+          "Set Vehicle Availability"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-FLT-006",
+      "name": "Vehicle Add-Ons Configuration",
+      "description": "Configure insurance options, equipment rentals (GPS, child seats), and additional services with pricing for each vehicle",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Configure Additional Options"
+        }
+      ],
+      "dependencies": [
+        "F-WF-FLT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 7,
+        "nextSteps": [
+          "Save and Activate Vehicle"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-FLT-008",
+      "name": "Vehicle Information Updates",
+      "description": "Modify existing vehicle specifications, pricing, images, availability, and locations with change tracking and impact analysis",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Update Existing Vehicle"
+        }
+      ],
+      "dependencies": [
+        "F-WF-FLT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 9,
+        "nextSteps": [
+          "Manage Vehicle Status"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-FLT-010",
+      "name": "Bulk Fleet Operations",
+      "description": "Perform mass updates on multiple vehicles simultaneously including pricing, locations, status, and availability with progress tracking and error handling",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/fleet-management.md",
+          "section": "Workflow Steps - Bulk Operations"
+        }
+      ],
+      "dependencies": [
+        "F-WF-FLT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 11,
+        "nextSteps": [
+          "Vehicle Performance Monitoring"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PRC-001",
+      "name": "Flexible Pricing Update Scope Selection",
+      "description": "Select pricing update scope from single vehicle to entire fleet with category, location, and supplier filtering",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/pricing-updates.md",
+          "section": "Workflow Steps - Select Pricing Update Scope"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Pricing Updates",
+        "step": 2,
+        "nextSteps": [
+          "Configure Base Rate Updates",
+          "Configure Seasonal Pricing",
+          "Create Promotional Discounts"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PRC-002",
+      "name": "Base Rate Management",
+      "description": "Update rental rates using absolute values, percentage changes, or formula-based calculations with automatic discount computation and validation",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/pricing-updates.md",
+          "section": "Workflow Steps - Configure Base Rate Updates"
+        }
+      ],
+      "dependencies": [
+        "F-WF-PRC-001"
+      ],
+      "workflowContext": {
+        "workflow": "Pricing Updates",
+        "step": 3,
+        "nextSteps": [
+          "Preview Pricing Changes"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-PRC-006",
+      "name": "Pricing Change Preview and Impact Analysis",
+      "description": "Before/after comparison with revenue impact estimates, competitive positioning, and affected bookings analysis",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/pricing-updates.md",
+          "section": "Workflow Steps - Preview Pricing Changes"
+        }
+      ],
+      "dependencies": [
+        "F-WF-PRC-002",
+        "F-WF-PRC-003",
+        "F-WF-PRC-004",
+        "F-WF-PRC-005"
+      ],
+      "workflowContext": {
+        "workflow": "Pricing Updates",
+        "step": 7,
+        "nextSteps": [
+          "Apply Pricing Updates"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-001",
+      "name": "Reporting Dashboard with KPIs",
+      "description": "Centralized reporting interface with real-time key performance indicators, report library, recent reports, and scheduled reports overview",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Access Reporting Dashboard"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 1,
+        "nextSteps": [
+          "Select Report Type"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-002",
+      "name": "Pre-Built Report Templates",
+      "description": "Comprehensive library of operational, financial, customer, marketing, and compliance report templates organized by category",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Select Report Type"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 2,
+        "nextSteps": [
+          "Configure Report Parameters"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-003",
+      "name": "Advanced Report Parameter Configuration",
+      "description": "Flexible report filtering with date ranges, location, vehicle, customer segments, custom filters, grouping, and comparison options",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Configure Report Parameters"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-002"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 3,
+        "nextSteps": [
+          "Generate Report"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-005",
+      "name": "Interactive Report Visualization",
+      "description": "Display reports with data tables, charts, graphs, trends, and comparisons with drill-down, filtering, and sorting capabilities",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Review Report Results"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-004"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 5,
+        "nextSteps": [
+          "Export Report",
+          "Schedule Recurring Reports",
+          "Share Reports"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-006",
+      "name": "Multi-Format Report Export",
+      "description": "Export reports to PDF, Excel, CSV, JSON, and HTML formats with customizable options for visualizations, data, and formatting",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Export Report"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-005"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 6,
+        "nextSteps": []
+      }
+    },
+    {
+      "id": "F-WF-RPT-008",
+      "name": "Custom Report Builder",
+      "description": "Drag-and-drop interface to create custom reports with data source selection, field selection, filters, grouping, aggregation, and visualizations",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Create Custom Report"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-001"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 8,
+        "nextSteps": [
+          "Generate Report"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-RPT-009",
+      "name": "Report Sharing and Collaboration",
+      "description": "Share reports via email, secure links, dashboards, or embeds with access control, expiration, and tracking",
+      "category": "administrative",
+      "functionalArea": "reporting",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/reporting.md",
+          "section": "Workflow Steps - Share Reports"
+        }
+      ],
+      "dependencies": [
+        "F-WF-RPT-005"
+      ],
+      "workflowContext": {
+        "workflow": "Reporting",
+        "step": 9,
+        "nextSteps": []
+      }
+    },
+    {
+      "id": "F-WF-USR-001",
+      "name": "User Account Creation",
+      "description": "Create customer, administrator, or supplier accounts with required information, role assignment, and automated welcome email",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Create New User Account"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 2,
+        "nextSteps": [
+          "Assign User Roles and Permissions"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-USR-003",
+      "name": "User Information Updates",
+      "description": "Modify user personal information, email, password, preferences with validation, verification, and audit logging",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Update User Information"
+        }
+      ],
+      "dependencies": [
+        "F-WF-USR-001"
+      ],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 4,
+        "nextSteps": [
+          "Manage User Status"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-USR-004",
+      "name": "User Status Management",
+      "description": "Change user account status (active, inactive, suspended, blacklisted) with reason tracking, session invalidation, and notifications",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Manage User Status"
+        }
+      ],
+      "dependencies": [
+        "F-WF-USR-001"
+      ],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 5,
+        "nextSteps": [
+          "Reset User Password"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-USR-006",
+      "name": "User Booking Management Interface",
+      "description": "View and modify user's booking history, cancel bookings, process refunds, and add notes from admin interface",
+      "category": "administrative",
+      "functionalArea": "customer-support",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Manage User Bookings"
+        }
+      ],
+      "dependencies": [
+        "F-WF-USR-001"
+      ],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 7,
+        "nextSteps": [
+          "Handle User Verification"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-USR-008",
+      "name": "User Communication Management",
+      "description": "Send individual or bulk emails, SMS, in-app notifications with templates, personalization, scheduling, and tracking",
+      "category": "administrative",
+      "functionalArea": "communications",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Manage User Communications"
+        }
+      ],
+      "dependencies": [
+        "F-WF-USR-001"
+      ],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 9,
+        "nextSteps": [
+          "Bulk User Operations"
+        ]
+      }
+    },
+    {
+      "id": "F-WF-USR-009",
+      "name": "Bulk User Operations",
+      "description": "Perform mass operations on multiple users including status changes, role assignments, emails, exports, and imports with batch processing",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/04-workflows/administrative/user-management.md",
+          "section": "Workflow Steps - Bulk User Operations"
+        }
+      ],
+      "dependencies": [
+        "F-WF-USR-001"
+      ],
+      "workflowContext": {
+        "workflow": "User Management",
+        "step": 10,
+        "nextSteps": [
+          "Monitor User Activity"
+        ]
+      }
+    },
+    {
+      "id": "F-FLEET-001",
+      "name": "Comprehensive Vehicle CRUD Operations",
+      "description": "Complete lifecycle management of vehicle inventory with full create, read, update, and delete capabilities including bulk import, advanced search, and vehicle categorization",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "1.1 Vehicle Catalog Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Centralized inventory control enables efficient fleet management and accurate customer-facing information"
+    },
+    {
+      "id": "F-FLEET-002",
+      "name": "Detailed Vehicle Specifications",
+      "description": "Manage comprehensive vehicle details including specifications, features, images, documentation, condition tracking, and multi-language support",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "1.2 Vehicle Information Management"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Detailed vehicle information improves customer satisfaction and reduces booking inquiries"
+    },
+    {
+      "id": "F-FLEET-004",
+      "name": "Flexible Rate Structures",
+      "description": "Sophisticated pricing engine supporting multiple rate structures, seasonal variations, promotional pricing, and vehicle-specific rates with automatic calculation",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "2.1 Multi-Tier Pricing Engine"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexible pricing enables revenue optimization through dynamic pricing strategies"
+    },
+    {
+      "id": "F-FLEET-006",
+      "name": "Calendar-Based Availability Management",
+      "description": "Visual calendar interface for managing vehicle availability with drag-and-drop scheduling, conflict detection, and bulk scheduling capabilities",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "3.1 Visual Availability Scheduler"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Visual scheduling reduces booking conflicts and enables proactive fleet management"
+    },
+    {
+      "id": "F-FLEET-018",
+      "name": "Geographic Organization System",
+      "description": "Multi-level geographic organization supporting complex multi-location operations with countries, cities/regions, and specific pickup/drop-off points",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "9.1 Hierarchical Location Structure"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Hierarchical structure supports complex multi-location operations and enables geographic expansion"
+    },
+    {
+      "id": "F-FLEET-020",
+      "name": "Comprehensive Supplier Management",
+      "description": "Complete lifecycle management of supplier accounts in multi-supplier marketplace mode, from onboarding through performance monitoring",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "10.1 Supplier Account Lifecycle"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Efficient supplier management maintains platform quality and enables marketplace growth"
+    },
+    {
+      "id": "F-FLEET-021",
+      "name": "Flexible Supplier Settings",
+      "description": "Configure supplier-specific settings, business rules, and operational parameters to support diverse supplier business models",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/fleet-management.md",
+          "section": "10.2 Supplier Configuration and Business Rules"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-020"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexible configuration supports diverse supplier business models and maintains operational control"
+    },
+    {
+      "id": "F-PRICE-001",
+      "name": "Flexible Rental Duration Pricing",
+      "description": "Comprehensive pricing system supporting hourly, daily, weekly, bi-weekly, monthly, and custom duration rates with automatic calculation",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "1.1 Multi-Duration Rate Structures"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Flexible rate structures accommodate different customer segments and maximize revenue across all booking patterns"
+    },
+    {
+      "id": "F-PRICE-002",
+      "name": "Individual Vehicle Rate Management",
+      "description": "Configure unique pricing for each vehicle based on category, features, age, and market positioning with bulk updates and rate templates",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "1.2 Vehicle-Specific Pricing"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Vehicle-specific pricing enables optimal revenue extraction based on vehicle value and market demand"
+    },
+    {
+      "id": "F-PRICE-003",
+      "name": "Geographic Price Differentiation",
+      "description": "Configure different pricing for the same vehicle at different locations with airport premiums and regional pricing strategies",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "1.3 Location-Based Pricing"
+        }
+      ],
+      "dependencies": [
+        "F-FLEET-018"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Location-based pricing optimizes revenue by reflecting local market conditions and competitive dynamics"
+    },
+    {
+      "id": "F-PRICE-004",
+      "name": "Time-Based Rate Variations",
+      "description": "Configure custom rates for specific date ranges including seasonal pricing, event-based pricing, and holiday premiums with visual calendar",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "2.1 Date-Based Pricing (Seasonal Pricing)"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Date-based pricing maximizes revenue during peak periods while maintaining competitiveness during low-demand periods"
+    },
+    {
+      "id": "F-PRICE-005",
+      "name": "Marketing-Driven Price Reductions",
+      "description": "Create and manage promotional campaigns with discount codes, percentage discounts, usage limits, and automatic application rules",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "2.2 Promotional Pricing and Discounts"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Promotional pricing drives customer acquisition and increases booking volume during low-demand periods"
+    },
+    {
+      "id": "F-PRICE-006",
+      "name": "Global Price Adjustment Mechanism",
+      "description": "Apply percentage-based markup or discount to base rates across vehicles with preview impact and rollback capability",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "2.3 Price Change Rate (Markup/Discount)"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Price change rate enables rapid market response and competitive positioning without manual rate updates"
+    },
+    {
+      "id": "F-PRICE-011",
+      "name": "Risk Protection Product Pricing",
+      "description": "Configure pricing for insurance products and damage protection options with age-based and vehicle-based adjustments",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "4.1 Insurance and Protection Pricing"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Insurance pricing generates significant ancillary revenue while providing customers with risk protection"
+    },
+    {
+      "id": "F-PRICE-012",
+      "name": "Ancillary Product Revenue",
+      "description": "Configure pricing for additional services and equipment including GPS, child seats, additional drivers, and delivery fees",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "4.2 Additional Services Pricing"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Ancillary pricing significantly increases revenue per booking while providing valuable optional services"
+    },
+    {
+      "id": "F-PRICE-017",
+      "name": "Pricing Governance System",
+      "description": "Implement approval workflows for pricing changes with multi-level approval hierarchy and threshold-based rules",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "6.1 Price Approval Workflows"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Approval workflows ensure pricing discipline and prevent unauthorized changes"
+    },
+    {
+      "id": "F-PRICE-019",
+      "name": "Pricing Change Management",
+      "description": "Comprehensive tracking of all pricing changes with complete audit trail, rollback capability, and compliance support",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/pricing-management.md",
+          "section": "6.3 Price History and Audit Trail"
+        }
+      ],
+      "dependencies": [
+        "F-PRICE-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Price history provides accountability and supports compliance requirements"
+    },
+    {
+      "id": "F-REV-012",
+      "name": "Enterprise Customer Platform",
+      "description": "Comprehensive corporate account management supporting hierarchical accounts, travel policy enforcement, and centralized billing",
+      "category": "administrative",
+      "functionalArea": "corporate",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/revenue-optimization.md",
+          "section": "5.1 Corporate Account Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Corporate accounts provide stable, high-volume revenue and predictable booking patterns"
+    },
+    {
+      "id": "F-USER-001",
+      "name": "Complete Customer Account Administration",
+      "description": "Comprehensive customer account management covering entire lifecycle with search, status management, verification, and account deletion",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "1.1 Customer Lifecycle Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Comprehensive customer management supports quality customer service and regulatory compliance"
+    },
+    {
+      "id": "F-USER-002",
+      "name": "Detailed Customer Data Management",
+      "description": "Manage comprehensive customer profile information including personal details, contact information, preferences, and documentation",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "1.2 Customer Profile Information"
+        }
+      ],
+      "dependencies": [
+        "F-USER-001"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Detailed customer profiles enable personalized service and improve customer experience"
+    },
+    {
+      "id": "F-USER-004",
+      "name": "Admin User Administration",
+      "description": "Manage administrator accounts with role-based access control, activity tracking, 2FA, and security controls",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "2.1 Administrator Account Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "stakeholderBenefit": "Controlled admin access ensures platform security and accountability"
+    },
+    {
+      "id": "F-USER-014",
+      "name": "Supplier User Lifecycle",
+      "description": "Manage supplier user accounts with role assignment, permission scoping, and multi-user support for marketplace operations",
+      "category": "administrative",
+      "functionalArea": "user-management",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/05-features/administrative/user-management.md",
+          "section": "6.1 Supplier Account Administration"
+        }
+      ],
+      "dependencies": [
+        "F-USER-004",
+        "F-FLEET-020"
+      ],
+      "workflowContext": null,
+      "stakeholderBenefit": "Supplier user management enables efficient multi-supplier operations while maintaining data security"
+    },
+    {
+      "id": "R-FM-001",
+      "name": "Vehicle Inventory Management",
+      "description": "Comprehensive vehicle lifecycle management including adding, updating, searching, filtering, bulk import, and audit trail for all vehicle information with image management",
+      "category": "administrative",
+      "functionalArea": "fleet",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 1: Vehicle Inventory Management"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 1,
+        "nextSteps": [
+          "Vehicle Status Management",
+          "Pricing Configuration"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to manage the complete vehicle inventory lifecycle",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    },
+    {
+      "id": "R-FM-003",
+      "name": "Dynamic Pricing Management",
+      "description": "Multi-tier pricing with hourly, daily, weekly, monthly rates, date-based seasonal pricing, bulk updates, price history, and optional AI-driven dynamic pricing based on demand and market conditions",
+      "category": "administrative",
+      "functionalArea": "pricing",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 3: Dynamic Pricing Management"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Pricing Updates",
+        "step": 1,
+        "nextSteps": [
+          "Price Validation",
+          "Booking Integration"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to configure flexible pricing strategies",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Must-Have (Basic), Should-Have (AI)",
+        "phase": "Phase 1: Foundation (Basic), Phase 3: Advanced (AI)"
+      }
+    },
+    {
+      "id": "R-FM-006",
+      "name": "Fleet Performance Analytics",
+      "description": "Comprehensive vehicle and fleet-level analytics including bookings, revenue, utilization rate, customer ratings, maintenance costs, profitability, trend analysis, and rebalancing recommendations",
+      "category": "administrative",
+      "functionalArea": "analytics",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 6: Fleet Performance Analytics"
+        },
+        {
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 2: Fleet Performance Analytics",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001",
+        "R-FM-002"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to monitor and optimize vehicle utilization",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Intelligence"
+      }
+    },
+    {
+      "id": "R-FM-011",
+      "name": "Location and Multi-Site Management",
+      "description": "Hierarchical location structure with address, coordinates, operating hours, vehicle assignment, location-based search, assignment history, bulk assignment, fleet rebalancing, and capacity monitoring",
+      "category": "administrative",
+      "functionalArea": "locations",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 11: Location and Multi-Site Management"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Fleet Management",
+        "step": 3,
+        "nextSteps": [
+          "Vehicle Assignment",
+          "Rebalancing"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to manage vehicles across multiple locations",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Must-Have",
+        "phase": "Phase 1: Foundation"
+      }
+    },
+    {
+      "id": "R-FM-012",
+      "name": "Supplier Management (Multi-Supplier Mode)",
+      "description": "Multi-supplier platform support with supplier account lifecycle, profile management, email verification, status management, supplier-specific settings, performance metrics, and comparative analysis dashboard",
+      "category": "administrative",
+      "functionalArea": "suppliers",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 12: Supplier Management (Multi-Supplier Mode)"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001"
+      ],
+      "workflowContext": {
+        "workflow": "Supplier Management",
+        "step": 1,
+        "nextSteps": [
+          "Performance Tracking",
+          "Settings Configuration"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a platform administrator, I want to manage multiple vehicle suppliers",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have (if multi-supplier)",
+        "phase": "Phase 3: Advanced Capabilities"
+      }
+    },
+    {
+      "id": "R-FM-015",
+      "name": "Maintenance Cost Tracking and Analytics",
+      "description": "Comprehensive cost tracking per vehicle with service type analysis, category comparison, vendor benchmarking, budget variance, trend forecasting, high-maintenance identification, ROI calculation, and export capabilities",
+      "category": "administrative",
+      "functionalArea": "finance",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 15: Maintenance Cost Tracking and Analytics"
+        }
+      ],
+      "dependencies": [
+        "R-FM-004",
+        "R-FM-014"
+      ],
+      "workflowContext": {
+        "workflow": "Budget Management",
+        "step": 1,
+        "nextSteps": [
+          "Cost Analysis",
+          "Financial Reporting"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to track and analyze maintenance costs",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Intelligence"
+      }
+    },
+    {
+      "id": "R-FM-017",
+      "name": "Bulk Operations",
+      "description": "Bulk updates for pricing, location assignment, status changes, availability with preview, batch processing, progress indicators, error handling, export capabilities, and audit logging",
+      "category": "administrative",
+      "functionalArea": "operations",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 17: Bulk Operations"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to perform bulk updates efficiently",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Intelligence"
+      }
+    },
+    {
+      "id": "R-FM-020",
+      "name": "Fleet Lifecycle Management",
+      "description": "Complete lifecycle from acquisition to disposition including registration, age/mileage tracking, retirement criteria, disposition workflow, residual value tracking, TCO calculation, optimal timing recommendations, and history reports",
+      "category": "administrative",
+      "functionalArea": "lifecycle",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/fleet-management.md",
+          "section": "Requirement 20: Fleet Lifecycle Management"
+        }
+      ],
+      "dependencies": [
+        "R-FM-001",
+        "R-FM-006"
+      ],
+      "workflowContext": {
+        "workflow": "Vehicle Disposition",
+        "step": 1,
+        "nextSteps": [
+          "Retirement Planning",
+          "Resale Processing"
+        ]
+      },
+      "requirementDetails": {
+        "userStory": "As a fleet manager, I want to manage vehicle lifecycle from acquisition to disposition",
+        "acceptanceCriteriaCount": 10,
+        "priority": "Should-Have",
+        "phase": "Phase 2: Intelligence"
+      }
+    }
+  ]
+}

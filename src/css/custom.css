@@ -1,0 +1,351 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Car Rental System Documentation Theme */
+:root {
+  /* Primary blue theme for car rental */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Custom spacing */
+  --ifm-spacing-horizontal: 1.5rem;
+  
+  /* Hero gradient */
+  --ifm-hero-background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Dark mode with complementary colors */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Hero section styling */
+.hero--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: cover;
+  color: white;
+}
+
+/* Feature cards hover effect */
+.text--center:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Mermaid diagram styling */
+.docusaurus-mermaid-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Dark mode Mermaid - Target classes added by JavaScript */
+[data-theme='dark'] .docusaurus-mermaid-container svg rect.dark-mode-node {
+  fill: #334155 !important;
+  stroke: #60a5fa !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme='dark'] .docusaurus-mermaid-container svg rect.dark-mode-cluster {
+  fill: #1e293b !important;
+  stroke: #475569 !important;
+  stroke-width: 2px !important;
+}
+
+/* Fallback: Override all node rectangles in dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container svg .node rect,
+[data-theme='dark'] .docusaurus-mermaid-container svg g[id^="flowchart-"] rect {
+  fill: #334155 !important;
+  stroke: #60a5fa !important;
+  stroke-width: 2px !important;
+}
+
+/* Override cluster/subgraph backgrounds */
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster > rect {
+  fill: #1e293b !important;
+  stroke: #475569 !important;
+  stroke-width: 2px !important;
+}
+
+/* Text colors in dark mode */
+[data-theme='dark'] .docusaurus-mermaid-container svg text,
+[data-theme='dark'] .docusaurus-mermaid-container svg .nodeLabel,
+[data-theme='dark'] .docusaurus-mermaid-container svg .nodeLabel p,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject div,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject span,
+[data-theme='dark'] .docusaurus-mermaid-container svg foreignObject p {
+  fill: #f1f5f9 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Edge labels background */
+[data-theme='dark'] .docusaurus-mermaid-container svg .edgeLabel .labelBkg,
+[data-theme='dark'] .docusaurus-mermaid-container svg .labelBkg {
+  background-color: #1e293b !important;
+}
+
+/* Lines and arrows */
+[data-theme='dark'] .docusaurus-mermaid-container svg path.flowchart-link,
+[data-theme='dark'] .docusaurus-mermaid-container svg .edgePath path {
+  stroke: #94a3b8 !important;
+}
+
+[data-theme='dark'] .docusaurus-mermaid-container svg .arrowMarkerPath {
+  fill: #94a3b8 !important;
+  stroke: #94a3b8 !important;
+}
+
+/* Cluster labels */
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label text,
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label span,
+[data-theme='dark'] .docusaurus-mermaid-container svg .cluster-label p {
+  fill: #e2e8f0 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Ensure logo displays properly */
+.navbar__logo img {
+  height: 2rem;
+  width: auto;
+}
+
+/* PDF Export Styling - Academic Standard */
+@media print {
+  /* Page setup with academic margins */
+  @page {
+    size: letter;
+    margin: 1in 1in 1in 1in;
+    
+    /* Page numbers in footer */
+    @bottom-right {
+      content: counter(page);
+      font-family: 'Times New Roman', serif;
+      font-size: 10pt;
+    }
+    
+    /* Chapter title in header */
+    @top-center {
+      content: string(chapter-title);
+      font-family: 'Times New Roman', serif;
+      font-size: 10pt;
+      font-style: italic;
+    }
+  }
+  
+  /* First page (title page) - no header/footer */
+  @page :first {
+    @top-center { content: none; }
+    @bottom-right { content: none; }
+  }
+  
+  /* Academic typography */
+  body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+  }
+  
+  /* Headings */
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 24pt;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+    string-set: chapter-title content();
+  }
+  
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 18pt;
+    margin-bottom: 10pt;
+    page-break-after: avoid;
+  }
+  
+  h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 14pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+  }
+  
+  h4 {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+  
+  /* Paragraphs */
+  p {
+    margin-bottom: 12pt;
+    text-align: justify;
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin-bottom: 12pt;
+  }
+  
+  li {
+    margin-bottom: 6pt;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    font-family: 'Courier New', monospace;
+    font-size: 10pt;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 8pt;
+    page-break-inside: avoid;
+  }
+  
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 12pt;
+    page-break-inside: avoid;
+  }
+  
+  th, td {
+    border: 1px solid #000;
+    padding: 6pt;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  /* Diagrams and images */
+  img, svg {
+    max-width: 100%;
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+  
+  /* Mermaid diagrams */
+  .docusaurus-mermaid-container {
+    page-break-inside: avoid;
+    margin: 18pt 0;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    border-left: 4pt solid #ccc;
+    padding-left: 12pt;
+    margin-left: 0;
+    margin-bottom: 12pt;
+    font-style: italic;
+    page-break-inside: avoid;
+  }
+  
+  /* Links - show URLs in print */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+  
+  /* Don't show URLs for internal links */
+  a[href^="#"]:after,
+  a[href^="/"]:after {
+    content: "";
+  }
+  
+  /* Page breaks */
+  .page-break {
+    page-break-after: always;
+  }
+  
+  /* Avoid breaking inside these elements */
+  .keep-together {
+    page-break-inside: avoid;
+  }
+  
+  /* Hide navigation elements in PDF */
+  nav,
+  .navbar,
+  .footer,
+  .sidebar,
+  .pagination-nav,
+  .theme-doc-breadcrumbs,
+  .theme-doc-footer,
+  .theme-edit-this-page,
+  .theme-last-updated {
+    display: none !important;
+  }
+  
+  /* Table of contents styling */
+  .table-of-contents {
+    page-break-after: always;
+  }
+  
+  .table-of-contents h2 {
+    text-align: center;
+    margin-bottom: 24pt;
+  }
+  
+  .table-of-contents ul {
+    list-style: none;
+  }
+  
+  .table-of-contents a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .table-of-contents a:after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+}
+
+/* Prince PDF specific styling */
+@media prince {
+  /* Enhanced page setup for Prince PDF */
+  @page {
+    prince-shrink-to-fit: auto;
+  }
+  
+  /* Better handling of Mermaid diagrams */
+  .docusaurus-mermaid-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ensure proper rendering of code blocks */
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}

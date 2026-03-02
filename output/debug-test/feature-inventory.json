@@ -1,0 +1,33 @@
+{
+  "features": [
+    {
+      "id": "aa0-",
+      "name": "A0  a ",
+      "description": "tellus",
+      "category": "user-facing",
+      "source": [
+        "docs/a/-.md"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "aaa-",
+      "name": "A0  Aa",
+      "description": "ullamcorper",
+      "category": "user-facing",
+      "source": [
+        "docs/-/a.md"
+      ],
+      "dependencies": []
+    }
+  ],
+  "categories": [
+    "user-facing"
+  ],
+  "extractedAt": "2026-02-18T12:06:56.751Z",
+  "totalFeatures": 2,
+  "sourceFiles": [
+    "docs/-/a.md",
+    "docs/a/-.md"
+  ]
+}

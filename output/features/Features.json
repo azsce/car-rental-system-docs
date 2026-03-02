@@ -1,0 +1,297 @@
+{
+  "category": "Features",
+  "total_features": 8,
+  "features": [
+    {
+      "id": "R-PG-009",
+      "name": "Flexible Payment Flow Patterns",
+      "description": "Support multiple payment timing options including deposit payment, full payment at booking, and pay-later for corporate clients with clear payment schedules",
+      "category": "Features",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 7: Payment Flow Patterns",
+          "requirementId": "R-PG-009"
+        }
+      ],
+      "dependencies": [
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a customer, I want flexible payment options including deposits, full payment, and pay-later, so that I can choose the payment timing that suits my needs.",
+        "acceptanceCriteria": [
+          "Supports deposit payment (partial upfront, remainder later)",
+          "Supports full payment at time of booking",
+          "Supports pay-later option for approved corporate clients",
+          "Collects minimum 20% upfront for deposit payments",
+          "Schedules remainder payment before pickup for deposit option",
+          "Supports guest checkout without account creation",
+          "Automatically creates account after successful guest checkout payment",
+          "Allows customers to select payment timing during booking flow",
+          "Clearly displays payment schedule and amounts for each option",
+          "Sends payment reminders for outstanding balances"
+        ]
+      }
+    },
+    {
+      "id": "R-PG-011",
+      "name": "Multi-Currency Payment Support",
+      "description": "Support payment processing in at least 10 major currencies with real-time exchange rates, automatic currency detection, and transparent conversion details",
+      "category": "Features",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 9: Multi-Currency Support",
+          "requirementId": "R-PG-011"
+        }
+      ],
+      "dependencies": [
+        "R-PG-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As an international customer, I want to pay in my local currency, so that I understand the exact cost without manual conversion.",
+        "acceptanceCriteria": [
+          "Supports payment processing in at least 10 major currencies (USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY, SGD, HKD)",
+          "Detects customer location via IP geolocation and suggests local currency",
+          "Allows manual currency selection during checkout",
+          "Displays prices in selected currency throughout booking flow",
+          "Uses real-time exchange rates from payment gateway",
+          "Settles all payments in platform's base currency",
+          "Updates all prices immediately when currency is changed",
+          "Displays exchange rate and conversion details transparently",
+          "Handles currency conversion fees according to gateway pricing",
+          "Supports currency-specific payment methods (e.g., Alipay for CNY)"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-006",
+      "name": "WeChat Location Services",
+      "description": "Use WeChat location API (wx.getLocation()) for user positioning and nearby vehicle search with map integration",
+      "category": "Features",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 6: WeChat Location Services",
+          "requirementId": "R-SA-006"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a WeChat user, I want the Mini-Program to detect my location and show nearby vehicles, so that I can find convenient rental options.",
+        "acceptanceCriteria": [
+          "Uses WeChat location API (wx.getLocation()) for user positioning",
+          "Requests location permission with clear explanation",
+          "Displays vehicles on WeChat Map (wx.openLocation())",
+          "Calculates distances from user location to vehicles",
+          "Provides navigation to pickup locations using WeChat Map",
+          "Updates location periodically for real-time vehicle search",
+          "Caches location data for session duration",
+          "Handles location permission denial with manual address entry",
+          "Respects user privacy by not storing location history without consent",
+          "Optimizes location API calls to reduce battery consumption"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-007",
+      "name": "WeChat Camera Integration",
+      "description": "Use WeChat camera API (wx.chooseImage()) for document scanning, damage photos, and QR code scanning with OCR",
+      "category": "Features",
+      "functionalArea": "Document Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 7: WeChat Camera Integration",
+          "requirementId": "R-SA-007"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a WeChat user, I want to use the camera for document scanning and damage photos, so that I can complete verification and inspection within the Mini-Program.",
+        "acceptanceCriteria": [
+          "Uses WeChat camera API (wx.chooseImage()) for photo capture",
+          "Implements document scanning for driver's license and ID",
+          "Uses OCR to extract information from scanned documents",
+          "Captures vehicle damage photos at pickup and return",
+          "Supports QR code scanning using wx.scanCode()",
+          "Compresses images before upload to reduce bandwidth",
+          "Provides photo preview and retake options",
+          "Stores photos securely with encryption",
+          "Integrates camera with AI damage detection",
+          "Handles camera permission denial gracefully"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-008",
+      "name": "WeChat Template Messages",
+      "description": "Send template messages for booking updates, payment confirmations, and reminders with deep links to Mini-Program pages",
+      "category": "Features",
+      "functionalArea": "Notifications",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 8: WeChat Template Messages",
+          "requirementId": "R-SA-008"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a WeChat user, I want to receive booking updates through WeChat notifications, so that I stay informed without checking the Mini-Program constantly.",
+        "acceptanceCriteria": [
+          "Sends template messages for booking confirmations",
+          "Sends template messages for payment confirmations",
+          "Sends template messages for pickup reminders",
+          "Sends template messages for return reminders",
+          "Uses WeChat-approved message templates",
+          "Includes deep links to relevant Mini-Program pages",
+          "Respects user notification preferences",
+          "Tracks message delivery and click-through rates",
+          "Handles message sending failures with retry logic",
+          "Complies with WeChat message frequency limits"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-009",
+      "name": "WeChat Offline Capabilities",
+      "description": "Implement offline mode with cached booking details, offline QR codes, and BLE-based vehicle unlocking",
+      "category": "Features",
+      "functionalArea": "Offline Support",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 9: WeChat Offline Capabilities",
+          "requirementId": "R-SA-009"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001",
+        "R-SA-004"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a WeChat user in areas with poor connectivity, I want to access my booking details and unlock vehicles offline, so that I'm not stranded without network access.",
+        "acceptanceCriteria": [
+          "Caches booking details in Mini-Program local storage",
+          "Caches vehicle information for offline access",
+          "Displays offline QR code for vehicle access",
+          "Enables BLE-based vehicle unlocking without internet",
+          "Syncs offline actions when connectivity is restored",
+          "Indicates offline mode status to users",
+          "Limits offline functionality to essential features",
+          "Implements conflict resolution for offline changes",
+          "Caches user profile and payment methods",
+          "Provides clear messaging about offline limitations"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-012",
+      "name": "Cross-Platform Identity Management",
+      "description": "Maintain unified user profiles across super-apps and native platforms with secure identity mapping and account linking",
+      "category": "Features",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 12: Cross-Platform Identity Management",
+          "requirementId": "R-SA-012"
+        }
+      ],
+      "dependencies": [
+        "R-SA-002",
+        "R-SA-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want unified user identity across super-apps and native platforms, so that users have consistent experiences regardless of entry point.",
+        "acceptanceCriteria": [
+          "Maintains unified user profiles across platforms",
+          "Maps WeChat OpenID to platform user accounts",
+          "Maps Grab ID to platform user accounts",
+          "Syncs profile updates across all platforms",
+          "Maintains booking history across all entry points",
+          "Supports account linking for users accessing from multiple platforms",
+          "Handles identity conflicts with user verification",
+          "Maintains separate authentication tokens per platform",
+          "Implements secure identity mapping with encryption",
+          "Provides users visibility into linked accounts"
+        ]
+      }
+    },
+    {
+      "id": "R-SA-013",
+      "name": "Super-App Analytics and Attribution",
+      "description": "Track user acquisition, conversion, and revenue attribution by super-app platform with analytics dashboard",
+      "category": "Features",
+      "functionalArea": "Analytics",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/integration/super-app-integration.md",
+          "section": "Requirement 13: Super-App Analytics and Attribution",
+          "requirementId": "R-SA-013"
+        }
+      ],
+      "dependencies": [
+        "R-SA-001",
+        "R-SA-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a marketing team member, I want to track user acquisition and conversion from super-apps, so that I can measure ROI and optimize channel strategy.",
+        "acceptanceCriteria": [
+          "Tracks user registrations by source platform (WeChat, Grab, native)",
+          "Tracks bookings by originating platform",
+          "Measures conversion rates per platform",
+          "Tracks revenue attribution by platform",
+          "Monitors user engagement metrics per platform",
+          "Tracks viral sharing and referral attribution",
+          "Provides analytics dashboard for super-app performance",
+          "Calculates customer acquisition cost (CAC) per platform",
+          "Measures lifetime value (LTV) by acquisition channel",
+          "Exports analytics data for external analysis"
+        ]
+      }
+    }
+  ]
+}

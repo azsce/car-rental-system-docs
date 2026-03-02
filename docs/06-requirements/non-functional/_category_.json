@@ -1,0 +1,8 @@
+{
+  "label": "Non-Functional Requirements",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Non-functional requirements defining performance, scalability, security, usability, and reliability standards for the car rental platform"
+  }
+}

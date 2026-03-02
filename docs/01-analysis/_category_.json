@@ -1,0 +1,8 @@
+{
+  "label": "Project Analysis",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Detailed analysis of three open-source car rental projects: bookcars, car-rental-php, and FreeCar."
+  }
+}
