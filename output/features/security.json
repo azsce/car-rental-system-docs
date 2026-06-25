@@ -1,1797 +1,1089 @@
 {
-  "category": "security",
-  "total_features": 91,
+  "category": "Security",
+  "total_features": 33,
   "features": [
     {
-      "id": "F-INS-008",
-      "name": "Fraud Detection Integration",
-      "description": "AI-powered fraud screening for insurance claims with pattern detection and risk scoring",
-      "category": "security",
-      "functionalArea": "insurance",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/03-stakeholders/business-stakeholders/insurance-providers.md",
-          "section": "Relationship to Features - Important Features"
-        }
-      ],
-      "dependencies": [
-        "F-INS-002"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces fraudulent claims and improves loss ratios through early detection"
-    },
-    {
-      "id": "F-PAY-002",
-      "name": "Payment Tokenization",
-      "description": "Secure storage of payment methods using tokenization to enable repeat bookings without re-entering card details",
-      "category": "security",
-      "functionalArea": "payments",
+      "id": "R-RA-008",
+      "name": "Audit Trail and Compliance Reporting",
+      "description": "Comprehensive audit trails logging all user actions, system events, data modifications with complete access tracking, change history, pre-built compliance reports (GDPR, SOX, PCI-DSS), tamper-proof logs, and automated suspicious activity alerts",
+      "category": "Security",
+      "functionalArea": "Analytics & Reporting",
+      "priority": "Must-Have",
+      "phase": "MVP",
       "effortEstimate": "Medium",
       "sources": [
         {
-          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
-          "section": "Relationship to Features - Critical Features"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Improves security by eliminating storage of sensitive card data while enabling convenient repeat payments"
-    },
-    {
-      "id": "F-PAY-006",
-      "name": "Fraud Detection and Prevention",
-      "description": "Real-time fraud screening for payment transactions with risk scoring, velocity checks, and 3D Secure support",
-      "category": "security",
-      "functionalArea": "payments",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
-          "section": "Relationship to Features - Critical Features"
-        },
-        {
-          "file": "docs/06-requirements/functional/payment-processing.md",
-          "section": "REQ-PP-005: Fraud Detection and Prevention"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-001",
-        "R-PP-003"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces fraudulent transactions and chargebacks while maintaining low false positive rates"
-    },
-    {
-      "id": "F-PAY-007",
-      "name": "PCI-DSS Compliance",
-      "description": "Secure handling of payment card data with PCI-DSS compliant infrastructure and processes",
-      "category": "security",
-      "functionalArea": "payments",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/03-stakeholders/business-stakeholders/payment-processors.md",
-          "section": "Relationship to Features - Critical Features"
-        },
-        {
-          "file": "docs/06-requirements/functional/payment-processing.md",
-          "section": "REQ-PP-002: PCI-DSS Compliance"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures regulatory compliance and protects against data breaches and security incidents"
-    },
-    {
-      "id": "F-ADM-007",
-      "name": "Role-Based Access Control",
-      "description": "Granular permission management system with customizable roles, access controls, and permission auditing for different administrator types",
-      "category": "security",
-      "functionalArea": "access-control",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/03-stakeholders/operational-staff/administrators.md",
-          "section": "Relationship to Features - Critical Features"
-        },
-        {
-          "file": "docs/06-requirements/functional/user-management.md",
-          "section": "REQ-UM-016: Role-Based Access Control",
+          "file": "docs/06-requirements/functional/reporting-analytics.md",
+          "section": "Requirement 8: Audit Trail and Compliance Reporting",
           "type": "functional-requirement"
         }
       ],
-      "dependencies": [
-        "F-ADM-002",
-        "R-UM-002"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures secure access to system functions and enables proper segregation of duties"
-    },
-    {
-      "id": "F-ADM-008",
-      "name": "Audit Logs and Activity Tracking",
-      "description": "Complete history of all system changes, user actions, and configuration updates with searchable audit trail",
-      "category": "security",
-      "functionalArea": "auditing",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/03-stakeholders/operational-staff/administrators.md",
-          "section": "Relationship to Features - Critical Features"
-        }
-      ],
       "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides accountability and enables investigation of issues or security incidents"
-    },
-    {
-      "id": "F-WF-USR-002",
-      "name": "Granular Role and Permission Management",
-      "description": "Assign roles with module-level, action-level, and data-level permissions with validation and immediate access updates",
-      "category": "security",
-      "functionalArea": "access-control",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/04-workflows/administrative/user-management.md",
-          "section": "Workflow Steps - Assign User Roles and Permissions"
-        }
-      ],
-      "dependencies": [
-        "F-WF-USR-001"
-      ],
       "workflowContext": {
-        "workflow": "User Management",
-        "step": 3,
-        "nextSteps": [
-          "Update User Information"
+        "workflow": "Reporting Workflow",
+        "step": "Monitor Report Performance",
+        "userRole": "Compliance Officer, Security Team"
+      },
+      "requirementDetails": {
+        "userStory": "As a Compliance Officer, I want comprehensive audit trails and compliance reports, so that I can demonstrate regulatory compliance and investigate security incidents",
+        "acceptanceCriteria": [
+          "Log all user actions, system events, data modifications with timestamp, user ID, action details",
+          "Track who accessed what data and when with complete access audit trail",
+          "Maintain complete change history for all data with before/after values",
+          "Provide pre-built compliance reports for GDPR, SOX, PCI-DSS",
+          "Provide powerful search and filter capabilities across audit logs",
+          "Implement configurable log retention policies based on compliance requirements",
+          "Ensure audit logs are tamper-proof and immutable using cryptographic hashing or blockchain",
+          "Alert security teams automatically when suspicious activity is detected",
+          "Provide audit log export capabilities for external analysis and archival",
+          "Support compliance reporting for data protection regulations including data access requests and deletion confirmations"
         ]
       }
     },
     {
-      "id": "F-WF-USR-005",
-      "name": "Password Reset Management",
-      "description": "Initiate password resets via email link, temporary password, or admin reset with secure token generation and logging",
-      "category": "security",
-      "functionalArea": "authentication",
+      "id": "R-UM-002",
+      "name": "User Authentication",
+      "description": "Secure multi-method authentication supporting email/password, social login, magic link, SMS OTP, and biometric with encrypted session tokens, account lockout protection, and login activity tracking",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-002: User Authentication",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-001"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "User Authentication",
+        "userRole": "Registered User"
+      },
+      "requirementDetails": {
+        "userStory": "As a registered user, I want to securely log in to my account using my preferred authentication method, so that I can access my bookings and personal information",
+        "acceptanceCriteria": [
+          "Support multiple authentication methods: email/password, social login, magic link, SMS OTP, biometric",
+          "Validate credentials against securely hashed passwords",
+          "Generate encrypted session token with user ID, role, expiration",
+          "Store session token in HTTP-only, secure, SameSite cookie for web",
+          "Return session token in API response for mobile secure storage",
+          "Extend session to 30 days with 'Remember Me' (configurable to 400 days for corporate)",
+          "Lock account for 30 minutes after 5 failed login attempts in 15 minutes",
+          "Send notification email for login from new device or location",
+          "Auto-logout and redirect to login page when session expires",
+          "Record login activity with timestamp, device, IP, location for audit"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-004",
+      "name": "Corporate Single Sign-On (SSO)",
+      "description": "Enterprise SSO integration supporting SAML 2.0 and OAuth 2.0/OpenID Connect for corporate identity providers with automatic account provisioning and session management",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-004: Corporate Single Sign-On (SSO)",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-002",
+        "R-UM-016"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "Corporate User Authentication",
+        "userRole": "Corporate Employee"
+      },
+      "requirementDetails": {
+        "userStory": "As a corporate employee, I want to log in using my company credentials, so that I don't need to manage separate passwords and can comply with corporate security policies",
+        "acceptanceCriteria": [
+          "Support SAML 2.0 and OAuth 2.0/OpenID Connect protocols for corporate identity providers",
+          "Redirect corporate user to identity provider's login page",
+          "Receive and validate authentication assertion with user identity and attributes",
+          "Validate signature and expiration of SSO assertion",
+          "Auto-create account and assign to corporate organization on first SSO login",
+          "Auto-logout and redirect to SSO login when corporate session expires",
+          "Deny access when corporate administrator disables user in identity provider",
+          "Display error message and corporate IT helpdesk contact when SSO fails"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-010",
+      "name": "Account Security Management",
+      "description": "Comprehensive account security settings including password management, active session management, login history, suspicious activity alerts, and account deactivation with session invalidation",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-010: Account Security Management",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-002"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Session Management",
+        "userRole": "Registered User"
+      },
+      "requirementDetails": {
+        "userStory": "As a user, I want to manage my account security settings and monitor account activity, so that I can protect my account from unauthorized access",
+        "acceptanceCriteria": [
+          "Display security settings: change password, update email/phone, manage sessions, view login history",
+          "Require current password verification before allowing password change",
+          "Enforce password strength requirements (min 8 chars, mix of uppercase, lowercase, numbers, special chars)",
+          "Invalidate all existing sessions except current when password changed, send confirmation email",
+          "Display active sessions with device type, browser, OS, IP, location, last activity timestamp",
+          "Invalidate specific session token and logout user on that device when session terminated",
+          "Invalidate all session tokens except current when 'Log out all devices' selected",
+          "Display last 50 login attempts with timestamp, device, location, success/failure status",
+          "Send email alert with details and account security link when suspicious login activity detected",
+          "Verify no active bookings, mark account inactive, send confirmation email when account deactivation requested"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-013",
+      "name": "Privacy Controls and Data Management",
+      "description": "GDPR/CCPA-compliant privacy controls including data visibility settings, partner data sharing opt-out, marketing opt-out, data export, account deletion with grace period, cookie preferences, and clear privacy policy",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-013: Privacy Controls and Data Management",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-005"
+      ],
+      "workflowContext": {
+        "workflow": "All Workflows",
+        "step": "Privacy Compliance",
+        "userRole": "All Users"
+      },
+      "requirementDetails": {
+        "userStory": "As a user concerned about privacy, I want to control how my personal data is used and shared, so that I can protect my privacy while using the platform",
+        "acceptanceCriteria": [
+          "Display controls for data visibility, location tracking, data sharing, marketing communications",
+          "Not share personal information with third parties (except service delivery: payment, insurance) when opted out of data sharing",
+          "Suppress promotional emails, SMS, push notifications while continuing transactional communications when opted out of marketing",
+          "Generate machine-readable export (JSON/CSV) with all personal info, bookings, payments, communications within 30 days",
+          "Verify no active bookings or outstanding payments before proceeding with account deletion",
+          "Provide 30-day grace period for account restoration when account deletion confirmed",
+          "Permanently delete account and personal data after grace period, retain only legally required info",
+          "Send confirmation email explaining retained data and reasons when account deleted",
+          "Respect user choices for analytics, advertising, functional cookies when managing cookie preferences",
+          "Display privacy policy in clear, accessible language with sections on data collection, usage, sharing, user rights"
+        ]
+      }
+    },
+    {
+      "id": "R-UM-015",
+      "name": "Decentralized Identity (DID) Integration",
+      "description": "Blockchain-based portable identity supporting W3C DID standards, verifiable credentials, cryptographic signature verification, portable reputation scores, selective disclosure, and redundant verification skip",
+      "category": "Security",
+      "functionalArea": "User Management",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/user-management.md",
+          "section": "REQ-UM-015: Decentralized Identity (DID) Integration",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [
+        "R-UM-007",
+        "R-UM-008"
+      ],
+      "workflowContext": {
+        "workflow": "Booking Creation Workflow",
+        "step": "DID-Based Instant Verification",
+        "userRole": "Tech-Savvy Early Adopter"
+      },
+      "requirementDetails": {
+        "userStory": "As a user who rents from multiple platforms, I want to use a portable digital identity, so that I can build a reputation that follows me across services and skip redundant verifications",
+        "acceptanceCriteria": [
+          "Support W3C DID standards and common wallet providers (uPort, Civic, Microsoft ION)",
+          "Verify cryptographic signatures on verifiable credentials without accessing raw personal data",
+          "Validate credential authenticity by checking issuer signature and blockchain anchor",
+          "Display portable reputation score from other platforms and use for trust decisions",
+          "Issue verifiable credentials representing rental history and reliability when user builds reputation",
+          "Support selective disclosure allowing users to prove attributes (e.g., 'over 25') without revealing exact data",
+          "Skip redundant verification steps (license upload, KYC) when equivalent DID credentials validated",
+          "Stop accessing DID-based credentials and fall back to traditional verification when user revokes DID access"
+        ]
+      }
+    },
+    {
+      "id": "R-VS-018",
+      "name": "Accessibility Compliance",
+      "description": "Screen reader compatibility with semantic HTML and ARIA labels, full keyboard navigation, sufficient color contrast (WCAG AA 4.5:1), font size preference support, descriptive alt text for images, captions/transcripts for video, proper form label association, clear focus indicators, voice control support, text alternatives for non-text content, screen reader error announcements, and WCAG 2.1 Level AA compliance",
+      "category": "Security",
+      "functionalArea": "Vehicle Search",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/functional/vehicle-search.md",
+          "section": "Requirement VS-18: Accessibility Compliance",
+          "type": "functional-requirement"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": {
+        "workflow": "Vehicle Search Workflow",
+        "step": "Accessible Search",
+        "userRole": "User with Disabilities"
+      },
+      "requirementDetails": {
+        "userStory": "As a user with disabilities, I want an accessible search interface, so that I can search for vehicles independently using assistive technologies",
+        "acceptanceCriteria": [
+          "Provide screen reader compatibility with proper semantic HTML and ARIA labels",
+          "Support full keyboard navigation for all search functions",
+          "Maintain sufficient color contrast ratios (WCAG AA minimum 4.5:1)",
+          "Respect user font size preferences and support text scaling",
+          "Provide descriptive alt text for all vehicle images",
+          "Provide captions and transcripts for video content",
+          "Ensure form labels are properly associated with input fields",
+          "Provide clear focus indicators for keyboard navigation",
+          "Support voice control for search on compatible devices",
+          "Provide text alternatives for all non-text content",
+          "Ensure error messages are announced to screen readers",
+          "Meet WCAG 2.1 Level AA compliance standards"
+        ]
+      }
+    },
+    {
+      "id": "R-MS-011",
+      "name": "API Key Management and Security",
+      "description": "Store mapping API keys in environment variables, use separate keys for dev/prod, implement key rotation policies (annually), monitor API usage and costs, set usage quotas and alerts, restrict keys to specific domains/IPs, implement rate limiting, log all API requests, alert on budget threshold exceeded, and document key compromise response procedures",
+      "category": "Security",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
       "effortEstimate": "Small",
       "sources": [
         {
-          "file": "docs/04-workflows/administrative/user-management.md",
-          "section": "Workflow Steps - Reset User Password"
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 11: API Key Management and Security",
+          "type": "integration-requirement"
         }
       ],
-      "dependencies": [
-        "F-WF-USR-001"
-      ],
+      "dependencies": [],
       "workflowContext": {
-        "workflow": "User Management",
-        "step": 6,
-        "nextSteps": [
-          "Manage User Bookings"
+        "workflow": "All Workflows",
+        "step": "API Security",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure management of mapping service API keys, so that unauthorized usage is prevented and costs are controlled",
+        "acceptanceCriteria": [
+          "Store mapping API keys in environment variables, not in code",
+          "Use separate API keys for development and production environments",
+          "Implement API key rotation policies (minimum annually)",
+          "Monitor API usage and costs through provider dashboards",
+          "Set usage quotas and alerts for cost control",
+          "Restrict API keys to specific domains and IP addresses",
+          "Implement rate limiting to prevent API abuse",
+          "Log all mapping API requests for audit and debugging",
+          "Alert operations team when API usage exceeds budget threshold",
+          "Have documented procedures for API key compromise response"
         ]
       }
     },
     {
-      "id": "F-WF-USR-007",
-      "name": "User Verification System",
-      "description": "Verify user email, phone, identity, payment methods, and address with document review, approval workflow, and status updates",
-      "category": "security",
-      "functionalArea": "verification",
-      "effortEstimate": "Large",
+      "id": "R-MS-013",
+      "name": "Privacy and Permissions",
+      "description": "Request location permission with clear explanation, provide value before requesting permission, respect permission denial without degrading core functionality, allow permission revocation, minimize location data retention (delete after session unless consent), anonymize location data for analytics, comply with GDPR/CCPA, provide transparency in privacy policy, no third-party sharing without consent, and allow location history deletion",
+      "category": "Security",
+      "functionalArea": "Mapping Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
       "sources": [
         {
-          "file": "docs/04-workflows/administrative/user-management.md",
-          "section": "Workflow Steps - Handle User Verification"
+          "file": "docs/06-requirements/integration/mapping-services.md",
+          "section": "Requirement 13: Privacy and Permissions",
+          "type": "integration-requirement"
         }
       ],
       "dependencies": [
-        "F-WF-USR-001"
+        "R-MS-002"
       ],
       "workflowContext": {
-        "workflow": "User Management",
-        "step": 8,
-        "nextSteps": [
-          "Manage User Communications"
+        "workflow": "All Workflows",
+        "step": "Privacy Compliance",
+        "userRole": "Customer"
+      },
+      "requirementDetails": {
+        "userStory": "As a customer, I want control over my location data, so that my privacy is respected and I understand how my location is used",
+        "acceptanceCriteria": [
+          "Request location permission with clear explanation of usage",
+          "Provide value before requesting location permission",
+          "Respect location permission denial without degrading core functionality",
+          "Allow users to revoke location permission at any time",
+          "Minimize location data retention (delete after session unless consent given)",
+          "Anonymize location data for analytics purposes",
+          "Comply with GDPR and CCPA location data requirements",
+          "Provide transparency about location data usage in privacy policy",
+          "Not share location data with third parties without explicit consent",
+          "Allow users to delete their location history"
         ]
       }
     },
     {
-      "id": "F-WF-USR-011",
-      "name": "GDPR-Compliant User Deletion",
-      "description": "Process account deletion requests with soft delete, hard delete, or anonymization options ensuring compliance with data retention requirements",
-      "category": "security",
-      "functionalArea": "compliance",
-      "effortEstimate": "Large",
+      "id": "R-NS-014",
+      "name": "Regulatory Compliance",
+      "description": "Obtain explicit opt-in consent for marketing, provide clear opt-out mechanisms, honor opt-out within 10 business days (CAN-SPAM), include sender identification, maintain consent records for audit, comply with GDPR (EU), TCPA (US SMS), CASL (Canada), respect quiet hours (9 PM - 8 AM local), provide data portability for preferences, allow notification history deletion, and document compliance in privacy policy",
+      "category": "Security",
+      "functionalArea": "Notification Services",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
       "sources": [
         {
-          "file": "docs/04-workflows/administrative/user-management.md",
-          "section": "Workflow Steps - Handle User Deletion Requests"
+          "file": "docs/06-requirements/integration/notification-services.md",
+          "section": "Requirement 14: Regulatory Compliance",
+          "type": "integration-requirement"
         }
       ],
       "dependencies": [
-        "F-WF-USR-001"
+        "R-NS-009"
       ],
       "workflowContext": {
-        "workflow": "User Management",
-        "step": 12,
-        "nextSteps": []
+        "workflow": "All Workflows",
+        "step": "Compliance Enforcement",
+        "userRole": "Platform Operator"
+      },
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want notification practices to comply with regulations, so that the platform avoids penalties and maintains customer trust",
+        "acceptanceCriteria": [
+          "Obtain explicit opt-in consent before sending marketing communications",
+          "Provide clear opt-out mechanisms in all marketing messages",
+          "Honor opt-out requests within 10 business days (CAN-SPAM requirement)",
+          "Include sender identification in all messages",
+          "Maintain consent records for audit purposes",
+          "Comply with GDPR requirements for EU customers",
+          "Comply with TCPA requirements for US SMS",
+          "Comply with CASL requirements for Canadian customers",
+          "Respect quiet hours (no SMS/push between 9 PM - 8 AM local time)",
+          "Provide data portability for notification preferences",
+          "Allow users to delete their notification history",
+          "Document compliance procedures in privacy policy"
+        ]
       }
     },
     {
-      "id": "F-USER-005",
-      "name": "Granular Permission System",
-      "description": "Sophisticated role-based access control with custom roles, permission granularity, and role hierarchy",
-      "category": "security",
-      "functionalArea": "access-control",
+      "id": "R-PG-008",
+      "name": "Payment Fraud Prevention System",
+      "description": "Implement fraud detection with gateway-provided features, 3D Secure, AVS checks, velocity limits, and device fingerprinting",
+      "category": "Security",
+      "functionalArea": "Payment Processing",
+      "priority": "Must-Have",
+      "phase": "MVP",
       "effortEstimate": "Large",
       "sources": [
         {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "2.2 Role-Based Access Control (RBAC)"
+          "file": "docs/06-requirements/integration/payment-gateways.md",
+          "section": "Requirement 6: Fraud Prevention",
+          "requirementId": "R-PG-008"
         }
       ],
       "dependencies": [
-        "F-USER-004"
+        "R-PG-001"
       ],
       "workflowContext": null,
-      "stakeholderBenefit": "RBAC ensures users have appropriate access levels and protects sensitive data"
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want to detect and prevent fraudulent transactions, so that chargebacks are minimized and legitimate customers are protected.",
+        "acceptanceCriteria": [
+          "Enables gateway-provided fraud detection features (Stripe Radar, PayPal Fraud Protection)",
+          "Implements 3D Secure authentication for high-value transactions (>$500)",
+          "Performs Address Verification System (AVS) checks for card payments",
+          "Implements velocity checks to limit transaction frequency per user",
+          "Maintains blacklist of fraudulent users and payment methods",
+          "Flags transactions for manual review when fraud is detected",
+          "Implements device fingerprinting to identify suspicious patterns",
+          "Monitors for unusual booking patterns (multiple bookings from same IP)",
+          "Requires additional verification for high-risk transactions",
+          "Tracks chargeback rates and fraud losses for continuous improvement"
+        ]
+      }
     },
     {
-      "id": "F-USER-007",
-      "name": "Advanced Identity Verification",
-      "description": "Next-generation identity verification using biometric authentication, liveness detection, and AI-powered fraud prevention",
-      "category": "security",
-      "functionalArea": "verification",
+      "id": "R-SEC-001",
+      "name": "Multi-Channel Authentication",
+      "description": "Support multiple authentication methods including email/password, social login, and two-factor authentication",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
       "effortEstimate": "Large",
       "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "3.2 Digital KYC and Biometric Verification"
-        }
-      ],
-      "dependencies": [
-        "F-USER-006"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Advanced KYC dramatically reduces fraud and improves security"
-    },
-    {
-      "id": "F-USER-009",
-      "name": "Risk Management Controls",
-      "description": "Comprehensive blacklisting system to block problematic customers with automatic triggers and appeal process",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "4.1 Customer Blacklisting and Blocking"
-        }
-      ],
-      "dependencies": [
-        "F-USER-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Blacklisting protects platform from fraudulent customers and reduces losses"
-    },
-    {
-      "id": "F-USER-010",
-      "name": "AI-Powered Fraud Detection",
-      "description": "Advanced fraud prevention using AI to detect synthetic identities, fake documents, and fraudulent behavior patterns",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "4.2 Synthetic Identity Fraud Defense"
-        },
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Advanced Fraud Prevention - AI-Powered Fraud Detection"
-        }
-      ],
-      "dependencies": [
-        "F-USER-007"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Advanced fraud detection dramatically reduces financial losses and protects platform integrity"
-    },
-    {
-      "id": "F-USER-015",
-      "name": "Comprehensive Audit Trail",
-      "description": "Track all user actions and administrative operations with action logging, change history, and tamper-proof records",
-      "category": "security",
-      "functionalArea": "auditing",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "7.1 User Activity Logging"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Complete audit trail ensures accountability and supports compliance requirements"
-    },
-    {
-      "id": "F-USER-016",
-      "name": "Immutable Audit Records",
-      "description": "Advanced audit logging using blockchain technology to create tamper-proof records of critical user events",
-      "category": "security",
-      "functionalArea": "auditing",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "7.2 Blockchain Event Logging"
-        }
-      ],
-      "dependencies": [
-        "F-USER-015"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Blockchain logging provides ultimate security critical for legal disputes and regulatory compliance"
-    },
-    {
-      "id": "F-USER-017",
-      "name": "Data Protection Controls",
-      "description": "Comprehensive privacy and data protection features ensuring GDPR, CCPA compliance with data access, portability, and erasure",
-      "category": "security",
-      "functionalArea": "compliance",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/administrative/user-management.md",
-          "section": "7.3 GDPR and Privacy Compliance"
-        }
-      ],
-      "dependencies": [
-        "F-USER-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Privacy compliance protects customers and avoids regulatory fines"
-    },
-    {
-      "id": "F-PAY-016",
-      "name": "Advanced Fraud Prevention System",
-      "description": "Multi-layered fraud detection with 3D Secure authentication, AVS, velocity checks, and behavioral analysis",
-      "category": "security",
-      "functionalArea": "payments",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/integration/payment-gateways.md",
-          "section": "Payment Security and Compliance - Fraud Prevention"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-010"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces chargeback rates and fraud losses through automated detection and manual review tools"
-    },
-    {
-      "id": "F-MOB-005",
-      "name": "Over-the-Air Key Delivery",
-      "description": "Secure digital key provisioning to user devices when booking confirmed, with encrypted transmission and secure device storage",
-      "category": "security",
-      "functionalArea": "digital-key",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Secure Key Provisioning"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables instant key delivery without physical exchange, supporting contactless operations"
-    },
-    {
-      "id": "F-MOB-006",
-      "name": "Time-Based Key Activation",
-      "description": "Digital keys automatically activate at pickup time and deactivate at return time with configurable grace period for late returns",
-      "category": "security",
-      "functionalArea": "digital-key",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Secure Key Provisioning"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-005"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Prevents unauthorized vehicle access outside rental period, enhancing security and fleet control"
-    },
-    {
-      "id": "F-MOB-009",
-      "name": "Biometric Key Access",
-      "description": "Require Face ID, Touch ID, or fingerprint authentication to use digital key with user-configurable security settings",
-      "category": "security",
-      "functionalArea": "digital-key",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Security Features"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Prevents unauthorized use of digital key if phone is accessed by others"
-    },
-    {
-      "id": "F-MOB-010",
-      "name": "Digital Key Revocation",
-      "description": "Instantly revoke digital key if device is lost or stolen with ability to provision key to new device",
-      "category": "security",
-      "functionalArea": "digital-key",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Security Features"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-005"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Prevents vehicle theft from lost phones and provides quick recovery path"
-    },
-    {
-      "id": "F-MOB-012",
-      "name": "Geofencing Alerts",
-      "description": "Alert if vehicle moves outside authorized area to detect unauthorized use or theft with optional remote immobilization",
-      "category": "security",
-      "functionalArea": "telematics",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Vehicle Telematics Integration"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-011"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enhances security and enables theft prevention through real-time location monitoring"
-    },
-    {
-      "id": "F-MOB-013",
-      "name": "Remote Vehicle Immobilization",
-      "description": "Remotely disable vehicle if stolen or payment issues with safe stop protocol when vehicle is stationary",
-      "category": "security",
-      "functionalArea": "telematics",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Advanced Digital Key Features - Vehicle Telematics Integration"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-011"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects fleet assets through theft recovery and non-payment enforcement capabilities"
-    },
-    {
-      "id": "F-MOB-015",
-      "name": "Biometric Verification at Pickup",
-      "description": "Facial recognition verification at pickup kiosk with AI comparison to ID on file for instant verification under 30 seconds",
-      "category": "security",
-      "functionalArea": "contactless-operations",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/digital-key.md",
-          "section": "Contactless Operations Integration - Digital Check-In"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides fastest, most secure identity verification while maintaining contactless operations"
-    },
-    {
-      "id": "F-MOB-019",
-      "name": "Biometric Payment Authentication",
-      "description": "Face ID, Touch ID, or fingerprint authentication for payment authorization with device secure enclave protection",
-      "category": "security",
-      "functionalArea": "mobile-payments",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/mobile-payments.md",
-          "section": "Core Mobile Payment Methods - Biometric Payment Authentication"
-        }
-      ],
-      "dependencies": [
-        "F-MOB-017",
-        "F-MOB-018"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides secure, convenient payment confirmation without passwords"
-    },
-    {
-      "id": "F-MOB-025",
-      "name": "Payment Tokenization and Security",
-      "description": "Replace actual card numbers with secure tokens, certificate pinning, and device fingerprinting for fraud prevention",
-      "category": "security",
-      "functionalArea": "mobile-payments",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/mobile-specific/mobile-payments.md",
-          "section": "Payment Security Features - Device-Level Security"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects payment data and reduces fraudulent transactions while maintaining compliance"
-    },
-    {
-      "id": "F-OPS-010",
-      "name": "Comprehensive Audit Logging",
-      "description": "Maintain detailed audit trails of all system activities, user actions, and data changes for compliance, security, and operational transparency with searchable logs and compliance reports",
-      "category": "security",
-      "functionalArea": "analytics-reporting",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/operational/analytics-reporting.md",
-          "section": "Reporting Features - Audit Trail and Compliance Reporting"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Demonstrates regulatory compliance and enables security incident investigation"
-    },
-    {
-      "id": "F-OPS-036",
-      "name": "Anti-Theft Protection System",
-      "description": "Comprehensive theft prevention capabilities including remote vehicle immobilization, real-time theft alerts, and recovery coordination with law enforcement",
-      "category": "security",
-      "functionalArea": "vehicle-tracking",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/operational/vehicle-tracking.md",
-          "section": "Core Tracking Features - Theft Prevention and Recovery"
-        }
-      ],
-      "dependencies": [
-        "F-OPS-033"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces theft losses and enables faster vehicle recovery"
-    },
-    {
-      "id": "F-SEC-AUTH-001",
-      "name": "Email/Password Authentication",
-      "description": "Traditional credential-based authentication with secure password hashing (bcrypt/Argon2), email verification, password reset flow, and encrypted session management",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Core Authentication Methods - Email/Password Authentication"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides familiar authentication method with strong security through password hashing and email verification"
-    },
-    {
-      "id": "F-SEC-AUTH-002",
-      "name": "Social Login Authentication",
-      "description": "OAuth-based authentication via Facebook, Google, Apple with automatic account creation, profile data import, and account linking capabilities",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Core Authentication Methods - Social Login Authentication"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces signup friction and improves conversion rates through one-click authentication"
-    },
-    {
-      "id": "F-SEC-AUTH-003",
-      "name": "Biometric Authentication",
-      "description": "Facial recognition and fingerprint authentication for mobile apps and kiosks with liveness detection, ID verification, and express checkout capabilities",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Advanced Authentication Methods - Biometric Authentication"
-        },
-        {
-          "file": "docs/05-features/user-facing/account-management.md",
-          "section": "Registration & Authentication - F-AM-003"
-        },
-        {
-          "file": "docs/06-requirements/functional/user-management.md",
-          "section": "REQ-UM-003: Biometric Authentication",
-          "type": "functional-requirement"
-        },
         {
           "file": "docs/06-requirements/non-functional/security.md",
-          "section": "REQ-SEC-4: Biometric Authentication",
-          "requirementId": "R-SEC-004"
+          "section": "REQ-SEC-1: Multi-Channel Authentication",
+          "requirementId": "R-SEC-001"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user of the car rental platform, I want my personal information, payment data, and account to be protected by robust security measures, so that I can use the service with confidence and without fear of fraud or data breaches.",
+        "acceptanceCriteria": [
+          "Email and password authentication with strong password requirements",
+          "Social login (Google, Facebook, Apple) integration",
+          "Two-factor authentication (2FA) option for enhanced security",
+          "Password reset via secure email verification",
+          "Account lockout after 5 failed login attempts"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-002",
+      "name": "Strong Password Security",
+      "description": "Enforce strong password requirements and secure storage with bcrypt or Argon2 hashing",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-2: Password Security",
+          "requirementId": "R-SEC-002"
         }
       ],
       "dependencies": [
-        "F-AM-002",
-        "R-UM-002",
         "R-SEC-001"
       ],
       "workflowContext": null,
-      "stakeholderBenefit": "Enables fastest checkout experience with strong identity verification and contactless operations"
-    },
-    {
-      "id": "F-SEC-AUTH-004",
-      "name": "Digital KYC and Document Scanning",
-      "description": "Automated identity verification using OCR for license/passport scanning, liveness checks, photo spoofing prevention, and government database verification",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Advanced Authentication Methods - Digital KYC and Document Scanning"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables fully digital onboarding with automated verification and 24/7 processing"
-    },
-    {
-      "id": "F-SEC-AUTH-005",
-      "name": "Decentralized Identity (DID)",
-      "description": "Blockchain-based portable identity system with self-sovereign identity, verifiable credentials, cross-platform reputation, and selective disclosure capabilities",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Advanced Authentication Methods - Decentralized Identity (DID)"
-        },
-        {
-          "file": "docs/05-features/user-facing/account-management.md",
-          "section": "Registration & Authentication - F-AM-004"
-        },
-        {
-          "file": "docs/06-requirements/non-functional/security.md",
-          "section": "REQ-SEC-26: Decentralized Identity (DID)",
-          "requirementId": "R-SEC-026"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables user-controlled data and portable reputation across platforms with privacy-preserving verification"
-    },
-    {
-      "id": "F-SEC-AUTH-006",
-      "name": "Token-Based Session Management",
-      "description": "Encrypted session tokens with configurable expiration, signature verification, and platform-specific storage (HTTP-only cookies for web, secure storage for mobile)",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Authentication Security Features - Token-Based Session Management"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-001",
-        "F-SEC-AUTH-002"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides secure session management with automatic expiration and protection against token tampering"
-    },
-    {
-      "id": "F-SEC-AUTH-007",
-      "name": "Multi-Factor Authentication (MFA)",
-      "description": "Email verification as second factor with future support for SMS, authenticator apps, hardware keys, and biometric MFA",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Authentication Security Features - Multi-Factor Authentication (MFA)"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enhances account security through additional verification layer beyond passwords"
-    },
-    {
-      "id": "F-SEC-AUTH-008",
-      "name": "Authentication Attack Protection",
-      "description": "Comprehensive protection against brute force, session hijacking, and credential stuffing through rate limiting, account lockout, CAPTCHA, and breach database integration",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Authentication Security Features - Protection Against Authentication Attacks"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects user accounts from common authentication attacks and unauthorized access"
-    },
-    {
-      "id": "F-SEC-AUTH-009",
-      "name": "Account Lifecycle Management",
-      "description": "Manage account states (created, unverified, verified, active, suspended, expired) with automatic transitions and temporary account support for guest checkout",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authentication.md",
-          "section": "Account Lifecycle Management - Account States"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables flexible account management with proper state tracking and data hygiene"
-    },
-    {
-      "id": "F-SEC-AUTHZ-001",
-      "name": "Role-Based Access Control (RBAC)",
-      "description": "Comprehensive RBAC system with three core roles (Admin, Supplier, Customer) with clearly defined permissions and access boundaries for each role",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Role-Based Access Control (RBAC) - Core User Roles"
-        },
-        {
-          "file": "docs/06-requirements/non-functional/security.md",
-          "section": "REQ-SEC-6: Role-Based Access Control (RBAC)",
-          "requirementId": "R-SEC-006"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures users can only access resources and perform actions appropriate to their role"
-    },
-    {
-      "id": "F-SEC-AUTHZ-002",
-      "name": "Application-Level Separation",
-      "description": "Enforce role-based access at application level with separate endpoints for admin and customer apps, automatic rejection of unauthorized access, and audit logging",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Role-Based Access Control (RBAC) - Application-Level Separation"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides clear security boundaries and prevents accidental access to wrong interface"
-    },
-    {
-      "id": "F-SEC-AUTHZ-003",
-      "name": "Supplier Data Isolation",
-      "description": "Strict data isolation ensuring suppliers can only access their own vehicles, locations, and bookings through ownership verification and query filtering",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Resource-Level Authorization - Supplier Data Isolation"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects business data from competitors and enables multi-supplier model without data leakage"
-    },
-    {
-      "id": "F-SEC-AUTHZ-004",
-      "name": "User Data Privacy Controls",
-      "description": "Strict privacy controls ensuring users can only access their own profile, bookings, payment methods, and booking history through user ID verification",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Resource-Level Authorization - User Data Privacy"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures GDPR and CCPA compliance with clear privacy boundaries"
-    },
-    {
-      "id": "F-SEC-AUTHZ-005",
-      "name": "Admin Override with Audit Trail",
-      "description": "Allow administrators to access all data for support with comprehensive audit logging, justification requirements, and optional user notifications",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Resource-Level Authorization - Admin Override with Audit Trail"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Balances support needs with privacy through transparency and accountability"
-    },
-    {
-      "id": "F-SEC-AUTHZ-006",
-      "name": "Fine-Grained Permissions",
-      "description": "Granular permission system beyond basic roles with specific permissions for actions (create, read, update, delete) across different resource types",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Permission Management - Fine-Grained Permissions"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables flexible role management and principle of least privilege enforcement"
-    },
-    {
-      "id": "F-SEC-AUTHZ-007",
-      "name": "API Key Authorization",
-      "description": "Alternative authorization for programmatic access with API key generation, scope definition, rate limiting, key rotation, and revocation capabilities",
-      "category": "security",
-      "functionalArea": "authorization",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/authorization.md",
-          "section": "Special Authorization Scenarios - API Key Authorization"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables B2B integrations and third-party application development"
-    },
-    {
-      "id": "F-SEC-DATA-001",
-      "name": "GDPR Compliance Features",
-      "description": "Comprehensive GDPR compliance including lawful basis for processing, data minimization, purpose limitation, storage limitation, and retention policies",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Regulatory Compliance Features - GDPR Compliance"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures legal compliance for EU operations and builds customer trust"
-    },
-    {
-      "id": "F-SEC-DATA-002",
-      "name": "Individual Rights Management",
-      "description": "Tools for users to exercise GDPR rights including data access, rectification, erasure, restriction, portability, and objection with automated workflows",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Regulatory Compliance Features - Individual Rights Management"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-DATA-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides users control over personal data and ensures systematic rights request handling"
-    },
-    {
-      "id": "F-SEC-DATA-003",
-      "name": "CCPA Compliance Features",
-      "description": "California Consumer Privacy Act compliance including right to know, delete, opt-out of sale, non-discrimination, and privacy policy requirements",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Regulatory Compliance Features - CCPA Compliance"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures legal compliance for California operations and protects consumer rights"
-    },
-    {
-      "id": "F-SEC-DATA-004",
-      "name": "Data Encryption",
-      "description": "Comprehensive encryption for data in transit (TLS 1.2+) and at rest (AES-256) including database, file storage, backups, and field-level encryption for sensitive data",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Technical Data Protection - Data Encryption"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects against data breaches and meets encryption requirements for regulations"
-    },
-    {
-      "id": "F-SEC-DATA-005",
-      "name": "Secure Data Storage",
-      "description": "Best practices for storing sensitive data including password hashing (bcrypt/Argon2), payment tokenization, encrypted document storage, and secure deletion",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Technical Data Protection - Secure Data Storage"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-DATA-004"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces liability in case of breach and ensures PCI-DSS compliance"
-    },
-    {
-      "id": "F-SEC-DATA-006",
-      "name": "Access Controls",
-      "description": "Strict controls over data access including role-based access, database access controls, IP whitelisting, VPN requirements, and resource ownership verification",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Technical Data Protection - Access Controls"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTHZ-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects data from unauthorized access through defense-in-depth controls"
-    },
-    {
-      "id": "F-SEC-DATA-007",
-      "name": "Blockchain-Based Audit Trails",
-      "description": "Immutable, tamper-proof audit logs using blockchain for critical data access and modifications with cryptographic hashing and timestamp verification",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Advanced Data Protection - Blockchain-Based Audit Trails"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides irrefutable audit trail for compliance and strong evidence for disputes"
-    },
-    {
-      "id": "F-SEC-DATA-008",
-      "name": "Data Anonymization and Pseudonymization",
-      "description": "Privacy-preserving techniques including irreversible anonymization, reversible pseudonymization, and differential privacy for analytics",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Advanced Data Protection - Data Anonymization and Pseudonymization"
-        },
-        {
-          "file": "docs/06-requirements/compliance/data-protection.md",
-          "section": "Advanced Data Protection Requirements - Requirement 17"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables privacy-preserving analytics and meets GDPR data minimization requirements"
-    },
-    {
-      "id": "F-SEC-DATA-009",
-      "name": "Data Breach Response",
-      "description": "Comprehensive breach detection and notification system including intrusion detection, incident response, regulatory notification, user notification, and post-breach actions",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/data-protection.md",
-          "section": "Data Breach Response - Breach Detection and Notification"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Ensures timely breach response and regulatory compliance in security incidents"
-    },
-    {
-      "id": "F-SEC-FRAUD-001",
-      "name": "Synthetic Identity Fraud Defense",
-      "description": "Advanced protection against AI-generated fake identities using passive/active liveness checks, document authenticity verification, and government database verification",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Identity Verification and Fraud Detection - Synthetic Identity Fraud Defense"
-        },
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Identity Verification Requirements - Requirement 4"
-        },
-        {
-          "file": "docs/06-requirements/non-functional/security.md",
-          "section": "REQ-SEC-20: Synthetic Identity Fraud Defense",
-          "requirementId": "R-SEC-020"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-004",
-        "R-FP-002",
-        "R-FP-003",
-        "R-SEC-005"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects against sophisticated identity fraud and reduces fraud losses"
-    },
-    {
-      "id": "F-SEC-FRAUD-002",
-      "name": "Multi-Factor Identity Verification",
-      "description": "Layered verification combining document verification, biometric verification, data verification, behavioral verification, and credit/background checks with risk-based approach",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Identity Verification and Fraud Detection - Multi-Factor Identity Verification"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-AUTH-004",
-        "F-SEC-FRAUD-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Balances fraud prevention with user experience through risk-based verification"
-    },
-    {
-      "id": "F-SEC-FRAUD-003",
-      "name": "Payment Fraud Detection",
-      "description": "Multi-layered payment fraud prevention including card verification (CVV, AVS, 3D Secure), fraud scoring, behavioral analysis, and real-time detection",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Payment Fraud Prevention - Payment Verification and Fraud Detection"
-        },
-        {
-          "file": "docs/06-requirements/non-functional/security.md",
-          "section": "REQ-SEC-21: Payment Fraud Detection",
-          "requirementId": "R-SEC-021"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces chargeback rates and fraud losses while maintaining smooth checkout"
-    },
-    {
-      "id": "F-SEC-FRAUD-004",
-      "name": "Chargeback Prevention",
-      "description": "Proactive chargeback prevention through clear billing descriptors, transparent pricing, email confirmations, pre-authorization, and comprehensive dispute management",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Payment Fraud Prevention - Chargeback Prevention"
-        },
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Payment Fraud Prevention - Requirement 6"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-001",
-        "F-SEC-DATA-007",
-        "R-FP-005"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces chargeback fees and improves payment processor relationships"
-    },
-    {
-      "id": "F-SEC-FRAUD-005",
-      "name": "Vehicle Theft Prevention",
-      "description": "Multi-layered theft prevention using telematics (GPS tracking, geofencing, remote immobilization), digital keys with expiration, and comprehensive theft detection",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Vehicle and Rental Fraud Prevention - Vehicle Theft Prevention"
-        }
-      ],
-      "dependencies": [
-        "F-OPS-033",
-        "F-OPS-036"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Reduces theft losses and enables faster vehicle recovery"
-    },
-    {
-      "id": "F-SEC-FRAUD-006",
-      "name": "Rental Abuse Prevention",
-      "description": "Detect and prevent rental misuse including unauthorized drivers, mileage fraud, subletting, commercial use, damage fraud, and policy violations",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Vehicle and Rental Fraud Prevention - Rental Abuse Prevention"
-        }
-      ],
-      "dependencies": [
-        "F-OPS-033",
-        "F-OPS-034"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protects vehicle assets and revenue through fair policy enforcement"
-    },
-    {
-      "id": "F-SEC-FRAUD-007",
-      "name": "Blockchain Chain of Custody",
-      "description": "Immutable record of all critical events in vehicle and rental lifecycle using blockchain for tamper-proof evidence in disputes and fraud investigations",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Advanced Fraud Prevention - Blockchain Chain of Custody"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides irrefutable evidence for disputes and reduces resolution costs"
-    },
-    {
-      "id": "F-SEC-FRAUD-009",
-      "name": "Reputation and Trust System",
-      "description": "Build user reputation over time through rental history, payment history, verification level, and community feedback with trust tiers and reputation benefits/penalties",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Advanced Fraud Prevention - Reputation and Trust Systems"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Incentivizes good behavior and enables trust-based fraud prevention"
-    },
-    {
-      "id": "F-SEC-FRAUD-010",
-      "name": "Fraud Investigation Tools",
-      "description": "Comprehensive investigation dashboard with case management, evidence collection, timeline visualization, network analysis, and complete data access for fraud analysts",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Fraud Investigation and Response - Fraud Investigation Tools"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-DATA-007"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Enables efficient fraud investigation with comprehensive evidence access"
-    },
-    {
-      "id": "F-SEC-FRAUD-011",
-      "name": "Fraud Response Procedures",
-      "description": "Systematic fraud response including immediate actions (account suspension, booking cancellation), investigation actions, prevention actions, and recovery actions",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/05-features/security/fraud-prevention.md",
-          "section": "Fraud Investigation and Response - Fraud Response Procedures"
-        }
-      ],
-      "dependencies": [
-        "F-SEC-FRAUD-010"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Provides systematic fraud response and continuous improvement"
-    },
-    {
-      "id": "F-PB-014",
-      "name": "Advanced Fraud Detection",
-      "description": "Multi-layered fraud prevention with real-time risk scoring, velocity checks, device fingerprinting, IP geolocation, card BIN analysis, behavioral analysis, stolen card detection, and 3D Secure enforcement",
-      "category": "security",
-      "functionalArea": "payment-billing",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/user-facing/payment-billing.md",
-          "section": "Security & Fraud Prevention - F-PB-014"
-        }
-      ],
-      "dependencies": [
-        "F-PB-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Protect customers from fraud. Reduce chargebacks and financial losses. Build trust through security"
-    },
-    {
-      "id": "F-PB-015",
-      "name": "PCI-DSS Compliance & Data Protection",
-      "description": "Full compliance with payment card industry standards including PCI-DSS Level 1, data encryption, tokenization, secure storage, access controls, audit logging, regular audits, and incident response",
-      "category": "security",
-      "functionalArea": "payment-billing",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/05-features/user-facing/payment-billing.md",
-          "section": "Security & Fraud Prevention - F-PB-015"
-        }
-      ],
-      "dependencies": [
-        "F-PB-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Customer payment data protected to highest standards. Regulatory compliance reduces legal risk. Trust through security certifications"
-    },
-    {
-      "id": "R-DP-015",
-      "name": "Blockchain-Based Immutable Audit Trails",
-      "description": "Log all critical data events to blockchain for immutable audit trails, log admin access to personal data, log data modifications with old/new values, log data subject rights requests, log consent changes, cryptographically hash events, provide searchable interface, generate compliance reports",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/data-protection.md",
-          "section": "Advanced Data Protection Requirements - Requirement 15"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Immutable, tamper-proof record of all data access and modifications proves compliance during audits"
-    },
-    {
-      "id": "R-FP-001",
-      "name": "Document Verification",
-      "description": "Require government-issued photo ID upload, verify document authenticity using automated services, check for forgery indicators, extract and validate information, verify documents are not expired, cross-reference with registration data, flag discrepancies for manual review",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Identity Verification Requirements - Requirement 1"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can verify user identity documents to ensure renters are who they claim to be"
-    },
-    {
-      "id": "R-FP-002",
-      "name": "Biometric Facial Verification",
-      "description": "Require selfie submission for facial verification, compare selfie to ID photo using facial recognition, calculate similarity score with minimum threshold (95% confidence), flag low-confidence matches for manual review, implement liveness detection, protect biometric data with encryption",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Identity Verification Requirements - Requirement 2"
-        }
-      ],
-      "dependencies": [
-        "R-FP-001"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can verify that the person renting matches their identity document, preventing identity theft"
-    },
-    {
-      "id": "R-FP-003",
-      "name": "Liveness Detection",
-      "description": "Implement passive liveness detection analyzing micro-reflections and texture patterns, detect presentation attacks (photos, videos, masks, deepfakes), analyze multiple frames for signs of life, use AI models to distinguish live humans from spoofing, require active liveness checks for high-risk transactions",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Identity Verification Requirements - Requirement 3"
-        }
-      ],
-      "dependencies": [
-        "R-FP-002"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can detect when someone is using a photo or video instead of live face, preventing spoofing attacks"
-    },
-    {
-      "id": "R-FP-005",
-      "name": "Payment Verification",
-      "description": "Verify payment method belongs to user through cardholder name matching, require CVV/CVC verification, implement 3D Secure authentication, verify billing address (AVS), flag mismatches for additional verification, implement velocity checks, detect stolen cards, integrate with fraud detection services",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Payment Fraud Prevention - Requirement 5"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can verify payment methods to prevent payment fraud and chargebacks"
-    },
-    {
-      "id": "R-FP-007",
-      "name": "Booking Pattern Analysis",
-      "description": "Monitor for velocity anomalies (multiple bookings in short time), detect unusual booking patterns, flag mismatched information, detect disposable email/temporary phone numbers, monitor bookings followed by cancellations, detect high-value vehicle bookings by new users, flag unusual rental periods",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Booking Fraud Prevention - Requirement 7"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can detect suspicious booking patterns to prevent fraudulent reservations"
-    },
-    {
-      "id": "R-FP-008",
-      "name": "Device and Location Intelligence",
-      "description": "Implement device fingerprinting to identify unique devices, detect multiple accounts from same device, detect single account from multiple devices in impossible timeframes, verify user location through IP geolocation, flag high-risk countries, detect VPNs/proxies/Tor, verify booking location matches typical patterns",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Booking Fraud Prevention - Requirement 8"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform can analyze device and location data to detect fraudulent access patterns"
-    },
-    {
-      "id": "R-FP-009",
-      "name": "Blockchain Immutable Event Logging",
-      "description": "Log all critical events to blockchain for tamper-proof audit trails, write pickup/return events to blockchain, write damage reports to blockchain, write maintenance events to blockchain, cryptographically hash each event, create unbreakable chain of custody, provide mathematically provable audit trails",
-      "category": "security",
-      "functionalArea": "fraud-prevention",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/fraud-prevention.md",
-          "section": "Blockchain-Based Chain of Custody - Requirement 9"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform has immutable record of all critical events for fraud investigations and legal disputes"
-    },
-    {
-      "id": "R-PS-001",
-      "name": "PCI DSS - Secure Network Architecture",
-      "description": "Install and maintain firewall configurations, do not use vendor-supplied defaults, segment payment systems from other networks, restrict traffic to necessary only, implement network intrusion detection/prevention, review firewall configurations every six months, document network connections",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 1"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Network security controls protect payment data and prevent unauthorized access to cardholder data"
-    },
-    {
-      "id": "R-PS-002",
-      "name": "PCI DSS - Protect Cardholder Data",
-      "description": "Never store sensitive authentication data (CVV2, full magnetic stripe, PIN) after authorization, minimize cardholder data storage, render PAN unreadable through tokenization/hashing/encryption, use strong cryptography (AES-256), encrypt transmission using TLS 1.2+, implement key management, rotate keys annually",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 2"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Payment information is encrypted and protected so financial data cannot be stolen or misused"
-    },
-    {
-      "id": "R-PS-003",
-      "name": "PCI DSS - Vulnerability Management",
-      "description": "Use and regularly update anti-virus software, develop secure systems following secure coding practices, implement vulnerability management program, conduct quarterly vulnerability scans by ASV, achieve passing scan results, conduct internal scans quarterly, apply critical patches within one month, conduct annual penetration testing",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 3"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Secure systems and applications prevent vulnerabilities from being exploited to access payment data"
-    },
-    {
-      "id": "R-PS-004",
-      "name": "PCI DSS - Access Control",
-      "description": "Restrict access to cardholder data to only those with business need-to-know, assign unique ID to each person, implement multi-factor authentication for remote access and administrative access, restrict physical access, maintain visitor log, implement role-based access controls, review access rights every six months",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 4"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Access to cardholder data is restricted based on business need-to-know, minimizing exposure"
-    },
-    {
-      "id": "R-PS-005",
-      "name": "PCI DSS - Monitor and Test Networks",
-      "description": "Track and monitor all access to network resources and cardholder data, implement automated audit trails, log user ID/event type/date/time/success/failure, synchronize clocks using NTP, secure audit trails, review logs daily, retain audit history for one year, implement intrusion detection/prevention, conduct file integrity monitoring",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 5"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Monitoring all access to payment systems enables detection and response to security incidents"
-    },
-    {
-      "id": "R-PS-006",
-      "name": "PCI DSS - Information Security Policy",
-      "description": "Maintain information security policy addressing all PCI DSS requirements, review policy annually, communicate policy to all personnel, provide security awareness training upon hire and annually, implement formal security awareness programs, establish incident response plan, test plan annually, designate security management personnel",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "PCI DSS Core Requirements - Requirement 6"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Clear security policies and training ensure employees understand responsibilities for protecting payment data"
-    },
-    {
-      "id": "R-PS-007",
-      "name": "Tokenization Implementation",
-      "description": "Integrate with PCI-compliant payment gateway providing tokenization, transmit payment data directly to gateway without touching platform servers, receive and store only non-sensitive tokens, use tokens for subsequent transactions, implement client-side encryption, validate tokens cannot be reverse-engineered, implement token lifecycle management",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Payment Gateway Integration Requirements - Requirement 7"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Tokenization avoids storing actual card numbers, reducing PCI compliance scope and security risks"
-    },
-    {
-      "id": "R-PS-008",
-      "name": "Hosted Payment Pages",
-      "description": "Redirect users to payment gateway's secure page for payment information entry, never receive or process actual cardholder data, receive only transaction results and tokens, implement seamless user experience with consistent branding, validate hosted pages use TLS 1.2+, handle redirects securely",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Payment Gateway Integration Requirements - Requirement 8"
-        }
-      ],
-      "dependencies": [
-        "R-PS-007"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Users enter payment information on secure page protected by payment gateway's security"
-    },
-    {
-      "id": "R-PS-010",
-      "name": "Data Encryption in Transit",
-      "description": "Use TLS 1.2+ for all transmission of cardholder data, disable older insecure protocols (SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1), implement perfect forward secrecy (ECDHE), use strong cipher suites (AES-256-GCM), obtain certificates from trusted CAs, implement certificate pinning for mobile apps, auto-renew certificates, redirect HTTP to HTTPS",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Encryption Requirements - Requirement 10"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Payment information is encrypted during transmission so it cannot be intercepted by attackers"
-    },
-    {
-      "id": "R-PS-011",
-      "name": "Data Encryption at Rest",
-      "description": "Encrypt stored cardholder data using AES-256 or equivalent, store encryption keys separately from encrypted data, use key management service (AWS KMS, Azure Key Vault, HashiCorp Vault), implement key rotation annually, encrypt database backups, encrypt file storage, implement cryptographic erasure for secure deletion",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Encryption Requirements - Requirement 11"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Payment-related data encrypted at rest remains protected even if storage media is compromised"
-    },
-    {
-      "id": "R-PS-013",
-      "name": "Cryptocurrency Security",
-      "description": "Never store private keys on platform servers, use payment gateway services for cryptocurrency custody, implement multi-signature wallets for any held cryptocurrency, conduct blockchain transaction verification, implement fraud detection for crypto transactions, comply with crypto-specific regulations, maintain audit trails",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Cryptocurrency Payment Requirements - Requirement 13"
-        }
-      ],
-      "dependencies": [
-        "R-PS-012"
-      ],
-      "workflowContext": null,
-      "stakeholderBenefit": "Platform securely handles cryptocurrency payments, protecting against theft and fraud"
-    },
-    {
-      "id": "R-PS-015",
-      "name": "Quarterly Vulnerability Scans",
-      "description": "Conduct quarterly vulnerability scans by Approved Scanning Vendor (ASV), scan all external-facing systems storing/processing/transmitting cardholder data, achieve passing scan results (no vulnerabilities rated 4.0+ on CVSS), conduct rescans after remediation, conduct scans after network changes, maintain documentation",
-      "category": "security",
-      "functionalArea": "payment-security",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/06-requirements/compliance/payment-security.md",
-          "section": "Compliance Validation Requirements - Requirement 15"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "stakeholderBenefit": "Quarterly vulnerability scans identify and remediate security weaknesses"
-    },
-    {
-      "id": "R-BM-026",
-      "name": "Data Protection and Privacy",
-      "description": "Comprehensive data protection with TLS 1.3+ encryption in transit, AES-256 at rest, GDPR/CCPA compliance, biometric data safeguards, and role-based access control",
-      "category": "security",
-      "functionalArea": "data-protection",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/functional/booking-management.md",
-          "section": "Requirement 26: Data Protection and Privacy"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
       "requirementDetails": {
-        "userStory": "As a customer, I want my personal and payment information protected",
-        "acceptanceCriteriaCount": 12,
-        "priority": "Must-Have",
-        "phase": "Phase 1: Foundation"
-      }
-    },
-    {
-      "id": "R-BM-027",
-      "name": "Booking Audit Trail",
-      "description": "Complete immutable audit logs of all booking operations including creation, modifications, cancellations, payments, and access with blockchain-based logging for critical operations",
-      "category": "security",
-      "functionalArea": "auditing",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/06-requirements/functional/booking-management.md",
-          "section": "Requirement 27: Booking Audit Trail"
-        }
-      ],
-      "dependencies": [],
-      "workflowContext": null,
-      "requirementDetails": {
-        "userStory": "As a system administrator, I want complete audit trails of all booking operations",
-        "acceptanceCriteriaCount": 10,
-        "priority": "Should-Have",
-        "phase": "Phase 2: Enhanced Experience"
-      }
-    },
-    {
-      "id": "R-PP-020",
-      "name": "3D Secure Authentication",
-      "description": "Implement 3D Secure 2.0 protocol for transactions over $500 or high-risk, redirect to issuing bank, support password/SMS/biometric auth, session state maintenance, SCA compliance, and fallback handling",
-      "category": "security",
-      "functionalArea": "authentication",
-      "effortEstimate": "Medium",
-      "sources": [
-        {
-          "file": "docs/06-requirements/functional/payment-processing.md",
-          "section": "REQ-PP-020: 3D Secure Authentication"
-        },
-        {
-          "file": "docs/04-workflows/core-rental/payment-processing.md",
-          "section": "Workflow Steps - Payment Authorization"
-        }
-      ],
-      "dependencies": [
-        "R-PP-003",
-        "F-PAY-006"
-      ],
-      "workflowContext": {
-        "workflow": "Payment Processing",
-        "step": 4,
-        "nextSteps": [
-          "Bank Authentication",
-          "Authorization Completion"
-        ]
-      },
-      "requirementDetails": {
-        "userStory": "As a compliance officer, I want 3D Secure authentication for enhanced security",
-        "acceptanceCriteriaCount": 10,
-        "priority": "Must-Have",
-        "phase": "Phase 1: Foundation"
-      }
-    },
-    {
-      "id": "F-WF-PAY-002",
-      "name": "Secure Payment Input Form",
-      "description": "PCI-DSS compliant payment form with card number masking, Luhn validation, CVV verification, and HTTPS encryption",
-      "category": "security",
-      "functionalArea": "payments",
-      "effortEstimate": "Large",
-      "sources": [
-        {
-          "file": "docs/04-workflows/core-rental/payment-processing.md",
-          "section": "Workflow Steps - Payment Information Entry"
-        }
-      ],
-      "dependencies": [
-        "F-PAY-007"
-      ],
-      "workflowContext": {
-        "workflow": "Payment Processing",
-        "step": 2,
-        "nextSteps": [
-          "Payment Amount Confirmation"
+        "userStory": "As a user, I want my password to be stored securely to protect my account.",
+        "acceptanceCriteria": [
+          "Minimum password length of 8 characters",
+          "Passwords must include uppercase, lowercase, number, and special character",
+          "Passwords are hashed using bcrypt or Argon2 with appropriate cost factor",
+          "Passwords are salted with unique salt per user",
+          "Password history prevents reuse of last 5 passwords"
         ]
       }
     },
     {
-      "id": "F-WF-PAY-008",
-      "name": "Automated Fraud Detection",
-      "description": "Real-time fraud screening with AVS, CVV verification, velocity checks, geolocation matching, and risk scoring",
-      "category": "security",
-      "functionalArea": "payments",
-      "effortEstimate": "Large",
+      "id": "R-SEC-003",
+      "name": "JWT Token Security",
+      "description": "Use JSON Web Tokens for stateless authentication with appropriate security controls and expiration",
+      "category": "Security",
+      "functionalArea": "Authentication",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
       "sources": [
         {
-          "file": "docs/04-workflows/core-rental/payment-processing.md",
-          "section": "Workflow Steps - Fraud Detection and Prevention"
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-3: JWT Token Security",
+          "requirementId": "R-SEC-003"
         }
       ],
       "dependencies": [
-        "F-PAY-006"
+        "R-SEC-001"
       ],
-      "workflowContext": {
-        "workflow": "Payment Processing",
-        "step": 9,
-        "nextSteps": [
-          "Manual Review if Flagged"
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure token-based authentication for scalable, stateless sessions.",
+        "acceptanceCriteria": [
+          "JWTs are signed with strong secret keys (minimum 256 bits)",
+          "Access tokens expire within 15 minutes",
+          "Refresh tokens expire within 7 days",
+          "Tokens include user ID, roles, and expiration claims",
+          "Token revocation mechanism exists for compromised accounts"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-005",
+      "name": "Digital KYC and Liveness Checks",
+      "description": "Implement digital Know Your Customer processes with liveness detection to prevent fraud",
+      "category": "Security",
+      "functionalArea": "Identity Verification",
+      "priority": "Should-Have",
+      "phase": "Phase 2",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-5: Digital KYC and Liveness Checks",
+          "requirementId": "R-SEC-005"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want digital KYC with liveness detection to prevent identity fraud.",
+        "acceptanceCriteria": [
+          "OCR scans driver's licenses and passports automatically",
+          "Liveness checks detect live humans vs photos or videos",
+          "Facial recognition matches selfie to ID photo",
+          "Passive liveness checks analyze micro-reflections",
+          "Failed verification attempts are logged and reviewed"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-007",
+      "name": "Resource-Level Authorization",
+      "description": "Verify user permissions to access specific resources (bookings, vehicles, reports) on every request",
+      "category": "Security",
+      "functionalArea": "Authorization",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-7: Resource-Level Authorization",
+          "requirementId": "R-SEC-007"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-006"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my data protected so only I can access my bookings and information.",
+        "acceptanceCriteria": [
+          "Users can only view their own bookings (unless admin)",
+          "Suppliers can only manage their own vehicles",
+          "Fleet managers can only access their assigned locations",
+          "API endpoints verify resource ownership before returning data",
+          "Authorization checks occur on every request"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-008",
+      "name": "API Authentication and Authorization",
+      "description": "Authenticate and authorize all API requests with API keys or OAuth tokens",
+      "category": "Security",
+      "functionalArea": "API Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-8: API Authentication and Authorization",
+          "requirementId": "R-SEC-008"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want secure API access to prevent unauthorized usage.",
+        "acceptanceCriteria": [
+          "API keys or OAuth tokens required for all API access",
+          "API rate limiting prevents abuse",
+          "API permissions are scoped to specific operations",
+          "API access is logged for audit purposes",
+          "Compromised API keys can be revoked immediately"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-009",
+      "name": "Encryption in Transit (TLS/HTTPS)",
+      "description": "Encrypt all data transmitted between clients and servers using TLS 1.2 or higher",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-9: Encryption in Transit",
+          "requirementId": "R-SEC-009"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my data encrypted during transmission to prevent interception.",
+        "acceptanceCriteria": [
+          "TLS 1.2 or higher is enforced for all connections",
+          "HTTP requests are automatically redirected to HTTPS",
+          "Strong cipher suites are configured (no weak ciphers)",
+          "Valid SSL/TLS certificates from trusted authorities",
+          "Certificate expiration monitoring and automatic renewal"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-010",
+      "name": "Encryption at Rest",
+      "description": "Encrypt sensitive data at rest in databases and file storage using AES-256",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-10: Encryption at Rest",
+          "requirementId": "R-SEC-010"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want data encrypted at rest to protect against storage compromise.",
+        "acceptanceCriteria": [
+          "Database encryption is enabled for all sensitive tables",
+          "Payment information is encrypted with strong algorithms (AES-256)",
+          "Personal identification documents are encrypted in storage",
+          "Encryption keys are managed securely (key management service)",
+          "Encryption key rotation occurs annually"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-011",
+      "name": "PII Protection",
+      "description": "Implement appropriate protection measures for Personally Identifiable Information with encryption and access logging",
+      "category": "Security",
+      "functionalArea": "Data Protection",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-11: PII Protection",
+          "requirementId": "R-SEC-011"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-009",
+        "R-SEC-010"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want my personal information protected according to privacy regulations.",
+        "acceptanceCriteria": [
+          "PII is encrypted at rest and in transit",
+          "PII access is logged and audited",
+          "PII is masked in logs and error messages",
+          "PII is segregated from non-sensitive data where possible",
+          "PII retention policies are enforced automatically"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-012",
+      "name": "Payment Data Security (PCI-DSS)",
+      "description": "Comply with PCI-DSS requirements for payment card data handling",
+      "category": "Security",
+      "functionalArea": "Payment Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-12: Payment Data Security",
+          "requirementId": "R-SEC-012"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want PCI-DSS compliance to handle payment data securely.",
+        "acceptanceCriteria": [
+          "Credit card numbers are never stored in plain text",
+          "Hosted checkout pages reduce PCI scope",
+          "Payment tokenization is used for recurring charges",
+          "PCI-DSS compliance is validated annually",
+          "Payment data is segregated from other application data"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-013",
+      "name": "Input Validation and Sanitization",
+      "description": "Validate and sanitize all user input to prevent injection attacks (SQL, XSS, command injection)",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-13: Input Validation and Sanitization",
+          "requirementId": "R-SEC-013"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want input validation to prevent common attacks.",
+        "acceptanceCriteria": [
+          "All user input is validated against expected formats",
+          "SQL injection is prevented through parameterized queries",
+          "XSS attacks are prevented through output encoding",
+          "File uploads are validated for type and size",
+          "Input validation occurs on both client and server"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-014",
+      "name": "CSRF Protection",
+      "description": "Implement Cross-Site Request Forgery protection for all state-changing operations",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-14: CSRF Protection",
+          "requirementId": "R-SEC-014"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want protection from CSRF attacks that could trick me into unwanted actions.",
+        "acceptanceCriteria": [
+          "CSRF tokens are generated for each user session",
+          "CSRF tokens are validated on all POST, PUT, DELETE requests",
+          "CSRF tokens are included in forms and AJAX requests",
+          "Failed CSRF validation results in request rejection",
+          "CSRF protection is tested regularly"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-015",
+      "name": "Rate Limiting and Throttling",
+      "description": "Implement rate limiting to prevent abuse and denial-of-service attacks",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-15: Rate Limiting and Throttling",
+          "requirementId": "R-SEC-015"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want rate limiting to prevent brute force and DoS attacks.",
+        "acceptanceCriteria": [
+          "API endpoints have appropriate rate limits (e.g., 100 requests/minute)",
+          "Login attempts are rate limited (5 attempts per 15 minutes)",
+          "Password reset requests are rate limited",
+          "Rate limit violations return 429 Too Many Requests",
+          "Rate limits are configurable per endpoint and user type"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-016",
+      "name": "Security Headers",
+      "description": "Implement security headers to protect against common web vulnerabilities",
+      "category": "Security",
+      "functionalArea": "Application Security",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-16: Security Headers",
+          "requirementId": "R-SEC-016"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want security headers for defense-in-depth.",
+        "acceptanceCriteria": [
+          "Content-Security-Policy header prevents XSS",
+          "X-Frame-Options header prevents clickjacking",
+          "X-Content-Type-Options header prevents MIME sniffing",
+          "Strict-Transport-Security header enforces HTTPS",
+          "Referrer-Policy header controls referrer information"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-017",
+      "name": "Security Event Logging",
+      "description": "Log all security-relevant events for audit and forensic purposes",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-17: Security Event Logging",
+          "requirementId": "R-SEC-017"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want comprehensive security logging for incident response.",
+        "acceptanceCriteria": [
+          "Login attempts (successful and failed) are logged",
+          "Authorization failures are logged",
+          "Data access to sensitive resources is logged",
+          "Configuration changes are logged",
+          "Logs include timestamp, user ID, IP address, and action"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-018",
+      "name": "Blockchain Audit Trail",
+      "description": "Use blockchain for immutable audit trails of critical events (bookings, payments, damage reports)",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-18: Blockchain Audit Trail",
+          "requirementId": "R-SEC-018"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-017"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want blockchain audit trails for tamper-proof records.",
+        "acceptanceCriteria": [
+          "Critical events (bookings, payments, damage reports) are hashed and stored on-chain",
+          "Blockchain records are immutable and tamper-evident",
+          "Audit trail provides chain of custody for disputes",
+          "Blockchain records are accessible for verification",
+          "Blockchain implementation does not impact performance"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-019",
+      "name": "Log Protection",
+      "description": "Protect log files from unauthorized access and tampering with access controls and integrity verification",
+      "category": "Security",
+      "functionalArea": "Audit and Logging",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-19: Log Protection",
+          "requirementId": "R-SEC-019"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-017"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want protected logs to ensure audit trails remain reliable.",
+        "acceptanceCriteria": [
+          "Logs are stored in secure, access-controlled locations",
+          "Log access is restricted to authorized personnel",
+          "Log integrity is verified through checksums or signatures",
+          "Logs are backed up regularly",
+          "Log retention policies comply with regulatory requirements"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-022",
+      "name": "Account Takeover Prevention",
+      "description": "Detect and prevent account takeover attempts with device verification and unusual activity alerts",
+      "category": "Security",
+      "functionalArea": "Fraud Prevention",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-22: Account Takeover Prevention",
+          "requirementId": "R-SEC-022"
+        }
+      ],
+      "dependencies": [
+        "R-SEC-001"
+      ],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a user, I want protection from unauthorized access to my account.",
+        "acceptanceCriteria": [
+          "Login from new devices triggers verification",
+          "Unusual login patterns (location, time) trigger alerts",
+          "Password changes require current password or email verification",
+          "Email/phone changes require verification",
+          "Users are notified of security-relevant account changes"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-023",
+      "name": "Security Testing",
+      "description": "Conduct regular security testing including automated scanning and annual penetration testing",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Medium",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-23: Security Testing",
+          "requirementId": "R-SEC-023"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want regular security testing to identify vulnerabilities.",
+        "acceptanceCriteria": [
+          "Automated security scanning runs with each deployment",
+          "Penetration testing occurs at least annually",
+          "Dependency vulnerability scanning runs daily",
+          "Security findings are prioritized and remediated",
+          "Security test results are documented and tracked"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-024",
+      "name": "Dependency Management",
+      "description": "Manage third-party dependencies to prevent known vulnerabilities with scanning and patching",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-24: Dependency Management",
+          "requirementId": "R-SEC-024"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want proactive dependency management to reduce vulnerability risk.",
+        "acceptanceCriteria": [
+          "Dependency versions are tracked and documented",
+          "Known vulnerabilities are identified through scanning",
+          "Critical vulnerabilities are patched within 7 days",
+          "High-severity vulnerabilities are patched within 30 days",
+          "Dependency updates are tested before deployment"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-025",
+      "name": "Incident Response Plan",
+      "description": "Maintain documented incident response procedures for security breaches with breach notification compliance",
+      "category": "Security",
+      "functionalArea": "Vulnerability Management",
+      "priority": "Must-Have",
+      "phase": "MVP",
+      "effortEstimate": "Small",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-25: Incident Response",
+          "requirementId": "R-SEC-025"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator, I want incident response procedures to minimize breach damage.",
+        "acceptanceCriteria": [
+          "Incident response plan is documented and tested",
+          "Security incidents are detected and escalated promptly",
+          "Incident response team is identified and trained",
+          "Breach notification procedures comply with regulations",
+          "Post-incident reviews identify improvements"
+        ]
+      }
+    },
+    {
+      "id": "R-SEC-027",
+      "name": "Smart Contract Security",
+      "description": "Ensure smart contracts are secure and audited before deployment with proper access controls",
+      "category": "Security",
+      "functionalArea": "Advanced Security",
+      "priority": "Nice-to-Have",
+      "phase": "Phase 3",
+      "effortEstimate": "Large",
+      "sources": [
+        {
+          "file": "docs/06-requirements/non-functional/security.md",
+          "section": "REQ-SEC-27: Smart Contract Security",
+          "requirementId": "R-SEC-027"
+        }
+      ],
+      "dependencies": [],
+      "workflowContext": null,
+      "requirementDetails": {
+        "userStory": "As a platform operator using blockchain, I want secure smart contracts to prevent financial losses.",
+        "acceptanceCriteria": [
+          "Smart contracts undergo security audits before deployment",
+          "Smart contracts are tested extensively",
+          "Smart contract upgradability is considered in design",
+          "Smart contract access controls are properly implemented",
+          "Smart contract events are monitored for anomalies"
         ]
       }
     }
